@@ -1,0 +1,149 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "swan_rich_text_FK6WPi": {
+      "type": "swan_rich-text",
+      "blocks": {
+        "heading_pg3qeT": {
+          "type": "heading",
+          "settings": {
+            "heading": ""
+          }
+        },
+        "text_mAjDLK": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>About Us</h2>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_pg3qeT",
+        "text_mAjDLK"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "custom_id": "",
+        "custom_class": "",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "swan_image_text_8yYbnC": {
+      "type": "swan_image-text",
+      "blocks": {
+        "headline_fDQTXH": {
+          "type": "headline",
+          "settings": {
+            "text": "THE BEGINNING OF SOMETHING BEAUTIFUL",
+            "center_text": false,
+            "heading_level": "h2",
+            "custom_id": "",
+            "custom_class": ""
+          }
+        },
+        "text_area_QMhKKF": {
+          "type": "text_area",
+          "settings": {
+            "text": "<p>My love affair with beauty began in my teens, but I never felt all that confident about my beauty expertise. I still don’t, to be honest. The art of applying makeup. The science of knowing what skincare to use when, and in what order. It always felt intimidating. Doing anything beyond a basic blowout on my own hair? Forget it.<br/><br/>It was in the midst of Covid that inspiration struck. I’d been working out with a fitness mirror and getting into Peloton too. I loved the idea that technology was making my workouts better and making me a healthier, happier person. Even more, I was moved by the community support I got along the way (especially during lockdown) – the affirmation for hitting a new milestone, doing another rep, or even for just showing up.<br/><br/>Then it hit me. This was exactly the kind of experience I needed in my beauty life. What if there were a beauty mirror that offered more than just reflection? With guidance and inspiration built right in. Connection to other beauty lovers too.<br/><br/>As this idea continued to take shape in my head, I connected with a tech partner in Europe, and we set off on the journey that led to SWAN. This mirror is more than an innovation, it’s a passion. A chance to create a beauty community that’s all love and no judgment. Join us.<br/><br/>Let’s reimagine routines together.<br/>Let’s share trends and tips.<br/>Let’s inspire creativity.<br/>Let’s collaborate.<br/>Let’s SWAN.<br/><br/>With love,<br/><strong>Colby Mitchell, <br/>Co-Founder & CEO<br/></strong></p>",
+            "center_text": false,
+            "custom_id": "",
+            "custom_class": ""
+          }
+        }
+      },
+      "block_order": [
+        "headline_fDQTXH",
+        "text_area_QMhKKF"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/mirror-cutout-white.png",
+        "image_position": "left",
+        "image_scale": "contain",
+        "image_background": "#f3f3f3",
+        "image_inset": "default",
+        "mirror_swap": true,
+        "image_2": "shopify://shop_images/mirror-side-black_662c74b7-0da8-4bf4-b6b5-ecffed357c9f.png",
+        "text_alignment": "flex-end",
+        "sticky_text": true,
+        "custom_id": "",
+        "custom_class": "",
+        "color_scheme": "scheme-3"
+      }
+    },
+    "swan_image_text_6nbE3P": {
+      "type": "swan_image-text",
+      "blocks": {
+        "headline_hyMTzq": {
+          "type": "headline",
+          "settings": {
+            "text": "THE CULTURE",
+            "center_text": false,
+            "heading_level": "h2",
+            "custom_id": "",
+            "custom_class": ""
+          }
+        },
+        "headline_tcnPM9": {
+          "type": "headline",
+          "settings": {
+            "text": "SWAN is a community of creators, entrepreneurs, artists, tech geeks and more.",
+            "center_text": false,
+            "heading_level": "h3",
+            "custom_id": "",
+            "custom_class": ""
+          }
+        },
+        "text_area_Emb4gL": {
+          "type": "text_area",
+          "settings": {
+            "text": "<p>We love beauty and technology, and we really love when they seamlessly blend. Creativity and personal expression are in our DNA. Our mission is to inspire, educate and connect. We plan on having fun and making waves along the way.</p>",
+            "center_text": false,
+            "custom_id": "",
+            "custom_class": ""
+          }
+        }
+      },
+      "block_order": [
+        "headline_hyMTzq",
+        "headline_tcnPM9",
+        "text_area_Emb4gL"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/swan-exp-1.jpg",
+        "image_position": "right",
+        "image_scale": "cover",
+        "image_background": "#ffffff",
+        "image_inset": "false",
+        "mirror_swap": false,
+        "text_alignment": "flex-end",
+        "sticky_text": false,
+        "custom_id": "",
+        "custom_class": "",
+        "color_scheme": "scheme-3"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "swan_rich_text_FK6WPi",
+    "swan_image_text_8yYbnC",
+    "swan_image_text_6nbE3P"
+  ]
+}

@@ -1,0 +1,150 @@
+{{ 'footer-main.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign has_social_icons = true
+  if settings.social_facebook_link == blank and settings.social_instagram_link == blank and settings.social_youtube_link == blank and settings.social_tiktok_link == blank and settings.social_twitter_link == blank and settings.social_pinterest_link == blank and settings.social_snapchat_link == blank and settings.social_tumblr_link == blank and settings.social_vimeo_link == blank
+    assign has_social_icons = false
+  endif
+-%}
+
+<footer id="main-footer" class="swan-footer color-{{ section.settings.color_scheme }}">
+  <ul class="footer-menu">
+    {% for link in section.settings.menu.links %}
+      <li>
+        <a href="{{ link.url }}">{{ link.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  {%- if section.settings.show_signup %}
+    <div class="footer-signup">
+      {% if section.settings.header %}
+        <div class="footer-header">
+          <h2>{{ section.settings.header }}</h2>
+        </div>
+      {% endif %}
+      {% form 'customer', class: 'swan-signup-form' %}
+        <input type="hidden" name="contact[tags]" value="newsletter">
+        <div class="form-group-container">
+          <div class="form-group">
+            <label for="ContactFormEmail" style="display: none;">Email</label>
+            <input
+              type="email"
+              name="contact[email]"
+              id="ContactFormEmail"
+              required
+              value="{{ form.email }}"
+              placeholder="Email address here..."
+              aria-required="true"
+              autocorrect="off"
+              autocapitalize="off"
+              autocomplete="email"
+              {% if form.errors %}
+                autofocus
+                aria-invalid="true"
+                aria-describedby="Newsletter-error--{{ section.id }}"
+              {% elsif form.posted_successfully? %}
+                aria-describedby="Newsletter-success--{{ section.id }}"
+              {% endif %}
+              required
+            >
+          </div>
+
+          <input type="hidden" name="contact[body]" value="Submitted from: {{ request.path }}">
+          <button type="submit">Submit</button>
+        </div>
+
+        {% if form.posted_successfully? %}
+          <div class="message-container">
+            <p class="success-message">Thanks! We'll be in touch soon.</p>
+          </div>
+        {% elsif form.errors %}
+          <div class="message-container">
+            <ul class="error-message">
+              {% for field in form.errors %}
+                {% for message in form.errors[field] %}
+                  <li>{{ message }}</li>
+                {% endfor %}
+              {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
+      {% endform %}
+    </div>
+  {%- endif -%}
+
+  <div class="swan-footer-brand">
+    {% if section.settings.image != blank %}
+      <div class="footer-logo">
+        <img src="{{ section.settings.image | image_url }}" alt="SWAN Footer Logo">
+      </div>
+    {% endif %}
+
+    <div class="footer-copyright">
+      <small class="copyright__content">&copy; {{ 'now' | date: '%Y' }}, {{ shop.name }} </small>
+    </div>
+
+    <div class="footer-socials">
+      {%- if section.settings.show_social and has_social_icons -%}
+        {%- render 'social-icons', class: 'footer__list-social' -%}
+      {%- endif -%}
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "SWAN Footer",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Footer Content"
+    },
+    {
+      "type": "text",
+      "id": "header",
+      "label": "Header",
+      "default": "Stay in Touch"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Footer Logo"
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Footer Menu",
+      "default": "main-menu"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_social",
+      "default": true,
+      "label": "Show Social"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_signup",
+      "default": true,
+      "label": "Show Signup"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-3"
+    }
+  ],
+  "presets": [
+    {
+      "name": "SWAN Footer"
+    }
+  ]
+}
+{% endschema %}

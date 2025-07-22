@@ -1,0 +1,134 @@
+.swan-footer {
+    background: rgb(var(--color-background));
+    color: var(--color-foreground);
+
+    padding: 5rem 3vw;
+}
+
+.footer-header {
+    text-align: center;
+}
+
+.footer-header h2 {
+    font-family: var(--bossa-extended) !important;
+    font-size: clamp(1rem, 2vw, 1.5rem) !important
+}
+
+.swan-footer ul.footer-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10rem;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.swan-footer ul.footer-menu li {
+    font-family: var(--bossa-expanded);
+    font-size: 1.2rem;
+    line-height: 1.4em;
+}
+
+.swan-footer ul li a {
+    text-decoration: none;
+}
+
+.swan-footer .swan-signup-form {
+    margin: 2rem auto !important;
+}
+
+.swan-footer .swan-signup-form input {
+    background: rgb(var(--color-background));
+    color: rgb(var(--color-foreground));
+    border: 1px solid rgba(var(--color-foreground), 0.5) !important;
+}
+
+.swan-footer .swan-signup-form button {
+    color: var(--color-background) !important;
+    background: white !important;
+    border: 1px solid rgba(var(--color-foreground), 0.5) !important;
+}
+
+.swan-footer .swan-signup-form input::placeholder {
+    color: #828282;
+}
+
+.swan-footer-brand {
+    display: grid;
+    grid-template-areas: 'logo copyright icons';
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    margin: 5rem 0 0;
+}
+
+.footer-logo {
+    grid-area: logo;
+}
+
+.footer-logo img {
+    max-width: 100px;
+}
+
+.footer-copyright {
+    font-family: var(--america-expanded);
+    color: white !important;
+    grid-area: copyright;
+
+    text-align: center;
+}
+
+.footer-socials {
+    grid-area: icons;
+    display: flex !important;
+    justify-content: flex-end;
+}
+
+@media (max-width: 979px) {
+    .swan-footer {
+        background: rgb(var(--color-background));
+        color: var(--color-foreground);
+    
+        padding: 5rem 7vw;
+    }    
+
+    .swan-footer ul.footer-menu {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 5rem;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .footer-header {
+        text-align: left;
+    }    
+
+    .swan-footer-brand {
+        display: grid;
+        grid-template-areas: 'logo icons' 'logo copyright';
+        grid-template-columns: auto;
+        gap: 0.5rem;
+    
+        margin: 5rem 0 0;
+    }
+
+    .swan-footer-brand .footer__list-social {
+        justify-content: flex-end !important;
+    }
+
+    .footer-copyright {
+        text-align: right;
+    }
+
+    .footer-logo {
+        display: flex;
+        align-items: flex-end;
+    }
+}

@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'Bossa Extended';
+    src: url(https://cdn.shopify.com/s/files/1/0913/3732/6911/files/Bossa-ExtendedRegular.woff?v=1741380694) format('woff'),
+    url(https://cdn.shopify.com/s/files/1/0913/3732/6911/files/Bossa-ExtendedRegular.woff2?v=1741380694) format('woff2');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'Bossa Extended';
+    src: url(https://cdn.shopify.com/s/files/1/0913/3732/6911/files/Bossa-ExtendedMedium.woff?v=1741380694) format('woff'),
+         url(https://cdn.shopify.com/s/files/1/0913/3732/6911/files/Bossa-ExtendedMedium.woff2?v=1741380694) format('woff2');
+    font-style: normal;
+    font-weight: 600;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'Bossa Expanded';
+    src: url(https://cdn.shopify.com/s/files/1/0913/3732/6911/files/Bossa-ExpandedLight.woff?v=1743712627) format('woff'),
+    url(https://cdn.shopify.com/s/files/1/0913/3732/6911/files/Bossa-ExpandedLight.woff2?v=1743712626) format('woff2');
+    font-style: normal;
+    font-weight: 200;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'Bossa Expanded';
+    src: url(https://cdn.shopify.com/s/files/1/0913/3732/6911/files/Bossa-ExpandedRegular.woff?v=1741380673) format('woff'),
+    url(https://cdn.shopify.com/s/files/1/0913/3732/6911/files/Bossa-ExpandedRegular.woff2?v=1741380673) format('woff2');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'Bossa Expanded';
+    src: url(https://cdn.shopify.com/s/files/1/0913/3732/6911/files/Bossa-ExpandedMedium.woff?v=1741380673) format('woff'),
+    url(https://cdn.shopify.com/s/files/1/0913/3732/6911/files/Bossa-ExpandedMedium.woff2?v=1741380673) format('woff2');
+    font-style: normal;
+    font-weight: 600;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'Bossa';
+    src: url(https://cdn.shopify.com/s/files/1/0913/3732/6911/files/Bossa-Regular.woff?v=1741380715) format('woff'),
+    url(https://cdn.shopify.com/s/files/1/0913/3732/6911/files/Bossa-Regular.woff2?v=1741380715) format('woff2');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'Bossa';
+    src: url(https://cdn.shopify.com/s/files/1/0913/3732/6911/files/Bossa-Medium.woff?v=1741380715) format('woff'),
+    url(https://cdn.shopify.com/s/files/1/0913/3732/6911/files/Bossa-Medium.woff2?v=1741380715) format('woff2');
+    font-style: normal;
+    font-weight: 600;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'GT America';
+    src: url( https://cdn.shopify.com/s/files/1/0913/3732/6911/files/GT-America-Standard-Regular.woff2?v=1741380515) format('woff'),
+    url(https://cdn.shopify.com/s/files/1/0913/3732/6911/files/GT-America-Standard-Regular.woff2?v=1741380515) format('woff2');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'GT America';
+    src: url(https://cdn.shopify.com/s/files/1/0913/3732/6911/files/GT-America-Standard-Light.woff?v=1741380515) format('woff'),
+    url(https://cdn.shopify.com/s/files/1/0913/3732/6911/files/GT-America-Standard-Light.woff2?v=1741380515) format('woff2');
+    font-style: normal;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'GT America Extended';
+    src: url(https://cdn.shopify.com/s/files/1/0913/3732/6911/files/GT-America-Extended-Light.woff?v=1741380515) format('woff'),
+    url(https://cdn.shopify.com/s/files/1/0913/3732/6911/files/GT-America-Extended-Light.woff2?v=1741380515) format('woff2');
+    font-style: normal;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+}
+
+

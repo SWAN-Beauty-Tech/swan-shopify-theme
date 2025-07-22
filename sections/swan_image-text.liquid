@@ -1,0 +1,364 @@
+{% schema %}
+{
+  "name": "SWAN Image & Text",
+  "tag": "section",
+  "class": "image-text-section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Image Position",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "select",
+      "id": "image_scale",
+      "label": "Image Scale",
+      "options": [
+        { "value": "cover", "label": "Cover" },
+        { "value": "contain", "label": "Contain" }
+      ],
+      "default": "cover"
+    },
+    {
+      "type": "color",
+      "id": "image_background",
+      "label": "Image Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "select",
+      "id": "image_inset",
+      "label": "Image Inset",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "default", "label": "Default" },
+        { "value": "half", "label": "Half" }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "checkbox",
+      "id": "mirror_swap",
+      "label": "Mirror Swap",
+      "info": "The white mirror image goes in the main image slot, use second image below for black mirror.",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Alt Image"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text Vertical Alignment",
+      "options": [
+        { "value": "flex-start", "label": "Top" },
+        { "value": "center", "label": "Center" },
+        { "value": "flex-end", "label": "Bottom" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "checkbox",
+      "id": "sticky_text",
+      "label": "Sticky Text",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "custom_id",
+      "label": "Custom Section ID"
+    },
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom Section Class"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Scheme",
+      "default": "none"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "headline",
+      "name": "Headline",
+      "settings": [
+        { "type": "text", "id": "text", "label": "Headline Text" },
+        {
+          "type": "checkbox",
+          "id": "center_text",
+          "label": "Center align text",
+          "default": false
+        },
+        {
+          "type": "select",
+          "id": "heading_level",
+          "label": "Heading Level",
+          "options": [
+            { "value": "h1", "label": "H1" },
+            { "value": "h2", "label": "H2" },
+            { "value": "h3", "label": "H3" },
+            { "value": "h4", "label": "H4" },
+            { "value": "h5", "label": "H5" },
+            { "value": "h6", "label": "H6" }
+          ],
+          "default": "h2"
+        },
+        { "type": "text", "id": "custom_id", "label": "Custom Block ID" },
+        { "type": "text", "id": "custom_class", "label": "Custom Block Class" }
+      ]
+    },
+    {
+      "type": "text_area",
+      "name": "Text Area",
+      "settings": [
+        { "type": "richtext", "id": "text", "label": "Text Area Content" },
+        {
+          "type": "checkbox",
+          "id": "center_text",
+          "label": "Center align text",
+          "default": false
+        },
+        { "type": "text", "id": "custom_id", "label": "Custom Block ID" },
+        { "type": "text", "id": "custom_class", "label": "Custom Block Class" }
+      ]
+    },
+    {
+      "type": "list_item",
+      "name": "List Item",
+      "settings": [
+        { "type": "textarea", "id": "list", "label": "List (one item per line)", "default": "Item 1\nItem 2\nItem 3" },
+        {
+          "type": "select",
+          "id": "list_style",
+          "label": "List Style",
+          "options": [
+            { "value": "ul", "label": "Bulleted" },
+            { "value": "ol", "label": "Numbered" }
+          ],
+          "default": "ul"
+        },
+        { "type": "text", "id": "custom_id", "label": "Custom Block ID" },
+        { "type": "text", "id": "custom_class", "label": "Custom Block Class" }
+      ]
+    },
+    {
+      "type": "inline_image",
+      "name": "Inline Image",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        {
+          "type": "range",
+          "id": "max_width",
+          "label": "Custom Width (px)",
+          "min": 100,
+          "max": 800,
+          "step": 10,
+          "default": 600
+        },
+        {
+          "type": "checkbox",
+          "id": "full_width",
+          "label": "Use full width",
+          "default": false
+        },
+        {
+          "type": "range",
+          "id": "margin_top",
+          "label": "Margin Top (px)",
+          "min": 0,
+          "max": 200,
+          "step": 5,
+          "default": 20
+        },
+        {
+          "type": "range",
+          "id": "margin_bottom",
+          "label": "Margin Bottom (px)",
+          "min": 0,
+          "max": 200,
+          "step": 5,
+          "default": 20
+        },
+        { "type": "text", "id": "custom_id", "label": "Custom Block ID" },
+        { "type": "text", "id": "custom_class", "label": "Custom Block Class" }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "Button",
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_secondary",
+          "default": false,
+          "label": "Secondary Style"
+        },
+        { "type": "text", "id": "custom_id", "label": "Custom Block ID" },
+        { "type": "text", "id": "custom_class", "label": "Custom Block Class" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "SWAN Image & Text",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<div
+  id="{{ section.settings.custom_id }}"
+  class="image-text-wrapper color-{{ section.settings.color_scheme }} {% if section.settings.sticky_text %}sticky{% endif %} {{ section.settings.custom_class }} scroll-trigger animate--slide-in"
+>
+  <div class="image-text-grid image-{{ section.settings.image_position }}">
+    <div
+      class="image-side inset-{{ section.settings.image_inset }}{% if section.settings.mirror_swap %} swap{% endif %}"
+      style="overflow: hidden; position: relative; background-color: {{ section.settings.image_background }};"
+    >
+      {% if section.settings.image != blank %}
+        <div class="parallax-wrapper">
+          <img
+            class="{% if section.settings.image_scale != 'contain' %}parallax{% endif %} {% if section.settings.mirror_swap and section.settings.image_2 != blank %} active{% endif %}"
+            src="{{ section.settings.image | image_url }}"
+            style="object-fit: {{ section.settings.image_scale }};"
+            alt="Section Image"
+            {% if section.settings.mirror_swap and section.settings.image_2 != blank %}
+              data-color="white"
+            {% endif %}
+            loading="lazy"
+            height="auto"
+            width="auto"
+          >
+
+          {% if section.settings.mirror_swap and section.settings.image_2 != blank %}
+            <img
+              class="{% if section.settings.image_scale != 'contain' %}parallax{% endif %}"
+              src="{{ section.settings.image_2 | image_url }}"
+              style="object-fit: {{ section.settings.image_scale }};"
+              alt="Section Image"
+              {% if section.settings.mirror_swap and section.settings.image_2 != blank %}
+                data-color="black"
+              {% endif %}
+              loading="lazy"
+              height="auto"
+              width="auto"
+            >
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if section.settings.mirror_swap %}
+        <div class="mirror-swap-buttons">
+          <div class="mirror-swap-buttons-inner">
+            <button class="active swap-button" data-color="white" type="button">White</button>
+            <button class="swap-button" data-color="black" type="button">Black</button>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+
+    <div
+      class="text-side"
+      style="display: flex; flex-direction: column; justify-content: {{ section.settings.text_alignment }};{% if section.settings.color_scheme.id == 'scheme-3' %}background-color: rgba(221, 162, 162, 0.6);{% endif %}"
+    >
+      {% if section.settings.color_scheme.id == 'scheme-3' %}
+        <video
+          class="gradient-background"
+          src="{{ 'swan-gradient-v2.mp4' | file_url }}"
+          muted
+          playsinline
+          autoplay
+          loop
+        ></video>
+      {% endif %}
+
+      <div class="text-side-inner">
+        {% for block in section.blocks %}
+          <div
+            id="{{ block.settings.custom_id }}"
+            class="block block-{{ block.type }} {{ block.settings.custom_class }}"
+          >
+            {% case block.type %}
+              {% when 'headline' %}
+                <{{ block.settings.heading_level }} style="{% if block.settings.center_text %}text-align: center;{% endif %}">
+                  {{- block.settings.text -}}
+                </{{ block.settings.heading_level }}>
+              {% when 'text_area' %}
+                <p style="{% if block.settings.center_text %}text-align: center;{% endif %}">
+                  {{ block.settings.text | newline_to_br }}
+                </p>
+              {% when 'list_item' %}
+                {% assign items = block.settings.list | newline_to_br | split: '<br />' %}
+                {% if block.settings.list_style == 'ol' %}
+                  <ol>
+                    {% for item in items %}
+                      <li>{{ item | strip }}</li>
+                    {% endfor %}
+                  </ol>
+                {% else %}
+                  <ul>
+                    {% for item in items %}
+                      <li>{{ item | strip }}</li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+              {% when 'inline_image' %}
+                {% if block.settings.image != blank %}
+                  <div style="margin-top: {{ block.settings.margin_top }}px; margin-bottom: {{ block.settings.margin_bottom }}px;">
+                    <img
+                      src="{{ block.settings.image | image_url }}"
+                      alt=""
+                      style="width: {% if block.settings.full_width %}100%{% else %}{{ block.settings.max_width }}px{% endif %}; display: block; margin: 0 auto;"
+                    >
+                  </div>
+                {% endif %}
+              {%- when 'button' -%}
+                {%- if block.settings.button_text != blank -%}
+                  <a
+                    {% if block.settings.custom_id %}
+                      id="{{ block.settings.custom_id }}"
+                    {% endif %}
+                    {% if block.settings.button_link == blank %}
+                      role="link" aria-disabled="true"
+                    {% else %}
+                      href="{{ block.settings.button_link }}"
+                    {% endif %}
+                    class="button swan-button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %} {% if block.settings.custom_class %}{{ block.settings.custom_class }}{% endif %}"
+                    {{ block.shopify_attributes }}
+                  >
+                    {{ block.settings.button_text | escape }}
+                  </a>
+                {%- endif -%}
+            {% endcase %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

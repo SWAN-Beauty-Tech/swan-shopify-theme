@@ -1,0 +1,105 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+ {
+  "sections": {
+    "landing_image_banner_RNxBNA": {
+      "type": "landing-image-banner",
+      "blocks": {
+        "heading_dEUdVr": {
+          "type": "heading",
+          "settings": {
+            "heading": "INSPIRED TECHNOLOGY.  BEAUTIFUL POSSIBILITIES.",
+            "heading_size": "hxxl"
+          }
+        }
+      },
+      "block_order": [
+        "heading_dEUdVr"
+      ],
+      "settings": {
+        "video_intro": "shopify://files/videos/web_swan_2.mp4",
+        "image": "shopify://shop_images/hero.jpg",
+        "image_overlay_opacity": 10,
+        "image_height": "large",
+        "image_behavior": "none",
+        "desktop_content_position": "bottom-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "scheme-4",
+        "stack_images_on_mobile": false,
+        "mobile_content_alignment": "center",
+        "show_text_below": false
+      }
+    },
+    "custom_liquid_DNCx7w": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div id=\"home-information\"></div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text": {
+      "type": "rich-text",
+      "blocks": {
+        "caption_WnTryB": {
+          "type": "caption",
+          "disabled": true,
+          "settings": {
+            "caption": "INSPIRED TECHNOLOGY.  BEAUTIFUL POSSIBILITIES.",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h3>SWAN is coming.<br/>Fall 2025.</h3>"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A high performance mirror, a gateway to a world of beautiful possibilities. SWAN is compelling content and a passionate community. SWAN is a marketplace with must-have brands and products. SWAN is a beyond-smart device with adjustable lighting, camera, microphone, and speakers. SWAN is a movement in the making. Become a member of SWAN nation. </p><p>Just one requirement: </p><h6>MUST LOVE BEAUTY.</h6>"
+          }
+        }
+      },
+      "block_order": [
+        "caption_WnTryB",
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-251b9dd3-b45f-4604-ba72-a5241f2d787f",
+        "full_width": true,
+        "padding_top": 140,
+        "padding_bottom": 140
+      }
+    },
+    "landing_signup_JT49aq": {
+      "type": "landing-signup",
+      "settings": {
+        "image": "shopify://shop_images/signup-color_9a98f05b-f43d-4a61-be60-15055b7efed2.jpg",
+        "eyebrow": "Get on the waiting list",
+        "header": "<p>Reserve your mirror and <br/>get updates from us.</p>",
+        "color_scheme": "scheme-1"
+      }
+    }
+  },
+  "order": [
+    "landing_image_banner_RNxBNA",
+    "custom_liquid_DNCx7w",
+    "rich_text",
+    "landing_signup_JT49aq"
+  ]
+}

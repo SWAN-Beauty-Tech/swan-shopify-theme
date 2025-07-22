@@ -1,0 +1,61 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "swan_footer_9riBqf": {
+      "type": "swan_footer",
+      "settings": {
+        "header": "Connect with us",
+        "image": "shopify://shop_images/swan-wordmark.svg",
+        "menu": "main-menu",
+        "show_social": true,
+        "show_signup": true,
+        "color_scheme": "scheme-3"
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "image_bLC9Q6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/swan-wordmark.svg",
+            "image_width": 100,
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_bLC9Q6"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "scheme-3",
+        "newsletter_enable": false,
+        "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": false,
+        "show_social": false,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "payment_enable": false,
+        "show_policy": false,
+        "margin_top": 0,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "swan_footer_9riBqf",
+    "footer"
+  ]
+}

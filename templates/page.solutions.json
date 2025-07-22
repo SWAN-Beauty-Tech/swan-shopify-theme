@@ -1,0 +1,166 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "swan_rich_text_CPiJV8": {
+      "type": "swan_rich-text",
+      "blocks": {
+        "heading_pUMLLb": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h1>{{ page.title }}</h1>"
+          }
+        },
+        "text_7rUBwX": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Elevating <br/>Customer Experience</h2>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_pUMLLb",
+        "text_7rUBwX"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "custom_id": "",
+        "custom_class": "",
+        "color_scheme": ""
+      }
+    },
+    "swan_image_text_N8YXGx": {
+      "type": "swan_image-text",
+      "blocks": {
+        "headline_h8KA4c": {
+          "type": "headline",
+          "settings": {
+            "text": "SWAN FOR BUSINESS",
+            "center_text": false,
+            "heading_level": "h2",
+            "custom_id": "",
+            "custom_class": ""
+          }
+        },
+        "text_area_fmtUAq": {
+          "type": "text_area",
+          "settings": {
+            "text": "<p>A SWAN mirror delivers an infusion of style and innovation into your customer experience. The device itself is a head-turning visual statement. It stops people  in their tracks and begs to explored. </p><p>It can serve as a complement to a live employee, taking some of the burden off them to be the expert in the room, or it can be a self-service solutionwhere your customer can transact unassisted.</p>",
+            "center_text": false,
+            "custom_id": "",
+            "custom_class": ""
+          }
+        }
+      },
+      "block_order": [
+        "headline_h8KA4c",
+        "text_area_fmtUAq"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/solutions-1.jpg",
+        "image_position": "left",
+        "image_scale": "cover",
+        "image_background": "#ffffff",
+        "image_inset": "false",
+        "mirror_swap": false,
+        "text_alignment": "flex-end",
+        "sticky_text": false,
+        "custom_id": "",
+        "custom_class": "",
+        "color_scheme": "scheme-2"
+      }
+    },
+    "swan_image_text_mBFxFG": {
+      "type": "swan_image-text",
+      "blocks": {
+        "headline_PGc3ma": {
+          "type": "headline",
+          "settings": {
+            "text": "CUSTOMIZATION",
+            "center_text": false,
+            "heading_level": "h2",
+            "custom_id": "",
+            "custom_class": ""
+          }
+        },
+        "text_area_J7EBLM": {
+          "type": "text_area",
+          "settings": {
+            "text": "<p>The experience is customizable too. We can tailor it to the nuances of your business and your specific goals: increasing basket size, driving transactions, lead capture, improving customer satisfaction and loyalty. </p><p>If your business is a:</p>",
+            "center_text": false,
+            "custom_id": "",
+            "custom_class": ""
+          }
+        },
+        "list_item_rkPkmG": {
+          "type": "list_item",
+          "settings": {
+            "list": "Beauty Brand \nBeauty Retailer \nSalon \nDermatology Practice \nSkin Spa\nHotel",
+            "list_style": "ul",
+            "custom_id": "",
+            "custom_class": ""
+          }
+        },
+        "text_area_MNkPTd": {
+          "type": "text_area",
+          "settings": {
+            "text": "<p>We want to connect.</p>",
+            "center_text": false,
+            "custom_id": "",
+            "custom_class": ""
+          }
+        }
+      },
+      "block_order": [
+        "headline_PGc3ma",
+        "text_area_J7EBLM",
+        "list_item_rkPkmG",
+        "text_area_MNkPTd"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/solutions-2.jpg",
+        "image_position": "right",
+        "image_scale": "cover",
+        "image_background": "#ffffff",
+        "image_inset": "false",
+        "mirror_swap": false,
+        "text_alignment": "flex-end",
+        "sticky_text": false,
+        "custom_id": "",
+        "custom_class": "",
+        "color_scheme": "scheme-3"
+      }
+    },
+    "swan_sign_up_wrac9X": {
+      "type": "swan_sign-up",
+      "settings": {
+        "text_content": "<h3>Let’s elevate your CX. <br/>Let’s SWAN.</h3>",
+        "color_scheme": "",
+        "mirror_image": "black"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "swan_rich_text_CPiJV8",
+    "swan_image_text_N8YXGx",
+    "swan_image_text_mBFxFG",
+    "swan_sign_up_wrac9X"
+  ]
+}

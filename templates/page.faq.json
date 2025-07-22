@@ -1,0 +1,126 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_banner_dLCjXr": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify://shop_images/faq-hero.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "swan_rich_text_Qgh6TP": {
+      "type": "swan_rich-text",
+      "blocks": {
+        "heading_d9VAXC": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h1>FAQ</h1>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_d9VAXC"
+      ],
+      "custom_css": [],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "custom_id": "",
+        "custom_class": "",
+        "color_scheme": ""
+      }
+    },
+    "collapsible_content_w3MTXT": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_NqizPe": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How big is the SWAN mirror?",
+            "icon": "none",
+            "row_content": "<p>The mirror is 17.3” high and 11.5” wide.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_pMDkUJ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What colors does the SWAN mirror come in?",
+            "icon": "none",
+            "row_content": "<p>The mirror currently comes in black and white. </p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_gC7Y8P": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Where can I buy a SWAN mirror?",
+            "icon": "none",
+            "row_content": "<p>The mirror will be for sale here at swanbeauty.com. Coming this Fall.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_bEFJGV": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I contact SWAN?",
+            "icon": "none",
+            "row_content": "<p>Email us at hello@swanbeauty.com.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_NqizPe",
+        "collapsible_row_pMDkUJ",
+        "collapsible_row_gC7Y8P",
+        "collapsible_row_bEFJGV"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 0,
+        "padding_bottom": 100
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_dLCjXr",
+    "swan_rich_text_Qgh6TP",
+    "collapsible_content_w3MTXT"
+  ]
+}
