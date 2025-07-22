@@ -16,7 +16,7 @@
       "settings": {
         "header": "Connect with us",
         "image": "shopify://shop_images/swan-wordmark.svg",
-        "menu": "main-menu",
+        "menu": "footer",
         "show_social": true,
         "show_signup": true,
         "color_scheme": "scheme-3"
