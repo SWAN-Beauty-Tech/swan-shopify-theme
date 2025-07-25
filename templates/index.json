@@ -52,7 +52,7 @@
         "text_8naCfk": {
           "type": "text",
           "settings": {
-            "text": "<h5><strong>Die Plattform für deine Beauty-Revolution</strong></h5><h5>SWAN Beauty ist die Plattform, die Beauty neu definiert. </h5><p><strong>Zwei Wege, ein Erlebnis:</strong><br/>Die <a href=\"https://www.swanbeauty.tech/app\"><strong>SWAN App</strong></a> – dein Must-have für Trends, Tutorials & Shopping. Der <a href=\"https://www.swanbeauty.tech/mirror\"><strong>SWAN Mirror</strong></a> – dein smartes Add-on für Hautanalysen & Content-Creation.</p><p>Teste Produkte virtuell, entdecke neue Favoriten und werde Teil der <a href=\"https://www.swanbeauty.tech/squad\"><strong>Community</strong></a>. Lerne von den Besten, shoppe direkt aus den Videos und bring deine Beauty-Routine aufs nächste Level! </p>"
+            "text": "<h5><strong>Die Plattform für deine Beauty-Revolution</strong></h5><p>SWAN Beauty ist die Plattform, die Beauty neu definiert. </p><p><strong>Zwei Wege, ein Erlebnis:</strong><br/>Die <a href=\"https://www.swanbeauty.tech/app\"><strong>SWAN App</strong></a> – dein Must-have für Trends, Tutorials & Shopping. Der <a href=\"https://www.swanbeauty.tech/mirror\"><strong>SWAN Mirror</strong></a> – dein smartes Add-on für Hautanalysen & Content-Creation.</p><p>Teste Produkte virtuell, entdecke neue Favoriten und werde Teil der <a href=\"https://www.swanbeauty.tech/squad\"><strong>Community</strong></a>. Lerne von den Besten, shoppe direkt aus den Videos und bring deine Beauty-Routine aufs nächste Level! </p>"
           }
         }
       },
@@ -97,7 +97,7 @@
         "text_area_zTUnjb"
       ],
       "settings": {
-        "image": "shopify://shop_images/8T8A3889-3.jpg",
+        "image": "shopify://shop_images/8T8A3926-3.jpg",
         "image_position": "left",
         "image_scale": "cover",
         "image_background": "#ffffff",
@@ -138,7 +138,7 @@
         "text_area_9BpG3e"
       ],
       "settings": {
-        "image": "shopify://shop_images/44_65eaf53f-fb31-4675-ad3b-8c258a724755.jpg",
+        "image": "shopify://shop_images/8T8A4882-3.jpg",
         "image_position": "right",
         "image_scale": "cover",
         "image_background": "#ffffff",
@@ -179,7 +179,7 @@
         "text_area_y4V6MC"
       ],
       "settings": {
-        "image": "shopify://shop_images/action.jpg",
+        "image": "shopify://shop_images/8T8A4453-3.jpg",
         "image_position": "left",
         "image_scale": "cover",
         "image_background": "#ffffff",
