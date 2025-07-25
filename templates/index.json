@@ -52,7 +52,7 @@
         "text_8naCfk": {
           "type": "text",
           "settings": {
-            "text": "<h5><strong>Die Plattform für deine Beauty-Revolution</strong></h5><p>SWAN Beauty ist die Plattform, die Beauty neu definiert. </p><p><strong>Zwei Wege, ein Erlebnis:</strong><br/>Die <a href=\"https://www.swanbeauty.tech/app\"><strong>SWAN App</strong></a> – dein Must-have für Trends, Tutorials & Shopping. Der <a href=\"https://www.swanbeauty.tech/mirror\"><strong>SWAN Mirror</strong></a> – dein smartes Add-on für Hautanalysen & Content-Creation.</p><p>Teste Produkte virtuell, entdecke neue Favoriten und werde Teil der <a href=\"https://www.swanbeauty.tech/squad\"><strong>Community</strong></a>. Lerne von den Besten, shoppe direkt aus den Videos und bring deine Beauty-Routine aufs nächste Level! ✨</p>"
+            "text": "<h5><strong>Die Plattform für deine Beauty-Revolution</strong></h5><h5>SWAN Beauty ist die Plattform, die Beauty neu definiert. </h5><p><strong>Zwei Wege, ein Erlebnis:</strong><br/>Die <a href=\"https://www.swanbeauty.tech/app\"><strong>SWAN App</strong></a> – dein Must-have für Trends, Tutorials & Shopping. Der <a href=\"https://www.swanbeauty.tech/mirror\"><strong>SWAN Mirror</strong></a> – dein smartes Add-on für Hautanalysen & Content-Creation.</p><p>Teste Produkte virtuell, entdecke neue Favoriten und werde Teil der <a href=\"https://www.swanbeauty.tech/squad\"><strong>Community</strong></a>. Lerne von den Besten, shoppe direkt aus den Videos und bring deine Beauty-Routine aufs nächste Level! </p>"
           }
         }
       },
@@ -85,7 +85,7 @@
         "text_area_zTUnjb": {
           "type": "text_area",
           "settings": {
-            "text": "<h5>The right lighting is everything. We designed the SWAN mirror with adjustable LED lights. Change up brightness and color temperature for all your beauty needs – from everyday looks to full glam, morning and nighttime skincare routines, a video tutorial you’re watching or shooting, and so much more.</h5>",
+            "text": "<h5>Dein persönlicher AI Beauty Assistant</h5><p>Mehr als nur ein Spiegel – <strong>Der neue SWAN Mirror analysiert deine Haut, inspiriert mit Trends und verbindet dich mit der Beauty-Community.</strong> </p><p>Mit <strong>Hautanalyse</strong>, <strong>HD-Kamera</strong> und smarter App revolutioniert er deine Beauty-Routine. Entdecke Trends, lerne von Expert*innen und erstelle eigene Looks – alles in einem Spiegel, der weit mehr kann als nur reflektieren.</p>",
             "center_text": false,
             "custom_id": "",
             "custom_class": ""
