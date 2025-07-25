@@ -46,13 +46,13 @@
         "text_iG6xwi": {
           "type": "text",
           "settings": {
-            "text": "<h2>Meet SWAN.</h2>"
+            "text": "<h2>Über SWAN Beauty</h2><p></p>"
           }
         },
         "text_8naCfk": {
           "type": "text",
           "settings": {
-            "text": "<h5>A next gen smart-mirror designed to elevate your beauty game. </h5><h5>Part video playground, part social community, part digital marketplace.</h5><h5>SWAN is all beauty, all the time. </h5><h5>And it’s housed inside one gorgeous piece of hardware. </h5><h5><strong>The future of beauty is now. See yourself.</strong></h5>"
+            "text": "<h5><strong>Die Plattform für deine Beauty-Revolution</strong></h5><p>SWAN Beauty ist die Plattform, die Beauty neu definiert. </p><p><strong>Zwei Wege, ein Erlebnis:</strong><br/>Die <a href=\"https://www.swanbeauty.tech/app\"><strong>SWAN App</strong></a> – dein Must-have für Trends, Tutorials & Shopping. Der <a href=\"https://www.swanbeauty.tech/mirror\"><strong>SWAN Mirror</strong></a> – dein smartes Add-on für Hautanalysen & Content-Creation.</p><p>Teste Produkte virtuell, entdecke neue Favoriten und werde Teil der <a href=\"https://www.swanbeauty.tech/squad\"><strong>Community</strong></a>. Lerne von den Besten, shoppe direkt aus den Videos und bring deine Beauty-Routine aufs nächste Level! ✨</p>"
           }
         }
       },
@@ -75,7 +75,7 @@
         "headline_8jaYQD": {
           "type": "headline",
           "settings": {
-            "text": "LIGHTS",
+            "text": "SWAN Mirror",
             "center_text": false,
             "heading_level": "h2",
             "custom_id": "",
