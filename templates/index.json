@@ -97,7 +97,7 @@
         "text_area_zTUnjb"
       ],
       "settings": {
-        "image": "shopify://shop_images/lights.jpg",
+        "image": "shopify://shop_images/35.jpg",
         "image_position": "left",
         "image_scale": "cover",
         "image_background": "#ffffff",
@@ -138,7 +138,7 @@
         "text_area_9BpG3e"
       ],
       "settings": {
-        "image": "shopify://shop_images/camera.jpg",
+        "image": "shopify://shop_images/44_65eaf53f-fb31-4675-ad3b-8c258a724755.jpg",
         "image_position": "right",
         "image_scale": "cover",
         "image_background": "#ffffff",
@@ -262,8 +262,8 @@
     "swan_sign_up_yYi4Dj": {
       "type": "swan_sign-up",
       "settings": {
-        "header": "Get Connected",
-        "text_content": "<h3>Sign up for exclusive sneak peeks, early access opportunities and more.</h3>",
+        "header": "Werde Teil der Beauty Revolution",
+        "text_content": "<h3>Werde SWAN Beauty Insider und verpasse keine Updates und exklusiven Rabatte.</h3>",
         "color_scheme": "",
         "mirror_image": "white"
       }
