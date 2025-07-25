@@ -45,13 +45,13 @@
         "text_ftVfr4": {
           "type": "text",
           "settings": {
-            "text": "<h2>We’re built for the  <br/>influencer economy</h2>"
+            "text": "<h2>Werde Teil des Squads</h2>"
           }
         },
         "text_TkerxH": {
           "type": "text",
           "settings": {
-            "text": "<p>Whether you identify as creator, influencer, affiliate, in many ways we designed the SWAN mirror with you in mind. It’s no coincidence that the mirror has an HD camera, dual microphones, and adjustable LED lights. We wanted to deliver a professional grade product, something influencer ready.</p>"
+            "text": "<h4>Limitierte, handverlesene Community</h4><p>Das <strong>SWAN Squad</strong> besteht aus nur <strong>30 ausgewählten Creatives</strong>, die für <strong>12-monatige Partnerschaften</strong> verpflichtet werden. Deine Teilnahme bringt dich direkt in eine exklusive, professionelle Creator-Community.</p><h3>Monetarisierung mit Struktur</h3><p>Als Squad-Mitglied erhältst du eine <strong>fixe Provisionsbeteiligung</strong> für deine Videos – zuverlässiges Einkommen durch Affiliate-Mechaniken oder Verkaufslinks, die du in deinem Creator-Profil integrieren kannst.</p><p></p>"
           }
         }
       },
@@ -74,7 +74,7 @@
         "headline_i9mhXX": {
           "type": "headline",
           "settings": {
-            "text": "MARKETPLACE",
+            "text": "Werde von Brands entdeckt",
             "center_text": false,
             "heading_level": "h2",
             "custom_id": "",
@@ -84,7 +84,7 @@
         "text_area_GUr6Y9": {
           "type": "text_area",
           "settings": {
-            "text": "<p>The SWAN marketplace is a land of opportunity for beauty influencers large and small. Expand your audience, build your personal brand, and convert sales. We’re developing new approaches to revenue sharing that you won’t see elsewhere.</p>",
+            "text": "<p>Als SWANie erhältst du <strong>regelmäßig Produktpakete von angesagten Beauty- und Lifestyle-Marken</strong>– zum Testen, Kreieren und Präsentieren. </p><p>Der SWAN Squad ist <strong>eine Bühne für aufstrebende Creator</strong>, die von renommierten Marken aktiv verfolgt wird. Jede Kooperation ist eine Chance, von Beauty-Brands<strong>direkt entdeckt und für exklusive Kampagnen gebucht zu werden</strong>– und das mit SWAN als starkem Partner an deiner Seite.</p>",
             "center_text": false,
             "custom_id": "",
             "custom_class": ""
@@ -93,7 +93,7 @@
         "button_VFhwzD": {
           "type": "button",
           "settings": {
-            "button_text": "View Marketplace",
+            "button_text": "Jetzt bewerben",
             "button_link": "shopify://pages/marketplace",
             "button_style_secondary": false,
             "custom_id": "",
@@ -123,6 +123,7 @@
     "swan_sign_up_7wJRrF": {
       "type": "swan_sign-up",
       "settings": {
+        "header": "Keep up to date",
         "text_content": "<h3>Let’s create. Let’s collaborate. <br/>Let’s SWAN. </h3>",
         "color_scheme": "",
         "mirror_image": "white"
