@@ -51,7 +51,7 @@
         "text_area_rPJR8R": {
           "type": "text_area",
           "settings": {
-            "text": "<p>Featuring your product in the SWAN marketplace instantly connects you to passionate, highly-engaged beauty lovers during moments of inspiration-seeking, experimentation and transformation; new opportunities to create interaction and transaction. </p><p>We blend content and commerce in a pure  beauty context. We can create original, shoppable video or adapt existing creative assets. We can also collaborate with your affiliates and preferred creators. SWAN Studio is a state-of-the-art production facility. The content possibilities are endless.  </p><p>The marketplace is built on SHOPIFY, so transacting is fast, frictionless and secure.  We also provide an app that makes onboarding and managing product listings a breeze.</p>",
+            "text": "<p>Du bist auf der Suche nach einer innovativen Lösung, um deine Produkte sichtbar zu machen, neue Zielgruppen zu erreichen und gleichzeitig einen zusätzlichen Vertriebskanal aufzubauen?</p><p>Ohne Aufwand, ohne Kosten, aber mit echtem Impact? Dann bist du hier genau richtig.</p><h5>Warum du als Brand mit uns zusammenarbeiten solltest?</h5><ul><li><strong>Neuer Vertriebskanal </strong>ohne Streuverluste</li><li><strong>Echte Zielgruppe</strong>– 96 % weiblich, 25–36 Jahre, digital affin</li><li><strong>Starke Marken-Präsenz </strong>direkt im Kontext</li><li><strong>Content-driven Commerce</strong>– Erklären, inspirieren, verkaufen</li><li><strong>Wachstumspotential </strong>durch US-Expansion & Events</li></ul><p></p><p></p>",
             "center_text": false,
             "custom_id": "",
             "custom_class": ""
@@ -78,6 +78,7 @@
     "swan_sign_up_aYagET": {
       "type": "swan_sign-up",
       "settings": {
+        "header": "Keep up to date",
         "text_content": "<h3>Let’s explore possibilities. <br/>Let’s SWAN.</h3>",
         "color_scheme": "",
         "mirror_image": "black"
