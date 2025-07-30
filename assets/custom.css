@@ -1171,3 +1171,7 @@ SWAN SIGNUP
 summary.facets__summary {
     margin-bottom: 0;
 }
+
+.product__description {
+    display: none;
+}
