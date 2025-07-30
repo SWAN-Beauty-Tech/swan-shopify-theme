@@ -1158,11 +1158,11 @@ SWAN SIGNUP
     max-width: 150ch;
 }
 
+#MainContent .shopify-policy__container, #MainContent > .shopify-section.section:first-child {
+    padding: clamp(100px, 12vw, 150px) 0;
+}
+
 #MainContent .shopify-policy__container, #MainContent > .shopify-section.section {
     padding-right: 20px;
     padding-left: 20px;
-}
-
-#MainContent .shopify-policy__container, #MainContent > .shopify-section.section:first-child {
-    padding: clamp(100px, 12vw, 150px) 0;
 }
