@@ -1159,7 +1159,7 @@ SWAN SIGNUP
     margin: 0 auto;
 }
 
-#MainContent .shopify-policy__container, #MainContent > .shopify-section.section .template-search, #MainContent > .shopify-section.section:has(#ProductGridContainer) {
+#MainContent .shopify-policy__container, #MainContent > .shopify-section.section .template-search, #MainContent:has(#ProductGridContainer) {
     padding: clamp(100px, 12vw, 150px) 0;
     padding-right: 20px;
     padding-left: 20px;
