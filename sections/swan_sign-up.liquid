@@ -30,14 +30,14 @@
             <input type="hidden" name="contact[tags]" value="newsletter">
             <div class="form-group-container">
               <div class="form-group">
-                <label for="ContactFormEmail" style="display: none;">Email</label>
+                <label for="ContactFormEmail" style="display: none;">Email-Adresse</label>
                 <input
                   type="email"
                   name="contact[email]"
                   id="ContactFormEmail"
                   required
                   value="{{ form.email }}"
-                  placeholder="Email address here..."
+                  placeholder="Email-Adresse eingeben..."
                   aria-required="true"
                   autocorrect="off"
                   autocapitalize="off"
@@ -54,7 +54,7 @@
               </div>
 
               <input type="hidden" name="contact[body]" value="Submitted from: {{ request.path }}">
-              <button type="submit">Submit</button>
+              <button type="submit">Absenden</button>
             </div>
 
             {% if form.posted_successfully? %}
