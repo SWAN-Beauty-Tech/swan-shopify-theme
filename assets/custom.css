@@ -1153,3 +1153,7 @@ SWAN SIGNUP
     -webkit-transform: translateX(15px);
     transform: translateX(15px);
 }
+
+.shopify-policy__container {
+    max-width: 150ch;
+}
