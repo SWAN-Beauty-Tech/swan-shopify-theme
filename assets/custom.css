@@ -1156,4 +1156,7 @@ SWAN SIGNUP
 
 #MainContent .shopify-policy__container {
     max-width: 150ch;
+    padding: clamp(100px, 12vw, 150px) 0;
+    display: flex;
+    justify-content: center;
 }
