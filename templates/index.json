@@ -263,7 +263,7 @@
       "type": "swan_sign-up",
       "settings": {
         "header": "Werde Teil der Beauty Revolution",
-        "text_content": "<h3>Werde SWAN Beauty Insider und verpasse keine Updates und exklusiven Rabatte.</h3>",
+        "text_content": "<h5>Werde SWAN Beauty Insider und verpasse keine Updates.</h5>",
         "color_scheme": "",
         "mirror_image": "white"
       }
