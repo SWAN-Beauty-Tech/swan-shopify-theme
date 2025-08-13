@@ -23,7 +23,7 @@
         "heading_pUMLLb": {
           "type": "heading",
           "settings": {
-            "heading": "<h1>{{ page.title }}</h1>"
+            "heading": "<h1>SWAN Brands </h1>"
           }
         },
         "text_7rUBwX": {
@@ -150,6 +150,7 @@
     "swan_sign_up_wrac9X": {
       "type": "swan_sign-up",
       "settings": {
+        "header": "Keep up to date",
         "text_content": "<h3>Let’s elevate your CX. <br/>Let’s SWAN.</h3>",
         "color_scheme": "",
         "mirror_image": "black"
