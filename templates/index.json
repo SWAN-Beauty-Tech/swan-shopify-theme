@@ -267,6 +267,21 @@
         "color_scheme": "",
         "mirror_image": "white"
       }
+    },
+    "17552076912420cc10": {
+      "type": "apps",
+      "blocks": {
+        "socialwidget_instafeed_base_widget_KPJjtK": {
+          "type": "shopify://apps/socialwidget-instafeed/blocks/base-widget/508b8d5b-b176-4dc6-a0ba-2b222db6eb79",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "socialwidget_instafeed_base_widget_KPJjtK"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -277,6 +292,7 @@
     "swan_image_text_peLJeg",
     "swan_image_text_XqVKXE",
     "swan_image_text_diHnaA",
-    "swan_sign_up_yYi4Dj"
+    "swan_sign_up_yYi4Dj",
+    "17552076912420cc10"
   ]
 }
