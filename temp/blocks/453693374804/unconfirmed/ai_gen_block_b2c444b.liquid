@@ -1,6 +1,376 @@
+{% doc %}
+  @prompt
+    create a section where I can place on the left half an image with a copy underneath and on the right side an embedded video of 9:16 format and autoplay functionality.
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-media-split-{{ ai_gen_id }} {
+    display: flex;
+    gap: {{ block.settings.gap }}px;
+    align-items: flex-start;
+    padding: {{ block.settings.padding }}px;
+    background-color: {{ block.settings.background_color }};
+    max-width: 100%;
+  }
+
+  .ai-media-split__left-{{ ai_gen_id }} {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: {{ block.settings.text_gap }}px;
+  }
+
+  .ai-media-split__right-{{ ai_gen_id }} {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .ai-media-split__image-container-{{ ai_gen_id }} {
+    width: 100%;
+    position: relative;
+    border-radius: {{ block.settings.image_border_radius }}px;
+    overflow: hidden;
+  }
+
+  .ai-media-split__image-container-{{ ai_gen_id }} img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .ai-media-split__image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    aspect-ratio: 4/3;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: {{ block.settings.image_border_radius }}px;
+  }
+
+  .ai-media-split__image-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;}
+
+  .ai-media-split__empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  .ai-media-split__text-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.text_size }}px;
+    line-height: 1.6;
+  }
+
+  .ai-media-split__video-container-{{ ai_gen_id }} {
+    width: 100%;
+    max-width: {{ block.settings.video_max_width }}px;
+    aspect-ratio: 9/16;
+    border-radius: {{ block.settings.video_border_radius }}px;
+    overflow: hidden;
+    background-color: #000;
+  }
+
+  .ai-media-split__video-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: {{ block.settings.video_border_radius }}px;
+  }
+
+  .ai-media-split__video-placeholder-{{ ai_gen_id }} svg {
+    width: 60%;
+    height: 60%;
+    opacity: 0.5;
+  }
+
+  .ai-media-split__video-empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  .ai-media-split__video-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-media-split-{{ ai_gen_id }} {
+      flex-direction: {{ block.settings.mobile_layout }};
+      gap: {{ block.settings.mobile_gap }}px;
+    }
+
+    .ai-media-split__video-container-{{ ai_gen_id }} {
+      max-width: 100%;
+    }
+  }
+{% endstyle %}
+
+<div
+  class="ai-media-split-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-media-split__left-{{ ai_gen_id }}">
+    {% if block.settings.image %}
+      <div class="ai-media-split__image-container-{{ ai_gen_id }}">
+        <img
+          src="{{ block.settings.image | image_url: width: 800 }}"
+          alt="{{ block.settings.image.alt | escape }}"
+          loading="lazy"
+          width="{{ block.settings.image.width }}"
+          height="{{ block.settings.image.height }}"
+        >
+      </div>
+    {% else %}
+      <div class="ai-media-split__image-placeholder-{{ ai_gen_id }}">
+        {{ 'image' | placeholder_svg_tag }}
+        <div class="ai-media-split__empty-state-{{ ai_gen_id }}">
+          Add an image
+        </div>
+      </div>
+    {% endif %}
+
+    {% if block.settings.text != blank %}
+      <div class="ai-media-split__text-{{ ai_gen_id }}">
+        {{ block.settings.text }}
+      </div>
+    {% endif %}
+  </div>
+
+  <div class="ai-media-split__right-{{ ai_gen_id }}">
+    {% if block.settings.video_url != blank %}
+      <div class="ai-media-split__video-container-{{ ai_gen_id }}">
+        {% if block.settings.video_url contains 'youtube.com' or block.settings.video_url contains 'youtu.be' %}
+          {% assign video_id = block.settings.video_url | split: 'v=' | last | split: '&' | first %}
+          {% if block.settings.video_url contains 'youtu.be' %}
+            {% assign video_id = block.settings.video_url | split: 'youtu.be/' | last | split: '?' | first %}
+          {% endif %}<iframe
+            class="ai-media-split__video-{{ ai_gen_id }}"
+            src="https://www.youtube.com/embed/{{ video_id }}?autoplay=1&mute=1&loop=1&playlist={{ video_id }}&controls=0&showinfo=0&rel=0&modestbranding=1"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen
+            title="Embedded video"
+          ></iframe>
+        {% elsif block.settings.video_url contains 'vimeo.com' %}
+          {% assign video_id = block.settings.video_url | split: 'vimeo.com/' | last | split: '?' | first %}
+          <iframe
+            class="ai-media-split__video-{{ ai_gen_id }}"
+            src="https://player.vimeo.com/video/{{ video_id }}?autoplay=1&muted=1&loop=1&background=1&controls=0"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen
+            title="Embedded video"
+          ></iframe>
+        {% else %}
+          <video
+            class="ai-media-split__video-{{ ai_gen_id }}"
+            autoplay
+            muted
+            loop
+            playsinline
+            {% if block.settings.show_video_controls %}controls{% endif %}
+          >
+            <source src="{{ block.settings.video_url }}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        {% endif %}
+      </div>
+    {% else %}
+      <div class="ai-media-split__video-placeholder-{{ ai_gen_id }}">
+        {{ 'image' | placeholder_svg_tag }}
+        <div class="ai-media-split__video-empty-state-{{ ai_gen_id }}">
+          Add a video URL
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Media split",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text content",
+      "default": "<p>Add your description text here. This content will appear below the image.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Video"
+    },
+    {
+      "type": "url",
+      "id": "video_url",
+      "label": "Video URL"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_video_controls",
+      "label": "Show video controls",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "video_max_width",
+      "min": 200,
+      "max": 500,
+      "step": 20,
+      "unit": "px",
+      "label": "Video max width",
+      "default": 300
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "mobile_layout",
+      "label": "Mobile layout",
+      "options": [
+        {
+          "value": "column",
+          "label": "Stack vertically"
+        },
+        {
+          "value": "column-reverse",
+          "label": "Stack vertically (video first)"
+        }
+      ],
+      "default": "column"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "min": 20,
+      "max": 100,
+      "step": 10,
+      "unit": "px",
+      "label": "Gap between columns",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "mobile_gap",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "label": "Mobile gap",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "text_gap",
+      "min": 10,
+      "max": 40,
+      "step": 5,
+      "unit": "px",
+      "label": "Gap between image and text",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "unit": "px",
+      "label": "Section padding",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Text size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Image border radius",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "video_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Video border radius",
+      "default": 12
+    }
+  ],
+  "presets": [
+    {
+      "name": "Media split"
+    }
+  ]
+}
 {% endschema %}
