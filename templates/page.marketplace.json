@@ -79,6 +79,35 @@
       "type": "_blocks",
       "settings": {}
     },
+    "1755642240b7fb8d61": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_b2c444b_T6VXGa": {
+          "type": "ai_gen_block_b2c444b",
+          "settings": {
+            "text": "<p>Add your description text here. This content will appear below the image.</p>",
+            "video_url": "",
+            "show_video_controls": false,
+            "video_max_width": 300,
+            "mobile_layout": "column",
+            "gap": 40,
+            "mobile_gap": 30,
+            "text_gap": 20,
+            "padding": 40,
+            "background_color": "#ffffff",
+            "text_color": "#000000",
+            "text_size": 16,
+            "image_border_radius": 8,
+            "video_border_radius": 12
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_b2c444b_T6VXGa"
+      ],
+      "settings": {}
+    },
     "swan_sign_up_aYagET": {
       "type": "swan_sign-up",
       "settings": {
@@ -167,6 +196,7 @@
     "swan_rich_text_daYrVd",
     "swan_image_text_67EcKy",
     "17556416728320b2de",
+    "1755642240b7fb8d61",
     "swan_sign_up_aYagET",
     "multicolumn_bf3fNa",
     "video_DQbnxf"
