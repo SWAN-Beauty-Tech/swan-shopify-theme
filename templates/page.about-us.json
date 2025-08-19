@@ -126,92 +126,24 @@
       ],
       "settings": {}
     },
-    "1755209408b94541a0": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_223d3a4_UtKBVy": {
-          "type": "ai_gen_block_223d3a4",
-          "settings": {
-            "video": "shopify://files/videos/Shopify_Video_Mirror.mov",
-            "autoplay": true,
-            "loop": false,
-            "muted": true,
-            "controls": true,
-            "video_border_radius": 2,
-            "heading": "Onboarding",
-            "text": "<p>Discover the new swan with his capabilities and how easy it is to onboard with your new beauty genius. </p>",
-            "button_text": "Learn more",
-            "button_link": "",
-            "background_color": "#f7f7f7",
-            "heading_color": "#000000",
-            "text_color": "#666666",
-            "button_color": "#000000",
-            "button_text_color": "#ffffff",
-            "button_hover_color": "#333333",
-            "heading_size": 32,
-            "text_size": 16,
-            "button_text_size": 14,
-            "padding": 40,
-            "gap": 40,
-            "heading_margin": 16,
-            "text_margin": 20,
-            "button_padding_vertical": 12,
-            "button_padding_horizontal": 24,
-            "border_radius": 0,
-            "button_border_radius": 4
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_223d3a4_UtKBVy"
-      ],
-      "settings": {}
-    },
-    "175520956970b9046a": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_daffeee_Wm9Hki": {
-          "type": "ai_gen_block_daffeee",
-          "settings": {
-            "heading": "Home Screen und Routine Planer",
-            "text": "<p>Discover the passion and craftsmanship behind our products through this exclusive behind-the-scenes video.</p>",
-            "button_text": "Learn more",
-            "button_link": "",
-            "video": "shopify://files/videos/swan-intro.mp4",
-            "autoplay": false,
-            "muted": true,
-            "loop": false,
-            "controls": true,
-            "gap": 40,
-            "padding": 40,
-            "video_max_width": 600,
-            "background_color": "#f7f7f7",
-            "heading_color": "#000000",
-            "text_color": "#666666",
-            "button_color": "#000000",
-            "button_hover_color": "#333333",
-            "button_text_color": "#ffffff",
-            "heading_size": 32,
-            "heading_weight": "600",
-            "text_size": 16,
-            "button_text_size": 14,
-            "border_radius": 8,
-            "video_border_radius": 8,
-            "button_border_radius": 6,
-            "button_padding": 12
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_daffeee_Wm9Hki"
-      ],
-      "settings": {}
-    },
     "1755209894103772ed": {
       "type": "_blocks",
       "blocks": {
+        "ai_gen_block_ade36af_h6Jqyj": {
+          "type": "ai_gen_block_ade36af",
+          "settings": {
+            "video_file": "shopify://files/videos/Shopify_Video_Mirror.mov",
+            "video_url": "",
+            "video_border_radius": 12,
+            "heading": "Your story starts here",
+            "text": "<p>Share your brand story, highlight key features, or describe what makes your product special. This text will animate in as users scroll to this section.</p>",
+            "heading_size": 36,
+            "text_size": 16,
+            "heading_color": "#000000",
+            "text_color": "#666666"
+          },
+          "blocks": {}
+        },
         "ai_gen_block_5989830_NAaqPC": {
           "type": "ai_gen_block_5989830",
           "settings": {
@@ -273,6 +205,7 @@
         }
       },
       "block_order": [
+        "ai_gen_block_ade36af_h6Jqyj",
         "ai_gen_block_5989830_NAaqPC"
       ],
       "settings": {}
@@ -335,8 +268,6 @@
     "swan_rich_text_FK6WPi",
     "swan_image_text_8yYbnC",
     "17552366850a6e1abb",
-    "1755209408b94541a0",
-    "175520956970b9046a",
     "1755209894103772ed",
     "swan_image_text_6nbE3P"
   ]
