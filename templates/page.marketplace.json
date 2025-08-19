@@ -23,7 +23,7 @@
         "heading_TRi9EE": {
           "type": "heading",
           "settings": {
-            "heading": "<h1>Marketplace</h1>"
+            "heading": "<h1>App</h1>"
           }
         },
         "text_bkRYYR": {
@@ -74,6 +74,10 @@
         "custom_class": "",
         "color_scheme": "scheme-3"
       }
+    },
+    "17556416728320b2de": {
+      "type": "_blocks",
+      "settings": {}
     },
     "swan_sign_up_aYagET": {
       "type": "swan_sign-up",
@@ -162,6 +166,7 @@
     "main",
     "swan_rich_text_daYrVd",
     "swan_image_text_67EcKy",
+    "17556416728320b2de",
     "swan_sign_up_aYagET",
     "multicolumn_bf3fNa",
     "video_DQbnxf"
