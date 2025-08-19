@@ -131,11 +131,22 @@
             "custom_id": "",
             "custom_class": ""
           }
+        },
+        "button_LQANHL": {
+          "type": "button",
+          "settings": {
+            "button_text": "App Infos",
+            "button_link": "shopify://pages/marketplace",
+            "button_style_secondary": true,
+            "custom_id": "",
+            "custom_class": ""
+          }
         }
       },
       "block_order": [
         "headline_de8QQB",
-        "text_area_9BpG3e"
+        "text_area_9BpG3e",
+        "button_LQANHL"
       ],
       "settings": {
         "image": "shopify://shop_images/8T8A4882-3.jpg",
