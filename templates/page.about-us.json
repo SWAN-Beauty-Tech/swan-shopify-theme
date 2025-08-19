@@ -73,13 +73,13 @@
         "text_area_QMhKKF"
       ],
       "settings": {
-        "image": "shopify://shop_images/mirror-cutout-white.png",
+        "image": "shopify://shop_images/Subject_3.png",
         "image_position": "left",
         "image_scale": "contain",
         "image_background": "#f3f3f3",
         "image_inset": "default",
         "mirror_swap": true,
-        "image_2": "shopify://shop_images/mirror-side-black_662c74b7-0da8-4bf4-b6b5-ecffed357c9f.png",
+        "image_2": "shopify://shop_images/Subject_2.png",
         "text_alignment": "flex-end",
         "sticky_text": true,
         "custom_id": "",

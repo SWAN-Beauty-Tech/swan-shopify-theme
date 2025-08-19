@@ -90,11 +90,22 @@
             "custom_id": "",
             "custom_class": ""
           }
+        },
+        "button_NUqHNF": {
+          "type": "button",
+          "settings": {
+            "button_text": "MEHR",
+            "button_link": "shopify://pages/about-us",
+            "button_style_secondary": true,
+            "custom_id": "",
+            "custom_class": ""
+          }
         }
       },
       "block_order": [
         "headline_8jaYQD",
-        "text_area_zTUnjb"
+        "text_area_zTUnjb",
+        "button_NUqHNF"
       ],
       "settings": {
         "image": "shopify://shop_images/8T8A3926-3.jpg",
@@ -135,7 +146,7 @@
         "button_LQANHL": {
           "type": "button",
           "settings": {
-            "button_text": "App Infos",
+            "button_text": "MEHR",
             "button_link": "shopify://pages/marketplace",
             "button_style_secondary": true,
             "custom_id": "",
@@ -183,11 +194,22 @@
             "custom_id": "",
             "custom_class": ""
           }
+        },
+        "button_Mr8kEz": {
+          "type": "button",
+          "settings": {
+            "button_text": "Mehr",
+            "button_link": "shopify://pages/solutions",
+            "button_style_secondary": true,
+            "custom_id": "",
+            "custom_class": ""
+          }
         }
       },
       "block_order": [
         "headline_hr8adk",
-        "text_area_y4V6MC"
+        "text_area_y4V6MC",
+        "button_Mr8kEz"
       ],
       "settings": {
         "image": "shopify://shop_images/8T8A4453-3.jpg",
@@ -275,7 +297,7 @@
       "settings": {
         "header": "Werde Teil der Beauty Revolution",
         "text_content": "<h5>Werde SWAN Beauty Insider und verpasse keine Updates.</h5>",
-        "color_scheme": "",
+        "color_scheme": "scheme-1",
         "mirror_image": "white"
       }
     },
