@@ -1,6 +1,376 @@
+{% doc %}
+  @prompt
+    I want to build a block with a video on the left side and text on the right half. The video should be Oriented for 9:16 video formats and the text on the right side should appear when the user scrolls to this section and also slightly disappear when the user is scrolling further, leaving this section. It should be possible to Upload the video directly to Shopify or through an embedded link. Furthermore we should be able to enable/deactivate Auto-Play of the video.
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-video-text-section-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    gap: 40px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .ai-video-container-{{ ai_gen_id }} {
+    flex: 0 0 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ai-video-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 9/16;
+    border-radius: {{ block.settings.video_border_radius }}px;
+    overflow: hidden;
+    background-color: #000;
+  }
+
+  .ai-video-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-video-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .ai-video-placeholder-{{ ai_gen_id }} svg {
+    width: 60%;
+    height: 60%;
+    color: #ccc;
+  }
+
+  .ai-video-empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  .ai-text-container-{{ ai_gen_id }} {
+    flex: 1;
+    padding-left: 40px;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  .ai-text-container-{{ ai_gen_id }}.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .ai-text-heading-{{ ai_gen_id }} {
+    font-size: {{ block.settings.heading_size }}px;
+    color: {{ block.settings.heading_color }};
+    margin: 0 0 20px 0;
+    font-weight: 600;
+  }
+
+  .ai-text-content-{{ ai_gen_id }} {
+    font-size: {{ block.settings.text_size }}px;
+    color: {{ block.settings.text_color }};
+    line-height: 1.6;
+  }
+
+  .ai-text-content-{{ ai_gen_id }} p {
+    margin: 0 0 16px 0;
+  }
+
+  .ai-text-content-{{ ai_gen_id }} p:last-child {
+    margin-bottom: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    .ai-video-text-section-{{ ai_gen_id }} {
+      flex-direction: {{ block.settings.mobile_layout }};
+      gap: 30px;
+      min-height: auto;
+      padding: 30px 20px;
+    }
+
+    .ai-video-container-{{ ai_gen_id }} {
+      flex: none;
+    }
+
+    .ai-video-wrapper-{{ ai_gen_id }} {
+      max-width: 300px;
+    }
+
+    .ai-text-container-{{ ai_gen_id }} {
+      padding-left: 0;
+    }
+
+    .ai-text-heading-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.heading_size }}px * 0.8);
+    }
+
+    .ai-text-content-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.text_size }}px * 0.9);
+    }
+  }
+{% endstyle %}
+
+<video-text-section-{{ ai_gen_id }}
+  class="ai-video-text-section-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-video-container-{{ ai_gen_id }}">
+    <div class="ai-video-wrapper-{{ ai_gen_id }}">
+      {% if block.settings.video_file != blank %}
+        <video
+          class="ai-video-{{ ai_gen_id }}"
+          {% if block.settings.autoplay %}autoplay{% endif %}
+          muted
+          loop
+          playsinline
+          preload="metadata"
+        >
+          <source src="{{ block.settings.video_file }}" type="video/mp4">
+        </video>
+      {% elsif block.settings.video_url != blank %}
+        {% if block.settings.video_url contains 'youtube.com' or block.settings.video_url contains 'youtu.be' %}
+          {% assign video_id = block.settings.video_url | split: '/' | last | split: '?' | first | split: '&' | first %}
+          {% if block.settings.video_url contains 'watch?v=' %}
+            {% assign video_id = block.settings.video_url | split: 'watch?v=' | last | split: '&' | first %}
+          {% endif %}
+          <iframe
+            class="ai-video-{{ ai_gen_id }}"
+            src="https://www.youtube.com/embed/{{ video_id }}?{% if block.settings.autoplay %}autoplay=1&{% endif %}mute=1&loop=1&playlist={{ video_id }}&controls=0&showinfo=0&rel=0&modestbranding=1"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen
+          ></iframe>
+        {% elsif block.settings.video_url contains 'vimeo.com' %}
+          {% assign video_id = block.settings.video_url | split: '/' | last | split: '?' | first %}
+          <iframe
+            class="ai-video-{{ ai_gen_id }}"
+            src="https://player.vimeo.com/video/{{ video_id }}?{% if block.settings.autoplay %}autoplay=1&{% endif %}muted=1&loop=1&background=1&controls=0"
+            frameborder="0"
+            allow="autoplay; fullscreen"
+            allowfullscreen
+          ></iframe>
+        {% else %}
+          <video
+            class="ai-video-{{ ai_gen_id }}"
+            {% if block.settings.autoplay %}autoplay{% endif %}
+            muted
+            loop
+            playsinline
+            preload="metadata"
+          >
+            <source src="{{ block.settings.video_url }}" type="video/mp4">
+          </video>
+        {% endif %}
+      {% else %}
+        <div class="ai-video-placeholder-{{ ai_gen_id }}">
+          {{ 'hero-apparel-1' | placeholder_svg_tag }}
+          <div class="ai-video-empty-state-{{ ai_gen_id }}">
+            Add a video file or video URL
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="ai-text-container-{{ ai_gen_id }}">
+    {% if block.settings.heading != blank %}
+      <h2 class="ai-text-heading-{{ ai_gen_id }}">{{ block.settings.heading }}</h2>
+    {% endif %}
+    {% if block.settings.text != blank %}
+      <div class="ai-text-content-{{ ai_gen_id }}">{{ block.settings.text }}</div>
+    {% endif %}
+  </div>
+</video-text-section-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class VideoTextSection{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.textContainer = null;
+        this.observer = null;
+      }
+
+      connectedCallback() {
+        this.textContainer = this.querySelector('.ai-text-container-{{ ai_gen_id }}');
+        this.setupScrollObserver();
+      }
+
+      disconnectedCallback() {
+        if (this.observer) {
+          this.observer.disconnect();
+        }
+      }
+
+      setupScrollObserver() {
+        if (!this.textContainer) return;
+
+        const options = {
+          root: null,
+          rootMargin: '-20% 0px -20% 0px',
+          threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
+        };
+
+        this.observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            const ratio = entry.intersectionRatio;
+            
+            if (ratio > 0.1) {
+              this.textContainer.classList.add('visible');
+              
+              const opacity = Math.min(1, ratio * 1.5);
+              const translateX = Math.max(0, 50 - (ratio * 50));
+              
+              this.textContainer.style.opacity = opacity;
+              this.textContainer.style.transform = `translateX(${translateX}px)`;
+            } else {
+              this.textContainer.classList.remove('visible');
+              this.textContainer.style.opacity = '0';
+              this.textContainer.style.transform = 'translateX(50px)';
+            }
+          });
+        }, options);
+
+        this.observer.observe(this);
+      }
+    }
+
+    customElements.define('video-text-section-{{ ai_gen_id }}', VideoTextSection{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Video with text",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Video"
+    },
+    {
+      "type": "video",
+      "id": "video_file",
+      "label": "Video file"
+    },
+    {
+      "type": "url",
+      "id": "video_url",
+      "label": "Video URL"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Autoplay video",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "video_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Video border radius",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Text content"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Your story begins here"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Share your brand story, highlight key features, or describe what makes your products special. This text will animate smoothly as visitors scroll through your page.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Heading size",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Text size",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#666666"
+    },
+    {
+      "type": "header",
+      "content": "Mobile layout"
+    },
+    {
+      "type": "select",
+      "id": "mobile_layout",
+      "label": "Mobile layout",
+      "options": [
+        {
+          "value": "column",
+          "label": "Video on top"
+        },
+        {
+          "value": "column-reverse",
+          "label": "Text on top"
+        }
+      ],
+      "default": "column"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Video with text"
+    }
+  ]
+}
 {% endschema %}
