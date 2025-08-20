@@ -85,10 +85,11 @@
         "ai_gen_block_b2c444b_T6VXGa": {
           "type": "ai_gen_block_b2c444b",
           "settings": {
+            "image": "shopify://shop_images/fentybeautymist.png",
             "text": "<p>Add your description text here. This content will appear below the image.</p>",
             "video_url": "",
             "show_video_controls": false,
-            "video_max_width": 300,
+            "video_max_width": 200,
             "mobile_layout": "column",
             "gap": 40,
             "mobile_gap": 30,
