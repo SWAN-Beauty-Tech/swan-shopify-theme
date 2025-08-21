@@ -13,7 +13,7 @@
       "type": "main-page",
       "disabled": true,
       "settings": {
-        "padding_top": 28,
+        "padding_top": 40,
         "padding_bottom": 28
       }
     },
@@ -100,7 +100,7 @@
             "text_content": "<p>Erfahren Sie, wie reibungslos der Onboarding-Prozess in der Swan-App abläuft und welchen personalisierten Inhalt Sie erhalten.</p>",
             "button_text": "Learn more",
             "button_link": "",
-            "section_padding": 60,
+            "section_padding": 80,
             "content_gap": 60,
             "text_padding": 20,
             "text_spacing": 20,
@@ -246,9 +246,9 @@
             "button_border_color": "#e5e5e5",
             "button_hover_background": "#f5f5f5",
             "button_hover_color": "#000000",
-            "section_padding": 40,
+            "section_padding": 60,
             "card_width": 320,
-            "card_gap": 20,
+            "card_gap": 24,
             "card_padding": 24,
             "card_border_radius": 8,
             "title_size": 32,
@@ -266,6 +266,68 @@
       ],
       "name": "Video left",
       "settings": {}
+    },
+    "collapsible_content_TkqmVL": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_bcghC6": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Frage 1",
+            "icon": "none",
+            "row_content": "<p>Platzhalter</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_bGWiMg": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Frage 2",
+            "icon": "none",
+            "row_content": "<p>Platzhalter</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_zQrkFy": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Frage 3",
+            "icon": "none",
+            "row_content": "<p>Platzhalter</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_BTU87p": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Frage 4",
+            "icon": "none",
+            "row_content": "<p>Platzhalter</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_bcghC6",
+        "collapsible_row_bGWiMg",
+        "collapsible_row_zQrkFy",
+        "collapsible_row_BTU87p"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "Häufig gestellte Fragen",
+        "heading": "Fragen & Antworten",
+        "heading_size": "h0",
+        "heading_alignment": "center",
+        "layout": "row",
+        "container_color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
+        "open_first_collapsible_row": true,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     },
     "swan_image_text_6nbE3P": {
       "type": "swan_image-text",
@@ -327,6 +389,7 @@
     "17552366850a6e1abb",
     "175564002500f2bde8",
     "blocks_R3JYbW",
+    "collapsible_content_TkqmVL",
     "swan_image_text_6nbE3P"
   ]
 }
