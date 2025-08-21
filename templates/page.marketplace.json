@@ -178,79 +178,6 @@
         "color_scheme": "",
         "mirror_image": "black"
       }
-    },
-    "multicolumn_bf3fNa": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_4q9xMj": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/8T8A4453-3.jpg",
-            "title": "<strong>Inspiration</strong>",
-            "text": "<p>Get insights into the latest beauty trends from renowned makeup artists or the community.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_ptWfzN": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/8T8A5056-3.jpg",
-            "title": "<strong>Marketplace </strong>",
-            "text": "<p>Purchase your favorite products conveniently and directly at the Mirror, without any hassle.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_ckhQ4L": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/8T8A4882-3.jpg",
-            "title": "<strong>Community</strong>",
-            "text": "<p>Let your friends and community inspire and engage with you.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_4q9xMj",
-        "column_ptWfzN",
-        "column_ckhQ4L"
-      ],
-      "name": "t:sections.multicolumn.presets.name",
-      "settings": {
-        "title": "<strong>SWAN - A beauty label</strong>",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "none",
-        "color_scheme": "scheme-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "video_DQbnxf": {
-      "type": "video",
-      "custom_css": [],
-      "name": "t:sections.video.presets.name",
-      "settings": {
-        "heading": "Video",
-        "heading_size": "h1",
-        "enable_video_looping": false,
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
@@ -259,8 +186,6 @@
     "swan_image_text_67EcKy",
     "17556416728320b2de",
     "1755642240b7fb8d61",
-    "swan_sign_up_aYagET",
-    "multicolumn_bf3fNa",
-    "video_DQbnxf"
+    "swan_sign_up_aYagET"
   ]
 }
