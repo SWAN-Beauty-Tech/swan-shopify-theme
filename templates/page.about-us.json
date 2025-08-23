@@ -199,22 +199,6 @@
           },
           "blocks": {}
         },
-        "ai_gen_block_ade36af_etDHNJ": {
-          "type": "ai_gen_block_ade36af",
-          "name": "Video with text",
-          "settings": {
-            "video_file": "shopify://files/videos/Hautanalyse_Score.mp4",
-            "video_url": "",
-            "video_border_radius": 12,
-            "heading": "Your story starts here",
-            "text": "<p>Share your brand story, highlight key features, or describe what makes your product special. This text will animate in as users scroll to this section.</p>",
-            "heading_size": 36,
-            "text_size": 16,
-            "heading_color": "#000000",
-            "text_color": "#666666"
-          },
-          "blocks": {}
-        },
         "ai_gen_block_5989830_d9d69i": {
           "type": "ai_gen_block_5989830",
           "name": "Customer reviews",
@@ -278,7 +262,6 @@
       },
       "block_order": [
         "ai_gen_block_2b816b2_JEKzmU",
-        "ai_gen_block_ade36af_etDHNJ",
         "ai_gen_block_5989830_d9d69i"
       ],
       "name": "Video left",
