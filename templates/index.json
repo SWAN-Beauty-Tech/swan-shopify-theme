@@ -34,76 +34,6 @@
         "show_text_below": true
       }
     },
-    "featured_product_Rg83zr": {
-      "type": "featured-product",
-      "blocks": {
-        "text_ngAE7X": {
-          "type": "text",
-          "settings": {
-            "text": "{{ section.settings.product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
-        "title_hiVMfe": {
-          "type": "title",
-          "settings": {
-            "heading_size": "h1"
-          }
-        },
-        "price_QkCRDG": {
-          "type": "price",
-          "settings": {}
-        },
-        "variant_picker_VNGjjz": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button",
-            "swatch_shape": "circle"
-          }
-        },
-        "quantity_selector_xkqGQa": {
-          "type": "quantity_selector",
-          "settings": {}
-        },
-        "buy_buttons_ycpnHU": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
-          }
-        },
-        "share_i9DbbF": {
-          "type": "share",
-          "settings": {
-            "share_label": "Teilen"
-          }
-        }
-      },
-      "block_order": [
-        "text_ngAE7X",
-        "title_hiVMfe",
-        "price_QkCRDG",
-        "variant_picker_VNGjjz",
-        "quantity_selector_xkqGQa",
-        "buy_buttons_ycpnHU",
-        "share_i9DbbF"
-      ],
-      "name": "t:sections.featured-product.presets.name",
-      "settings": {
-        "product": "natu-collagen-boost-volumen-lippenserum-annemarie-borlind",
-        "color_scheme": "",
-        "secondary_background": false,
-        "media_size": "medium",
-        "constrain_to_viewport": true,
-        "media_fit": "contain",
-        "media_position": "left",
-        "image_zoom": "lightbox",
-        "hide_variants": false,
-        "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "swan_rich_text_hz9x9F": {
       "type": "swan_rich-text",
       "blocks": {
@@ -377,7 +307,6 @@
   "order": [
     "main",
     "landing_image_banner_JqF7Ui",
-    "featured_product_Rg83zr",
     "swan_rich_text_hz9x9F",
     "swan_image_text_BpemXT",
     "swan_image_text_peLJeg",
