@@ -87,8 +87,8 @@
           "settings": {
             "image": "shopify://shop_images/fentybeautymist.png",
             "text": "<p>Add your description text here. This content will appear below the image.</p>",
-            "video_url": "shopify://pages/creators",
-            "show_video_controls": false,
+            "video_url": "shopify://pages/studio",
+            "show_video_controls": true,
             "video_max_width": 200,
             "mobile_layout": "column",
             "gap": 40,
