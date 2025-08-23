@@ -61,6 +61,7 @@
         "text_iG6xwi",
         "text_8naCfk"
       ],
+      "custom_css": [],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -294,6 +295,7 @@
     },
     "swan_sign_up_yYi4Dj": {
       "type": "swan_sign-up",
+      "custom_css": [],
       "settings": {
         "header": "Werde Teil der Beauty Revolution",
         "text_content": "<h5>Werde SWAN Beauty Insider und verpasse keine Updates.</h5>",
