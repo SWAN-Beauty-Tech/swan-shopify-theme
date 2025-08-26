@@ -325,20 +325,6 @@
       "name": "Video left",
       "settings": {}
     },
-    "slideshow_YEBBwM": {
-      "type": "slideshow",
-      "name": "t:sections.slideshow.presets.name",
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "medium",
-        "slider_visual": "counter",
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "image_behavior": "ambient",
-        "show_text_below": true,
-        "accessibility_info": "Slideshow zu deiner Marke"
-      }
-    },
     "collapsible_content_TkqmVL": {
       "type": "collapsible-content",
       "blocks": {
@@ -462,7 +448,6 @@
     "17552366850a6e1abb",
     "175564002500f2bde8",
     "blocks_R3JYbW",
-    "slideshow_YEBBwM",
     "collapsible_content_TkqmVL",
     "swan_image_text_6nbE3P"
   ]
