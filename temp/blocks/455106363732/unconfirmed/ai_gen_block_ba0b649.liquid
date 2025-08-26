@@ -1,6 +1,431 @@
+{% doc %}
+  @prompt
+    I want to build a block with a video on the right side and text on the left half. The video should be Oriented for 9:16 video formats and the text on the left side should appear when the user scrolls to this section and also slightly disappear when the user is scrolling further, leaving this section. I would like to have the option to include the video via a link or direct upload option.
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-video-text-section-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .ai-video-text-content-{{ ai_gen_id }} {
+    flex: 1;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  .ai-video-text-content-{{ ai_gen_id }}.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .ai-video-text-heading-{{ ai_gen_id }} {
+    font-size: {{ block.settings.heading_size }}px;
+    color: {{ block.settings.heading_color }};
+    margin: 0 0 20px 0;
+    line-height: 1.2;
+  }
+
+  .ai-video-text-description-{{ ai_gen_id }} {
+    font-size: {{ block.settings.text_size }}px;
+    color: {{ block.settings.text_color }};
+    line-height: 1.6;
+    margin: 0 0 30px 0;
+  }
+
+  .ai-video-text-button-{{ ai_gen_id }} {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: {{ block.settings.button_color }};
+    color: {{ block.settings.button_text_color }};
+    text-decoration: none;
+    border-radius: {{ block.settings.button_radius }}px;
+    font-size: {{ block.settings.button_text_size }}px;
+    transition: background-color 0.3s ease;
+  }
+
+  .ai-video-text-button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.button_hover_color }};
+  }
+
+  .ai-video-text-video-container-{{ ai_gen_id }} {
+    flex: 1;
+    max-width: 400px;
+    aspect-ratio: 9/16;
+    border-radius: {{ block.settings.video_radius }}px;
+    overflow: hidden;
+    background-color: #f4f4f4;
+    position: relative;
+  }
+
+  .ai-video-text-video-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-video-text-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+    position: relative;
+  }
+
+  .ai-video-text-placeholder-{{ ai_gen_id }} svg {
+    width: 80px;
+    height: 80px;
+    color: #999;
+    margin-bottom: 20px;
+  }
+
+  .ai-video-text-empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    .ai-video-text-section-{{ ai_gen_id }} {
+      flex-direction: column;
+      text-align: center;
+      min-height: auto;
+      padding: 40px 20px;
+    }
+
+    .ai-video-text-content-{{ ai_gen_id }} {
+      order: 2;
+      transform: translateY(50px);
+    }
+
+    .ai-video-text-content-{{ ai_gen_id }}.visible {
+      transform: translateY(0);
+    }
+
+    .ai-video-text-video-container-{{ ai_gen_id }} {
+      order: 1;
+      max-width: 300px;
+      margin-bottom: 20px;
+    }
+
+    .ai-video-text-heading-{{ ai_gen_id }} {
+      font-size: {{ block.settings.heading_size | times: 0.8 }}px;
+    }
+  }
+{% endstyle %}
+
+<video-text-section-{{ ai_gen_id }}
+  class="ai-video-text-section-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-video-text-content-{{ ai_gen_id }}">
+    {% if block.settings.heading != blank %}
+      <h2 class="ai-video-text-heading-{{ ai_gen_id }}">{{ block.settings.heading }}</h2>
+    {% endif %}
+
+    {% if block.settings.description != blank %}
+      <div class="ai-video-text-description-{{ ai_gen_id }}">{{ block.settings.description }}</div>
+    {% endif %}
+
+    {% if block.settings.button_text != blank and block.settings.button_link != blank %}
+      <a href="{{ block.settings.button_link }}" class="ai-video-text-button-{{ ai_gen_id }}">
+        {{ block.settings.button_text }}
+      </a>
+    {% endif %}
+  </div>
+
+  <div class="ai-video-text-video-container-{{ ai_gen_id }}">
+    {% if block.settings.video_file != blank %}
+      <video
+        class="ai-video-text-video-{{ ai_gen_id }}"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+      >
+        <source src="{{ block.settings.video_file }}" type="video/mp4">
+      </video>
+    {% elsif block.settings.video_url != blank %}
+      {% assign video_id = block.settings.video_url | split: '/' | last %}
+      {% if block.settings.video_url contains 'youtube.com' or block.settings.video_url contains 'youtu.be' %}
+        {% if block.settings.video_url contains 'youtu.be' %}
+          {% assign video_id = block.settings.video_url | split: '/' | last | split: '?' | first %}
+        {% elsif block.settings.video_url contains 'watch?v=' %}
+          {% assign video_id = block.settings.video_url | split: 'watch?v=' | last | split: '&' | first %}
+        {% endif %}
+        <iframe
+          class="ai-video-text-video-{{ ai_gen_id }}"
+          src="https://www.youtube.com/embed/{{ video_id }}?autoplay=1&mute=1&loop=1&playlist={{ video_id }}&controls=0&showinfo=0&rel=0&modestbranding=1"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+        ></iframe>
+      {% elsif block.settings.video_url contains 'vimeo.com' %}
+        {% assign video_id = block.settings.video_url | split: '/' | last %}
+        <iframe
+          class="ai-video-text-video-{{ ai_gen_id }}"
+          src="https://player.vimeo.com/video/{{ video_id }}?autoplay=1&muted=1&loop=1&background=1&controls=0"
+          frameborder="0"
+          allow="autoplay; fullscreen"
+          allowfullscreen
+        ></iframe>
+      {% else %}
+        <video
+          class="ai-video-text-video-{{ ai_gen_id }}"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+        >
+          <source src="{{ block.settings.video_url }}" type="video/mp4">
+        </video>
+      {% endif %}
+    {% else %}
+      <div class="ai-video-text-placeholder-{{ ai_gen_id }}">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="23 7 16 12 23 17 23 7"></polygon>
+          <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+        </svg>
+        <div class="ai-video-text-empty-state-{{ ai_gen_id }}">
+          Add a video file or video URL
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</video-text-section-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class VideoTextSection{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.content = this.querySelector('.ai-video-text-content-{{ ai_gen_id }}');
+        this.observer = null;
+      }
+
+      connectedCallback() {
+        this.setupIntersectionObserver();
+        this.setupScrollEffect();
+      }
+
+      disconnectedCallback() {
+        if (this.observer) {
+          this.observer.disconnect();
+        }
+        window.removeEventListener('scroll', this.handleScroll);
+      }
+
+      setupIntersectionObserver() {
+        this.observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              this.content.classList.add('visible');
+            }
+          });
+        }, {
+          threshold: 0.3,
+          rootMargin: '0px 0px -100px 0px'
+        });
+
+        this.observer.observe(this);
+      }
+
+      setupScrollEffect() {
+        this.handleScroll = this.handleScroll.bind(this);
+        window.addEventListener('scroll', this.handleScroll);
+      }
+
+      handleScroll() {
+        const rect = this.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        
+        if (rect.top < windowHeight && rect.bottom > 0) {
+          let opacity = 1;
+          
+          if (rect.top < 0) {
+            const fadeStart = -rect.height * 0.3;
+            const fadeEnd = -rect.height * 0.8;
+            
+            if (rect.top < fadeStart) {
+              const fadeProgress = Math.abs(rect.top - fadeStart) / Math.abs(fadeEnd - fadeStart);
+              opacity = Math.max(0.3, 1 - fadeProgress);
+            }
+          }
+          
+          if (rect.bottom < windowHeight * 0.7) {
+            const fadeProgress = (windowHeight * 0.7 - rect.bottom) / (windowHeight * 0.3);
+            opacity = Math.max(0.3, 1 - fadeProgress);
+          }
+          
+          this.content.style.opacity = opacity;
+        }
+      }
+    }
+
+    customElements.define('video-text-section-{{ ai_gen_id }}', VideoTextSection{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Video with text",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Discover our story"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Experience the perfect blend of innovation and tradition. Our carefully crafted products tell a story of quality and dedication.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Learn more"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "header",
+      "content": "Video"
+    },
+    {
+      "type": "video",
+      "id": "video_file",
+      "label": "Video file"
+    },
+    {
+      "type": "text",
+      "id": "video_url",
+      "label": "Video URL",
+      "info": "YouTube, Vimeo, or direct video file URL. Video file takes priority if both are provided."
+    },
+    {
+      "type": "range",
+      "id": "video_radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Video border radius",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Text style"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Heading size",
+      "default": 36
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Text size",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#666666"
+    },
+    {
+      "type": "header",
+      "content": "Button style"
+    },
+    {
+      "type": "range",
+      "id": "button_text_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Button text size",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_color",
+      "label": "Button hover color",
+      "default": "#333333"
+    },
+    {
+      "type": "range",
+      "id": "button_radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Button border radius",
+      "default": 8
+    }
+  ],
+  "presets": [
+    {
+      "name": "Video with text"
+    }
+  ],
+  "tag": null
+}
 {% endschema %}
