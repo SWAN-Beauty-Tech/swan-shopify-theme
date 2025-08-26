@@ -139,7 +139,7 @@
           "type": "ai_gen_block_ba0b649",
           "name": "Video with text",
           "settings": {
-            "heading": "Marketplace",
+            "heading": "Routinen-Planer",
             "description": "<p>Experience the perfect blend of innovation and tradition. Our carefully crafted products tell a story of quality and dedication.</p>",
             "button_text": "Learn more",
             "button_link": "",
@@ -164,7 +164,7 @@
             "video": "",
             "video_max_width": 350,
             "video_border_radius": 16,
-            "heading": "Routinen-Planer",
+            "heading": "Marketplace",
             "text_content": "<p>Share your story with engaging content that captures attention and drives action.</p>",
             "button_text": "Learn more",
             "button_link": "",
