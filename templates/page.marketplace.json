@@ -82,6 +82,28 @@
     "1755642240b7fb8d61": {
       "type": "_blocks",
       "blocks": {
+        "ai_gen_block_ba0b649_FK9CYd": {
+          "type": "ai_gen_block_ba0b649",
+          "name": "Video with text",
+          "settings": {
+            "heading": "Discover our story",
+            "description": "<p>Experience the perfect blend of innovation and tradition. Our carefully crafted products tell a story of quality and dedication.</p>",
+            "button_text": "Learn more",
+            "button_link": "",
+            "video_url": "",
+            "video_radius": 12,
+            "heading_size": 36,
+            "heading_color": "#000000",
+            "text_size": 16,
+            "text_color": "#666666",
+            "button_text_size": 16,
+            "button_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_hover_color": "#333333",
+            "button_radius": 8
+          },
+          "blocks": {}
+        },
         "ai_gen_block_b2c444b_T6VXGa": {
           "type": "ai_gen_block_b2c444b",
           "settings": {
@@ -165,19 +187,11 @@
         }
       },
       "block_order": [
+        "ai_gen_block_ba0b649_FK9CYd",
         "ai_gen_block_b2c444b_T6VXGa",
         "ai_gen_block_5989830_6AMH3J"
       ],
       "settings": {}
-    },
-    "swan_sign_up_aYagET": {
-      "type": "swan_sign-up",
-      "settings": {
-        "header": "Keep up to date",
-        "text_content": "<h3>Let’s explore possibilities. <br/>Let’s SWAN.</h3>",
-        "color_scheme": "",
-        "mirror_image": "black"
-      }
     },
     "collapsible_content_dpkVMU": {
       "type": "collapsible-content",
@@ -239,6 +253,15 @@
         "desktop_layout": "image_second",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "swan_sign_up_aYagET": {
+      "type": "swan_sign-up",
+      "settings": {
+        "header": "Keep up to date",
+        "text_content": "<h3>Let’s explore possibilities. <br/>Let’s SWAN.</h3>",
+        "color_scheme": "",
+        "mirror_image": "black"
       }
     }
   },
