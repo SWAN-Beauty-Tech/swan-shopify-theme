@@ -93,7 +93,7 @@
         "ai_gen_block_2b816b2_6DnQ96": {
           "type": "ai_gen_block_2b816b2",
           "settings": {
-            "video": "https://cdn.shopify.com/videos/c/o/v/1b7ce871d5084d04860572446f40f528.mp4",
+            "video": "",
             "video_max_width": 350,
             "video_border_radius": 16,
             "heading": "Onboarding",
@@ -267,6 +267,60 @@
       "name": "Video left",
       "settings": {}
     },
+    "slideshow_YEBBwM": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_zxhtJw": {
+          "type": "slide",
+          "settings": {
+            "image_overlay_opacity": 0,
+            "heading": "Slideshow",
+            "heading_size": "h1",
+            "subheading": "Erzähle deine Geschichte mit Fotos",
+            "button_label": "Schaltflächenbeschriftung",
+            "link": "",
+            "button_style_secondary": false,
+            "show_text_box": true,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": ""
+          }
+        },
+        "slide_GeMbHC": {
+          "type": "slide",
+          "settings": {
+            "image_overlay_opacity": 0,
+            "heading": "Slideshow",
+            "heading_size": "h1",
+            "subheading": "Erzähle deine Geschichte mit Fotos",
+            "button_label": "Schaltflächenbeschriftung",
+            "link": "",
+            "button_style_secondary": false,
+            "show_text_box": true,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_zxhtJw",
+        "slide_GeMbHC"
+      ],
+      "name": "t:sections.slideshow.presets.name",
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "ambient",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow zu deiner Marke"
+      }
+    },
     "collapsible_content_TkqmVL": {
       "type": "collapsible-content",
       "blocks": {
@@ -275,7 +329,7 @@
           "settings": {
             "heading": "Frage 1",
             "icon": "none",
-            "row_content": "<p>Platzhalter</p>",
+            "row_content": "<p>          Platzhalter</p>",
             "page": ""
           }
         },
@@ -389,6 +443,7 @@
     "17552366850a6e1abb",
     "175564002500f2bde8",
     "blocks_R3JYbW",
+    "slideshow_YEBBwM",
     "collapsible_content_TkqmVL",
     "swan_image_text_6nbE3P"
   ]
