@@ -159,11 +159,11 @@
           "type": "ai_gen_block_ba0b649",
           "name": "Video with text",
           "settings": {
-            "heading": "Discover our story",
+            "heading": "Hautanalyse Aufbau",
             "description": "<p>Experience the perfect blend of innovation and tradition. Our carefully crafted products tell a story of quality and dedication.</p>",
             "button_text": "Learn more",
             "button_link": "",
-            "video_url": "",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/9e5453b47c4f46aaa5fd6546913e1620.mp4",
             "video_radius": 12,
             "heading_size": 36,
             "heading_color": "#000000",
