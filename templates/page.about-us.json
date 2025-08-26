@@ -155,34 +155,25 @@
           },
           "blocks": {}
         },
-        "ai_gen_block_2b816b2_k7fXFb": {
-          "type": "ai_gen_block_2b816b2",
+        "ai_gen_block_ba0b649_a4WnpP": {
+          "type": "ai_gen_block_ba0b649",
           "name": "Video with text",
           "settings": {
-            "video": "https://cdn.shopify.com/videos/c/o/v/9e5453b47c4f46aaa5fd6546913e1620.mp4",
-            "video_max_width": 350,
-            "video_border_radius": 16,
-            "heading": "Hautanalyse Aufbau",
-            "text_content": "<p>Share your story with engaging content that captures attention and drives action.</p>",
+            "heading": "Discover our story",
+            "description": "<p>Experience the perfect blend of innovation and tradition. Our carefully crafted products tell a story of quality and dedication.</p>",
             "button_text": "Learn more",
             "button_link": "",
-            "section_padding": 60,
-            "content_gap": 60,
-            "text_padding": 20,
-            "text_spacing": 20,
-            "heading_size": 48,
-            "heading_weight": "700",
-            "text_size": 16,
-            "button_text_size": 16,
-            "background_color": "#ffffff",
+            "video_url": "",
+            "video_radius": 12,
+            "heading_size": 36,
             "heading_color": "#000000",
+            "text_size": 16,
             "text_color": "#666666",
+            "button_text_size": 16,
             "button_color": "#000000",
-            "button_hover_color": "#333333",
             "button_text_color": "#ffffff",
-            "button_padding_vertical": 14,
-            "button_padding_horizontal": 28,
-            "button_border_radius": 8
+            "button_hover_color": "#333333",
+            "button_radius": 8
           },
           "blocks": {}
         },
@@ -249,7 +240,7 @@
       },
       "block_order": [
         "ai_gen_block_2b816b2_JEKzmU",
-        "ai_gen_block_2b816b2_k7fXFb",
+        "ai_gen_block_ba0b649_a4WnpP",
         "ai_gen_block_5989830_d9d69i"
       ],
       "name": "Video left",
