@@ -160,6 +160,34 @@
     "175564002500f2bde8": {
       "type": "_blocks",
       "blocks": {
+        "ai_gen_block_3dbb3e6_kTR3hP": {
+          "type": "ai_gen_block_3dbb3e6",
+          "name": "Text with video",
+          "settings": {
+            "heading": "Watch Our Story",
+            "description": "<p>Discover the passion and craftsmanship behind our brand through this immersive video experience.</p>",
+            "button_text": "Learn More",
+            "button_link": "",
+            "video": "",
+            "video_max_width": 400,
+            "video_border_radius": 16,
+            "gap": 60,
+            "section_padding": 40,
+            "mobile_layout": "column",
+            "heading_size": 36,
+            "text_size": 16,
+            "text_spacing": 20,
+            "heading_color": "#000000",
+            "text_color": "#666666",
+            "button_text_size": 16,
+            "button_padding": 12,
+            "button_border_radius": 8,
+            "button_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_hover_color": "#333333"
+          },
+          "blocks": {}
+        },
         "ai_gen_block_7818203_j8YNJ3": {
           "type": "ai_gen_block_7818203",
           "settings": {
@@ -190,6 +218,7 @@
         }
       },
       "block_order": [
+        "ai_gen_block_3dbb3e6_kTR3hP",
         "ai_gen_block_7818203_j8YNJ3"
       ],
       "name": "Video right",
@@ -298,46 +327,6 @@
     },
     "slideshow_YEBBwM": {
       "type": "slideshow",
-      "blocks": {
-        "slide_zxhtJw": {
-          "type": "slide",
-          "settings": {
-            "image_overlay_opacity": 0,
-            "heading": "Slideshow",
-            "heading_size": "h1",
-            "subheading": "Erzähle deine Geschichte mit Fotos",
-            "button_label": "Schaltflächenbeschriftung",
-            "link": "",
-            "button_style_secondary": false,
-            "show_text_box": true,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "text_alignment_mobile": "center",
-            "color_scheme": ""
-          }
-        },
-        "slide_GeMbHC": {
-          "type": "slide",
-          "settings": {
-            "image_overlay_opacity": 0,
-            "heading": "Slideshow",
-            "heading_size": "h1",
-            "subheading": "Erzähle deine Geschichte mit Fotos",
-            "button_label": "Schaltflächenbeschriftung",
-            "link": "",
-            "button_style_secondary": false,
-            "show_text_box": true,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "text_alignment_mobile": "center",
-            "color_scheme": ""
-          }
-        }
-      },
-      "block_order": [
-        "slide_zxhtJw",
-        "slide_GeMbHC"
-      ],
       "name": "t:sections.slideshow.presets.name",
       "settings": {
         "layout": "full_bleed",
