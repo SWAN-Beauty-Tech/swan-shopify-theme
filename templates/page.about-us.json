@@ -93,7 +93,7 @@
         "ai_gen_block_ba0b649_EjnKUf": {
           "type": "ai_gen_block_ba0b649",
           "settings": {
-            "heading": "Discover our story",
+            "heading": "Tutorials",
             "description": "<p>Experience the perfect blend of innovation and tradition. Our carefully crafted products tell a story of quality and dedication.</p>",
             "button_text": "Learn more",
             "button_link": "",
@@ -126,7 +126,7 @@
             "video": "",
             "video_max_width": 350,
             "video_border_radius": 16,
-            "heading": "Onboarding",
+            "heading": "Routinen-Planer",
             "text_content": "<p>Erfahren Sie, wie reibungslos der Onboarding-Prozess in der Swan-App abläuft und welchen personalisierten Inhalt Sie erhalten.</p>",
             "button_text": "Learn more",
             "button_link": "",
@@ -163,11 +163,10 @@
         "ai_gen_block_7818203_j8YNJ3": {
           "type": "ai_gen_block_7818203",
           "settings": {
-            "heading": "Discover our story",
+            "heading": "Hautanalyse Ablauf",
             "description": "<p>Experience our brand through this immersive video content that showcases our values and commitment to excellence.</p>",
             "button_text": "Learn more",
             "button_link": "",
-            "video": "shopify://files/videos/Routinen-Planer.mp4",
             "video_max_width": 350,
             "video_max_width_mobile": 250,
             "video_border_radius": 12,
