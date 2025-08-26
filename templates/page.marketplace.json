@@ -108,7 +108,7 @@
           "type": "ai_gen_block_2b816b2",
           "name": "Video with text",
           "settings": {
-            "video": "",
+            "video": "https://cdn.shopify.com/videos/c/o/v/414d24a9400143c4a39106e7594b3538.mp4",
             "video_max_width": 350,
             "video_border_radius": 16,
             "heading": "Onboarding 2",
@@ -143,7 +143,7 @@
             "description": "<p>Experience the perfect blend of innovation and tradition. Our carefully crafted products tell a story of quality and dedication.</p>",
             "button_text": "Learn more",
             "button_link": "",
-            "video_url": "",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/00110fabb530489eb37d199b00512a80.mp4",
             "video_radius": 12,
             "heading_size": 36,
             "heading_color": "#000000",
