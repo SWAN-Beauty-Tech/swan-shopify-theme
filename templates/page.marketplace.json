@@ -161,7 +161,7 @@
           "type": "ai_gen_block_2b816b2",
           "name": "Video with text",
           "settings": {
-            "video": "",
+            "video": "https://cdn.shopify.com/videos/c/o/v/b0b3403d42314f1bbc7fe1b415880bcc.mp4",
             "video_max_width": 350,
             "video_border_radius": 16,
             "heading": "Marketplace",
@@ -185,27 +185,6 @@
             "button_padding_vertical": 14,
             "button_padding_horizontal": 28,
             "button_border_radius": 8
-          },
-          "blocks": {}
-        },
-        "ai_gen_block_b2c444b_T6VXGa": {
-          "type": "ai_gen_block_b2c444b",
-          "settings": {
-            "image": "shopify://shop_images/fentybeautymist.png",
-            "text": "<p>Add your description text here. This content will appear below the image.</p>",
-            "video_url": "",
-            "show_video_controls": false,
-            "video_max_width": 200,
-            "mobile_layout": "column",
-            "gap": 40,
-            "mobile_gap": 30,
-            "text_gap": 20,
-            "padding": 40,
-            "background_color": "#ffffff",
-            "text_color": "#000000",
-            "text_size": 16,
-            "image_border_radius": 8,
-            "video_border_radius": 12
           },
           "blocks": {}
         },
@@ -275,7 +254,6 @@
         "ai_gen_block_2b816b2_HJrUdG",
         "ai_gen_block_ba0b649_xwmYyC",
         "ai_gen_block_2b816b2_DeteKz",
-        "ai_gen_block_b2c444b_T6VXGa",
         "ai_gen_block_5989830_6AMH3J"
       ],
       "settings": {}
