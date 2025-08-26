@@ -87,6 +87,36 @@
         "color_scheme": "scheme-3"
       }
     },
+    "1756214345b5c620e8": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_ba0b649_EjnKUf": {
+          "type": "ai_gen_block_ba0b649",
+          "settings": {
+            "heading": "Discover our story",
+            "description": "<p>Experience the perfect blend of innovation and tradition. Our carefully crafted products tell a story of quality and dedication.</p>",
+            "button_text": "Learn more",
+            "button_link": "",
+            "video_url": "http://gofile.me/70nAS/Tnb1cMHOw",
+            "video_radius": 12,
+            "heading_size": 36,
+            "heading_color": "#000000",
+            "text_size": 16,
+            "text_color": "#666666",
+            "button_text_size": 16,
+            "button_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_hover_color": "#333333",
+            "button_radius": 8
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_ba0b649_EjnKUf"
+      ],
+      "settings": {}
+    },
     "17552366850a6e1abb": {
       "type": "_blocks",
       "blocks": {
@@ -440,6 +470,7 @@
     "main",
     "swan_rich_text_FK6WPi",
     "swan_image_text_8yYbnC",
+    "1756214345b5c620e8",
     "17552366850a6e1abb",
     "175564002500f2bde8",
     "blocks_R3JYbW",
