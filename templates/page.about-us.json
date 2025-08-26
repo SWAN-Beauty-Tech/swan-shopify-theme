@@ -157,73 +157,6 @@
       "name": "Video left",
       "settings": {}
     },
-    "175564002500f2bde8": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_3dbb3e6_kTR3hP": {
-          "type": "ai_gen_block_3dbb3e6",
-          "name": "Text with video",
-          "settings": {
-            "heading": "Watch Our Story",
-            "description": "<p>Discover the passion and craftsmanship behind our brand through this immersive video experience.</p>",
-            "button_text": "Learn More",
-            "button_link": "",
-            "video": "",
-            "video_max_width": 400,
-            "video_border_radius": 16,
-            "gap": 60,
-            "section_padding": 40,
-            "mobile_layout": "column",
-            "heading_size": 36,
-            "text_size": 16,
-            "text_spacing": 20,
-            "heading_color": "#000000",
-            "text_color": "#666666",
-            "button_text_size": 16,
-            "button_padding": 12,
-            "button_border_radius": 8,
-            "button_color": "#000000",
-            "button_text_color": "#ffffff",
-            "button_hover_color": "#333333"
-          },
-          "blocks": {}
-        },
-        "ai_gen_block_7818203_j8YNJ3": {
-          "type": "ai_gen_block_7818203",
-          "settings": {
-            "heading": "Hautanalyse Ablauf",
-            "description": "<p>Experience our brand through this immersive video content that showcases our values and commitment to excellence.</p>",
-            "button_text": "Learn more",
-            "button_link": "",
-            "video_max_width": 350,
-            "video_max_width_mobile": 250,
-            "video_border_radius": 12,
-            "content_gap": 20,
-            "mobile_layout": "column",
-            "mobile_text_alignment": "left",
-            "background_color": "#ffffff",
-            "text_color": "#000000",
-            "button_color": "#000000",
-            "button_text_color": "#ffffff",
-            "button_hover_color": "#333333",
-            "heading_size": 36,
-            "text_size": 16,
-            "text_spacing": 20,
-            "button_text_size": 16,
-            "button_padding_vertical": 12,
-            "button_padding_horizontal": 24,
-            "button_border_radius": 6
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_3dbb3e6_kTR3hP",
-        "ai_gen_block_7818203_j8YNJ3"
-      ],
-      "name": "Video right",
-      "settings": {}
-    },
     "blocks_R3JYbW": {
       "type": "_blocks",
       "blocks": {
@@ -446,7 +379,6 @@
     "swan_image_text_8yYbnC",
     "1756214345b5c620e8",
     "17552366850a6e1abb",
-    "175564002500f2bde8",
     "blocks_R3JYbW",
     "collapsible_content_TkqmVL",
     "swan_image_text_6nbE3P"
