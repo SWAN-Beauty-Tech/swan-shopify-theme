@@ -185,36 +185,36 @@
         "collapsible_row_7pX9aB": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Einklappbare Reihe",
+            "heading": "Frage",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p>Antwort</p>",
             "page": ""
           }
         },
         "collapsible_row_BMnUrK": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Einklappbare Reihe",
+            "heading": "Frage",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p>Antwort</p>",
             "page": ""
           }
         },
         "collapsible_row_YhJe6R": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Einklappbare Reihe",
+            "heading": "Frage",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p>Antwort</p>",
             "page": ""
           }
         },
         "collapsible_row_Gqdq9Q": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Einklappbare Reihe",
+            "heading": "Frage",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p>Antwort</p>",
             "page": ""
           }
         }
