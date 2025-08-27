@@ -320,11 +320,29 @@
         "padding_bottom": 36
       }
     },
+    "featured_blog_3YTjpM": {
+      "type": "featured-blog",
+      "name": "t:sections.featured-blog.presets.name",
+      "settings": {
+        "blog": "",
+        "post_limit": 3,
+        "heading": "Blog-Beiträge",
+        "heading_size": "h1",
+        "columns_desktop": 3,
+        "show_view_all": true,
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "swan_sign_up_aYagET": {
       "type": "swan_sign-up",
       "settings": {
-        "header": "Keep up to date",
-        "text_content": "<h3>Let’s explore possibilities. <br/>Let’s SWAN.</h3>",
+        "header": "The future of beauty is now",
+        "text_content": "<h5>Werde SWAN Beauty Insider und verpasse keine Updates.</h5>",
         "color_scheme": "",
         "mirror_image": "black"
       }
@@ -337,6 +355,7 @@
     "17556416728320b2de",
     "1755642240b7fb8d61",
     "collapsible_content_dpkVMU",
+    "featured_blog_3YTjpM",
     "swan_sign_up_aYagET"
   ]
 }
