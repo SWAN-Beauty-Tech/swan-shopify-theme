@@ -80,7 +80,7 @@
         "image_inset": "default",
         "mirror_swap": true,
         "image_2": "shopify://shop_images/Subject_2.png",
-        "text_alignment": "flex-end",
+        "text_alignment": "center",
         "sticky_text": true,
         "custom_id": "",
         "custom_class": "",
