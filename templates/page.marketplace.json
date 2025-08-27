@@ -109,7 +109,7 @@
           "name": "Video with text",
           "settings": {
             "video": "https://cdn.shopify.com/videos/c/o/v/414d24a9400143c4a39106e7594b3538.mp4",
-            "video_max_width": 350,
+            "video_max_width": 400,
             "video_border_radius": 16,
             "heading": "Onboarding 2",
             "text_content": "<p>Share your story with engaging content that captures attention and drives action.</p>",
@@ -162,7 +162,7 @@
           "name": "Video with text",
           "settings": {
             "video": "https://cdn.shopify.com/videos/c/o/v/b0b3403d42314f1bbc7fe1b415880bcc.mp4",
-            "video_max_width": 350,
+            "video_max_width": 400,
             "video_border_radius": 16,
             "heading": "Marketplace",
             "text_content": "<p>Share your story with engaging content that captures attention and drives action.</p>",
