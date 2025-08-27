@@ -182,7 +182,7 @@
           "name": "Video with text",
           "settings": {
             "video": "https://cdn.shopify.com/videos/c/o/v/59976f6c71bb4078b3ba96b4f34f1385.mp4",
-            "video_max_width": 350,
+            "video_max_width": 400,
             "video_border_radius": 16,
             "heading": "Hautanalyse Score",
             "text_content": "<p>Share your story with engaging content that captures attention and drives action.</p>",
