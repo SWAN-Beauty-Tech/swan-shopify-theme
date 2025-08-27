@@ -197,7 +197,7 @@
             "review_1_name": "ugiguib",
             "review_1_stars": 5,
             "review_1_comment": "So ne tolle App. Viele verschiedene Tipps und Tricks von \"normalen\" Alltagsmenschen bis hin zu Profis! Liebe diese Mischung! So mega sympathisch. Freue mich so auf alles Weitere, was es zu entdecken geben wird!!",
-            "review_2_name": "Freimünzen",
+            "review_2_name": "Freimünze",
             "review_2_stars": 4,
             "review_2_comment": "Die SWAN App hat so wertvolle Videos! Bin mir sicher, da werden noch richtig coole Features kommen!",
             "review_3_name": "butjehh",
@@ -242,7 +242,7 @@
             "card_border_radius": 8,
             "title_size": 40,
             "subtitle_size": 17,
-            "name_size": 16,
+            "name_size": 14,
             "comment_size": 14,
             "star_size": 16
           },
