@@ -9,6 +9,28 @@
  */
 {
   "sections": {
+    "17563728463cb4fe3b": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_3655cfc_UCfrDm": {
+          "type": "ai_gen_block_3655cfc",
+          "settings": {
+            "logo_size": 120,
+            "logo_spacing": 60,
+            "section_padding": 40,
+            "animation_speed": 8,
+            "background_color": "#dca1a1",
+            "logo_opacity": 70,
+            "grayscale_amount": 100
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_3655cfc_UCfrDm"
+      ],
+      "settings": {}
+    },
     "main": {
       "type": "main-page",
       "disabled": true,
@@ -305,6 +327,7 @@
     }
   },
   "order": [
+    "17563728463cb4fe3b",
     "main",
     "landing_image_banner_JqF7Ui",
     "swan_rich_text_hz9x9F",
