@@ -50,8 +50,8 @@
       "name": "t:sections.video.presets.name",
       "settings": {
         "heading": "",
-        "heading_size": "h1",
-        "enable_video_looping": false,
+        "heading_size": "h2",
+        "enable_video_looping": true,
         "video": "shopify://files/videos/3 Mirror Mood Leni Full Facial.mov",
         "video_url": "",
         "description": "",
@@ -171,6 +171,22 @@
         "image_zoom": "lightbox",
         "hide_variants": true,
         "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "video_LEqXnJ": {
+      "type": "video",
+      "name": "t:sections.video.presets.name",
+      "settings": {
+        "heading": "",
+        "heading_size": "h2",
+        "enable_video_looping": true,
+        "video": "shopify://files/videos/3 Mirror Mood Bathroom - 3 (Favorit graded and looped).mov",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -510,6 +526,7 @@
     "video_nVB6z7",
     "swan_image_text_8yYbnC",
     "featured_product_imLJVN",
+    "video_LEqXnJ",
     "1756214345b5c620e8",
     "17552366850a6e1abb",
     "blocks_R3JYbW",
