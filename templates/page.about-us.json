@@ -229,6 +229,29 @@
     "blocks_R3JYbW": {
       "type": "_blocks",
       "blocks": {
+        "ai_gen_block_3655cfc_FM8peT": {
+          "type": "ai_gen_block_3655cfc",
+          "name": "Brand carousel",
+          "settings": {
+            "logo_size": 120,
+            "logo_spacing": 60,
+            "section_padding": 40,
+            "animation_speed": 3,
+            "background_color": "#ffffff",
+            "logo_opacity": 70,
+            "grayscale_amount": 100,
+            "brand_logo_1": "shopify://shop_images/1-logo-ug-schwarz-2.png",
+            "brand_logo_2": "shopify://shop_images/Logo_Ylumi_gold.webp",
+            "brand_logo_3": "shopify://shop_images/subbrand_50537_default.webp",
+            "brand_logo_4": "shopify://shop_images/fleeky-logo.png",
+            "brand_logo_5": "shopify://shop_images/559702-logo-1715779880.png",
+            "brand_logo_6": "shopify://shop_images/Design_ohne_Titel_43.webp",
+            "brand_logo_7": "shopify://shop_images/IVY001_Logo_rot_1200x1200_bbee04b2-af2e-4491-94ee-01c4a6327f23.webp",
+            "brand_logo_8": "shopify://shop_images/d417c127-3d60-4531-bbba-d86c19d12b48.__CR0_0_600_180_PT0_SX600_V1.jpg",
+            "brand_logo_9": "shopify://shop_images/597720-logo-1737030702.png"
+          },
+          "blocks": {}
+        },
         "ai_gen_block_2b816b2_JEKzmU": {
           "type": "ai_gen_block_2b816b2",
           "settings": {
@@ -393,38 +416,15 @@
             "star_size": 16
           },
           "blocks": {}
-        },
-        "ai_gen_block_3655cfc_FM8peT": {
-          "type": "ai_gen_block_3655cfc",
-          "name": "Brand carousel",
-          "settings": {
-            "logo_size": 120,
-            "logo_spacing": 60,
-            "section_padding": 40,
-            "animation_speed": 3,
-            "background_color": "#ffffff",
-            "logo_opacity": 70,
-            "grayscale_amount": 100,
-            "brand_logo_1": "shopify://shop_images/1-logo-ug-schwarz-2.png",
-            "brand_logo_2": "shopify://shop_images/Logo_Ylumi_gold.webp",
-            "brand_logo_3": "shopify://shop_images/subbrand_50537_default.webp",
-            "brand_logo_4": "shopify://shop_images/fleeky-logo.png",
-            "brand_logo_5": "shopify://shop_images/559702-logo-1715779880.png",
-            "brand_logo_6": "shopify://shop_images/Design_ohne_Titel_43.webp",
-            "brand_logo_7": "shopify://shop_images/IVY001_Logo_rot_1200x1200_bbee04b2-af2e-4491-94ee-01c4a6327f23.webp",
-            "brand_logo_8": "shopify://shop_images/d417c127-3d60-4531-bbba-d86c19d12b48.__CR0_0_600_180_PT0_SX600_V1.jpg",
-            "brand_logo_9": "shopify://shop_images/597720-logo-1737030702.png"
-          },
-          "blocks": {}
         }
       },
       "block_order": [
+        "ai_gen_block_3655cfc_FM8peT",
         "ai_gen_block_2b816b2_JEKzmU",
         "ai_gen_block_ba0b649_a4WnpP",
         "ai_gen_block_2b816b2_hc8MHd",
         "ai_gen_block_ba0b649_8Wchfg",
-        "ai_gen_block_5989830_d9d69i",
-        "ai_gen_block_3655cfc_FM8peT"
+        "ai_gen_block_5989830_d9d69i"
       ],
       "name": "Video left",
       "settings": {}
