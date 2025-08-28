@@ -73,6 +73,32 @@
     "17563728463cb4fe3b": {
       "type": "_blocks",
       "blocks": {
+        "ai_gen_block_7c6c3e1_DyfD7j": {
+          "type": "ai_gen_block_7c6c3e1",
+          "settings": {
+            "title": "About Our Story",
+            "subtitle": "Discover the passion and craftsmanship behind our brand",
+            "button_text": "About us",
+            "button_link": "",
+            "background_mode": "color",
+            "background_color": "#dca1a1",
+            "background_parallax_intensity": 0.4,
+            "image_1_width": 25,
+            "image_1_parallax_intensity": 0.8,
+            "image_2_width": 20,
+            "image_2_parallax_intensity": 1.1,
+            "padding_top": 10,
+            "padding_bottom": 10,
+            "text_color": "#ffffff",
+            "title_size": 48,
+            "subtitle_size": 18,
+            "button_color": "#ffffff",
+            "button_text_color": "#000000",
+            "button_hover_color": "#f0f0f0",
+            "button_radius": 4
+          },
+          "blocks": {}
+        },
         "ai_gen_block_3655cfc_UCfrDm": {
           "type": "ai_gen_block_3655cfc",
           "settings": {
@@ -94,6 +120,7 @@
         }
       },
       "block_order": [
+        "ai_gen_block_7c6c3e1_DyfD7j",
         "ai_gen_block_3655cfc_UCfrDm"
       ],
       "settings": {}
