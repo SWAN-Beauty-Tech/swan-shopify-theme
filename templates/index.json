@@ -52,7 +52,7 @@
         "text_8naCfk": {
           "type": "text",
           "settings": {
-            "text": "<h5>Die Plattform für deine Beauty-Revolution</h5><p>Deine Plattform für alles, was Beauty neu definiert.<br/>Mit der <strong>SWAN App </strong>entdeckst du Trends, Tutorials & Shopping.<br/>Der <strong>SWAN Mirror </strong>bringt Hautanalysen & Content-Creation direkt zu dir nach Hause – dein Smart-Mirror für das nächste Level.<br/>Community, Beauty-Education und Marktplatz in einem: Finde neue Favoriten, shoppe direkt aus Videos und erlebe Beauty in einer neuen Dimension.</p><p><strong>The Future of Beauty is now. See yourself.</strong></p>"
+            "text": "<h5>Die Plattform für deine Beauty-Revolution</h5><p>Deine Plattform für alles, was Beauty neu definiert.<br/>Mit der <strong>SWAN App </strong>entdeckst du Trends, Tutorials & Shopping.<br/>Der <strong>SWAN Mirror </strong>bringt Hautanalysen & Content-Creation direkt zu dir nach Hause – dein Smart-Mirror für das nächste Level.<br/>Community, Beauty-Education und Marktplatz in einem: Finde neue Favoriten, shoppe direkt aus Videos und erlebe Beauty in einer neuen Dimension.</p><p>SWAN verbindet App, Smart-Mirror und Community: Beauty-Tutorials, KI-gestützte Hautanalyse und Shopping direkt aus Videos. Personalisierte Empfehlungen für deine beste Routine.</p><p><strong>The Future of Beauty is now. See yourself.</strong></p>"
           }
         }
       },
@@ -69,63 +69,6 @@
         "custom_class": "",
         "color_scheme": ""
       }
-    },
-    "17563728463cb4fe3b": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_7c6c3e1_DyfD7j": {
-          "type": "ai_gen_block_7c6c3e1",
-          "settings": {
-            "title": "About Our Story",
-            "subtitle": "Discover the passion and craftsmanship behind our brand",
-            "button_text": "About us",
-            "button_link": "",
-            "background_mode": "image",
-            "background_color": "#334fb4",
-            "background_parallax_intensity": 0.4,
-            "foreground_image_1": "shopify://shop_images/amber_suede.png",
-            "image_1_width": 25,
-            "image_1_parallax_intensity": 0.8,
-            "foreground_image_2": "shopify://shop_images/25.png",
-            "image_2_width": 20,
-            "image_2_parallax_intensity": 1.1,
-            "padding_top": 10,
-            "padding_bottom": 10,
-            "text_color": "#121212",
-            "title_size": 48,
-            "subtitle_size": 18,
-            "button_color": "#dca1a1",
-            "button_text_color": "#000000",
-            "button_hover_color": "#414047",
-            "button_radius": 4
-          },
-          "blocks": {}
-        },
-        "ai_gen_block_3655cfc_UCfrDm": {
-          "type": "ai_gen_block_3655cfc",
-          "settings": {
-            "logo_size": 180,
-            "logo_spacing": 30,
-            "section_padding": 70,
-            "animation_speed": 3,
-            "background_color": "#ffffff",
-            "logo_opacity": 50,
-            "grayscale_amount": 30,
-            "brand_logo_1": "shopify://shop_images/mocha_dde97c91-db58-453e-a215-1c8687c84f6b.png",
-            "brand_logo_2": "shopify://shop_images/ebony.png",
-            "brand_logo_3": "shopify://shop_images/25.png",
-            "brand_logo_4": "shopify://shop_images/model-with-leather-jacket-over-shoulders.jpg",
-            "brand_logo_5": "shopify://shop_images/mediumhoney.png",
-            "brand_logo_6": "shopify://shop_images/apple_crisp_bc7e2811-cabf-4869-b9f0-267445bf9241.png"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_7c6c3e1_DyfD7j",
-        "ai_gen_block_3655cfc_UCfrDm"
-      ],
-      "settings": {}
     },
     "swan_image_text_BpemXT": {
       "type": "swan_image-text",
@@ -365,7 +308,6 @@
     "main",
     "landing_image_banner_JqF7Ui",
     "swan_rich_text_hz9x9F",
-    "17563728463cb4fe3b",
     "swan_image_text_BpemXT",
     "swan_image_text_peLJeg",
     "swan_image_text_XqVKXE",
