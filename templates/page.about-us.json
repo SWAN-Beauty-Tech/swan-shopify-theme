@@ -471,7 +471,7 @@
       ],
       "name": "t:sections.featured-product.presets.name",
       "settings": {
-        "product": "",
+        "product": "swan-mirror-cleo",
         "color_scheme": "",
         "secondary_background": false,
         "media_size": "medium",
