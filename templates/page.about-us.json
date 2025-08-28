@@ -111,11 +111,12 @@
           "type": "variant_picker",
           "settings": {
             "picker_type": "button",
-            "swatch_shape": "circle"
+            "swatch_shape": "none"
           }
         },
         "quantity_selector_CyqVpz": {
           "type": "quantity_selector",
+          "disabled": true,
           "settings": {}
         },
         "buy_buttons_d7RqM7": {
@@ -127,6 +128,7 @@
         },
         "share_wTGkkx": {
           "type": "share",
+          "disabled": true,
           "settings": {
             "share_label": "Teilen"
           }
