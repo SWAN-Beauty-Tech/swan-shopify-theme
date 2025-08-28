@@ -253,7 +253,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Was ist die SWAN App und welche Funktionen bietet sie?",
-            "icon": "lightning_bolt",
+            "icon": "none",
             "row_content": "<p>Die SWAN App ist eine interaktive Plattform für Beauty-Enthusiasten. </p><p>Sie kombiniert eine kreative Community, authentischen Content ohne Filter und einen integrierten Onlineshop. </p><p>Nutzer*innen können eigene Inhalte hochladen, Beauty-Videos anschauen und exklusive Produkte von spannenden Brands entdecken.</p>",
             "page": ""
           }
@@ -262,7 +262,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Ist die App kostenlos?",
-            "icon": "lightning_bolt",
+            "icon": "none",
             "row_content": "<p><strong>Die SWAN App ist komplett kostenlos zum Download und zur Nutzung.</strong></p><p>Du kannst Beauty-Videos, Tutorials, Shopping und Community-Funktionen ohne Kosten nutzen.</p><p>Es gibt keine kostenpflichtigen Abonnements oder versteckten Gebühren.</p><p>Wenn du den SWAN Mirror verwendest, erhältst du Zugang zu zusätzlichen Funktionen wie KI-gestützter Hautanalyse und HD-Videoerstellung.</p>",
             "page": ""
           }
@@ -271,7 +271,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Für welche Betriebssysteme ist die App verfügbar?",
-            "icon": "lightning_bolt",
+            "icon": "none",
             "row_content": "<p>Die App ist sowohl für iOS als auch für Android verfügbar und kann in den jeweiligen App-Stores heruntergeladen werden.</p>",
             "page": ""
           }
@@ -280,7 +280,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Benötige ich ein Benutzerkonto, um die App zu nutzen?",
-            "icon": "lightning_bolt",
+            "icon": "none",
             "row_content": "<p>Ja, für die volle Nutzung der interaktiven Features und den Zugang zur Community ist eine Registrierung in der SWAN App erforderlich. </p>",
             "page": ""
           }
@@ -289,7 +289,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "An wen kann ich mich bei technischen Problemen oder Fragen wenden?",
-            "icon": "lightning_bolt",
+            "icon": "none",
             "row_content": "<p>Bei technischen Problemen oder Fragen steht der Kundenservice unter hi@swanbeauty.com zur Verfügung.</p>",
             "page": ""
           }
