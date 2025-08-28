@@ -411,9 +411,9 @@
         "collapsible_row_bcghC6": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Frage 1",
+            "heading": "Brauche ich ein spezielles Abonnement oder eine App für die Nutzung?",
             "icon": "none",
-            "row_content": "<p>          Platzhalter</p>",
+            "row_content": "<p>Der SWAN Mirror kann <strong>ohne Abonnement kostenfrei</strong> genutzt werden. Allerdings ist für den Zugriff auf die Plattform und ihre Funktionen – wie Beauty-Videos, Produktshopping, Content-Erstellung und Hautanalyse – die kostenlose <strong>SWAN App erforderlich</strong>.</p>",
             "page": ""
           }
         },
