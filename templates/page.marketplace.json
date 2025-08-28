@@ -51,7 +51,7 @@
         "text_area_rPJR8R": {
           "type": "text_area",
           "settings": {
-            "text": "<p>Du bist auf der Suche nach einer innovativen Lösung, um deine Produkte sichtbar zu machen, neue Zielgruppen zu erreichen und gleichzeitig einen zusätzlichen Vertriebskanal aufzubauen?</p><p>Ohne Aufwand, ohne Kosten, aber mit echtem Impact? Dann bist du hier genau richtig.</p><h5>Warum du als Brand mit uns zusammenarbeiten solltest?</h5><ul><li><strong>Neuer Vertriebskanal </strong>ohne Streuverluste</li><li><strong>Echte Zielgruppe</strong>– 96 % weiblich, 25–36 Jahre, digital affin</li><li><strong>Starke Marken-Präsenz </strong>direkt im Kontext</li><li><strong>Content-driven Commerce</strong>– Erklären, inspirieren, verkaufen</li><li><strong>Wachstumspotential </strong>durch US-Expansion & Events</li></ul><p></p><p></p>",
+            "text": "<p>Du bist auf der Suche nach einer innovativen Lösung, um deine Produkte sichtbar zu machen, neue Zielgruppen zu erreichen und gleichzeitig einen zusätzlichen Vertriebskanal aufzubauen?</p><p>Ohne Aufwand, ohne Kosten, aber mit echtem Impact? Dann bist du hier genau richtig.</p>",
             "center_text": false,
             "custom_id": "",
             "custom_class": ""
@@ -86,7 +86,7 @@
           "type": "ai_gen_block_ba0b649",
           "name": "Video with text",
           "settings": {
-            "heading": "Onboarding 1",
+            "heading": "Onboarding - dein persönlicher Beauty-Start",
             "description": "<p>Experience the perfect blend of innovation and tradition. Our carefully crafted products tell a story of quality and dedication.</p>",
             "button_text": "Learn more",
             "button_link": "",
