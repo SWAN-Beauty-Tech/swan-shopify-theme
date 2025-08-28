@@ -420,18 +420,18 @@
         "collapsible_row_bGWiMg": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Frage 2",
+            "heading": "Unterstützt der SWAN Mirror Drittanbieter-Apps?",
             "icon": "none",
-            "row_content": "<p>Platzhalter</p>",
+            "row_content": "<p>Nein, der SWAN Mirror ist so konzipiert, dass er <strong>ausschließlich mit der SWAN App</strong> funktioniert. Das gewährleistet ein nahtloses, sicheres und optimiertes Beauty-Erlebnis.</p><p>Alle Funktionen – von Beauty-Videos und Tutorials über Hautanalyse bis hin zum Produkt-Shopping – sind direkt in die SWAN App integriert.</p><p>Diese Lösung garantiert hohe Leistung, Sicherheit und kontinuierliche Updates.</p>",
             "page": ""
           }
         },
         "collapsible_row_zQrkFy": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Frage 3",
+            "heading": "Welche Rückgabemöglichkeiten gibt es?",
             "icon": "none",
-            "row_content": "<p>Platzhalter</p>",
+            "row_content": "<p>Wir bieten eine 14-tägige Rückgabemöglichkeit für den SWAN Mirror an.</p><p>Du kannst deinen SWAN Mirror innerhalb von 14 Tagen nach Erhalt zurückgeben, sofern er sich im Originalzustand und in der Originalverpackung befindet.</p><p>Um eine Rückgabe einzuleiten, kontaktiere einfach unser Kundenservice-Team per E-Mail (hi@swanbeauty.com). Sie werden dich durch den Rückgabeprozess führen.</p><p>Rückerstattungen erfolgen über die ursprüngliche Zahlungsmethode.</p>",
             "page": ""
           }
         },
