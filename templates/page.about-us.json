@@ -438,9 +438,27 @@
         "collapsible_row_BTU87p": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Frage 4",
+            "heading": "An wen kann ich mich bei technischen Problemen oder Fragen wenden?",
             "icon": "none",
-            "row_content": "<p>Platzhalter</p>",
+            "row_content": "<p>Der Kundenservice von SWAN Beauty ist per E-Mail unter hi@swanbeauty.com erreichbar.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_pjj8pm": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Benötige ich WLAN für den SWAN Mirror?",
+            "icon": "none",
+            "row_content": "<p>Ja, für die volle Funktionalität benötigst du eine WLAN-Verbindung. Der Spiegel verbindet sich mit der SWAN App und dem Internet, um dir aktuelle Inhalte, Updates und die Community-Funktionen zu bieten.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_g88fN3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "An wen kann ich mich bei technischen Problemen oder Fragen wenden?",
+            "icon": "none",
+            "row_content": "<p>Der Kundenservice von SWAN Beauty ist per E-Mail unter hi@swanbeauty.com erreichbar.</p>",
             "page": ""
           }
         }
@@ -449,7 +467,9 @@
         "collapsible_row_bcghC6",
         "collapsible_row_bGWiMg",
         "collapsible_row_zQrkFy",
-        "collapsible_row_BTU87p"
+        "collapsible_row_BTU87p",
+        "collapsible_row_pjj8pm",
+        "collapsible_row_g88fN3"
       ],
       "name": "FAQs",
       "settings": {
