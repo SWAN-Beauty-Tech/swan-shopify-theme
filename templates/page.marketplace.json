@@ -29,7 +29,7 @@
         "text_bkRYYR": {
           "type": "text",
           "settings": {
-            "text": "<h2>Nicht einfach eine weitere Beauty App.</h2>"
+            "text": "<h2>Nicht einfach eine weitere </h2><h2>Beauty App.</h2>"
           }
         }
       },
