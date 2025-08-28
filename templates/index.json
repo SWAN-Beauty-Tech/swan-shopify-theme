@@ -81,7 +81,7 @@
             "section_padding": 70,
             "animation_speed": 3,
             "background_color": "#ffffff",
-            "logo_opacity": 70,
+            "logo_opacity": 50,
             "grayscale_amount": 30,
             "brand_logo_1": "shopify://shop_images/mocha_dde97c91-db58-453e-a215-1c8687c84f6b.png",
             "brand_logo_2": "shopify://shop_images/ebony.png",
