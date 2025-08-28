@@ -1,6 +1,563 @@
+{% doc %}
+  @prompt
+    Goal
+    
+    Create a parallax scrolling section with:
+    	•	A title, subtitle, and a button linking to an “About us” page.
+    	•	A background that can be either a color or an image.
+    	•	Two foreground images that parallax into view while scrolling.
+    	•	Adjustable top/bottom spacing and foreground image sizes.
+    	•	No external frameworks. Keep it accessible, responsive, and lightweight.
+    
+    Inputs (make these configurable)
+    
+    Expose these as either CSS custom properties (preferred) and/or simple HTML attributes/data-* props the user can set:
+    	•	--title: (string) Section title text
+    	•	--subtitle: (string) Section subtitle text
+    	•	--about-url: (string, URL) Link for the button
+    	•	--btn-label: (string) Button text (default: “About us”)
+    	•	--bg-mode: (“image” | “color”) Which background to use
+    	•	--bg-image: (URL) Background image (used when --bg-mode: image)
+    	•	--bg-color: (color) Background color (used when --bg-mode: color)
+    	•	--pad-top: (length) Top spacing (e.g., 10vh)
+    	•	--pad-bottom: (length) Bottom spacing (e.g., 10vh)
+    	•	--img1-src: (URL) Foreground image 1
+    	•	--img2-src: (URL) Foreground image 2
+    	•	--img1-width: (length or %) Max width of image 1 (e.g., 40vmin)
+    	•	--img2-width: (length or %) Max width of image 2 (e.g., 30vmin)
+    	•	--parallax-depth-bg: (number) Parallax intensity for background (e.g., 0.4)
+    	•	--parallax-depth-img1: (number) Parallax intensity for image 1 (e.g., 0.8)
+    	•	--parallax-depth-img2: (number) Parallax intensity for image 2 (e.g., 1.1)
+    
+    (If custom properties are not supported by the target tool, expose the same as options in its UI/schema.)
+    
+    Structure & Behavior
+    	•	Use a single section with a stacked layers approach:
+    	•	Layer 1 (back): background (color or image, image should have background-attachment: fixed fallback).
+    	•	Layer 2 (middle): content wrapper with title, subtitle, button.
+    	•	Layer 3 (front): two absolutely positioned images that move at different rates on scroll (CSS-only technique using position: sticky + transforms over a tall container; option, the scrolling function in the section is not working
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-parallax-section-{{ ai_gen_id }} {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    padding-top: {{ block.settings.padding_top }}vh;
+    padding-bottom: {{ block.settings.padding_bottom }}vh;{% if block.settings.background_mode == 'color' %}
+      background-color: {{ block.settings.background_color }};
+    {% else %}
+      {% if block.settings.background_image %}
+        background-image: url('{{ block.settings.background_image | image_url: width: 2000}}');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+      {% else %}
+        background-color: {{ block.settings.background_color }};
+      {% endif %}
+    {% endif %}
+  }
+
+  .ai-parallax-content-{{ ai_gen_id }} {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 60vh;
+    padding: 2rem;
+    color: {{ block.settings.text_color }};
+  }
+
+  .ai-parallax-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.title_size }}px;
+    font-weight: bold;
+    margin: 0 0 1rem 0;
+    max-width: 800px;
+  }
+
+  .ai-parallax-subtitle-{{ ai_gen_id }} {
+    font-size: {{ block.settings.subtitle_size }}px;
+    margin: 0 0 2rem 0;
+    max-width: 600px;
+    opacity: 0.9;
+  }
+
+  .ai-parallax-button-{{ ai_gen_id }} {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: {{ block.settings.button_color }};
+    color: {{ block.settings.button_text_color }};
+    text-decoration: none;
+    border-radius: {{ block.settings.button_radius }}px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+
+  .ai-parallax-button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.button_hover_color }};
+    transform: translateY(-2px);
+  }
+
+  .ai-parallax-images-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .ai-parallax-image-{{ ai_gen_id }} {
+    position: absolute;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    will-change: transform;
+  }
+
+  .ai-parallax-image-1-{{ ai_gen_id }} {
+    top: 20%;
+    left: 10%;
+    width: {{ block.settings.image_1_width }}%;
+  }
+
+  .ai-parallax-image-2-{{ ai_gen_id }} {
+    top: 60%;
+    right: 10%;
+    width: {{ block.settings.image_2_width }}%;
+  }
+
+  .ai-parallax-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 200px;
+    background-color: #f0f0f0;
+    border: 2px dashed #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: #666;
+    font-size: 14px;
+  }
+
+  @media (max-width: 768px) {
+    .ai-parallax-section-{{ ai_gen_id }} {
+      background-attachment: scroll;
+    }
+
+    .ai-parallax-title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.title_size | times: 0.8 }}px;
+    }
+
+    .ai-parallax-subtitle-{{ ai_gen_id }} {
+      font-size: {{ block.settings.subtitle_size | times: 0.9 }}px;
+    }
+
+    .ai-parallax-image-1-{{ ai_gen_id }} {
+      width: {{ block.settings.image_1_width | times: 1.2 }}%;
+      left: 5%;
+    }
+
+    .ai-parallax-image-2-{{ ai_gen_id }} {
+      width: {{ block.settings.image_2_width | times: 1.2 }}%;
+      right: 5%;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ai-parallax-image-{{ ai_gen_id }} {
+      transform: none !important;
+    }
+  }
+{% endstyle %}<parallax-section-{{ ai_gen_id }}
+  class="ai-parallax-section-{{ ai_gen_id }}"
+  data-bg-parallax="{{ block.settings.background_parallax_intensity }}"
+  data-img1-parallax="{{ block.settings.image_1_parallax_intensity }}"
+  data-img2-parallax="{{ block.settings.image_2_parallax_intensity }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-parallax-content-{{ ai_gen_id }}">
+    {% if block.settings.title != blank %}
+      <h2 class="ai-parallax-title-{{ ai_gen_id }}">{{ block.settings.title }}</h2>
+    {% endif %}
+    {% if block.settings.subtitle != blank %}
+      <p class="ai-parallax-subtitle-{{ ai_gen_id }}">{{ block.settings.subtitle }}</p>
+    {% endif %}
+    
+    {% if block.settings.button_link != blank %}
+      <a href="{{ block.settings.button_link }}" class="ai-parallax-button-{{ ai_gen_id }}">
+        {{ block.settings.button_text }}
+      </a>
+    {% endif %}</div>
+
+  <div class="ai-parallax-images-{{ ai_gen_id }}">
+    {% if block.settings.foreground_image_1 %}
+      <img
+        src="{{ block.settings.foreground_image_1 | image_url: width: 800 }}"
+        alt="{{ block.settings.foreground_image_1.alt | escape }}"
+        class="ai-parallax-image-{{ ai_gen_id }} ai-parallax-image-1-{{ ai_gen_id }}"
+        loading="lazy"
+      >
+    {% else %}
+      <div class="ai-parallax-image-{{ ai_gen_id }} ai-parallax-image-1-{{ ai_gen_id }}">
+        <div class="ai-parallax-placeholder-{{ ai_gen_id }}">
+          Add foreground image 1
+        </div>
+      </div>
+    {% endif %}
+
+    {% if block.settings.foreground_image_2 %}
+      <img 
+        src="{{ block.settings.foreground_image_2 | image_url: width: 800 }}"
+        alt="{{ block.settings.foreground_image_2.alt | escape }}"
+        class="ai-parallax-image-{{ ai_gen_id }} ai-parallax-image-2-{{ ai_gen_id }}"
+        loading="lazy"
+      >
+    {% else %}
+      <div class="ai-parallax-image-{{ ai_gen_id }} ai-parallax-image-2-{{ ai_gen_id }}">
+        <div class="ai-parallax-placeholder-{{ ai_gen_id }}">
+          Add foreground image 2
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</parallax-section-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class ParallaxSection{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.bgParallax = parseFloat(this.dataset.bgParallax) || 0.4;
+        this.img1Parallax = parseFloat(this.dataset.img1Parallax) || 0.8;
+        this.img2Parallax = parseFloat(this.dataset.img2Parallax) || 1.1;
+        this.ticking = false;
+        this.isIntersecting = false;
+      }
+
+      connectedCallback() {
+        this.setupElements();
+        this.setupIntersectionObserver();
+        this.bindEvents();
+        this.updateParallax();
+      }
+
+      disconnectedCallback() {
+        this.unbindEvents();
+        if (this.observer) {
+          this.observer.disconnect();
+        }
+      }
+
+      setupElements() {
+        this.image1 = this.querySelector('.ai-parallax-image-1-{{ ai_gen_id }}');
+        this.image2 = this.querySelector('.ai-parallax-image-2-{{ ai_gen_id }}');
+      }
+
+      setupIntersectionObserver() {
+        if ('IntersectionObserver' in window) {
+          this.observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              this.isIntersecting = entry.isIntersecting;
+              if (this.isIntersecting) {
+                this.updateParallax();
+              }
+            });
+          }, {
+            threshold: 0,
+            rootMargin: '50px 0px'
+          });
+          this.observer.observe(this);
+        } else {
+          this.isIntersecting = true;
+        }
+      }
+
+      bindEvents() {
+        this.handleScrollBound = this.handleScroll.bind(this);
+        this.handleResizeBound = this.handleResize.bind(this);
+        
+        window.addEventListener('scroll', this.handleScrollBound, { passive: true });
+        window.addEventListener('resize', this.handleResizeBound, { passive: true });
+      }
+
+      unbindEvents() {
+        window.removeEventListener('scroll', this.handleScrollBound);
+        window.removeEventListener('resize', this.handleResizeBound);
+      }
+
+      handleScroll() {
+        if (!this.isIntersecting) return;
+        
+        if (!this.ticking) {
+          requestAnimationFrame(() => {
+            this.updateParallax();
+            this.ticking = false;
+          });
+          this.ticking = true;
+        }
+      }
+
+      handleResize() {
+        this.updateParallax();
+      }
+
+      updateParallax() {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          return;
+        }
+
+        const rect = this.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        const elementTop = rect.top;
+        const elementHeight = rect.height;
+        
+        if (elementTop <= windowHeight && elementTop + elementHeight >= 0) {
+          const scrolled = windowHeight - elementTop;
+          const rate = scrolled / (windowHeight + elementHeight);
+          
+          if (this.image1) {
+            const yPos1 = -(rate * 100 * this.img1Parallax);
+            this.image1.style.transform = `translateY(${yPos1}px)`;
+          }
+          
+          if (this.image2) {
+            const yPos2 = -(rate * 100 * this.img2Parallax);
+            this.image2.style.transform = `translateY(${yPos2}px)`;
+          }
+        }
+      }
+    }
+
+    if (!customElements.get('parallax-section-{{ ai_gen_id }}')) {
+      customElements.define('parallax-section-{{ ai_gen_id }}', ParallaxSection{{ ai_gen_id }});
+    }
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Parallax section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "About Our Story"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Discover the passion and craftsmanship behind our brand"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "About us"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "header",
+      "content": "Background"
+    },
+    {
+      "type": "select",
+      "id": "background_mode",
+      "label": "Background type",
+      "options": [
+        {
+          "value": "color",
+          "label": "Color"
+        },
+        {
+          "value": "image",
+          "label": "Image"
+        }
+      ],
+      "default": "image"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background image"
+    },
+    {
+      "type": "range",
+      "id": "background_parallax_intensity",
+      "min": 0,
+      "max": 1,
+      "step": 0.1,
+      "label": "Background parallax intensity",
+      "default": 0.4
+    },
+    {
+      "type": "header",
+      "content": "Foreground images"
+    },
+    {
+      "type": "image_picker",
+      "id": "foreground_image_1",
+      "label": "Foreground image 1"
+    },
+    {
+      "type": "range",
+      "id": "image_1_width",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "%",
+      "label": "Image 1 width",
+      "default": 25
+    },
+    {
+      "type": "range",
+      "id": "image_1_parallax_intensity",
+      "min": 0,
+      "max": 2,
+      "step": 0.1,
+      "label": "Image 1 parallax intensity",
+      "default": 0.8
+    },
+    {
+      "type": "image_picker",
+      "id": "foreground_image_2",
+      "label": "Foreground image 2"
+    },
+    {
+      "type": "range",
+      "id": "image_2_width",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "%",
+      "label": "Image 2 width",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "image_2_parallax_intensity",
+      "min": 0,
+      "max": 2,
+      "step": 0.1,
+      "label": "Image 2 parallax intensity",
+      "default": 1.1
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "unit": "vh",
+      "label": "Top padding",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "unit": "vh",
+      "label": "Bottom padding",
+      "default": 10
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 24,
+      "max": 72,
+      "step": 4,
+      "unit": "px",
+      "label": "Title size",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "subtitle_size",
+      "min": 14,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Subtitle size",
+      "default": 18
+    },
+    {
+      "type": "header",
+      "content": "Button style"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_color",
+      "label": "Button hover color",
+      "default": "#f0f0f0"
+    },
+    {
+      "type": "range",
+      "id": "button_radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Button border radius",
+      "default": 4
+    }
+  ],
+  "presets": [
+    {
+      "name": "Parallax section"
+    }
+  ],
+  "tag": null
+}
 {% endschema %}
