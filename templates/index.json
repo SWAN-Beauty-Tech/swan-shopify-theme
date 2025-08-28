@@ -86,7 +86,7 @@
         "text_area_zTUnjb": {
           "type": "text_area",
           "settings": {
-            "text": "<h5>Dein persönlicher AI-Beauty-Assistant</h5><p>Der SWAN Mirror kombiniert KI-gestützte Hautanalyse, HD-Kamera und dimmbares Beauty-Light – und arbeitet nahtlos mit der SWAN App zusammen. Er zeigt dir, was deine Haut braucht, inspiriert mit Trends & Tutorials und vernetzt dich mit einer engagierten Community. So wird dein Beauty-Alltag intelligenter, individueller und interaktiver.</p>",
+            "text": "<h5>Dein persönlicher AI-Beauty-Assistant</h5><p>Der SWAN Mirror kombiniert KI-gestützte Hautanalyse, HD-Kamera und dimmbares Beauty-Light – und arbeitet nahtlos mit der SWAN App zusammen. </p><p>Er zeigt dir, was deine Haut braucht, inspiriert mit Trends & Tutorials und vernetzt dich mit einer engagierten Community. So wird dein Beauty-Alltag intelligenter, individueller und interaktiver.</p>",
             "center_text": false,
             "custom_id": "",
             "custom_class": ""
@@ -190,7 +190,7 @@
         "text_area_y4V6MC": {
           "type": "text_area",
           "settings": {
-            "text": "<p>SWAN Beauty verbindet smarte Technologie mit einer aktiven Community – und eröffnet Marken neue Möglichkeiten: Erreiche deine Zielgruppe direkt und interaktiv, präsentiere Produkte im authentischen Kontext und steigere deinen Umsatz mit Shopping direkt aus Videos. Alles auf einer Plattform, die Beauty neu definiert.</p><p><strong>Warum SWAN?</strong></p><ul><li>Direkter Zugang zur Zielgruppe</li><li>Tutorials & Content mit Kaufabschluss</li><li>Verlässliche Creator & Brand Safety</li></ul>",
+            "text": "<p>SWAN Beauty verbindet smarte Technologie mit einer aktiven Community – und eröffnet Marken neue Möglichkeiten: </p><p>Erreiche deine Zielgruppe direkt und interaktiv, präsentiere Produkte im authentischen Kontext und steigere deinen Umsatz mit Shopping direkt aus Videos. Alles auf einer Plattform, die Beauty neu definiert.</p><p><strong>Warum SWAN?</strong></p><ul><li>Direkter Zugang zur Zielgruppe</li><li>Tutorials & Content mit Kaufabschluss</li><li>Verlässliche Creator & Brand Safety</li></ul>",
             "center_text": false,
             "custom_id": "",
             "custom_class": ""
