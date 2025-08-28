@@ -284,13 +284,23 @@
             "row_content": "<p>Ja, für die volle Nutzung der interaktiven Features und den Zugang zur Community ist eine Registrierung in der SWAN App erforderlich. </p>",
             "page": ""
           }
+        },
+        "collapsible_row_hLcgfk": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "An wen kann ich mich bei technischen Problemen oder Fragen wenden?",
+            "icon": "lightning_bolt",
+            "row_content": "<p>Bei technischen Problemen oder Fragen steht der Kundenservice unter hi@swanbeauty.com zur Verfügung.</p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
         "collapsible_row_7pX9aB",
         "collapsible_row_BMnUrK",
         "collapsible_row_YhJe6R",
-        "collapsible_row_Gqdq9Q"
+        "collapsible_row_Gqdq9Q",
+        "collapsible_row_hLcgfk"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
