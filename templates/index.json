@@ -9,28 +9,6 @@
  */
 {
   "sections": {
-    "17563728463cb4fe3b": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_3655cfc_UCfrDm": {
-          "type": "ai_gen_block_3655cfc",
-          "settings": {
-            "logo_size": 120,
-            "logo_spacing": 60,
-            "section_padding": 40,
-            "animation_speed": 8,
-            "background_color": "#dca1a1",
-            "logo_opacity": 70,
-            "grayscale_amount": 100
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_3655cfc_UCfrDm"
-      ],
-      "settings": {}
-    },
     "main": {
       "type": "main-page",
       "disabled": true,
@@ -91,6 +69,34 @@
         "custom_class": "",
         "color_scheme": ""
       }
+    },
+    "17563728463cb4fe3b": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_3655cfc_UCfrDm": {
+          "type": "ai_gen_block_3655cfc",
+          "settings": {
+            "logo_size": 180,
+            "logo_spacing": 30,
+            "section_padding": 70,
+            "animation_speed": 8,
+            "background_color": "#dca1a1",
+            "logo_opacity": 70,
+            "grayscale_amount": 100,
+            "brand_logo_1": "shopify://shop_images/mocha_dde97c91-db58-453e-a215-1c8687c84f6b.png",
+            "brand_logo_2": "shopify://shop_images/ebony.png",
+            "brand_logo_3": "shopify://shop_images/25.png",
+            "brand_logo_4": "shopify://shop_images/model-with-leather-jacket-over-shoulders.jpg",
+            "brand_logo_5": "shopify://shop_images/mediumhoney.png",
+            "brand_logo_6": "shopify://shop_images/apple_crisp_bc7e2811-cabf-4869-b9f0-267445bf9241.png"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_3655cfc_UCfrDm"
+      ],
+      "settings": {}
     },
     "swan_image_text_BpemXT": {
       "type": "swan_image-text",
@@ -327,10 +333,10 @@
     }
   },
   "order": [
-    "17563728463cb4fe3b",
     "main",
     "landing_image_banner_JqF7Ui",
     "swan_rich_text_hz9x9F",
+    "17563728463cb4fe3b",
     "swan_image_text_BpemXT",
     "swan_image_text_peLJeg",
     "swan_image_text_XqVKXE",
