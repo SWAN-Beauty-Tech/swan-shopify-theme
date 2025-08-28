@@ -129,7 +129,7 @@
           "name": "Video with text",
           "settings": {
             "heading": "Routinen-Planer",
-            "description": "<p>Stelle dir mit deinen Lieblingsprodukten eine persönliche Morgen- und Abendroutine zusammen. Passe sie jederzeit an die aktuellen Bedürfnisse deiner Haut an – flexibel, wenn sich etwas ändert. So verpasst du keinen Step, behältst die Reihenfolge im Blick und bereitest deine Haut Tag für Tag optimal vor. Das Beste: Deine geplante Routine erscheint direkt auf dem SWAN Mirror – für ein nahtloses Beauty-Erlebnis.</p><p></p>",
+            "description": "<p>Stelle dir mit deinen Lieblingsprodukten eine persönliche Morgen- und Abendroutine zusammen. Passe sie jederzeit an die aktuellen Bedürfnisse deiner Haut an – flexibel, wenn sich etwas ändert. </p><p>So verpasst du keinen Step, behältst die Reihenfolge im Blick und bereitest deine Haut Tag für Tag optimal vor. </p><p>Das Beste: Deine geplante Routine erscheint direkt auf dem SWAN Mirror – für ein nahtloses Beauty-Erlebnis.</p><p></p>",
             "button_text": "Learn more",
             "button_link": "",
             "video_url": "https://cdn.shopify.com/videos/c/o/v/00110fabb530489eb37d199b00512a80.mp4",
@@ -154,7 +154,7 @@
             "video_max_width": 400,
             "video_border_radius": 16,
             "heading": "Shop the Look – direkt aus dem Video",
-            "text_content": "<p>Dein Shortcut zu neuen Must-haves: Produkte aus den Videos sind direkt verlinkt und mit wenigen Klicks im Warenkorb – smart shoppen, ohne Umwege oder Werbelinks.<br/>Im SWAN Marketplace entdeckst du kuratierte Produkte und limitierte Angebote. Exklusive App-Deals, verlässlich ausgewählt – immer einen Klick wert.</p>",
+            "text_content": "<p>Dein Shortcut zu neuen Must-haves: Produkte aus den Videos sind direkt verlinkt und mit wenigen Klicks im Warenkorb – smart shoppen, ohne Umwege oder Werbelinks.</p><p>Im SWAN Marketplace entdeckst du kuratierte Produkte und limitierte Angebote. Exklusive App-Deals, verlässlich ausgewählt – immer einen Klick wert.</p>",
             "button_text": "Learn more",
             "button_link": "",
             "section_padding": 60,
@@ -252,9 +252,9 @@
         "collapsible_row_7pX9aB": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Frage",
-            "icon": "check_mark",
-            "row_content": "<p>Antwort</p>",
+            "heading": "Was ist die SWAN App und welche Funktionen bietet sie?",
+            "icon": "lightning_bolt",
+            "row_content": "<p>Die SWAN App ist eine interaktive Plattform für Beauty-Enthusiasten. </p><p>Sie kombiniert eine kreative Community, authentischen Content ohne Filter und einen integrierten Onlineshop. </p><p>Nutzer*innen können eigene Inhalte hochladen, Beauty-Videos anschauen und exklusive Produkte von spannenden Brands entdecken.</p>",
             "page": ""
           }
         },
