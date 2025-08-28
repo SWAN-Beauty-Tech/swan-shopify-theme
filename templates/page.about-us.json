@@ -160,7 +160,7 @@
           "name": "Video with text",
           "settings": {
             "heading": "Hautanalyse – Ablauf",
-            "description": "<p>Der SWAN Skin-Analyzer wurde gemeinsam mit Dermatolog*innen entwickelt und vereint medizinisches Know-how mit moderner KI-Technologie.</p><p>Mit der integrierten HD-Kamera nimmst du ein Gesichtsfoto auf, beantwortest 5 kurze Fragen – u. a. zu Hautzielen und Wunschzustand (z. B. ebenmäßiger Teint, weniger Unreinheiten, mehr Glow) – und erhältst anschließend eine <strong>ausführliche Analyse</strong> inklusive <strong>persönlichem Hautscore</strong>.</p><h2>How it works </h2><p>1. Foto aufnehmen: Ein Selfie per integrierter HD-Kamera.<br/>2. Fragen beantworten: 5 Fragen zu Hautthemen & Zielen.<br/>3. Ergebnis erhalten: Analyse, Empfehlungen & persönlicher Hautscore.</p>",
+            "description": "<p>Entwickelt mit Dermatolog*innen, unterstützt von KI: Ein Foto über die HD-Kamera, fünf Fragen zu deinem Hautzustand und deinen Zielen – ebenmäßiger Teint, weniger Unreinheiten oder mehr Glow? </p><p>Danach erhältst du eine präzise Auswertung mit <strong>persönlichem Hautscore</strong>.</p><h2>How it works </h2><p>1. Foto aufnehmen: Ein Selfie per integrierter HD-Kamera.<br/>2. Fragen beantworten: 5 Fragen zu Hautthemen & Zielen.<br/>3. Ergebnis erhalten: Analyse, Empfehlungen & persönlicher Hautscore.</p>",
             "button_text": "Learn more",
             "button_link": "",
             "video_url": "https://cdn.shopify.com/videos/c/o/v/9e5453b47c4f46aaa5fd6546913e1620.mp4",
@@ -185,7 +185,7 @@
             "video_max_width": 400,
             "video_border_radius": 16,
             "heading": "Hautanalyse Score",
-            "text_content": "<p>Dein Score basiert auf 7 Hautparametern: Pigmentierung, Falten, Hautstruktur, Rötungen,UV-Spots, Unreinheiten & Hautglanz.<br/>Zu jedem Parameter bekommst du klare Erklärungen, konkrete Handlungsempfehlungen und passende Produkttipps – für Alltag und Vorbeugung. </p><p>So verstehst du, was deine Haut braucht, erkennst Veränderungen frühzeitig und stärkst langfristig Gesundheit und Balance.</p>",
+            "text_content": "<p>Dein Score basiert auf 7 Hautparametern: Pigmentierung, Falten, Hautstruktur, Rötungen, UV-Spots, Unreinheiten & Hautglanz.<br/>Zu jedem Parameter bekommst du klare Erklärungen, konkrete Handlungsempfehlungen und passende Produkttipps – für Alltag und Vorbeugung. </p><p>So verstehst du, was deine Haut braucht, erkennst Veränderungen frühzeitig und stärkst langfristig Gesundheit und Balance.</p>",
             "button_text": "Learn more",
             "button_link": "",
             "section_padding": 60,
