@@ -87,7 +87,7 @@
           "name": "Video with text",
           "settings": {
             "heading": "Onboarding - dein persönlicher Beauty-Start",
-            "description": "<p>Gestalte deine App-Erfahrung von Anfang an individuell: Wähle deine Beauty-Interessen beim Onboarding aus und entdecke Content, der perfekt zu dir passt – von Skincare über Make-up bis hin zu Hair & Wellness. So erhältst du Inspirationen, die deine Routine wirklich bereichern.</p>",
+            "description": "<p>Starte in der SWAN App mit nur wenigen Steps: E-Mailadresse eingeben, Code per E-Mail erhalten & eingeben, Sprache & Land auswählen, Profil- und Username wählen - Beauty Journey starten!</p>",
             "button_text": "Learn more",
             "button_link": "",
             "video_url": "https://cdn.shopify.com/videos/c/o/v/d65a3b1be1eb48728c61d6b36acb154b.mp4",
@@ -112,7 +112,7 @@
             "video_max_width": 400,
             "video_border_radius": 16,
             "heading": "Onboarding 2",
-            "text_content": "<p>Share your story with engaging content that captures attention and drives action.</p>",
+            "text_content": "<p>Gestalte deine App-Erfahrung von Anfang an individuell: Wähle deine Beauty-Interessen beim Onboarding aus und entdecke Content, der perfekt zu dir passt – von Skincare über Make-up bis hin zu Hair & Wellness. So erhältst du Inspirationen, die deine Routine wirklich bereichern.</p>",
             "button_text": "Learn more",
             "button_link": "",
             "section_padding": 60,
