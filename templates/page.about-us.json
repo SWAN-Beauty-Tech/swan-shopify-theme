@@ -87,6 +87,76 @@
         "color_scheme": "scheme-3"
       }
     },
+    "featured_product_imLJVN": {
+      "type": "featured-product",
+      "blocks": {
+        "text_xmRTjb": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_qa3HEt": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_tNMBew": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_KEdYDX": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector_CyqVpz": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_d7RqM7": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_wTGkkx": {
+          "type": "share",
+          "settings": {
+            "share_label": "Teilen"
+          }
+        }
+      },
+      "block_order": [
+        "text_xmRTjb",
+        "title_qa3HEt",
+        "price_tNMBew",
+        "variant_picker_KEdYDX",
+        "quantity_selector_CyqVpz",
+        "buy_buttons_d7RqM7",
+        "share_wTGkkx"
+      ],
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "product": "swan-mirror-cleo",
+        "color_scheme": "scheme-1",
+        "secondary_background": true,
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "1756214345b5c620e8": {
       "type": "_blocks",
       "blocks": {
@@ -414,87 +484,17 @@
         "custom_class": "",
         "color_scheme": "scheme-3"
       }
-    },
-    "featured_product_imLJVN": {
-      "type": "featured-product",
-      "blocks": {
-        "text_xmRTjb": {
-          "type": "text",
-          "settings": {
-            "text": "{{ section.settings.product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
-        "title_qa3HEt": {
-          "type": "title",
-          "settings": {
-            "heading_size": "h1"
-          }
-        },
-        "price_tNMBew": {
-          "type": "price",
-          "settings": {}
-        },
-        "variant_picker_KEdYDX": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button",
-            "swatch_shape": "circle"
-          }
-        },
-        "quantity_selector_CyqVpz": {
-          "type": "quantity_selector",
-          "settings": {}
-        },
-        "buy_buttons_d7RqM7": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
-          }
-        },
-        "share_wTGkkx": {
-          "type": "share",
-          "settings": {
-            "share_label": "Teilen"
-          }
-        }
-      },
-      "block_order": [
-        "text_xmRTjb",
-        "title_qa3HEt",
-        "price_tNMBew",
-        "variant_picker_KEdYDX",
-        "quantity_selector_CyqVpz",
-        "buy_buttons_d7RqM7",
-        "share_wTGkkx"
-      ],
-      "name": "t:sections.featured-product.presets.name",
-      "settings": {
-        "product": "swan-mirror-cleo",
-        "color_scheme": "scheme-2",
-        "secondary_background": true,
-        "media_size": "small",
-        "constrain_to_viewport": true,
-        "media_fit": "contain",
-        "media_position": "left",
-        "image_zoom": "lightbox",
-        "hide_variants": true,
-        "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
     "main",
     "swan_rich_text_FK6WPi",
     "swan_image_text_8yYbnC",
+    "featured_product_imLJVN",
     "1756214345b5c620e8",
     "17552366850a6e1abb",
     "blocks_R3JYbW",
     "collapsible_content_TkqmVL",
-    "swan_image_text_6nbE3P",
-    "featured_product_imLJVN"
+    "swan_image_text_6nbE3P"
   ]
 }
