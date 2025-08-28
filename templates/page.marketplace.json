@@ -261,9 +261,9 @@
         "collapsible_row_BMnUrK": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Frage",
+            "heading": "Ist die App kostenlos?",
             "icon": "check_mark",
-            "row_content": "<p>Antwort</p>",
+            "row_content": "<p><strong>Die SWAN App ist komplett kostenlos zum Download und zur Nutzung.</strong></p><p>Du kannst Beauty-Videos, Tutorials, Shopping und Community-Funktionen ohne Kosten nutzen.</p><p>Es gibt keine kostenpflichtigen Abonnements oder versteckten Gebühren.</p><p>Wenn du den SWAN Mirror verwendest, erhältst du Zugang zu zusätzlichen Funktionen wie KI-gestützter Hautanalyse und HD-Videoerstellung.</p>",
             "page": ""
           }
         },
