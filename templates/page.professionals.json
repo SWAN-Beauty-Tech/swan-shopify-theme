@@ -45,13 +45,13 @@
         "text_ftVfr4": {
           "type": "text",
           "settings": {
-            "text": "<h2>Werde Teil des Squads</h2>"
+            "text": "<h2>Deine exklusive </h2><h2>Beauty Community</h2>"
           }
         },
         "text_TkerxH": {
           "type": "text",
           "settings": {
-            "text": "<h5>Deine exklusive Beauty Community</h5><p>Unser SWAN Squad vereint 30 ausgewählte Creator in einer langfristigen Partnerschaft. Hier geht’s um Beauty, Austausch und Inspiration: Tipps teilen, neue Produkte kennenlernen und andere motivieren, den Beauty-Kosmos mit uns zu entdecken.</p><p><strong>Einfache Monetarisierung</strong><br/>Als Squad-Mitglied erhältst du eine feste Provision auf Produkte, die über deine Videos verkauft werden. So baust du dir unkompliziert planbare Einnahmen auf – während du Inhalte erstellst, die begeistern und deine Community wachsen lassen.</p>"
+            "text": "<p>Unser SWAN Squad vereint 30 ausgewählte Creator in einer langfristigen Partnerschaft. Hier geht’s um Beauty, Austausch und Inspiration: Tipps teilen, neue Produkte kennenlernen und andere motivieren, den Beauty-Kosmos mit uns zu entdecken.</p><p><strong>Einfache Monetarisierung</strong><br/>Als Squad-Mitglied erhältst du eine feste Provision auf Produkte, die über deine Videos verkauft werden. So baust du dir unkompliziert planbare Einnahmen auf – während du Inhalte erstellst, die begeistern und deine Community wachsen lassen.</p>"
           }
         }
       },
@@ -84,7 +84,7 @@
         "text_area_GUr6Y9": {
           "type": "text_area",
           "settings": {
-            "text": "<p>Als SWANie erhältst du <strong>regelmäßig Produktpakete von angesagten Beauty- und Lifestyle-Marken </strong>– zum Ausprobieren, Kreativwerden und Teilen mit deiner Community.</p><p>Der SWAN Squad ist <strong>eine Bühne für aufstrebende Creator</strong>: Renommierte Marken verfolgen aktiv, was du machst. Jede Kooperation ist deine Chance, <strong>direkt von Beauty-Brands entdeckt </strong>und für exklusive Kampagnen gebucht zu werden – mit <strong>SWAN als starkem Partner an deiner Seite</strong>.</p>",
+            "text": "<p>Als <strong>SWANie</strong> erhältst du regelmäßig Produktpakete angesagter Beauty- und Lifestyle-Marken – zum Testen, Kreieren und Teilen mit deiner Community.</p><p>Der <strong>SWAN Squad</strong> ist deine Bühne: Top-Brands verfolgen aktiv deine Inhalte. Jede Kooperation ist eine Chance, direkt entdeckt und für exklusive Kampagnen gebucht zu werden – mit SWAN als starkem Partner an deiner Seite.</p>",
             "center_text": false,
             "custom_id": "",
             "custom_class": ""
