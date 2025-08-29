@@ -128,7 +128,7 @@
           "type": "ai_gen_block_ba0b649",
           "name": "Video with text",
           "settings": {
-            "heading": "Routinen-Planer",
+            "heading": "Morgen- & Abendroutine mit dem Routinen-Planer",
             "description": "<p>Stelle dir mit deinen Lieblingsprodukten eine persönliche Morgen- und Abendroutine zusammen. Passe sie jederzeit an die aktuellen Bedürfnisse deiner Haut an – flexibel, wenn sich etwas ändert. </p><p>So verpasst du keinen Step, behältst die Reihenfolge im Blick und bereitest deine Haut Tag für Tag optimal vor. </p><p>Das Beste: Deine geplante Routine erscheint direkt auf dem SWAN Mirror – für ein nahtloses Beauty-Erlebnis.</p><p></p>",
             "button_text": "Learn more",
             "button_link": "",
@@ -322,7 +322,7 @@
       "type": "featured-blog",
       "name": "t:sections.featured-blog.presets.name",
       "settings": {
-        "blog": "",
+        "blog": "news",
         "post_limit": 3,
         "heading": "Blog-Beiträge",
         "heading_size": "h1",
