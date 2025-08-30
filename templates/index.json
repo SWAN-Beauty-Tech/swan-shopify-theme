@@ -9,68 +9,6 @@
  */
 {
   "sections": {
-    "1756594554f0ec837f": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_7e17886_9W97F9": {
-          "type": "ai_gen_block_7e17886",
-          "settings": {
-            "hotspot_size": 30,
-            "hotspot_color": "#000000",
-            "hotspot_icon_color": "#FFFFFF",
-            "popup_position": "top",
-            "popup_width": 200,
-            "popup_bg_color": "#FFFFFF",
-            "popup_text_color": "#000000",
-            "hotspot_1_enabled": true,
-            "hotspot_1_x": 20,
-            "hotspot_1_y": 20,
-            "hotspot_1_product": "",
-            "hotspot_2_enabled": true,
-            "hotspot_2_x": 40,
-            "hotspot_2_y": 30,
-            "hotspot_2_product": "",
-            "hotspot_3_enabled": true,
-            "hotspot_3_x": 60,
-            "hotspot_3_y": 40,
-            "hotspot_3_product": "",
-            "hotspot_4_enabled": false,
-            "hotspot_4_x": 80,
-            "hotspot_4_y": 50,
-            "hotspot_4_product": "",
-            "hotspot_5_enabled": false,
-            "hotspot_5_x": 25,
-            "hotspot_5_y": 60,
-            "hotspot_5_product": "",
-            "hotspot_6_enabled": false,
-            "hotspot_6_x": 45,
-            "hotspot_6_y": 70,
-            "hotspot_6_product": "",
-            "hotspot_7_enabled": false,
-            "hotspot_7_x": 65,
-            "hotspot_7_y": 80,
-            "hotspot_7_product": "",
-            "hotspot_8_enabled": false,
-            "hotspot_8_x": 85,
-            "hotspot_8_y": 25,
-            "hotspot_8_product": "",
-            "hotspot_9_enabled": false,
-            "hotspot_9_x": 15,
-            "hotspot_9_y": 75,
-            "hotspot_9_product": "",
-            "hotspot_10_enabled": false,
-            "hotspot_10_x": 75,
-            "hotspot_10_y": 15,
-            "hotspot_10_product": ""
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_7e17886_9W97F9"
-      ],
-      "settings": {}
-    },
     "main": {
       "type": "main-page",
       "disabled": true,
@@ -364,6 +302,68 @@
         "color_scheme": "scheme-1",
         "mirror_image": "white"
       }
+    },
+    "1756594554f0ec837f": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_7e17886_9W97F9": {
+          "type": "ai_gen_block_7e17886",
+          "settings": {
+            "hotspot_size": 30,
+            "hotspot_color": "#000000",
+            "hotspot_icon_color": "#ffffff",
+            "popup_position": "top",
+            "popup_width": 200,
+            "popup_bg_color": "#ffffff",
+            "popup_text_color": "#000000",
+            "hotspot_1_enabled": true,
+            "hotspot_1_x": 20,
+            "hotspot_1_y": 20,
+            "hotspot_1_product": "",
+            "hotspot_2_enabled": true,
+            "hotspot_2_x": 40,
+            "hotspot_2_y": 30,
+            "hotspot_2_product": "",
+            "hotspot_3_enabled": true,
+            "hotspot_3_x": 60,
+            "hotspot_3_y": 40,
+            "hotspot_3_product": "",
+            "hotspot_4_enabled": false,
+            "hotspot_4_x": 80,
+            "hotspot_4_y": 50,
+            "hotspot_4_product": "",
+            "hotspot_5_enabled": false,
+            "hotspot_5_x": 25,
+            "hotspot_5_y": 60,
+            "hotspot_5_product": "",
+            "hotspot_6_enabled": false,
+            "hotspot_6_x": 45,
+            "hotspot_6_y": 70,
+            "hotspot_6_product": "",
+            "hotspot_7_enabled": false,
+            "hotspot_7_x": 65,
+            "hotspot_7_y": 80,
+            "hotspot_7_product": "",
+            "hotspot_8_enabled": false,
+            "hotspot_8_x": 85,
+            "hotspot_8_y": 25,
+            "hotspot_8_product": "",
+            "hotspot_9_enabled": false,
+            "hotspot_9_x": 15,
+            "hotspot_9_y": 75,
+            "hotspot_9_product": "",
+            "hotspot_10_enabled": false,
+            "hotspot_10_x": 75,
+            "hotspot_10_y": 15,
+            "hotspot_10_product": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_7e17886_9W97F9"
+      ],
+      "settings": {}
     }
   },
   "order": [
