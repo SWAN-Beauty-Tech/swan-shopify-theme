@@ -1,6 +1,544 @@
+{% doc %}
+  @prompt
+    Image slideshow with numbers, make it large, reduce it to medium, increase the size to large, push the numbers to the left hand side
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-slideshow-container-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    background-color: {{ block.settings.background_color }};
+    border-radius: {{ block.settings.border_radius }}px;
+    overflow: hidden;}
+
+  .ai-slideshow-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    height: {{ block.settings.slideshow_height }}px;
+  }
+
+  .ai-slideshow-track-{{ ai_gen_id }} {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .ai-slideshow-slide-{{ ai_gen_id }} {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .ai-slideshow-slide-{{ ai_gen_id }} img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;}
+
+  .ai-slideshow-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .ai-slideshow-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    max-width: 200px;
+    max-height: 200px;
+  }
+
+  .ai-slideshow-empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  .ai-slideshow-controls-{{ ai_gen_id }} {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: {{ block.settings.control_background }};
+    color: {{ block.settings.control_color }};
+    border: none;
+    width: {{ block.settings.control_size }}px;
+    height: {{ block.settings.control_size }}px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: {{ block.settings.control_size | times: 0.4 }}px;
+    transition: opacity 0.3s ease;z-index: 2;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .ai-slideshow-controls-{{ ai_gen_id }}:hover {
+    opacity: 0.8;
+  }
+
+  .ai-slideshow-prev-{{ ai_gen_id }} {
+    left: {{ block.settings.control_spacing }}px;
+  }
+
+  .ai-slideshow-next-{{ ai_gen_id }} {
+    right: {{ block.settings.control_spacing }}px;
+  }
+
+  .ai-slideshow-indicators-{{ ai_gen_id }} {
+    position: absolute;
+    left: {{ block.settings.indicator_spacing }}px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: {{ block.settings.indicator_gap }}px;
+    z-index: 2;
+  }
+
+  .ai-slideshow-indicator-{{ ai_gen_id }} {
+    width: {{ block.settings.indicator_size }}px;
+    height: {{ block.settings.indicator_size }}px;
+    border-radius: 50%;
+    background-color: {{ block.settings.indicator_background }};
+    color: {{ block.settings.indicator_color }};
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: {{ block.settings.indicator_size | times: 0.4 }}px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .ai-slideshow-indicator-{{ ai_gen_id }}.active {
+    background-color: {{ block.settings.indicator_active_background }};
+    color: {{ block.settings.indicator_active_color }};
+    transform: scale(1.1);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .ai-slideshow-indicator-{{ ai_gen_id }}:hover {
+    opacity: 0.8;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-slideshow-wrapper-{{ ai_gen_id }} {
+      height: {{ block.settings.slideshow_height | times: 0.7 }}px;
+    }
+
+    .ai-slideshow-controls-{{ ai_gen_id }} {
+      width: {{ block.settings.control_size | times: 0.8 }}px;
+      height: {{ block.settings.control_size | times: 0.8 }}px;
+      font-size: {{ block.settings.control_size | times: 0.32 }}px;
+    }
+
+    .ai-slideshow-prev-{{ ai_gen_id }} {
+      left: {{ block.settings.control_spacing | times: 0.6 }}px;
+    }
+
+    .ai-slideshow-next-{{ ai_gen_id }} {
+      right: {{ block.settings.control_spacing | times: 0.6 }}px;
+    }
+
+    .ai-slideshow-indicator-{{ ai_gen_id }} {
+      width: {{ block.settings.indicator_size | times: 0.8 }}px;
+      height: {{ block.settings.indicator_size | times: 0.8 }}px;
+      font-size: {{ block.settings.indicator_size | times: 0.32 }}px;
+    }
+
+    .ai-slideshow-indicators-{{ ai_gen_id }} {
+      gap: {{ block.settings.indicator_gap | times: 0.8 }}px;
+      left: {{ block.settings.indicator_spacing | times: 0.8 }}px;
+    }
+
+    .ai-slideshow-empty-state-{{ ai_gen_id }} {
+      font-size: 14px;
+      bottom: 16px;
+      padding: 10px 16px;
+    }
+  }
+{% endstyle %}
+
+<image-slideshow-{{ ai_gen_id }}
+  class="ai-slideshow-container-{{ ai_gen_id }}"
+  data-autoplay="{{ block.settings.autoplay }}"
+  data-autoplay-speed="{{ block.settings.autoplay_speed }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-slideshow-wrapper-{{ ai_gen_id }}">
+    <div class="ai-slideshow-track-{{ ai_gen_id }}">
+      {% for i in (1..5) %}
+        {% assign image_key = 'image_' | append: i %}
+        {% assign image = block.settings[image_key] %}
+        
+        {% if image != blank %}
+          <div class="ai-slideshow-slide-{{ ai_gen_id }}" data-slide="{{ forloop.index0 }}">
+            <img
+              src="{{ image | image_url: width: 1500}}"
+              alt="{{ image.alt | escape }}"
+              loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
+              width="{{ image.width }}"
+              height="{{ image.height }}"
+            >
+          </div>
+        {% elsif forloop.first %}
+          <div class="ai-slideshow-slide-{{ ai_gen_id }}" data-slide="{{ forloop.index0 }}">
+            <div class="ai-slideshow-placeholder-{{ ai_gen_id }}">
+              {{ 'image' | placeholder_svg_tag }}<div class="ai-slideshow-empty-state-{{ ai_gen_id }}">
+                Add images to create your slideshow
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    {% assign total_images = 0 %}
+    {% for i in (1..5) %}
+      {% assign image_key = 'image_' | append: i %}
+      {% assign image = block.settings[image_key] %}
+      {% if image != blank %}
+        {% assign total_images = total_images | plus: 1 %}{% endif %}
+    {% endfor %}
+
+    {% if total_images > 1 %}
+      {% if block.settings.show_controls %}
+        <button class="ai-slideshow-controls-{{ ai_gen_id }} ai-slideshow-prev-{{ ai_gen_id }}" aria-label="Previous slide">
+          &#8249;
+        </button>
+        <button class="ai-slideshow-controls-{{ ai_gen_id }} ai-slideshow-next-{{ ai_gen_id }}" aria-label="Next slide">
+          &#8250;
+        </button>
+      {% endif %}
+
+      {% if block.settings.show_indicators %}
+        <div class="ai-slideshow-indicators-{{ ai_gen_id }}">
+          {% for i in (1..total_images) %}
+            <button
+              class="ai-slideshow-indicator-{{ ai_gen_id }} {% if forloop.first %}active{% endif %}"
+              data-slide="{{ forloop.index0 }}"
+              aria-label="Go to slide {{ forloop.index }}"
+            >
+              {{ forloop.index }}
+            </button>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endif %}
+  </div>
+</image-slideshow-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class ImageSlideshow{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.currentSlide = 0;
+        this.totalSlides = 0;
+        this.autoplayInterval = null;
+      }
+
+      connectedCallback() {
+        this.track = this.querySelector('.ai-slideshow-track-{{ ai_gen_id }}');
+        this.slides = this.querySelectorAll('.ai-slideshow-slide-{{ ai_gen_id }}');
+        this.prevButton = this.querySelector('.ai-slideshow-prev-{{ ai_gen_id }}');
+        this.nextButton = this.querySelector('.ai-slideshow-next-{{ ai_gen_id }}');
+        this.indicators = this.querySelectorAll('.ai-slideshow-indicator-{{ ai_gen_id }}');
+        
+        this.totalSlides = this.slides.length;
+        this.autoplay = this.dataset.autoplay === 'true';
+        this.autoplaySpeed = parseInt(this.dataset.autoplaySpeed) || 3000;
+
+        this.setupEventListeners();
+        this.updateSlideshow();
+
+        if (this.autoplay && this.totalSlides > 1) {
+          this.startAutoplay();
+        }
+      }
+
+      disconnectedCallback() {
+        this.stopAutoplay();
+      }
+
+      setupEventListeners() {
+        if (this.prevButton) {
+          this.prevButton.addEventListener('click', () => this.prevSlide());
+        }
+
+        if (this.nextButton) {
+          this.nextButton.addEventListener('click', () => this.nextSlide());
+        }
+
+        this.indicators.forEach((indicator, index) => {
+          indicator.addEventListener('click', () => this.goToSlide(index));
+        });
+
+        this.addEventListener('mouseenter', () => this.stopAutoplay());
+        this.addEventListener('mouseleave', () => {
+          if (this.autoplay && this.totalSlides > 1) {
+            this.startAutoplay();
+          }
+        });
+      }
+
+      prevSlide() {
+        this.currentSlide = this.currentSlide === 0 ? this.totalSlides - 1 : this.currentSlide - 1;
+        this.updateSlideshow();
+      }
+
+      nextSlide() {
+        this.currentSlide = this.currentSlide === this.totalSlides - 1 ? 0 : this.currentSlide + 1;
+        this.updateSlideshow();
+      }
+
+      goToSlide(index) {
+        this.currentSlide = index;
+        this.updateSlideshow();
+      }
+
+      updateSlideshow() {
+        if (this.track) {
+          const translateX = -this.currentSlide * 100;
+          this.track.style.transform = `translateX(${translateX}%)`;
+        }
+
+        this.indicators.forEach((indicator, index) => {
+          indicator.classList.toggle('active', index === this.currentSlide);
+        });
+      }
+
+      startAutoplay() {
+        this.stopAutoplay();
+        this.autoplayInterval = setInterval(() => {
+          this.nextSlide();
+        }, this.autoplaySpeed);
+      }
+
+      stopAutoplay() {
+        if (this.autoplayInterval) {
+          clearInterval(this.autoplayInterval);
+          this.autoplayInterval = null;
+        }
+      }
+    }
+
+    customElements.define('image-slideshow-{{ ai_gen_id }}', ImageSlideshow{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Image slideshow",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Images"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "Image 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Image 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_3",
+      "label": "Image 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_4",
+      "label": "Image 4"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_5",
+      "label": "Image 5"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "slideshow_height",
+      "min": 500,
+      "max": 800,
+      "step": 25,
+      "unit": "px",
+      "label": "Slideshow height",
+      "default": 650
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 8
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#f4f4f4"
+    },
+    {
+      "type": "header",
+      "content": "Controls"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_controls",
+      "label": "Show arrow controls",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "control_size",
+      "min": 45,
+      "max": 65,
+      "step": 5,
+      "unit": "px",
+      "label": "Control size",
+      "default": 55
+    },
+    {
+      "type": "range",
+      "id": "control_spacing",
+      "min": 20,
+      "max": 40,
+      "step": 5,
+      "unit": "px",
+      "label": "Control spacing from edge",
+      "default": 30
+    },
+    {
+      "type": "color",
+      "id": "control_background",
+      "label": "Control background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "control_color",
+      "label": "Control color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Number indicators"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_indicators",
+      "label": "Show number indicators",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "indicator_size",
+      "min": 36,
+      "max": 56,
+      "step": 4,
+      "unit": "px",
+      "label": "Indicator size",
+      "default": 44
+    },
+    {
+      "type": "range",
+      "id": "indicator_gap",
+      "min": 8,
+      "max": 16,
+      "step": 2,
+      "unit": "px",
+      "label": "Gap between indicators",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "indicator_spacing",
+      "min": 20,
+      "max": 40,
+      "step": 5,
+      "unit": "px",
+      "label": "Spacing from left edge",
+      "default": 30
+    },
+    {
+      "type": "color",
+      "id": "indicator_background",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "indicator_color",
+      "label": "Text color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "indicator_active_background",
+      "label": "Active background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "indicator_active_color",
+      "label": "Active text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Autoplay"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Enable autoplay",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "autoplay_speed",
+      "min": 2000,
+      "max": 6000,
+      "step": 500,
+      "unit": "ms",
+      "label": "Autoplay speed",
+      "default": 3500
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image slideshow"
+    }
+  ],
+  "tag": null
+}
 {% endschema %}
