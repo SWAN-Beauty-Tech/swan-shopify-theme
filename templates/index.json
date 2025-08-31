@@ -309,6 +309,7 @@
         "ai_gen_block_7e17886_9W97F9": {
           "type": "ai_gen_block_7e17886",
           "settings": {
+            "image": "shopify://shop_images/loreal-uv-patch-today-003-160106.webp",
             "hotspot_size": 30,
             "hotspot_color": "#000000",
             "hotspot_icon_color": "#ffffff",
@@ -382,6 +383,206 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "1756606764d59b2a1b": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_710080f_9FTLgf": {
+          "type": "ai_gen_block_710080f",
+          "settings": {
+            "layout": "side-by-side",
+            "color_scheme": "scheme-1",
+            "video": "shopify://files/videos/Video in Ivory Grey Scrapbook Scrapbook Style.mp4",
+            "autoplay": false,
+            "muted": true,
+            "loop": false,
+            "product": "zz-sensitive-system-anti-stress-aufbauende-nachtcreme-annemarie-borling",
+            "show_product_image": true,
+            "show_description": true,
+            "button_text": "Shop now"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_710080f_9FTLgf"
+      ],
+      "settings": {}
+    },
+    "1756607302649791a7": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_62e4169_Cmbp9L": {
+          "type": "ai_gen_block_62e4169",
+          "settings": {
+            "logo_height": 60,
+            "logo_max_width": 120,
+            "logo_spacing": 40,
+            "padding_vertical": 40,
+            "animation_speed": 30,
+            "pause_on_hover": true,
+            "background_color": "#ffffff",
+            "logo_opacity": 70,
+            "grayscale_logos": true
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_62e4169_Cmbp9L"
+      ],
+      "settings": {}
+    },
+    "1756607884b53defc4": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_0776ed8_BkGMAC": {
+          "type": "ai_gen_block_0776ed8",
+          "settings": {
+            "title": "Success Stories",
+            "subtitle": "<p>See how our clients achieved remarkable results</p>",
+            "text_alignment": "center",
+            "section_padding": 60,
+            "grid_gap": 32,
+            "case_1_image": "shopify://shop_images/applications-medical-wearables-hero-GettyImages-1421771110-2.avif",
+            "case_1_category": "E-commerce",
+            "case_1_title": "Online Store Transformation",
+            "case_1_description": "Complete redesign and optimization of an e-commerce platform resulting in significant performance improvements.",
+            "case_1_metric1_value": "+150%",
+            "case_1_metric1_label": "Sales increase",
+            "case_1_metric2_value": "45%",
+            "case_1_metric2_label": "Faster loading",
+            "case_1_link": "",
+            "case_2_category": "Mobile App",
+            "case_2_title": "Mobile Experience Redesign",
+            "case_2_description": "User-centered mobile app redesign that improved engagement and user satisfaction across all demographics.",
+            "case_2_metric1_value": "+200%",
+            "case_2_metric1_label": "User engagement",
+            "case_2_metric2_value": "4.8",
+            "case_2_metric2_label": "App store rating",
+            "case_2_link": "",
+            "case_3_category": "Branding",
+            "case_3_title": "Brand Identity Refresh",
+            "case_3_description": "Complete brand identity overhaul including logo, messaging, and digital presence for a growing startup.",
+            "case_3_metric1_value": "+300%",
+            "case_3_metric1_label": "Brand recognition",
+            "case_3_metric2_value": "85%",
+            "case_3_metric2_label": "Customer satisfaction",
+            "case_3_link": "",
+            "link_text": "View case study",
+            "title_size": 36,
+            "subtitle_size": 18,
+            "background_color": "#ffffff",
+            "title_color": "#000000",
+            "subtitle_color": "#666666",
+            "card_background_color": "#ffffff",
+            "card_title_color": "#000000",
+            "card_text_color": "#666666",
+            "category_background_color": "#f0f0f0",
+            "category_text_color": "#333333",
+            "metric_color": "#007acc",
+            "link_color": "#007acc",
+            "link_hover_color": "#005999",
+            "card_border_radius": 8
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_0776ed8_BkGMAC"
+      ],
+      "settings": {}
+    },
+    "1756608292307a69c2": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_75d0dac_rk4NJQ": {
+          "type": "ai_gen_block_75d0dac",
+          "settings": {
+            "title": "Steps",
+            "description": "<p>Follow these simple steps to get started</p>",
+            "text_alignment": "center",
+            "step_1_title": "Choose your product",
+            "step_1_text": "<p>Browse our collection and select the perfect item for you</p>",
+            "step_2_title": "Add to cart",
+            "step_2_text": "<p>Select your size and quantity, then add to your shopping cart</p>",
+            "step_3_title": "Secure checkout",
+            "step_3_text": "<p>Complete your purchase with our secure payment system</p>",
+            "step_4_title": "",
+            "step_4_text": "",
+            "step_5_title": "",
+            "step_5_text": "",
+            "max_width": 1200,
+            "section_padding": 40,
+            "header_spacing": 40,
+            "step_spacing": 30,
+            "content_spacing": 16,
+            "step_padding": 25,
+            "title_size": 32,
+            "description_size": 16,
+            "step_title_size": 20,
+            "step_text_size": 15,
+            "number_size": 40,
+            "number_font_size": 18,
+            "number_background": "#000000",
+            "number_text_color": "#ffffff",
+            "title_color": "#000000",
+            "description_color": "#666666",
+            "step_title_color": "#000000",
+            "step_text_color": "#666666",
+            "step_background": "#ffffff",
+            "border_radius": 8,
+            "border_width": 1,
+            "border_color": "#e5e5e5"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_75d0dac_rk4NJQ"
+      ],
+      "settings": {}
+    },
+    "1756608397ad5395e1": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_f451576_KEWhqk": {
+          "type": "ai_gen_block_f451576",
+          "settings": {
+            "number_1": "100+",
+            "label_1": "Happy customers",
+            "number_2": "50",
+            "label_2": "Products sold",
+            "number_3": "24/7",
+            "label_3": "Customer support",
+            "number_4": "5★",
+            "label_4": "Average rating",
+            "columns_desktop": 4,
+            "columns_mobile": "2",
+            "text_alignment": "center",
+            "gap": 20,
+            "background_color": "#ffffff",
+            "item_background_color": "#f8f8f8",
+            "number_color": "#000000",
+            "label_color": "#666666",
+            "number_size": 48,
+            "number_weight": "700",
+            "label_size": 16,
+            "number_margin_bottom": 8,
+            "item_padding": 20,
+            "border_radius": 8,
+            "border_width": 0,
+            "border_color": "#e0e0e0",
+            "padding_top": 40,
+            "padding_bottom": 40
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_f451576_KEWhqk"
+      ],
+      "settings": {}
     }
   },
   "order": [
@@ -394,6 +595,11 @@
     "swan_image_text_diHnaA",
     "swan_sign_up_yYi4Dj",
     "1756594554f0ec837f",
-    "17565967426594b20c"
+    "17565967426594b20c",
+    "1756606764d59b2a1b",
+    "1756607302649791a7",
+    "1756607884b53defc4",
+    "1756608292307a69c2",
+    "1756608397ad5395e1"
   ]
 }
