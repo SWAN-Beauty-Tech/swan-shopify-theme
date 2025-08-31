@@ -415,6 +415,14 @@
         "ai_gen_block_62e4169_Cmbp9L": {
           "type": "ai_gen_block_62e4169",
           "settings": {
+            "logo_1": "shopify://shop_images/597720-logo-1737030702.png",
+            "logo_2": "shopify://shop_images/IVY001_Logo_rot_1200x1200_bbee04b2-af2e-4491-94ee-01c4a6327f23.webp",
+            "logo_3": "shopify://shop_images/Design_ohne_Titel_43.webp",
+            "logo_4": "shopify://shop_images/demares_Gift_Card.webp",
+            "logo_5": "shopify://shop_images/d417c127-3d60-4531-bbba-d86c19d12b48.__CR0_0_600_180_PT0_SX600_V1.jpg",
+            "logo_6": "shopify://shop_images/559702-logo-1715779880.png",
+            "logo_7": "shopify://shop_images/fleeky-logo.png",
+            "logo_8": "shopify://shop_images/Logo_Ylumi_gold.webp",
             "logo_height": 60,
             "logo_max_width": 120,
             "logo_spacing": 40,
@@ -439,7 +447,7 @@
         "ai_gen_block_0776ed8_BkGMAC": {
           "type": "ai_gen_block_0776ed8",
           "settings": {
-            "title": "Success Stories",
+            "title": "Case studies",
             "subtitle": "<p>See how our clients achieved remarkable results</p>",
             "text_alignment": "center",
             "section_padding": 60,
@@ -577,10 +585,39 @@
             "padding_bottom": 40
           },
           "blocks": {}
+        },
+        "ai_gen_block_1cdaf88_zwjpab": {
+          "type": "ai_gen_block_1cdaf88",
+          "settings": {
+            "image_1": "shopify://shop_images/12115795_1.webp",
+            "image_2": "shopify://shop_images/loreal-uv-patch-today-003-160106.webp",
+            "image_3": "shopify://shop_images/applications-medical-wearables-hero-GettyImages-1421771110-2.avif",
+            "image_4": "shopify://shop_images/406-1920w.webp",
+            "slideshow_height": 650,
+            "border_radius": 8,
+            "background_color": "#f4f4f4",
+            "show_controls": false,
+            "control_size": 55,
+            "control_spacing": 30,
+            "control_background": "#ffffff",
+            "control_color": "#000000",
+            "show_indicators": true,
+            "indicator_size": 44,
+            "indicator_gap": 12,
+            "indicator_spacing": 30,
+            "indicator_background": "#ffffff",
+            "indicator_color": "#000000",
+            "indicator_active_background": "#000000",
+            "indicator_active_color": "#ffffff",
+            "autoplay": true,
+            "autoplay_speed": 3500
+          },
+          "blocks": {}
         }
       },
       "block_order": [
-        "ai_gen_block_f451576_KEWhqk"
+        "ai_gen_block_f451576_KEWhqk",
+        "ai_gen_block_1cdaf88_zwjpab"
       ],
       "settings": {}
     }
