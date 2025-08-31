@@ -1,6 +1,354 @@
+{% doc %}
+  @prompt
+    Numbers
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-numbers-block-{{ ai_gen_id }} {
+    padding: {{ block.settings.padding_top }}px 0 {{ block.settings.padding_bottom }}px;
+    background-color: {{ block.settings.background_color }};
+  }
+
+  .ai-numbers-container-{{ ai_gen_id }} {
+    max-width: {{ settings.page_width }}px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .ai-numbers-grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat({{ block.settings.columns_desktop }}, 1fr);
+    gap: {{ block.settings.gap }}px;
+    text-align: {{ block.settings.text_alignment }};
+  }
+
+  .ai-numbers-item-{{ ai_gen_id }} {
+    padding: {{ block.settings.item_padding }}px;
+    background-color: {{ block.settings.item_background_color }};
+    border-radius: {{ block.settings.border_radius }}px;
+    border: {{ block.settings.border_width }}px solid {{ block.settings.border_color }};
+  }
+
+  .ai-numbers-number-{{ ai_gen_id }} {
+    font-size: {{ block.settings.number_size }}px;
+    font-weight: {{ block.settings.number_weight }};
+    color: {{ block.settings.number_color }};
+    margin:0 0 {{ block.settings.number_margin_bottom }}px;line-height: 1.2;
+  }
+
+  .ai-numbers-label-{{ ai_gen_id }} {
+    font-size: {{ block.settings.label_size }}px;
+    color: {{ block.settings.label_color }};
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-numbers-grid-{{ ai_gen_id }} {
+      grid-template-columns: repeat({{ block.settings.columns_mobile }}, 1fr);
+    }
+    .ai-numbers-number-{{ ai_gen_id }} {
+      font-size: {{ block.settings.number_size | times: 0.8 }}px;
+    }
+    .ai-numbers-label-{{ ai_gen_id }} {
+      font-size: {{ block.settings.label_size | times: 0.9 }}px;
+    }
+  }
+{% endstyle %}<div class="ai-numbers-block-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-numbers-container-{{ ai_gen_id }}">
+    <div class="ai-numbers-grid-{{ ai_gen_id }}">
+      {% for i in (1..4) %}
+        {% liquid
+          assign number_key = 'number_' | append: i
+          assign label_key = 'label_' | append: i
+          assign number_value = block.settings[number_key]
+          assign label_value = block.settings[label_key]
+        %}
+        
+        {% if number_value != blank or label_value != blank %}
+          <div class="ai-numbers-item-{{ ai_gen_id }}">
+            {% if number_value != blank %}
+              <div class="ai-numbers-number-{{ ai_gen_id }}">{{ number_value }}</div>
+            {% endif %}
+            {% if label_value != blank %}
+              <div class="ai-numbers-label-{{ ai_gen_id }}">{{ label_value }}</div>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Numbers",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "number_1",
+      "label": "Number 1",
+      "default": "100+"
+    },
+    {
+      "type": "text",
+      "id": "label_1",
+      "label": "Label 1",
+      "default": "Happy customers"
+    },
+    {
+      "type": "text",
+      "id": "number_2",
+      "label": "Number 2",
+      "default": "50"
+    },
+    {
+      "type": "text",
+      "id": "label_2",
+      "label": "Label 2",
+      "default": "Products sold"
+    },
+    {
+      "type": "text",
+      "id": "number_3",
+      "label": "Number 3",
+      "default": "24/7"
+    },
+    {
+      "type": "text",
+      "id": "label_3",
+      "label": "Label 3",
+      "default": "Customer support"
+    },
+    {
+      "type": "text",
+      "id": "number_4",
+      "label": "Number 4",
+      "default": "5★"
+    },
+    {
+      "type": "text",
+      "id": "label_4",
+      "label": "Label 4",
+      "default": "Average rating"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "label": "Columns on desktop",
+      "default": 4
+    },
+    {
+      "type": "select",
+      "id": "columns_mobile",
+      "label": "Columns on mobile",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        }
+      ],
+      "default": "2"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "label": "Gap between items",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "item_background_color",
+      "label": "Item background",
+      "default": "#f8f8f8"
+    },
+    {
+      "type": "color",
+      "id": "number_color",
+      "label": "Number",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "label_color",
+      "label": "Label",
+      "default": "#666666"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "number_size",
+      "min": 20,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "label": "Number size",
+      "default": 48
+    },
+    {
+      "type": "select",
+      "id": "number_weight",
+      "label": "Number weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "600",
+          "label": "Semi bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "700"
+    },
+    {
+      "type": "range",
+      "id": "label_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Label size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "number_margin_bottom",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Space below number",
+      "default": 8
+    },
+    {
+      "type": "header",
+      "content": "Item style"
+    },
+    {
+      "type": "range",
+      "id": "item_padding",
+      "min": 0,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "label": "Item padding",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "border_width",
+      "min": 0,
+      "max": 4,
+      "step": 1,
+      "unit": "px",
+      "label": "Border width",
+      "default": 0
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border color",
+      "default": "#e0e0e0"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 40
+    }
+  ],
+  "presets": [
+    {
+      "name": "Numbers"
+    }
+  ],
+  "tag": null
+}
 {% endschema %}
