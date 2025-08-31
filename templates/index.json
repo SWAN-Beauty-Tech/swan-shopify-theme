@@ -308,6 +308,7 @@
       "blocks": {
         "ai_gen_block_7e17886_9W97F9": {
           "type": "ai_gen_block_7e17886",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/loreal-uv-patch-today-003-160106.webp",
             "hotspot_size": 30,
@@ -359,10 +360,65 @@
             "hotspot_10_product": ""
           },
           "blocks": {}
+        },
+        "ai_gen_block_8ccdd87_DDaNyx": {
+          "type": "ai_gen_block_8ccdd87",
+          "settings": {
+            "image": "shopify://shop_images/loreal-uv-patch-today-003-160106.webp",
+            "hotspot_size": 36,
+            "hotspot_color": "#000000",
+            "hotspot_icon_color": "#FFFFFF",
+            "popup_position": "top",
+            "popup_width": 250,
+            "popup_bg_color": "#FFFFFF",
+            "popup_text_color": "#000000",
+            "hotspot_1_enabled": true,
+            "hotspot_1_x": 20,
+            "hotspot_1_y": 30,
+            "hotspot_1_product": "",
+            "hotspot_2_enabled": true,
+            "hotspot_2_x": 50,
+            "hotspot_2_y": 40,
+            "hotspot_2_product": "",
+            "hotspot_3_enabled": true,
+            "hotspot_3_x": 75,
+            "hotspot_3_y": 60,
+            "hotspot_3_product": "",
+            "hotspot_4_enabled": false,
+            "hotspot_4_x": 25,
+            "hotspot_4_y": 70,
+            "hotspot_4_product": "",
+            "hotspot_5_enabled": false,
+            "hotspot_5_x": 80,
+            "hotspot_5_y": 25,
+            "hotspot_5_product": "",
+            "hotspot_6_enabled": false,
+            "hotspot_6_x": 15,
+            "hotspot_6_y": 50,
+            "hotspot_6_product": "",
+            "hotspot_7_enabled": false,
+            "hotspot_7_x": 65,
+            "hotspot_7_y": 80,
+            "hotspot_7_product": "",
+            "hotspot_8_enabled": false,
+            "hotspot_8_x": 40,
+            "hotspot_8_y": 15,
+            "hotspot_8_product": "",
+            "hotspot_9_enabled": false,
+            "hotspot_9_x": 85,
+            "hotspot_9_y": 45,
+            "hotspot_9_product": "",
+            "hotspot_10_enabled": false,
+            "hotspot_10_x": 30,
+            "hotspot_10_y": 85,
+            "hotspot_10_product": ""
+          },
+          "blocks": {}
         }
       },
       "block_order": [
-        "ai_gen_block_7e17886_9W97F9"
+        "ai_gen_block_7e17886_9W97F9",
+        "ai_gen_block_8ccdd87_DDaNyx"
       ],
       "settings": {}
     },
@@ -402,10 +458,40 @@
             "button_text": "Shop now"
           },
           "blocks": {}
+        },
+        "ai_gen_block_1c2bbdf_MgFCyC": {
+          "type": "ai_gen_block_1c2bbdf",
+          "settings": {
+            "video": "shopify://files/videos/swan-intro.mp4",
+            "autoplay": false,
+            "muted": true,
+            "loop": false,
+            "video_border_radius": 12,
+            "product": "",
+            "show_description": true,
+            "button_text": "Shop now",
+            "product_image_size": 200,
+            "product_image_border_radius": 12,
+            "mobile_layout": "video_top",
+            "gap": 64,
+            "padding": 40,
+            "background_color": "#ffffff",
+            "text_color": "#000000",
+            "price_color": "#000000",
+            "button_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_hover_color": "#333333",
+            "product_title_size": 32,
+            "product_price_size": 24,
+            "product_description_size": 16,
+            "button_border_radius": 8
+          },
+          "blocks": {}
         }
       },
       "block_order": [
-        "ai_gen_block_710080f_9FTLgf"
+        "ai_gen_block_710080f_9FTLgf",
+        "ai_gen_block_1c2bbdf_MgFCyC"
       ],
       "settings": {}
     },
