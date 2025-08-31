@@ -1,6 +1,656 @@
+{% doc %}
+  @prompt
+    Case studies
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-case-studies-{{ ai_gen_id }} {
+    padding: {{ block.settings.section_padding }}px 0;
+    background-color: {{ block.settings.background_color }};
+  }
+
+  .ai-case-studies-container-{{ ai_gen_id }} {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .ai-case-studies-header-{{ ai_gen_id }} {
+    text-align: {{ block.settings.text_alignment }};
+    margin-bottom: 40px;
+  }
+
+  .ai-case-studies-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.title_size }}px;
+    color: {{ block.settings.title_color }};
+    margin: 0 0 16px;
+    font-weight: 600;
+  }
+
+  .ai-case-studies-subtitle-{{ ai_gen_id }} {
+    font-size: {{ block.settings.subtitle_size }}px;
+    color: {{ block.settings.subtitle_color }};
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .ai-case-studies-grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: {{ block.settings.grid_gap }}px;
+  }
+
+  .ai-case-study-card-{{ ai_gen_id }} {
+    background-color: {{ block.settings.card_background_color }};
+    border-radius: {{ block.settings.card_border_radius }}px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .ai-case-study-card-{{ ai_gen_id }}:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  .ai-case-study-image-{{ ai_gen_id }} {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ai-case-study-image-{{ ai_gen_id }} img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-case-study-image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .ai-case-study-image-placeholder-{{ ai_gen_id }} svg {
+    width: 60px;
+    height: 60px;
+    opacity: 0.5;
+  }
+
+  .ai-case-study-empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+  }
+
+  .ai-case-study-content-{{ ai_gen_id }} {
+    padding: 24px;
+  }
+
+  .ai-case-study-category-{{ ai_gen_id }} {
+    display: inline-block;
+    background-color: {{ block.settings.category_background_color }};
+    color: {{ block.settings.category_text_color }};
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .ai-case-study-title-{{ ai_gen_id }} {
+    font-size: 20px;
+    color: {{ block.settings.card_title_color }};
+    margin: 0 0 12px;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  .ai-case-study-description-{{ ai_gen_id }} {
+    color: {{ block.settings.card_text_color }};
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0 0 16px;
+  }
+
+  .ai-case-study-results-{{ ai_gen_id }} {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+
+  .ai-case-study-metric-{{ ai_gen_id }} {
+    text-align: center;
+  }
+
+  .ai-case-study-metric-value-{{ ai_gen_id }} {
+    font-size: 24px;
+    font-weight: 700;
+    color: {{ block.settings.metric_color }};
+    margin: 0;
+    line-height: 1;
+  }
+
+  .ai-case-study-metric-label-{{ ai_gen_id }} {
+    font-size: 12px;
+    color: {{ block.settings.card_text_color }};
+    margin: 4px 0 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .ai-case-study-link-{{ ai_gen_id }} {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: {{ block.settings.link_color }};
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .ai-case-study-link-{{ ai_gen_id }}:hover {
+    color: {{ block.settings.link_hover_color }};
+  }
+
+  .ai-case-study-link-{{ ai_gen_id }} svg {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+  }
+
+  .ai-case-study-link-{{ ai_gen_id }}:hover svg {
+    transform: translateX(4px);
+  }
+
+  @media screen and (max-width: 768px) {
+    .ai-case-studies-grid-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+    }
+
+    .ai-case-study-results-{{ ai_gen_id }} {
+      justify-content: space-around;
+    }
+
+    .ai-case-studies-title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.title_size | times: 0.8 }}px;
+    }
+  }
+{% endstyle %}<div class="ai-case-studies-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-case-studies-container-{{ ai_gen_id }}">
+    {% if block.settings.title != blank or block.settings.subtitle != blank %}
+      <div class="ai-case-studies-header-{{ ai_gen_id }}">
+        {% if block.settings.title != blank %}
+          <h2 class="ai-case-studies-title-{{ ai_gen_id }}">{{ block.settings.title }}</h2>
+        {% endif %}
+        {% if block.settings.subtitle != blank %}
+          <div class="ai-case-studies-subtitle-{{ ai_gen_id }}">{{ block.settings.subtitle }}</div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="ai-case-studies-grid-{{ ai_gen_id }}">
+      {% for i in (1..3) %}
+        {% liquid
+          assign case_title_key = 'case_' | append: i | append: '_title'
+          assign case_category_key = 'case_' | append: i | append: '_category'
+          assign case_description_key = 'case_' | append: i | append: '_description'
+          assign case_image_key = 'case_' | append: i | append: '_image'
+          assign case_link_key = 'case_' | append: i | append: '_link'
+          assign case_metric1_value_key = 'case_' | append: i | append: '_metric1_value'
+          assign case_metric1_label_key = 'case_' | append: i | append: '_metric1_label'
+          assign case_metric2_value_key = 'case_' | append: i | append: '_metric2_value'
+          assign case_metric2_label_key = 'case_' | append: i | append: '_metric2_label'
+
+          assign case_title = block.settings[case_title_key]
+          assign case_category = block.settings[case_category_key]
+          assign case_description = block.settings[case_description_key]
+          assign case_image = block.settings[case_image_key]
+          assign case_link = block.settings[case_link_key]
+          assign case_metric1_value = block.settings[case_metric1_value_key]
+          assign case_metric1_label = block.settings[case_metric1_label_key]
+          assign case_metric2_value = block.settings[case_metric2_value_key]
+          assign case_metric2_label = block.settings[case_metric2_label_key]
+        %}
+
+        {% if case_title != blank or case_description != blank or case_image != blank %}
+          <div class="ai-case-study-card-{{ ai_gen_id }}">
+            <div class="ai-case-study-image-{{ ai_gen_id }}">
+              {% if case_image %}
+                <img
+                  src="{{ case_image | image_url: width: 400 }}"
+                  alt="{{ case_image.alt | escape }}"
+                  loading="lazy"
+                  width="400"
+                  height="200"
+                >
+              {% else %}
+                <div class="ai-case-study-image-placeholder-{{ ai_gen_id }}">
+                  {{ 'image' | placeholder_svg_tag }}
+                  <div class="ai-case-study-empty-state-{{ ai_gen_id }}">
+                    Add case study image
+                  </div>
+                </div>
+              {% endif %}
+            </div>
+
+            <div class="ai-case-study-content-{{ ai_gen_id }}">
+              {% if case_category != blank %}
+                <span class="ai-case-study-category-{{ ai_gen_id }}">{{ case_category }}</span>
+              {% endif %}
+
+              {% if case_title != blank %}
+                <h3 class="ai-case-study-title-{{ ai_gen_id }}">{{ case_title }}</h3>
+              {% endif %}
+
+              {% if case_description != blank %}
+                <div class="ai-case-study-description-{{ ai_gen_id }}">{{ case_description }}</div>
+              {% endif %}
+
+              {% if case_metric1_value != blank or case_metric2_value != blank %}
+                <div class="ai-case-study-results-{{ ai_gen_id }}">
+                  {% if case_metric1_value != blank %}
+                    <div class="ai-case-study-metric-{{ ai_gen_id }}">
+                      <div class="ai-case-study-metric-value-{{ ai_gen_id }}">{{ case_metric1_value }}</div>
+                      {% if case_metric1_label != blank %}
+                        <div class="ai-case-study-metric-label-{{ ai_gen_id }}">{{ case_metric1_label }}</div>
+                      {% endif %}
+                    </div>
+                  {% endif %}
+
+                  {% if case_metric2_value != blank %}
+                    <div class="ai-case-study-metric-{{ ai_gen_id }}">
+                      <div class="ai-case-study-metric-value-{{ ai_gen_id }}">{{ case_metric2_value }}</div>
+                      {% if case_metric2_label != blank %}
+                        <div class="ai-case-study-metric-label-{{ ai_gen_id }}">{{ case_metric2_label }}</div>
+                      {% endif %}
+                    </div>
+                  {% endif %}
+                </div>
+              {% endif %}
+
+              {% if case_link != blank %}
+                <a href="{{ case_link }}" class="ai-case-study-link-{{ ai_gen_id }}">
+                  {{ block.settings.link_text }}
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7,7 17,717,17"></polyline>
+                  </svg>
+                </a>
+              {% endif %}
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Case studies",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Success Stories"
+    },
+    {
+      "type": "richtext",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "<p>See how our clients achieved remarkable results</p>"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "section_padding",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Section padding",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "grid_gap",
+      "min": 16,
+      "max": 48,
+      "step": 4,
+      "unit": "px",
+      "label": "Grid gap",
+      "default": 32
+    },
+    {
+      "type": "header",
+      "content": "Case study1"
+    },
+    {
+      "type": "image_picker",
+      "id": "case_1_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "case_1_category",
+      "label": "Category",
+      "default": "E-commerce"
+    },
+    {
+      "type": "text",
+      "id": "case_1_title",
+      "label": "Title",
+      "default": "Online Store Transformation"
+    },
+    {
+      "type": "textarea",
+      "id": "case_1_description",
+      "label": "Description",
+      "default": "Complete redesign and optimization of an e-commerce platform resulting in significant performance improvements."
+    },
+    {
+      "type": "text",
+      "id": "case_1_metric1_value",
+      "label": "Metric 1 value",
+      "default": "+150%"
+    },
+    {
+      "type": "text",
+      "id": "case_1_metric1_label",
+      "label": "Metric 1 label",
+      "default": "Sales increase"
+    },
+    {
+      "type": "text",
+      "id": "case_1_metric2_value",
+      "label": "Metric 2 value",
+      "default": "45%"
+    },
+    {
+      "type": "text",
+      "id": "case_1_metric2_label",
+      "label": "Metric 2 label",
+      "default": "Faster loading"
+    },
+    {
+      "type": "url",
+      "id": "case_1_link",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Case study 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "case_2_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "case_2_category",
+      "label": "Category",
+      "default": "Mobile App"
+    },
+    {
+      "type": "text",
+      "id": "case_2_title",
+      "label": "Title",
+      "default": "Mobile Experience Redesign"
+    },
+    {
+      "type": "textarea",
+      "id": "case_2_description",
+      "label": "Description",
+      "default": "User-centered mobile app redesign that improved engagement and user satisfaction across all demographics."
+    },
+    {
+      "type": "text",
+      "id": "case_2_metric1_value",
+      "label": "Metric 1 value",
+      "default": "+200%"
+    },
+    {
+      "type": "text",
+      "id": "case_2_metric1_label",
+      "label": "Metric 1 label",
+      "default": "User engagement"
+    },
+    {
+      "type": "text",
+      "id": "case_2_metric2_value",
+      "label": "Metric 2 value",
+      "default": "4.8"
+    },
+    {
+      "type": "text",
+      "id": "case_2_metric2_label",
+      "label": "Metric 2 label",
+      "default": "App store rating"
+    },
+    {
+      "type": "url",
+      "id": "case_2_link",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Case study 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "case_3_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "case_3_category",
+      "label": "Category",
+      "default": "Branding"
+    },
+    {
+      "type": "text",
+      "id": "case_3_title",
+      "label": "Title",
+      "default": "Brand Identity Refresh"
+    },
+    {
+      "type": "textarea",
+      "id": "case_3_description",
+      "label": "Description",
+      "default": "Complete brand identity overhaul including logo, messaging, and digital presence for a growing startup."
+    },
+    {
+      "type": "text",
+      "id": "case_3_metric1_value",
+      "label": "Metric 1 value",
+      "default": "+300%"
+    },
+    {
+      "type": "text",
+      "id": "case_3_metric1_label",
+      "label": "Metric 1 label",
+      "default": "Brand recognition"
+    },
+    {
+      "type": "text",
+      "id": "case_3_metric2_value",
+      "label": "Metric 2 value",
+      "default": "85%"
+    },
+    {
+      "type": "text",
+      "id": "case_3_metric2_label",
+      "label": "Metric 2 label",
+      "default": "Customer satisfaction"
+    },
+    {
+      "type": "url",
+      "id": "case_3_link",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Link settings"
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Link text",
+      "default": "View case study"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 24,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Title size",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "subtitle_size",
+      "min": 14,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Subtitle size",
+      "default": 18
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "subtitle_color",
+      "label": "Subtitle",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "card_background_color",
+      "label": "Card background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "card_title_color",
+      "label": "Card title",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "card_text_color",
+      "label": "Card text",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "category_background_color",
+      "label": "Category background",
+      "default": "#f0f0f0"
+    },
+    {
+      "type": "color",
+      "id": "category_text_color",
+      "label": "Category text",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "metric_color",
+      "label": "Metric values",
+      "default": "#007acc"
+    },
+    {
+      "type": "color",
+      "id": "link_color",
+      "label": "Link",
+      "default": "#007acc"
+    },
+    {
+      "type": "color",
+      "id": "link_hover_color",
+      "label": "Link hover",
+      "default": "#005999"
+    },
+    {
+      "type": "header",
+      "content": "Card style"
+    },
+    {
+      "type": "range",
+      "id": "card_border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Card border radius",
+      "default": 8
+    }
+  ],
+  "presets": [
+    {
+      "name": "Case studies"
+    }
+  ]
+}
 {% endschema %}
