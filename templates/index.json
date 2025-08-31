@@ -445,6 +445,7 @@
       "blocks": {
         "ai_gen_block_710080f_9FTLgf": {
           "type": "ai_gen_block_710080f",
+          "disabled": true,
           "settings": {
             "layout": "side-by-side",
             "color_scheme": "scheme-1",
@@ -467,7 +468,7 @@
             "muted": true,
             "loop": false,
             "video_border_radius": 12,
-            "product": "",
+            "product": "dr-emi-arpa-better-balm-kopie",
             "show_description": true,
             "button_text": "Shop now",
             "product_image_size": 200,
