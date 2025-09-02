@@ -473,7 +473,7 @@
           "settings": {
             "heading": "Benötige ich WLAN für den SWAN Mirror?",
             "icon": "none",
-            "row_content": "<p>Ja, für die volle Funktionalität benötigst du eine WLAN-Verbindung. Der Spiegel verbindet sich mit der SWAN App und dem Internet, um dir aktuelle Inhalte, Updates und die Community-Funktionen zu bieten.</p>",
+            "row_content": "<p>Ja, für die volle Funktionalität benötigst du eine WLAN-Verbindung sowie einen Stromanschluss. Der Spiegel verbindet sich mit der SWAN App und dem Internet, um dir aktuelle Inhalte, Updates und die Community-Funktionen zu bieten.</p>",
             "page": ""
           }
         }
