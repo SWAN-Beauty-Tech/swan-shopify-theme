@@ -157,12 +157,13 @@
         "buy_buttons_KXWJgr",
         "share_baBqTd"
       ],
+      "disabled": true,
       "name": "t:sections.featured-product.presets.name",
       "settings": {
         "product": "",
         "color_scheme": "",
         "secondary_background": false,
-        "media_size": "medium",
+        "media_size": "small",
         "constrain_to_viewport": true,
         "media_fit": "contain",
         "media_position": "left",
