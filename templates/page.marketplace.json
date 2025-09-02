@@ -190,8 +190,21 @@
             "button_border_radius": 8
           },
           "blocks": {}
-        },
-        "ai_gen_block_5989830_6AMH3J": {
+        }
+      },
+      "block_order": [
+        "reelup_shoppable_videos_reels_reelup_stories_nX83Pb",
+        "reelup_shoppable_videos_reels_reelup_playlist_FfenHr",
+        "ai_gen_block_2b816b2_HJrUdG",
+        "ai_gen_block_ba0b649_xwmYyC",
+        "ai_gen_block_2b816b2_DeteKz"
+      ],
+      "settings": {}
+    },
+    "blocks_jgG73b": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_5989830_UagdQm": {
           "type": "ai_gen_block_5989830",
           "name": "Customer reviews",
           "settings": {
@@ -253,12 +266,10 @@
         }
       },
       "block_order": [
-        "reelup_shoppable_videos_reels_reelup_stories_nX83Pb",
-        "reelup_shoppable_videos_reels_reelup_playlist_FfenHr",
-        "ai_gen_block_2b816b2_HJrUdG",
-        "ai_gen_block_ba0b649_xwmYyC",
-        "ai_gen_block_2b816b2_DeteKz",
-        "ai_gen_block_5989830_6AMH3J"
+        "ai_gen_block_5989830_UagdQm"
+      ],
+      "custom_css": [
+        "div {max-width: 150ch; margin: 0 auto;}"
       ],
       "settings": {}
     },
@@ -368,6 +379,7 @@
     "swan_image_text_67EcKy",
     "17556416728320b2de",
     "1755642240b7fb8d61",
+    "blocks_jgG73b",
     "collapsible_content_dpkVMU",
     "featured_blog_3YTjpM",
     "swan_sign_up_aYagET"
