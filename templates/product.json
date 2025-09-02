@@ -115,7 +115,7 @@
         "share"
       ],
       "custom_css": [
-        "div. {max-width: 175ch; margin: 0 auto;}"
+        ".product {padding-top: 10vh; max-width: 175ch; margin: 0 auto;}"
       ],
       "settings": {
         "enable_sticky_info": true,
