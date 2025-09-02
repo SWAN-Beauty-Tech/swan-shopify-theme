@@ -427,6 +427,7 @@
       "blocks": {
         "reelup_shoppable_videos_reels_reelup_playlist_slider_WKHYUV": {
           "type": "shopify://apps/reelup-shoppable-videos-reels/blocks/reelup-playlist-slider/a8ec9e4d-d192-44f7-9c23-595f9ee7dd5b",
+          "disabled": true,
           "settings": {
             "playlist_id": "",
             "debugging_script": ""
@@ -462,6 +463,7 @@
         },
         "ai_gen_block_1c2bbdf_MgFCyC": {
           "type": "ai_gen_block_1c2bbdf",
+          "disabled": true,
           "settings": {
             "video": "shopify://files/videos/Video in Ivory Grey Scrapbook Scrapbook Style.mp4",
             "autoplay": false,
