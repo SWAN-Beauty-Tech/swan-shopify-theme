@@ -539,6 +539,7 @@
         "headline_tcnPM9",
         "text_area_Emb4gL"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/swan-exp-1.jpg",
         "image_position": "right",
