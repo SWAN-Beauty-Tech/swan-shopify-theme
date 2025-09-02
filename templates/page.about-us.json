@@ -175,22 +175,6 @@
         "padding_bottom": 36
       }
     },
-    "video_LEqXnJ": {
-      "type": "video",
-      "name": "t:sections.video.presets.name",
-      "settings": {
-        "heading": "",
-        "heading_size": "h2",
-        "enable_video_looping": true,
-        "video": "shopify://files/videos/3 Mirror Mood Bathroom - 3 (Favorit graded and looped).mov",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "1756214345b5c620e8": {
       "type": "_blocks",
       "blocks": {
@@ -221,10 +205,10 @@
           "settings": {
             "hotspot_size": 30,
             "hotspot_color": "#000000",
-            "hotspot_icon_color": "#FFFFFF",
+            "hotspot_icon_color": "#ffffff",
             "popup_position": "top",
             "popup_width": 200,
-            "popup_bg_color": "#FFFFFF",
+            "popup_bg_color": "#ffffff",
             "popup_text_color": "#000000",
             "hotspot_1_enabled": true,
             "hotspot_1_x": 20,
@@ -643,6 +627,7 @@
         "headline_tcnPM9",
         "text_area_Emb4gL"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/swan-exp-1.jpg",
         "image_position": "right",
@@ -664,7 +649,6 @@
     "video_nVB6z7",
     "swan_image_text_8yYbnC",
     "featured_product_imLJVN",
-    "video_LEqXnJ",
     "1756214345b5c620e8",
     "17552366850a6e1abb",
     "blocks_R3JYbW",
