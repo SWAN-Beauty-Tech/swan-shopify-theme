@@ -379,6 +379,9 @@
         "ai_gen_block_7e17886_ywGmdd",
         "ai_gen_block_ba0b649_Ti6gek"
       ],
+      "custom_css": [
+        "div {max-width: 150ch;margin: 0 auto;}"
+      ],
       "settings": {}
     },
     "17552366850a6e1abb": {
