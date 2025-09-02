@@ -134,6 +134,7 @@
         "text_EVbb6h",
         "button_GrNaJX"
       ],
+      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/8T8A4453-3_fb6c33c8-8781-4eea-9661-3f804c4cd6de.jpg",
