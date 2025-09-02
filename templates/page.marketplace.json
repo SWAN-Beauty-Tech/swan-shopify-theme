@@ -93,6 +93,20 @@
     "1755642240b7fb8d61": {
       "type": "_blocks",
       "blocks": {
+        "reelup_shoppable_videos_reels_reelup_stories_nX83Pb": {
+          "type": "shopify://apps/reelup-shoppable-videos-reels/blocks/reelup-stories/a8ec9e4d-d192-44f7-9c23-595f9ee7dd5b",
+          "settings": {
+            "section_id": "",
+            "debugging_script": ""
+          }
+        },
+        "reelup_shoppable_videos_reels_reelup_playlist_FfenHr": {
+          "type": "shopify://apps/reelup-shoppable-videos-reels/blocks/reelup-playlist/a8ec9e4d-d192-44f7-9c23-595f9ee7dd5b",
+          "settings": {
+            "playlist_id": "rl_pl_19440",
+            "debugging_script": ""
+          }
+        },
         "ai_gen_block_2b816b2_HJrUdG": {
           "type": "ai_gen_block_2b816b2",
           "name": "Video with text",
@@ -239,6 +253,8 @@
         }
       },
       "block_order": [
+        "reelup_shoppable_videos_reels_reelup_stories_nX83Pb",
+        "reelup_shoppable_videos_reels_reelup_playlist_FfenHr",
         "ai_gen_block_2b816b2_HJrUdG",
         "ai_gen_block_ba0b649_xwmYyC",
         "ai_gen_block_2b816b2_DeteKz",
