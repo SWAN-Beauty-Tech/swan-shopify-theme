@@ -252,6 +252,22 @@
           },
           "blocks": {}
         },
+        "ai_gen_block_62e4169_V9jTPn": {
+          "type": "ai_gen_block_62e4169",
+          "name": "Marquee logo list",
+          "settings": {
+            "logo_height": 60,
+            "logo_max_width": 120,
+            "logo_spacing": 40,
+            "padding_vertical": 40,
+            "animation_speed": 30,
+            "pause_on_hover": true,
+            "background_color": "#ffffff",
+            "logo_opacity": 70,
+            "grayscale_logos": true
+          },
+          "blocks": {}
+        },
         "ai_gen_block_2b816b2_JEKzmU": {
           "type": "ai_gen_block_2b816b2",
           "settings": {
@@ -420,6 +436,7 @@
       },
       "block_order": [
         "ai_gen_block_3655cfc_FM8peT",
+        "ai_gen_block_62e4169_V9jTPn",
         "ai_gen_block_2b816b2_JEKzmU",
         "ai_gen_block_ba0b649_a4WnpP",
         "ai_gen_block_2b816b2_hc8MHd",
