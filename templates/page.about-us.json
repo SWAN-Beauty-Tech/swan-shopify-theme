@@ -103,6 +103,76 @@
         "color_scheme": "scheme-3"
       }
     },
+    "featured_product_PRQUjy": {
+      "type": "featured-product",
+      "blocks": {
+        "text_CXKpJc": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_HGhTMc": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_YgREJ4": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_iE7JGK": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector_JQFG4a": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_KXWJgr": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_baBqTd": {
+          "type": "share",
+          "settings": {
+            "share_label": "Teilen"
+          }
+        }
+      },
+      "block_order": [
+        "text_CXKpJc",
+        "title_HGhTMc",
+        "price_YgREJ4",
+        "variant_picker_iE7JGK",
+        "quantity_selector_JQFG4a",
+        "buy_buttons_KXWJgr",
+        "share_baBqTd"
+      ],
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "product": "",
+        "color_scheme": "",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "featured_product_imLJVN": {
       "type": "featured-product",
       "blocks": {
@@ -159,6 +229,7 @@
         "buy_buttons_d7RqM7",
         "share_wTGkkx"
       ],
+      "disabled": true,
       "name": "t:sections.featured-product.presets.name",
       "settings": {
         "product": "swan-mirror-cleo",
@@ -649,6 +720,7 @@
     "swan_rich_text_FK6WPi",
     "video_nVB6z7",
     "swan_image_text_8yYbnC",
+    "featured_product_PRQUjy",
     "featured_product_imLJVN",
     "1756214345b5c620e8",
     "17552366850a6e1abb",
