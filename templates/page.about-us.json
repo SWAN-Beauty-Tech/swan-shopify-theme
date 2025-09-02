@@ -597,140 +597,6 @@
     "blocks_YJM6Bi": {
       "type": "_blocks",
       "blocks": {
-        "ai_gen_block_62e4169_PGAT76": {
-          "type": "ai_gen_block_62e4169",
-          "name": "Marquee logo list",
-          "disabled": true,
-          "settings": {
-            "logo_1": "shopify://shop_images/597720-logo-1737030702.png",
-            "logo_2": "shopify://shop_images/IVY001_Logo_rot_1200x1200_bbee04b2-af2e-4491-94ee-01c4a6327f23.webp",
-            "logo_3": "shopify://shop_images/d417c127-3d60-4531-bbba-d86c19d12b48.__CR0_0_600_180_PT0_SX600_V1.jpg",
-            "logo_4": "shopify://shop_images/demares_Gift_Card.webp",
-            "logo_5": "shopify://shop_images/Design_ohne_Titel_43.webp",
-            "logo_6": "shopify://shop_images/559702-logo-1715779880.png",
-            "logo_7": "shopify://shop_images/fleeky-logo.png",
-            "logo_8": "shopify://shop_images/subbrand_50537_default.webp",
-            "logo_height": 120,
-            "logo_max_width": 190,
-            "logo_spacing": 20,
-            "padding_vertical": 40,
-            "animation_speed": 30,
-            "pause_on_hover": true,
-            "background_color": "#ffffff",
-            "logo_opacity": 70,
-            "grayscale_logos": true
-          },
-          "blocks": {}
-        },
-        "ai_gen_block_2b816b2_PVEJBw": {
-          "type": "ai_gen_block_2b816b2",
-          "disabled": true,
-          "settings": {
-            "video": "https://cdn.shopify.com/videos/c/o/v/ad22289d313241cc846fb28bfb639612.mp4",
-            "video_max_width": 400,
-            "video_border_radius": 16,
-            "heading": "Hautpflege leicht gemacht mit dem Routinen-Planer",
-            "text_content": "<p>Kreiere deine Morgen- und Abendroutine in der App.<strong> </strong>So vergisst du keinen Step – und deine Haut ist optimal versorgt: morgens geschützt für den Tag, nachts besonders aufnahmebereit für Wirkstoffe. </p><p>Das <strong>Wetter-Widget mit UV-Index</strong> erinnert dich an SPF und passt deine Pflege an die aktuellen Bedingungen an.</p>",
-            "button_text": "Learn more",
-            "button_link": "",
-            "section_padding": 60,
-            "content_gap": 60,
-            "text_padding": 20,
-            "text_spacing": 20,
-            "heading_size": 36,
-            "heading_weight": "700",
-            "text_size": 16,
-            "button_text_size": 16,
-            "background_color": "#f3f3f3",
-            "heading_color": "#000000",
-            "text_color": "#666666",
-            "button_color": "#000000",
-            "button_hover_color": "#333333",
-            "button_text_color": "#ffffff",
-            "button_padding_vertical": 14,
-            "button_padding_horizontal": 28,
-            "button_border_radius": 8
-          },
-          "blocks": {}
-        },
-        "ai_gen_block_ba0b649_hdjzQG": {
-          "type": "ai_gen_block_ba0b649",
-          "name": "Video with text",
-          "disabled": true,
-          "settings": {
-            "heading": "Dein persönlicher Hautscore in 3 Schritten",
-            "description": "<p>Entwickelt mit Dermatolog*innen, unterstützt von KI: Du nimmst mit der integrierten HD-Kamera ein Foto auf & beantwortest fünf Fragen zu deinem Hautzustand und deinen Zielen – ebenmäßiger Teint, weniger Unreinheiten oder mehr Glow?</p><p>Anschließend erhältst du eine ausführliche Analyse mit deinem <strong>persönlichen Hautscore</strong>.</p><h2>How it works </h2><p>1. Foto aufnehmen: Ein Selfie per integrierter HD-Kamera.<br/>2. Fragen beantworten: 5 Fragen zu Hautthemen & Zielen.<br/>3. Ergebnis erhalten: Analyse, Empfehlungen & persönlicher Hautscore.</p>",
-            "button_text": "Learn more",
-            "button_link": "",
-            "video_url": "https://cdn.shopify.com/videos/c/o/v/9e5453b47c4f46aaa5fd6546913e1620.mp4",
-            "video_radius": 12,
-            "heading_size": 36,
-            "heading_color": "#000000",
-            "text_size": 16,
-            "text_color": "#666666",
-            "button_text_size": 16,
-            "button_color": "#000000",
-            "button_text_color": "#ffffff",
-            "button_hover_color": "#333333",
-            "button_radius": 8
-          },
-          "blocks": {}
-        },
-        "ai_gen_block_2b816b2_YTMMpj": {
-          "type": "ai_gen_block_2b816b2",
-          "name": "Video with text",
-          "disabled": true,
-          "settings": {
-            "video": "https://cdn.shopify.com/videos/c/o/v/59976f6c71bb4078b3ba96b4f34f1385.mp4",
-            "video_max_width": 400,
-            "video_border_radius": 16,
-            "heading": "Haut verstehen: Analyse, Tipps & Produktempfehlungen",
-            "text_content": "<p>Dein Score basiert auf insgesamt 7 Hautparametern.<br/>Zu jedem Parameter bekommst du klare Erklärungen, konkrete Handlungsempfehlungen und passende Produkttipps – für Alltag und Vorbeugung. </p><p>So verstehst du, was deine Haut braucht, erkennst Veränderungen frühzeitig und stärkst langfristig Gesundheit und Balance.</p>",
-            "button_text": "Learn more",
-            "button_link": "",
-            "section_padding": 60,
-            "content_gap": 60,
-            "text_padding": 20,
-            "text_spacing": 20,
-            "heading_size": 36,
-            "heading_weight": "700",
-            "text_size": 16,
-            "button_text_size": 16,
-            "background_color": "#f3f3f3",
-            "heading_color": "#000000",
-            "text_color": "#666666",
-            "button_color": "#000000",
-            "button_hover_color": "#333333",
-            "button_text_color": "#ffffff",
-            "button_padding_vertical": 14,
-            "button_padding_horizontal": 28,
-            "button_border_radius": 8
-          },
-          "blocks": {}
-        },
-        "ai_gen_block_ba0b649_yjgAF9": {
-          "type": "ai_gen_block_ba0b649",
-          "name": "Video with text",
-          "disabled": true,
-          "settings": {
-            "heading": "Beauty Marketplace: Inspiration direkt shoppen",
-            "description": "<p>Der integrierte SWAN Marketplace macht Inspiration sofort shoppable: Entdecke Produkte in Tutorials und lege sie mit einem Klick in den Warenkorb. So probierst du Skincare-Essentials, Make-up-Must-haves und Haircare-Favorites sofort aus – und integrierst sie nahtlos in deine Routine. Content, Community & Commerce: alles verbunden für ein reibungsloses Beauty-Erlebnis.</p>",
-            "button_text": "Learn more",
-            "button_link": "",
-            "video_url": "https://cdn.shopify.com/videos/c/o/v/a3b520dd970347e4bff90ccc18dbb983.mp4",
-            "video_radius": 12,
-            "heading_size": 36,
-            "heading_color": "#000000",
-            "text_size": 16,
-            "text_color": "#666666",
-            "button_text_size": 16,
-            "button_color": "#000000",
-            "button_text_color": "#ffffff",
-            "button_hover_color": "#333333",
-            "button_radius": 8
-          },
-          "blocks": {}
-        },
         "ai_gen_block_5989830_MhRinR": {
           "type": "ai_gen_block_5989830",
           "name": "Customer reviews",
@@ -793,11 +659,6 @@
         }
       },
       "block_order": [
-        "ai_gen_block_62e4169_PGAT76",
-        "ai_gen_block_2b816b2_PVEJBw",
-        "ai_gen_block_ba0b649_hdjzQG",
-        "ai_gen_block_2b816b2_YTMMpj",
-        "ai_gen_block_ba0b649_yjgAF9",
         "ai_gen_block_5989830_MhRinR"
       ],
       "custom_css": [
@@ -836,6 +697,9 @@
         "heading_7dgTbX",
         "text_y4rjzw",
         "button_j9pwkY"
+      ],
+      "custom_css": [
+        "div {max-width: 150ch; margin: 0 auto;}"
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
