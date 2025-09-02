@@ -82,10 +82,10 @@
   padding: 0;
 }
 
-#MainContent {
+/* #MainContent {
   width: 100%;
   box-sizing: border-box;
-}
+} */
 
 body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   max-width: 100%;
