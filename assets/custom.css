@@ -1145,7 +1145,7 @@ SWAN SIGNUP
 }
 
 .accordion__content {
-    padding: 2.5rem 0 !important;
+    padding: 2.5rem 1.5rem !important;
 }
 
 .collapsible-content summary:hover .accordion__title {
