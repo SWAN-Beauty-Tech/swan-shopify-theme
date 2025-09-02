@@ -52,7 +52,7 @@
         "text_8naCfk": {
           "type": "text",
           "settings": {
-            "text": "<h5>Die Plattform für deine Beauty-Revolution</h5><p>SWAN verbindet App, Smart-Mirror und Community: Beauty-Tutorials, <br/>Hautanalyse und Shopping direkt aus Videos – mit personalisierten Empfehlungen für deine beste Routine.</p><p>Trends & Tutorials. Beauty Education. Community & Marktplatz – alles an einem Ort – zugänglich über App und Mirror.</p><p><strong>The Future of Beauty is now. See yourself.</strong></p>"
+            "text": "<h5>Die Plattform für deine Beauty-Revolution</h5><p>SWAN verbindet App, Smart-Mirror und Community: Beauty-Tutorials, KI-gestützte Hautanalyse und Shopping direkt aus Videos – mit personalisierten Empfehlungen für deine beste Routine.</p><p>Trends & Tutorials. Beauty Education. Community & Marktplatz – alles an einem Ort – zugänglich über App und Mirror.</p><p><strong>The Future of Beauty is now. See yourself.</strong></p>"
           }
         }
       },
@@ -190,7 +190,7 @@
         "text_area_y4V6MC": {
           "type": "text_area",
           "settings": {
-            "text": "<p>SWAN Beauty verbindet smarte Technologie mit einer aktiven Community – und eröffnet Marken neue Möglichkeiten: </p><p>Erreiche deine Zielgruppe direkt und interaktiv, präsentiere Produkte im authentischen Kontext und steigere deinen Umsatz mit Shopping direkt aus Videos.</p><p><strong>Warum SWAN?</strong></p><ul><li>Direkter Zugang zur Zielgruppe</li><li>Tutorials & Content mit Kaufabschluss</li><li>Verlässliche Creator & Brand Safety</li></ul>",
+            "text": "<p>SWAN Beauty verbindet smarte Technologie mit einer aktiven Community – und eröffnet Marken neue Möglichkeiten: </p><p>Erreiche deine Zielgruppe direkt und interaktiv, präsentiere Produkte im authentischen Kontext und steigere deinen Umsatz mit Shopping direkt aus Videos. Alles auf einer Plattform, die Beauty neu definiert.</p><p><strong>Warum SWAN?</strong></p><ul><li>Direkter Zugang zur Zielgruppe</li><li>Tutorials & Content mit Kaufabschluss</li><li>Verlässliche Creator & Brand Safety</li></ul>",
             "center_text": false,
             "custom_id": "",
             "custom_class": ""
@@ -375,7 +375,7 @@
             "hotspot_1_enabled": true,
             "hotspot_1_x": 20,
             "hotspot_1_y": 30,
-            "hotspot_1_product": "",
+            "hotspot_1_product": "kamera",
             "hotspot_2_enabled": true,
             "hotspot_2_x": 50,
             "hotspot_2_y": 40,
