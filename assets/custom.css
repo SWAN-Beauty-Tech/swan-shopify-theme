@@ -1155,7 +1155,7 @@ SWAN SIGNUP
 }
 
 #MainContent .shopify-policy__container,
-#MainContent:has(#ProductGridContainer), 
+/* #MainContent:has(#ProductGridContainer),  */
 .template-search, #MainContent:has(product-info),
 #MainContent .main-blog,
 #MainContent .article-template {
