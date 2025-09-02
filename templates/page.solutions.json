@@ -111,7 +111,7 @@
         "list_item_rkPkmG": {
           "type": "list_item",
           "settings": {
-            "list": "Beauty Brand \nBeauty Retailer \nSalon \nDermatology Practice \nSkin Spa\nHotel",
+            "list": "Beauty Brand s\nBeauty Retailer \nSalon s\nDermatologie Praxen\nSkin Spas\nHotels",
             "list_style": "ul",
             "custom_id": "",
             "custom_class": ""
