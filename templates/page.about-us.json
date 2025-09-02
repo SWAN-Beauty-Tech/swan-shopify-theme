@@ -442,14 +442,14 @@
         "text_y4rjzw": {
           "type": "text",
           "settings": {
-            "text": "<p>Der <strong>SWAN Mirror der ersten Version</strong> bietet dir alle Essentials für dein Beauty-Erlebnis:</p><p>- Videos direkt im Spiegel ansehen und Schritt für Schritt nachmachen<br/>- Perfekte Ausleuchtung mit dimmbarem Beauty-Light<br/>- Deine persönliche Pflege-Routine immer im Blick danke des Routinen-Planers</p><p>Ohne Kamera und Hautanalyse-Features – dafür zum <strong>Einsteigerpreis von 299 €</strong>.<br/>Ideal für alle, die Beauty-Inhalte lieber genießen als selbst produzieren.</p>",
+            "text": "<p>Der <strong>SWAN Mirror der ersten Version</strong> bietet dir alle Essentials für dein Beauty-Erlebnis:</p><p>- Videos direkt im Spiegel ansehen und Schritt für Schritt nachmachen<br/>- Perfekte Ausleuchtung mit dimmbarem Beauty-Light<br/>- Deine persönliche Pflege-Routine immer im Blick danke des Routinen-Planers</p><p>Ohne Kamera und Hautanalyse-Features – dafür zum <br/><strong>Einsteigerpreis von 299 €</strong>.<br/>Ideal für alle, die Beauty-Inhalte lieber genießen als selbst produzieren.</p>",
             "text_style": "body"
           }
         },
         "button_j9pwkY": {
           "type": "button",
           "settings": {
-            "button_label": "Schaltflächenbeschriftung",
+            "button_label": "Jetzt bestellen",
             "button_link": "",
             "button_style_secondary": false
           }
