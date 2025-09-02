@@ -524,6 +524,7 @@
         "ai_gen_block_5989830_d9d69i": {
           "type": "ai_gen_block_5989830",
           "name": "Customer reviews",
+          "disabled": true,
           "settings": {
             "title": "Stimmen aus der Community",
             "subtitle": "Das sagen unsere Nutzer",
