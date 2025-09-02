@@ -463,7 +463,7 @@
         "ai_gen_block_1c2bbdf_MgFCyC": {
           "type": "ai_gen_block_1c2bbdf",
           "settings": {
-            "video": "shopify://files/videos/swan-intro.mp4",
+            "video": "shopify://files/videos/Video in Ivory Grey Scrapbook Scrapbook Style.mp4",
             "autoplay": false,
             "muted": true,
             "loop": false,
@@ -533,6 +533,7 @@
       "blocks": {
         "ai_gen_block_0776ed8_BkGMAC": {
           "type": "ai_gen_block_0776ed8",
+          "disabled": true,
           "settings": {
             "title": "Case studies",
             "subtitle": "<p>See how our clients achieved remarkable results</p>",
@@ -643,6 +644,7 @@
       "blocks": {
         "ai_gen_block_f451576_KEWhqk": {
           "type": "ai_gen_block_f451576",
+          "disabled": true,
           "settings": {
             "number_1": "100+",
             "label_1": "Happy customers",
