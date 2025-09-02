@@ -178,31 +178,11 @@
     "1756214345b5c620e8": {
       "type": "_blocks",
       "blocks": {
-        "ai_gen_block_ba0b649_EjnKUf": {
-          "type": "ai_gen_block_ba0b649",
-          "settings": {
-            "heading": "Beauty-Spiegel im Creator-Modus",
-            "description": "<p>Der SWAN Mirror macht dich zum Creator. Mit HD-Kamera, Dual-Mikrofon und dimmbarem Beauty-Light setzt du Routinen und Looks perfekt in Szene. Nimm Tutorials direkt am Spiegel auf, teile sie mit der Community oder schau dir Step-by-Step-Videos zum Nachmachen an.</p><p><strong>Perfektes Setup:</strong> HD-Kamera, Dual-Mikrofon, Beauty-Light<br/><strong>Lernen im Spiegel:</strong> ansehen & sofort nachmachen<br/><strong>Creator-Modus:</strong> aufnehmen, speichern, teilen</p>",
-            "button_text": "Learn more",
-            "button_link": "",
-            "video_url": "https://cdn.shopify.com/videos/c/o/v/ffed9fab7a534308ad0c7ccc5283160a.mp4",
-            "video_radius": 12,
-            "heading_size": 36,
-            "heading_color": "#000000",
-            "text_size": 16,
-            "text_color": "#666666",
-            "button_text_size": 16,
-            "button_color": "#000000",
-            "button_text_color": "#ffffff",
-            "button_hover_color": "#333333",
-            "button_radius": 8
-          },
-          "blocks": {}
-        },
         "ai_gen_block_7e17886_bCxefx": {
           "type": "ai_gen_block_7e17886",
           "name": "Product hotspots",
           "settings": {
+            "image": "shopify://shop_images/Website_Mirror_Features_2.jpg",
             "hotspot_size": 30,
             "hotspot_color": "#000000",
             "hotspot_icon_color": "#ffffff",
@@ -211,7 +191,7 @@
             "popup_bg_color": "#ffffff",
             "popup_text_color": "#000000",
             "hotspot_1_enabled": true,
-            "hotspot_1_x": 20,
+            "hotspot_1_x": 29,
             "hotspot_1_y": 20,
             "hotspot_1_product": "kamera",
             "hotspot_2_enabled": true,
@@ -252,11 +232,32 @@
             "hotspot_10_product": ""
           },
           "blocks": {}
+        },
+        "ai_gen_block_ba0b649_EjnKUf": {
+          "type": "ai_gen_block_ba0b649",
+          "settings": {
+            "heading": "Beauty-Spiegel im Creator-Modus",
+            "description": "<p>Der SWAN Mirror macht dich zum Creator. Mit HD-Kamera, Dual-Mikrofon und dimmbarem Beauty-Light setzt du Routinen und Looks perfekt in Szene. Nimm Tutorials direkt am Spiegel auf, teile sie mit der Community oder schau dir Step-by-Step-Videos zum Nachmachen an.</p><p><strong>Perfektes Setup:</strong> HD-Kamera, Dual-Mikrofon, Beauty-Light<br/><strong>Lernen im Spiegel:</strong> ansehen & sofort nachmachen<br/><strong>Creator-Modus:</strong> aufnehmen, speichern, teilen</p>",
+            "button_text": "Learn more",
+            "button_link": "",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/ffed9fab7a534308ad0c7ccc5283160a.mp4",
+            "video_radius": 12,
+            "heading_size": 36,
+            "heading_color": "#000000",
+            "text_size": 16,
+            "text_color": "#666666",
+            "button_text_size": 16,
+            "button_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_hover_color": "#333333",
+            "button_radius": 8
+          },
+          "blocks": {}
         }
       },
       "block_order": [
-        "ai_gen_block_ba0b649_EjnKUf",
-        "ai_gen_block_7e17886_bCxefx"
+        "ai_gen_block_7e17886_bCxefx",
+        "ai_gen_block_ba0b649_EjnKUf"
       ],
       "settings": {}
     },
