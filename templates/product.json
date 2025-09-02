@@ -155,6 +155,9 @@
         "image-with-text-0",
         "image-with-text-1"
       ],
+      "custom_css": [
+        "div {max-width: 175ch; margin: 0 auto;}"
+      ],
       "settings": {
         "height": "small",
         "desktop_image_width": "medium",
@@ -196,6 +199,9 @@
         "column-0",
         "column-1"
       ],
+      "custom_css": [
+        "div {max-width: 175ch; margin: 0 auto;}"
+      ],
       "settings": {
         "title": "",
         "heading_size": "h1",
@@ -215,6 +221,9 @@
     },
     "related-products": {
       "type": "related-products",
+      "custom_css": [
+        "div {max-width: 175ch; margin: 0 auto;}"
+      ],
       "settings": {
         "heading": "You may also like",
         "heading_size": "h2",
