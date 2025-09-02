@@ -79,7 +79,7 @@
         "image_background": "#ffffff",
         "image_inset": "false",
         "mirror_swap": false,
-        "text_alignment": "flex-end",
+        "text_alignment": "center",
         "sticky_text": false,
         "custom_id": "",
         "custom_class": "",
