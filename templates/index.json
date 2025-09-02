@@ -501,6 +501,7 @@
       "blocks": {
         "ai_gen_block_62e4169_Cmbp9L": {
           "type": "ai_gen_block_62e4169",
+          "disabled": true,
           "settings": {
             "logo_1": "shopify://shop_images/597720-logo-1737030702.png",
             "logo_2": "shopify://shop_images/IVY001_Logo_rot_1200x1200_bbee04b2-af2e-4491-94ee-01c4a6327f23.webp",
