@@ -210,7 +210,8 @@
       ],
       "custom_css": [
         "div.featured-product {max-width: 175ch; margin: 0 auto; font-family: var(--bossa) !important; padding-right: 1.5rem;}",
-        "div.product__info-wrapper {padding: 1.5rem;}"
+        "div.product__info-wrapper {padding: 1.5rem;}",
+        ".slider-buttons {text-align: center;}"
       ],
       "name": "t:sections.featured-product.presets.name",
       "settings": {
