@@ -1157,7 +1157,7 @@ SWAN SIGNUP
 #MainContent .shopify-policy__container,
 #MainContent:has(#ProductGridContainer), 
 .template-search, 
-/* #MainContent:has(product-info), */
+#MainContent:has(product-info),
 #MainContent .main-blog,
 #MainContent .article-template {
     max-width: 150ch;
@@ -1168,7 +1168,7 @@ SWAN SIGNUP
 #MainContent > .shopify-section.section .template-search, 
 #MainContent:has(#ProductGridContainer),
 .template-search, 
-/* #MainContent:has(product-info), */
+#MainContent:has(product-info),
 #MainContent .main-blog,
 #MainContent .article-template {
     padding: clamp(100px, 12vw, 150px) 0;
