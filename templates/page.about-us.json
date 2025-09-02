@@ -383,7 +383,7 @@
         "ai_gen_block_ba0b649_Ti6gek"
       ],
       "custom_css": [
-        "div {max-width: 150ch; margin: 0 auto;}"
+        "div {max-width: 175ch; margin: 0 auto;}"
       ],
       "settings": {}
     },
@@ -702,7 +702,7 @@
         "button_j9pwkY"
       ],
       "custom_css": [
-        "div {max-width: 150ch; margin: 0 auto;}"
+        "div {max-width: 175ch; margin: 0 auto;}"
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
