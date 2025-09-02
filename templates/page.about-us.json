@@ -208,6 +208,9 @@
         "buy_buttons_d7RqM7",
         "share_wTGkkx"
       ],
+      "custom_css": [
+        "div {max-width: 150ch; margin: 0 auto;}"
+      ],
       "name": "t:sections.featured-product.presets.name",
       "settings": {
         "product": "swan-mirror-cleo",
