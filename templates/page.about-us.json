@@ -209,7 +209,7 @@
         "share_wTGkkx"
       ],
       "custom_css": [
-        "div.featured-product {max-width: 150ch; margin: 0 auto; font-family: var(--bossa) !important; padding-right: 1.5rem;}",
+        "div.featured-product {max-width: 175ch; margin: 0 auto; font-family: var(--bossa) !important; padding-right: 1.5rem;}",
         "div.product__info-wrapper {padding: 1.5rem;}"
       ],
       "name": "t:sections.featured-product.presets.name",
