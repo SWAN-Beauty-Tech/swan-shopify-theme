@@ -363,6 +363,7 @@
         },
         "ai_gen_block_8ccdd87_DDaNyx": {
           "type": "ai_gen_block_8ccdd87",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/loreal-uv-patch-today-003-160106.webp",
             "hotspot_size": 36,
@@ -597,6 +598,7 @@
       "blocks": {
         "ai_gen_block_75d0dac_rk4NJQ": {
           "type": "ai_gen_block_75d0dac",
+          "disabled": true,
           "settings": {
             "title": "Steps",
             "description": "<p>Follow these simple steps to get started</p>",
@@ -680,6 +682,7 @@
         },
         "ai_gen_block_1cdaf88_zwjpab": {
           "type": "ai_gen_block_1cdaf88",
+          "disabled": true,
           "settings": {
             "image_1": "shopify://shop_images/12115795_1.webp",
             "image_2": "shopify://shop_images/loreal-uv-patch-today-003-160106.webp",
