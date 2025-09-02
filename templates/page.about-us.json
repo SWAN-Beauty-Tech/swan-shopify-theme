@@ -429,6 +429,53 @@
       "name": "Video left",
       "settings": {}
     },
+    "image_with_text_HdjJfc": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_7dgTbX": {
+          "type": "heading",
+          "settings": {
+            "heading": "Bild mit Text",
+            "heading_size": "h1"
+          }
+        },
+        "text_y4rjzw": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Dein Einstieg in die Smart Beauty Welt –SWAN Mirror V1</h2><p>Der <strong>SWAN Mirror der ersten Version</strong> bietet dir alle Essentials für dein Beauty-Erlebnis:</p><p>- Videos direkt im Spiegel ansehen und Schritt für Schritt nachmachen<br/>- Perfekte Ausleuchtung mit dimmbarem Beauty-Light<br/>- Deine persönliche Pflege-Routine immer im Blick danke des Routinen-Planers</p><p>Ohne Kamera und Hautanalyse-Features – dafür zum <strong>Einsteigerpreis von 299 €</strong>.<br/>Ideal für alle, die Beauty-Inhalte lieber genießen als selbst produzieren.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_j9pwkY": {
+          "type": "button",
+          "settings": {
+            "button_label": "Schaltflächenbeschriftung",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_7dgTbX",
+        "text_y4rjzw",
+        "button_j9pwkY"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "collapsible_content_TkqmVL": {
       "type": "collapsible-content",
       "blocks": {
@@ -539,7 +586,6 @@
         "headline_tcnPM9",
         "text_area_Emb4gL"
       ],
-      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/swan-exp-1.jpg",
         "image_position": "right",
@@ -565,6 +611,7 @@
     "1756214345b5c620e8",
     "17552366850a6e1abb",
     "blocks_R3JYbW",
+    "image_with_text_HdjJfc",
     "collapsible_content_TkqmVL",
     "swan_image_text_6nbE3P"
   ]
