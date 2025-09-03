@@ -13,7 +13,6 @@
   "sections": {
     "swan_footer_9riBqf": {
       "type": "swan_footer",
-      "disabled": true,
       "settings": {
         "header": "Lass uns sprechen",
         "image": "shopify://shop_images/swan-wordmark.svg",
