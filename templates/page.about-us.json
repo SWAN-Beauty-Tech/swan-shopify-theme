@@ -160,7 +160,7 @@
         "share_wTGkkx"
       ],
       "custom_css": [
-        ".section-featured-product {max-width: 1200px; margin: 0 auto; font-family: var(--bossa) !important; padding-right: 1.5rem;}",
+        ".section-featured-product {max-width: 1200px; margin: 0 auto; font-family: var(--bossa) !important; padding-right: 1.5rem; padding-top: 36px;}",
         "div.product__info-wrapper {padding: 1.5rem;}",
         ".slider-buttons {text-align: center;}"
       ],
