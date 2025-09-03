@@ -148,7 +148,7 @@
           "type": "button",
           "settings": {
             "button_text": "MEHR",
-            "button_link": "shopify://pages/marketplace",
+            "button_link": "shopify://pages/app",
             "button_style_secondary": true,
             "custom_id": "",
             "custom_class": ""
