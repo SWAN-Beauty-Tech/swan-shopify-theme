@@ -9,7 +9,7 @@
   .ai-video-text-section-{{ ai_gen_id }} {
     display: flex;
     align-items: center;
-    min-height: 100vh;
+    {% comment %} min-height: 100vh; {% endcomment %}
     padding: 60px 0;
     background-color: {{ block.settings.background_color }};
     gap: {{ block.settings.content_gap }}px;
