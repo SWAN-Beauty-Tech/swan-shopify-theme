@@ -101,13 +101,13 @@
             "text": "<p>Lade jetzt die SWAN App herunter und lass dich von unserer kreative Community inspirieren.</p>"
           }
         },
-        "button_8b8dWP": {
+        "button_M9kzPW": {
           "type": "button",
           "settings": {
-            "button_label": "Schaltflächenbeschriftung",
+            "button_label": "App Store",
             "button_link": "",
             "button_style_secondary": false,
-            "button_label_2": "",
+            "button_label_2": "Google Playstore",
             "button_link_2": "",
             "button_style_secondary_2": false
           }
@@ -116,7 +116,7 @@
       "block_order": [
         "heading_GkABpx",
         "text_Cxaqh3",
-        "button_8b8dWP"
+        "button_M9kzPW"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
