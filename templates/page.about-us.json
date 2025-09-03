@@ -168,7 +168,7 @@
       "settings": {
         "product": "swan-mirror-cleo",
         "color_scheme": "scheme-1",
-        "secondary_background": true,
+        "secondary_background": false,
         "media_size": "small",
         "constrain_to_viewport": true,
         "media_fit": "contain",
@@ -186,6 +186,7 @@
         "ai_gen_block_7e17886_bCxefx": {
           "type": "ai_gen_block_7e17886",
           "name": "Product hotspots",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Website_Mirror_Features_2.jpg",
             "hotspot_size": 30,
