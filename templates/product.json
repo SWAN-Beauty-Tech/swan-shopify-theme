@@ -68,9 +68,9 @@
         "collapsible-row-2": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Dimensions",
+            "heading": "Abmessung",
             "icon": "ruler",
-            "content": "",
+            "content": "<p>- 15,6” rahmenlose Spiegelfläche</p><p>- Wand- oder Standspiegel </p><p>- Gewicht: 2,3 kg</p>",
             "page": ""
           }
         },
