@@ -77,9 +77,9 @@
         "collapsible-row-3": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Care Instructions",
+            "heading": "Features",
             "icon": "heart",
-            "content": "",
+            "content": "<p>- Dimmbares LED Beauty (warm und kaltes Licht)</p><p>- Full HD Multi-Touch Display</p><p>- Smarte Synchronisierung von App und Mirror</p><p>- Beauty Tutorials zum Nachmachen im Spiegel</p><p>- Routinen-Planer und UV-Index-Anzeige</p>",
             "page": ""
           }
         },
