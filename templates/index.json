@@ -482,6 +482,31 @@
         "include_margins": true
       }
     },
+    "17569402223a881207": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_3202828_QfPATa": {
+          "type": "ai_gen_block_3202828",
+          "settings": {
+            "video_1": "shopify://files/videos/Video in Ivory Grey Scrapbook Scrapbook Style.mp4",
+            "video_2": "shopify://files/videos/3 Mirror Mood Bathroom - 3 (Favorit graded and looped).mov",
+            "video_3": "shopify://files/videos/3 Mirror Mood Leni Full Facial.mov",
+            "background_color": "#ffffff",
+            "text_color": "#000000",
+            "nav_button_color": "#000000",
+            "nav_button_text_color": "#ffffff",
+            "nav_button_hover_color": "#333333",
+            "video_border_radius": 8,
+            "section_padding": 40
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_3202828_QfPATa"
+      ],
+      "settings": {}
+    },
     "1756606764d59b2a1b": {
       "type": "_blocks",
       "blocks": {
@@ -504,7 +529,6 @@
         },
         "ai_gen_block_1c2bbdf_MgFCyC": {
           "type": "ai_gen_block_1c2bbdf",
-          "disabled": true,
           "settings": {
             "video": "shopify://files/videos/Video in Ivory Grey Scrapbook Scrapbook Style.mp4",
             "autoplay": false,
@@ -768,6 +792,7 @@
     "swan_sign_up_yYi4Dj",
     "1756594554f0ec837f",
     "17565967426594b20c",
+    "17569402223a881207",
     "1756606764d59b2a1b",
     "1756607302649791a7",
     "1756607884b53defc4",
