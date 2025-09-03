@@ -37,6 +37,7 @@
       "block_order": [
         "image_bLC9Q6"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-3",
         "newsletter_enable": false,
