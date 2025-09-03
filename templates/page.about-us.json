@@ -306,6 +306,7 @@
         "ai_gen_block_7e17886_ywGmdd": {
           "type": "ai_gen_block_7e17886",
           "name": "Product hotspots",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Website_Mirror_Features_2e9fe374-81ac-4417-89bc-9a0709e68855.jpg",
             "hotspot_size": 30,
@@ -693,7 +694,7 @@
           "type": "button",
           "settings": {
             "button_label": "Jetzt bestellen",
-            "button_link": "",
+            "button_link": "https://de.swanbeauty.com/products/swan-beauty-mirror?utm_source=mirrorlp&utm_medium=website&utm_campaign=ctabutton&utm_content=mirrorv1",
             "button_style_secondary": false
           }
         }
