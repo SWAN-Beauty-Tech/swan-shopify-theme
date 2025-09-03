@@ -105,7 +105,7 @@
           "type": "button",
           "settings": {
             "button_label": "App Store",
-            "button_link": "",
+            "button_link": "https://apps.apple.com/de/app/swan-beauty/id1641229945?l=en-GB",
             "button_style_secondary": false,
             "button_label_2": "Google Playstore",
             "button_link_2": "",
