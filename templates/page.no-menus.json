@@ -10,15 +10,7 @@
 {
   "layout": "theme.blank",
   "sections": {
-    "main": {
-      "type": "main-page",
-      "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
-      }
-    }
+    "main": { "type": "page-no-title", "settings": { "padding_top": 28, "padding_bottom": 28 } }
   },
-  "order": [
-    "main"
-  ]
+  "order": ["main"]
 }
