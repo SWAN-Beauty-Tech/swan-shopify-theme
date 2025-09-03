@@ -56,21 +56,12 @@
           "type": "description",
           "settings": {}
         },
-        "collapsible-row-0": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Materials",
-            "icon": "leather",
-            "content": "",
-            "page": ""
-          }
-        },
         "collapsible-row-1": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Shipping & Returns",
+            "heading": "Lieferumfang",
             "icon": "truck",
-            "content": "",
+            "content": "<p>- 1x Smart Mirror</p><p>- 1x Netzteil + 1x Adapter (UK & US) </p><p>- 1x Mikrofaser Reinigungstuch</p><p>- 1x Bedienungsanleitung</p>",
             "page": ""
           }
         },
@@ -108,7 +99,6 @@
         "quantity_selector",
         "buy_buttons",
         "description",
-        "collapsible-row-0",
         "collapsible-row-1",
         "collapsible-row-2",
         "collapsible-row-3",
