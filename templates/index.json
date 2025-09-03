@@ -199,8 +199,8 @@
         "button_Mr8kEz": {
           "type": "button",
           "settings": {
-            "button_text": "Mehr",
-            "button_link": "shopify://pages/solutions",
+            "button_text": "Coming soon",
+            "button_link": "",
             "button_style_secondary": true,
             "custom_id": "",
             "custom_class": ""
