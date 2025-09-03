@@ -363,6 +363,7 @@
         },
         "ai_gen_block_3e2f9bb_dfexUc": {
           "type": "ai_gen_block_3e2f9bb",
+          "disabled": true,
           "settings": {
             "desktop_image": "shopify://shop_images/8T8A4882-3_f1b58747-a4b5-40a9-8804-6d44db8c1f7c.jpg",
             "hotspot_size": 40,
@@ -467,6 +468,7 @@
       "blocks": {
         "reelup_shoppable_videos_reels_reelup_playlist_slider_WKHYUV": {
           "type": "shopify://apps/reelup-shoppable-videos-reels/blocks/reelup-playlist-slider/a8ec9e4d-d192-44f7-9c23-595f9ee7dd5b",
+          "disabled": true,
           "settings": {
             "playlist_id": "",
             "debugging_script": ""
