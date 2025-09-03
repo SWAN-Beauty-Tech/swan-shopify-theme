@@ -89,13 +89,13 @@
         "text_area_QMhKKF"
       ],
       "settings": {
-        "image": "shopify://shop_images/Subject_3.png",
+        "image": "shopify://shop_images/1_f696cd36-6e83-4a56-a566-b4a216978cbb.png",
         "image_position": "left",
         "image_scale": "contain",
         "image_background": "#f3f3f3",
         "image_inset": "default",
         "mirror_swap": true,
-        "image_2": "shopify://shop_images/Subject_2.png",
+        "image_2": "shopify://shop_images/2_9c237925-57a8-4759-8339-926ff4306d37.png",
         "text_alignment": "flex-start",
         "sticky_text": true,
         "custom_id": "",
