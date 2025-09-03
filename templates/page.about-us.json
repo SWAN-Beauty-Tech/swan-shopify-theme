@@ -58,7 +58,7 @@
         "full_width": false,
         "color_scheme": "",
         "padding_top": 36,
-        "padding_bottom": 0
+        "padding_bottom": 36
       }
     },
     "swan_image_text_8yYbnC": {
@@ -77,7 +77,7 @@
         "text_area_QMhKKF": {
           "type": "text_area",
           "settings": {
-            "text": "<p>Der Smart-Mirror für die nächste Generation Beauty.<br/>Macht deine Routine persönlicher, professioneller und smarter – verbunden mit einer Community, die Beauty neu denkt.</p><ul><li><strong>Hautanalyse </strong>–Starte mit einer KI-gestützten Hautanalyse (mit Dermatolog*innen entwickelt). Verstehe deine Haut, erkenne Veränderungen und erhalte individuelle Pflege-Empfehlungen.</li><li><strong>Kamera </strong>– 13-Megapixel-HD-Kamera & Dual-Mikrofon: Nimm Routinen in hoher Qualität auf und kreiere Social-Content direkt am Spiegel.</li><li><strong>SWAN App </strong>– Nahtlos verbunden: Tutorials, Tipps, Trends und personalisierte Inhalte – am Mirror oder unterwegs in der App.</li><li><strong>Beauty-Light </strong>– LED-Beleuchtung mit dimmbarer Helligkeit und Farbtemperatur von warm über neutral bis kalt – immer optimal ausgeleuchtet.</li><li><strong>Multi-Touch </strong>–15,6-Zoll Multi-Touch-Display: Intuitive Steuerung wie am Smartphone. Schnell, präzise, zukunftssicher.</li><li><strong>Design-Upgrade </strong>– Minimalistisch & elegant in Schwarz oder Weiß – fügt sich stilvoll in dein Interior ein.</li></ul><p><strong>Jetzt vorbestellen:</strong> 199 € Anzahlung*</p><p>* Restzahlung von 400 € bei Auslieferung fällig.</p>",
+            "text": "<p>Der Smart-Mirror für die nächste Generation Beauty.<br/>Macht deine Routine persönlicher, professioneller und smarter – verbunden mit einer Community, die Beauty neu denkt.</p><ul><li><strong>Hautanalyse </strong>–Starte mit einer KI-gestützten Hautanalyse (mit Dermatolog*innen entwickelt). Verstehe deine Haut, erkenne Veränderungen und erhalte individuelle Pflege-Empfehlungen.</li><li><strong>Kamera </strong>– 13-Megapixel-HD-Kamera & Mikrofon: Nimm Routinen in hoher Qualität auf und kreiere Social-Content direkt am Spiegel.</li><li><strong>SWAN App </strong>– Nahtlos verbunden: Tutorials, Tipps, Trends und personalisierte Inhalte – am Mirror oder unterwegs in der App.</li><li><strong>Beauty-Light </strong>– LED-Beleuchtung mit dimmbarer Helligkeit und Farbtemperatur von warm über neutral bis kalt – immer optimal ausgeleuchtet.</li><li><strong>Multi-Touch </strong>–15,6-Zoll Multi-Touch-Display: Intuitive Steuerung wie am Smartphone. Schnell, präzise, zukunftssicher.</li><li><strong>Design-Upgrade </strong>– Minimalistisch & elegant in Schwarz oder Weiß – fügt sich stilvoll in dein Interior ein.</li></ul><p><strong>Jetzt vorbestellen:</strong> 199 € Anzahlung*</p><p>* Restzahlung von 400 € bei Auslieferung fällig.</p>",
             "center_text": false,
             "custom_id": "",
             "custom_class": ""
@@ -96,60 +96,11 @@
         "image_inset": "default",
         "mirror_swap": true,
         "image_2": "shopify://shop_images/Subject_2.png",
-        "text_alignment": "center",
+        "text_alignment": "flex-start",
         "sticky_text": true,
         "custom_id": "",
         "custom_class": "",
         "color_scheme": "scheme-3"
-      }
-    },
-    "image_with_text_bHkXfp": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_bUggDJ": {
-          "type": "heading",
-          "settings": {
-            "heading": "Bild mit Text",
-            "heading_size": "h1"
-          }
-        },
-        "text_EVbb6h": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
-            "text_style": "body"
-          }
-        },
-        "button_GrNaJX": {
-          "type": "button",
-          "settings": {
-            "button_label": "Schaltflächenbeschriftung",
-            "button_link": "",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_bUggDJ",
-        "text_EVbb6h",
-        "button_GrNaJX"
-      ],
-      "disabled": true,
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/8T8A4453-3_fb6c33c8-8781-4eea-9661-3f804c4cd6de.jpg",
-        "height": "adapt",
-        "desktop_image_width": "small",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "featured_product_imLJVN": {
@@ -217,7 +168,7 @@
       "settings": {
         "product": "swan-mirror-cleo",
         "color_scheme": "scheme-1",
-        "secondary_background": false,
+        "secondary_background": true,
         "media_size": "small",
         "constrain_to_viewport": true,
         "media_fit": "contain",
@@ -229,86 +180,14 @@
         "padding_bottom": 36
       }
     },
-    "featured_product_PRQUjy": {
-      "type": "featured-product",
-      "blocks": {
-        "text_CXKpJc": {
-          "type": "text",
-          "settings": {
-            "text": "{{ section.settings.product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
-        "title_HGhTMc": {
-          "type": "title",
-          "settings": {
-            "heading_size": "h1"
-          }
-        },
-        "price_YgREJ4": {
-          "type": "price",
-          "settings": {}
-        },
-        "variant_picker_iE7JGK": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button",
-            "swatch_shape": "circle"
-          }
-        },
-        "quantity_selector_JQFG4a": {
-          "type": "quantity_selector",
-          "settings": {}
-        },
-        "buy_buttons_KXWJgr": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
-          }
-        },
-        "share_baBqTd": {
-          "type": "share",
-          "settings": {
-            "share_label": "Teilen"
-          }
-        }
-      },
-      "block_order": [
-        "text_CXKpJc",
-        "title_HGhTMc",
-        "price_YgREJ4",
-        "variant_picker_iE7JGK",
-        "quantity_selector_JQFG4a",
-        "buy_buttons_KXWJgr",
-        "share_baBqTd"
-      ],
-      "disabled": true,
-      "name": "t:sections.featured-product.presets.name",
-      "settings": {
-        "product": "",
-        "color_scheme": "",
-        "secondary_background": false,
-        "media_size": "small",
-        "constrain_to_viewport": true,
-        "media_fit": "contain",
-        "media_position": "left",
-        "image_zoom": "lightbox",
-        "hide_variants": false,
-        "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "blocks_mcUahr": {
+    "1756214345b5c620e8": {
       "type": "_blocks",
       "blocks": {
-        "ai_gen_block_7e17886_ywGmdd": {
+        "ai_gen_block_7e17886_bCxefx": {
           "type": "ai_gen_block_7e17886",
           "name": "Product hotspots",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/Website_Mirror_Features_2e9fe374-81ac-4417-89bc-9a0709e68855.jpg",
+            "image": "shopify://shop_images/Website_Mirror_Features_2.jpg",
             "hotspot_size": 30,
             "hotspot_color": "#000000",
             "hotspot_icon_color": "#ffffff",
@@ -359,7 +238,7 @@
           },
           "blocks": {}
         },
-        "ai_gen_block_ba0b649_Ti6gek": {
+        "ai_gen_block_ba0b649_EjnKUf": {
           "type": "ai_gen_block_ba0b649",
           "settings": {
             "heading": "Beauty-Spiegel im Creator-Modus",
@@ -382,11 +261,8 @@
         }
       },
       "block_order": [
-        "ai_gen_block_7e17886_ywGmdd",
-        "ai_gen_block_ba0b649_Ti6gek"
-      ],
-      "custom_css": [
-        "div {max-width: 150ch; margin: 0 auto;}"
+        "ai_gen_block_7e17886_bCxefx",
+        "ai_gen_block_ba0b649_EjnKUf"
       ],
       "settings": {}
     },
@@ -530,7 +406,6 @@
         "ai_gen_block_5989830_d9d69i": {
           "type": "ai_gen_block_5989830",
           "name": "Customer reviews",
-          "disabled": true,
           "settings": {
             "title": "Stimmen aus der Community",
             "subtitle": "Das sagen unsere Nutzer",
@@ -600,79 +475,6 @@
       "name": "Video left",
       "settings": {}
     },
-    "blocks_YJM6Bi": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_5989830_MhRinR": {
-          "type": "ai_gen_block_5989830",
-          "name": "Customer reviews",
-          "settings": {
-            "title": "Stimmen aus der Community",
-            "subtitle": "Das sagen unsere Nutzer",
-            "review_1_name": "Farina Opoku",
-            "review_1_stars": 5,
-            "review_1_comment": "Mirror und App Design sind einfach unfassbar – I love it!",
-            "review_2_name": "Boris Entrup",
-            "review_2_stars": 5,
-            "review_2_comment": "SWAN ist die perfekte Plattform, um Spaß und Freude an Make-up zu vermitteln.",
-            "review_3_name": "Loni Baur",
-            "review_3_stars": 5,
-            "review_3_comment": "Für mich bietet SWAN die optimale Möglichkeit, meine Make-ups lebendig zu machen.",
-            "review_4_name": "Dejan Garz",
-            "review_4_stars": 5,
-            "review_4_comment": "Mit SWAN können meine Haar-Tipps 1:1 zuhause umgesetzt werden.",
-            "review_5_name": "",
-            "review_5_stars": 5,
-            "review_5_comment": "",
-            "review_6_name": "",
-            "review_6_stars": 5,
-            "review_6_comment": "",
-            "review_7_name": "",
-            "review_7_stars": 5,
-            "review_7_comment": "",
-            "review_8_name": "",
-            "review_8_stars": 5,
-            "review_8_comment": "",
-            "review_9_name": "",
-            "review_9_stars": 5,
-            "review_9_comment": "",
-            "review_10_name": "",
-            "review_10_stars": 5,
-            "review_10_comment": "",
-            "background_color": "#ffffff",
-            "text_color": "#000000",
-            "card_background": "#ffffff",
-            "card_border_color": "#e5e5e5",
-            "star_color": "#ffd700",
-            "star_empty_color": "#e5e5e5",
-            "button_background": "#ffffff",
-            "button_color": "#000000",
-            "button_border_color": "#e5e5e5",
-            "button_hover_background": "#f5f5f5",
-            "button_hover_color": "#000000",
-            "section_padding": 60,
-            "card_width": 320,
-            "card_gap": 24,
-            "card_padding": 24,
-            "card_border_radius": 8,
-            "title_size": 32,
-            "subtitle_size": 16,
-            "name_size": 16,
-            "comment_size": 14,
-            "star_size": 16
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_5989830_MhRinR"
-      ],
-      "custom_css": [
-        "div {max-width: 175ch; margin: 0 auto;}"
-      ],
-      "name": "Video left",
-      "settings": {}
-    },
     "image_with_text_HdjJfc": {
       "type": "image-with-text",
       "blocks": {
@@ -680,13 +482,13 @@
           "type": "heading",
           "settings": {
             "heading": "Dein Einstieg in die Smart Beauty Welt –SWAN Mirror V1",
-            "heading_size": "hxl"
+            "heading_size": "h1"
           }
         },
         "text_y4rjzw": {
           "type": "text",
           "settings": {
-            "text": "<p>Der <strong>SWAN Mirror Light </strong> bietet dir alle Essentials für dein Beauty-Erlebnis:</p><p>- Videos direkt im Spiegel ansehen und Schritt für Schritt nachmachen</p><p>- Lieblingsprodukte über den Marketplace shoppen</p><p>- Perfekte Ausleuchtung mit dimmbarem Beauty-Light</p><p>- Deine persönliche Pflege-Routine immer im Blick dank des Routinen-Planers</p><p>Ohne Kamera und Hautanalyse-Features – dafür zum <strong>Einsteigerpreis von 299 €</strong>.</p>",
+            "text": "<p>Der <strong>SWAN Mirror der ersten Version</strong> bietet dir alle Essentials für dein Beauty-Erlebnis:</p><p>- Videos direkt im Spiegel ansehen und Schritt für Schritt nachmachen<br/>- Lieblingsprodukte über den Marketplace shoppen<br/>- Perfekte Ausleuchtung mit dimmbarem Beauty-Light<br/>- Deine persönliche Pflege-Routine immer im Blick dank des Routinen-Planers</p><p>Ohne Kamera und Hautanalyse-Features – dafür zum <br/><strong>Einsteigerpreis von 299 €</strong>.<br/>Ideal für alle, die Beauty-Inhalte lieber genießen als selbst produzieren.</p>",
             "text_style": "body"
           }
         },
@@ -694,7 +496,7 @@
           "type": "button",
           "settings": {
             "button_label": "Jetzt bestellen",
-            "button_link": "https://de.swanbeauty.com/products/swan-beauty-mirror?utm_source=mirrorlp&utm_medium=website&utm_campaign=ctabutton&utm_content=mirrorv1",
+            "button_link": "",
             "button_style_secondary": false
           }
         }
@@ -855,13 +657,10 @@
     "swan_rich_text_FK6WPi",
     "video_nVB6z7",
     "swan_image_text_8yYbnC",
-    "image_with_text_bHkXfp",
     "featured_product_imLJVN",
-    "featured_product_PRQUjy",
-    "blocks_mcUahr",
+    "1756214345b5c620e8",
     "17552366850a6e1abb",
     "blocks_R3JYbW",
-    "blocks_YJM6Bi",
     "image_with_text_HdjJfc",
     "collapsible_content_TkqmVL",
     "swan_image_text_6nbE3P"
