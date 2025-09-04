@@ -1186,7 +1186,7 @@ product-info, product-recommendations {
     padding-right: 1.5rem !important;
 }
 
-.product {
+.product, .shopify-pc__banner {
     font-family: var(--bossa)!important;
 }
 
