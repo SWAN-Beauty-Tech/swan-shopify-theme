@@ -755,5 +755,5 @@ li[data-address] > h2 {
 }
 
 h1:not(.header__heading) {
-  font-size: calc(var(--font-heading-scale) * 2.4rem);
+  font-size: calc(var(--font-heading-scale) * 2.4rem) !important;
 }
