@@ -55,24 +55,30 @@
   id="Banner-{{ section.id }}"
   class="landing-banner banner banner--content-align-{{ section.settings.desktop_content_alignment }} banner--content-align-mobile-{{ section.settings.mobile_content_alignment }} banner--{{ section.settings.image_height }}{% if section.settings.stack_images_on_mobile and section.settings.image != blank and section.settings.image_2 != blank %} banner--stacked{% endif %}{% if section.settings.image_height == 'adapt' and section.settings.image != blank %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
 >
-  {% if section.settings.video_intro != blank %}
-    <div class="banner__media">
-      <video
-        id="hero-loop"
-        class="video-js vjs-default-skin"
-        crossorigin="anonymous"
-        onloadedmetadata="this.muted = true"
-        data-playback-speed="{{ section.settings.playback_speed | default: 1 }}"
-        src="https://cdn.shopify.com/videos/c/o/v/038454ed0b134ec68215a97fb8284353.mp4"
 
-        autoplay
-        muted
-        playsinline
-        loop
-      >
-        Your browser does not support the video tag.
-      </video>
-    </div>
+  {% if section.settings.video_intro != blank %}
+  {% assign mp4_source = section.settings.video_intro.sources | where: 'format', 'mp4' | first %}
+  <div class="banner__media">
+    <video
+      id="hero-loop"
+      class="video-js vjs-default-skin"
+      autoplay
+      muted
+      playsinline
+      loop
+      onloadedmetadata="this.playbackRate={{ section.settings.playback_speed | default: 1 }};"
+    >
+      {% if mp4_source %}
+        <source src="{{ mp4_source.url }}" type="video/mp4">
+      {% endif %}
+      {% for s in section.settings.video_intro.sources %}
+        {% unless s == mp4_source %}
+          <source src="{{ s.url }}" type="video/{{ s.format }}">
+        {% endunless %}
+      {% endfor %}
+      Your browser does not support the video tag.
+    </video>
+  </div>
   {%- elsif section.settings.image != blank -%}
     <div class="banner__media media{% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %}{% if section.settings.image_2 != blank %} banner__media-half{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
       {%- liquid
