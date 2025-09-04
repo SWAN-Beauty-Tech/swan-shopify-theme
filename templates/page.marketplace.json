@@ -103,6 +103,7 @@
         },
         "button_M9kzPW": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "button_label": "Apple Store",
             "button_link": "https://onelink.to/swanapp",
@@ -111,12 +112,24 @@
             "button_link_2": "https://onelink.to/swanapp",
             "button_style_secondary_2": false
           }
+        },
+        "button_UxyU9W": {
+          "type": "button",
+          "settings": {
+            "button_label": "Jetzt herunterladen",
+            "button_link": "https://onelink.to/swanapp ?utm_source=applp&utm_medium=website&utm_campaign=ctabutton&utm_content=appstores",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
         }
       },
       "block_order": [
         "heading_GkABpx",
         "text_Cxaqh3",
-        "button_M9kzPW"
+        "button_M9kzPW",
+        "button_UxyU9W"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
