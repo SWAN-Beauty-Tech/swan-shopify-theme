@@ -47,6 +47,7 @@
     },
     "landing_image_banner_NmPPaq": {
       "type": "landing-image-banner",
+      "disabled": true,
       "name": "Landing Image Banner",
       "settings": {
         "video_intro": "shopify://files/videos/3 Mirror Mood Leni Full Facial.mov",
@@ -65,7 +66,6 @@
     },
     "video_nVB6z7": {
       "type": "video",
-      "disabled": true,
       "name": "t:sections.video.presets.name",
       "settings": {
         "heading": "",
