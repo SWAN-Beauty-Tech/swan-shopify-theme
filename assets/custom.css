@@ -135,6 +135,7 @@ transform: translateY(-100%);
     position: relative;
     display: inline-block;
     text-decoration: none;
+    align-self: center;
 }
 
 .swan-button::before,
@@ -1178,6 +1179,11 @@ SWAN SIGNUP
 
 summary.facets__summary {
     margin-bottom: 0;
+}
+
+product-info, product-recommendations {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
 }
 
 .product {
