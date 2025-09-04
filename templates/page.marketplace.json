@@ -116,7 +116,7 @@
         "button_UxyU9W": {
           "type": "button",
           "settings": {
-            "button_label": "Jetzt herunterladen",
+            "button_label": "Zum Download",
             "button_link": "https://onelink.to/swanapp ?utm_source=applp&utm_medium=website&utm_campaign=ctabutton&utm_content=appstores",
             "button_style_secondary": false,
             "button_label_2": "",
@@ -151,16 +151,14 @@
         "reelup_shoppable_videos_reels_reelup_stories_nX83Pb": {
           "type": "shopify://apps/reelup-shoppable-videos-reels/blocks/reelup-stories/a8ec9e4d-d192-44f7-9c23-595f9ee7dd5b",
           "settings": {
-            "section_id": "",
-            "debugging_script": ""
+            "section_id": ""
           }
         },
         "reelup_shoppable_videos_reels_reelup_playlist_FfenHr": {
           "type": "shopify://apps/reelup-shoppable-videos-reels/blocks/reelup-playlist/a8ec9e4d-d192-44f7-9c23-595f9ee7dd5b",
           "disabled": true,
           "settings": {
-            "playlist_id": "rl_pl_19440",
-            "debugging_script": ""
+            "playlist_id": "rl_pl_19440"
           }
         },
         "ai_gen_block_2b816b2_HJrUdG": {
