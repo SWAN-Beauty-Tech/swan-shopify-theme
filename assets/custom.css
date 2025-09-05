@@ -1194,7 +1194,7 @@ product-info, product-recommendations {
     //display: none;
 }
 
-.page-width.page-width--narrow {
+.page-width.page-width--narrow:not(.contact) {
     padding: clamp(100px, 12vw, 150px) 0;
     padding-bottom: 0;
     padding-right: 20px;
