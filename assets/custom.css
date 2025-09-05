@@ -1200,3 +1200,11 @@ product-info, product-recommendations {
     padding-left: 20px;
 }
 
+h1.main-page-title.page-title {
+    font-size: clamp(3rem, 3.5vw, 6rem) !important;
+    font-style: normal;
+    font-weight: 300 !important;
+    text-transform: none;
+    line-height: 1.1em;
+    letter-spacing: 0em !important;
+}
