@@ -1195,6 +1195,7 @@ product-info, product-recommendations {
 }
 
 .page-width.page-width--narrow {
+    padding-top: 24px;
     padding-left: 16px;
     padding-right: 16px;
 }
