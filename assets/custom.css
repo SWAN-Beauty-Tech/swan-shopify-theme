@@ -1194,11 +1194,15 @@ product-info, product-recommendations {
     //display: none;
 }
 
-.page-width.page-width--narrow:not(.contact) {
+.page-width.page-width--narrow {
     padding: clamp(100px, 12vw, 150px) 0;
     padding-bottom: 0;
     padding-right: 20px;
     padding-left: 20px;
+}
+
+.page-width.page-width--narrow.contact {
+    padding-top: 0;
 }
 
 h1.main-page-title.page-title {
