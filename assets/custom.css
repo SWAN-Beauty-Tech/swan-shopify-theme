@@ -1194,7 +1194,7 @@ product-info, product-recommendations {
     //display: none;
 }
 
-.page-width {
+.page-width.page-width--narrow {
     padding-left: 16px;
     padding-right: 16px;
 }
