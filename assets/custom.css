@@ -1193,3 +1193,8 @@ product-info, product-recommendations {
 .product__description {
     //display: none;
 }
+
+.page-width {
+    padding-left: 16px;
+    padding-right: 16px;
+}
