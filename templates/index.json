@@ -306,61 +306,6 @@
     "1756594554f0ec837f": {
       "type": "_blocks",
       "blocks": {
-        "ai_gen_block_8ccdd87_DDaNyx": {
-          "type": "ai_gen_block_8ccdd87",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/loreal-uv-patch-today-003-160106.webp",
-            "hotspot_size": 36,
-            "hotspot_color": "#000000",
-            "hotspot_icon_color": "#ffffff",
-            "popup_position": "top",
-            "popup_width": 250,
-            "popup_bg_color": "#ffffff",
-            "popup_text_color": "#000000",
-            "hotspot_1_enabled": true,
-            "hotspot_1_x": 20,
-            "hotspot_1_y": 30,
-            "hotspot_1_product": "kamera",
-            "hotspot_2_enabled": true,
-            "hotspot_2_x": 50,
-            "hotspot_2_y": 40,
-            "hotspot_2_product": "",
-            "hotspot_3_enabled": true,
-            "hotspot_3_x": 75,
-            "hotspot_3_y": 60,
-            "hotspot_3_product": "",
-            "hotspot_4_enabled": false,
-            "hotspot_4_x": 25,
-            "hotspot_4_y": 70,
-            "hotspot_4_product": "",
-            "hotspot_5_enabled": false,
-            "hotspot_5_x": 80,
-            "hotspot_5_y": 25,
-            "hotspot_5_product": "",
-            "hotspot_6_enabled": false,
-            "hotspot_6_x": 15,
-            "hotspot_6_y": 50,
-            "hotspot_6_product": "",
-            "hotspot_7_enabled": false,
-            "hotspot_7_x": 65,
-            "hotspot_7_y": 80,
-            "hotspot_7_product": "",
-            "hotspot_8_enabled": false,
-            "hotspot_8_x": 40,
-            "hotspot_8_y": 15,
-            "hotspot_8_product": "",
-            "hotspot_9_enabled": false,
-            "hotspot_9_x": 85,
-            "hotspot_9_y": 45,
-            "hotspot_9_product": "",
-            "hotspot_10_enabled": false,
-            "hotspot_10_x": 30,
-            "hotspot_10_y": 85,
-            "hotspot_10_product": ""
-          },
-          "blocks": {}
-        },
         "ai_gen_block_8e10786_PHgELQ": {
           "type": "ai_gen_block_8e10786",
           "disabled": true,
@@ -438,28 +383,9 @@
         }
       },
       "block_order": [
-        "ai_gen_block_8ccdd87_DDaNyx",
         "ai_gen_block_8e10786_PHgELQ"
       ],
       "settings": {}
-    },
-    "17565967426594b20c": {
-      "type": "apps",
-      "blocks": {
-        "reelup_shoppable_videos_reels_reelup_playlist_slider_WKHYUV": {
-          "type": "shopify://apps/reelup-shoppable-videos-reels/blocks/reelup-playlist-slider/a8ec9e4d-d192-44f7-9c23-595f9ee7dd5b",
-          "disabled": true,
-          "settings": {
-            "playlist_id": ""
-          }
-        }
-      },
-      "block_order": [
-        "reelup_shoppable_videos_reels_reelup_playlist_slider_WKHYUV"
-      ],
-      "settings": {
-        "include_margins": true
-      }
     },
     "17569402223a881207": {
       "type": "_blocks",
@@ -772,7 +698,6 @@
     "swan_image_text_diHnaA",
     "swan_sign_up_yYi4Dj",
     "1756594554f0ec837f",
-    "17565967426594b20c",
     "17569402223a881207",
     "1756606764d59b2a1b",
     "1756607302649791a7",
