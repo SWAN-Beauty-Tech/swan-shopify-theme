@@ -6,440 +6,439 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */
-{
-  "sections": {
-    "main": {
-      "type": "main-page",
-      "disabled": true,
-      "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
-      }
-    },
-    "swan_rich_text_daYrVd": {
-      "type": "swan_rich-text",
-      "blocks": {
-        "heading_TRi9EE": {
-          "type": "heading",
-          "settings": {
-            "heading": ""
-          }
+ */{
+    "sections": {
+        "main": {
+            "type": "main-page",
+            "disabled": true,
+            "settings": {
+                "padding_top": 28,
+                "padding_bottom": 28
+            }
         },
-        "text_bkRYYR": {
-          "type": "text",
-          "settings": {
-            "text": "<h2>SWAN App</h2>"
-          }
+        "swan_rich_text_daYrVd": {
+            "type": "swan_rich-text",
+            "blocks": {
+                "heading_TRi9EE": {
+                    "type": "heading",
+                    "settings": {
+                        "heading": ""
+                    }
+                },
+                "text_bkRYYR": {
+                    "type": "text",
+                    "settings": {
+                        "text": "<h2>SWAN App</h2>"
+                    }
+                }
+            },
+            "block_order": [
+                "heading_TRi9EE",
+                "text_bkRYYR"
+            ],
+            "settings": {
+                "desktop_content_position": "center",
+                "content_alignment": "center",
+                "custom_id": "",
+                "custom_class": "",
+                "color_scheme": ""
+            }
+        },
+        "swan_image_text_67EcKy": {
+            "type": "swan_image-text",
+            "blocks": {
+                "headline_KzJ9d6": {
+                    "type": "headline",
+                    "settings": {
+                        "text": "Entdecke, inspiriere und werde Teil der Community",
+                        "center_text": false,
+                        "heading_level": "h2",
+                        "custom_id": "",
+                        "custom_class": ""
+                    }
+                },
+                "text_area_rPJR8R": {
+                    "type": "text_area",
+                    "settings": {
+                        "text": "<p>Dein Zugang zu Inspiration, Tutorials und einer lebendigen Community \u2013 frei nutzbar, auch\u00a0ohne SWAN Mirror. Schau dir Videos Schritt f\u00fcr Schritt an,\u00a0shoppe Produkte direkt aus den Clips\u00a0im\u00a0SWAN Marketplace\u00a0und teile deinen eigenen Content. Authentisch, nahbar, ohne Filter.\u00a0Jetzt kostenlos laden.</p><p><strong>Kurzvorteile</strong></p><ul><li><strong>Videos zum Nachmachen</strong></li><li><strong>Shopping direkt aus Clips</strong>\u00a0(SWAN Marketplace)</li><li><strong>Eigene Inhalte teilen & Feedback</strong></li><li><strong>Funktioniert auch ohne Mirror</strong></li></ul>",
+                        "center_text": false,
+                        "custom_id": "",
+                        "custom_class": ""
+                    }
+                }
+            },
+            "block_order": [
+                "headline_KzJ9d6",
+                "text_area_rPJR8R"
+            ],
+            "settings": {
+                "image": "shopify://shop_images/8T8A4866-3.jpg",
+                "image_position": "left",
+                "image_scale": "cover",
+                "image_background": "#ffffff",
+                "image_inset": "false",
+                "mirror_swap": false,
+                "text_alignment": "center",
+                "sticky_text": false,
+                "custom_id": "",
+                "custom_class": "",
+                "color_scheme": "scheme-3"
+            }
+        },
+        "rich_text_3zqCi8": {
+            "type": "rich-text",
+            "blocks": {
+                "heading_GkABpx": {
+                    "type": "heading",
+                    "settings": {
+                        "heading": ""
+                    }
+                },
+                "text_Cxaqh3": {
+                    "type": "text",
+                    "settings": {
+                        "text": "<h5>Lade jetzt die SWAN App herunter und lass dich von unserer kreativen Community inspirieren.</h5>"
+                    }
+                },
+                "button_M9kzPW": {
+                    "type": "button",
+                    "disabled": true,
+                    "settings": {
+                        "button_label": "Apple Store",
+                        "button_link": "https://onelink.to/swanapp",
+                        "button_style_secondary": false,
+                        "button_label_2": "Google Playstore",
+                        "button_link_2": "https://onelink.to/swanapp",
+                        "button_style_secondary_2": false
+                    }
+                },
+                "button_UxyU9W": {
+                    "type": "button",
+                    "settings": {
+                        "button_label": "Zum Download",
+                        "button_link": "https://onelink.to/swanapp ?utm_source=applp&utm_medium=website&utm_campaign=ctabutton&utm_content=appstores",
+                        "button_style_secondary": false,
+                        "button_label_2": "",
+                        "button_link_2": "",
+                        "button_style_secondary_2": false
+                    }
+                }
+            },
+            "block_order": [
+                "heading_GkABpx",
+                "text_Cxaqh3",
+                "button_M9kzPW",
+                "button_UxyU9W"
+            ],
+            "name": "t:sections.rich-text.presets.name",
+            "settings": {
+                "desktop_content_position": "center",
+                "content_alignment": "center",
+                "color_scheme": "",
+                "full_width": true,
+                "padding_top": 40,
+                "padding_bottom": 52
+            }
+        },
+        "17556416728320b2de": {
+            "type": "_blocks",
+            "settings": {}
+        },
+        "1755642240b7fb8d61": {
+            "type": "_blocks",
+            "blocks": {
+                "reelup_shoppable_videos_reels_reelup_stories_nX83Pb": {
+                    "type": "shopify://apps/reelup-shoppable-videos-reels/blocks/reelup_stories/a8ec9e4d-d192-44f7-9c23-595f9ee7dd5b",
+                    "settings": {
+                        "section_id": ""
+                    }
+                },
+                "reelup_shoppable_videos_reels_reelup_playlist_FfenHr": {
+                    "type": "shopify://apps/reelup-shoppable-videos-reels/blocks/reelup_playlist/a8ec9e4d-d192-44f7-9c23-595f9ee7dd5b",
+                    "disabled": true,
+                    "settings": {
+                        "playlist_id": "rl_pl_19440"
+                    }
+                },
+                "ai_gen_block_ba0b649_xwmYyC": {
+                    "type": "ai_gen_block_ba0b649",
+                    "name": "Video with text",
+                    "settings": {
+                        "heading": "Routinen-Planer: Deine flexible Hautpflege",
+                        "description": "<p>Stelle dir mit deinen\u00a0Lieblingsprodukten\u00a0eine pers\u00f6nliche\u00a0Morgen- und Abendroutine\u00a0zusammen. Passe sie jederzeit an die aktuellen Bed\u00fcrfnisse deiner Haut an \u2013 flexibel, wenn sich etwas \u00e4ndert. <br/>So verpasst du\u00a0keinen Step & beh\u00e4ltst die\u00a0korrekte Reihenfolge t\u00e4glich\u00a0im Blick.</p><p>Das Beste: Deine geplante Routine erscheint direkt auf dem\u00a0SWAN Mirror\u00a0\u2013 f\u00fcr ein nahtloses Beauty-Erlebnis.</p><p></p>",
+                        "button_text": "Learn more",
+                        "button_link": "",
+                        "video_url": "https://cdn.shopify.com/videos/c/o/v/00110fabb530489eb37d199b00512a80.mp4",
+                        "video_radius": 12,
+                        "heading_size": 36,
+                        "heading_color": "#000000",
+                        "text_size": 16,
+                        "text_color": "#666666",
+                        "button_text_size": 16,
+                        "button_color": "#000000",
+                        "button_text_color": "#ffffff",
+                        "button_hover_color": "#333333",
+                        "button_radius": 8
+                    },
+                    "blocks": {}
+                },
+                "ai_gen_block_2b816b2_HJrUdG": {
+                    "type": "ai_gen_block_2b816b2",
+                    "name": "Video with text",
+                    "settings": {
+                        "video": "https://cdn.shopify.com/videos/c/o/v/414d24a9400143c4a39106e7594b3538.mp4",
+                        "video_max_width": 400,
+                        "video_border_radius": 16,
+                        "heading": "W\u00e4hle deine Interessen & erlebe Beauty, die zu dir passt",
+                        "text_content": "<p>Gestalte deine App-Erfahrung von Anfang an individuell: W\u00e4hle deine Beauty-Interessen und entdecke Content, der wirklich zu dir passt \u2013 von Skincare \u00fcber Make-up bis Hair & Wellness. </p><p>So bekommst du Inspiration, die deine Routine sp\u00fcrbar bereichert.</p>",
+                        "button_text": "Learn more",
+                        "button_link": "",
+                        "section_padding": 30,
+                        "content_gap": 60,
+                        "text_padding": 20,
+                        "text_spacing": 20,
+                        "heading_size": 48,
+                        "heading_weight": "700",
+                        "text_size": 16,
+                        "button_text_size": 16,
+                        "background_color": "#f3f3f3",
+                        "heading_color": "#000000",
+                        "text_color": "#666666",
+                        "button_color": "#000000",
+                        "button_hover_color": "#333333",
+                        "button_text_color": "#ffffff",
+                        "button_padding_vertical": 14,
+                        "button_padding_horizontal": 28,
+                        "button_border_radius": 8
+                    },
+                    "blocks": {}
+                },
+                "ai_gen_block_2b816b2_DeteKz": {
+                    "type": "ai_gen_block_2b816b2",
+                    "name": "Video with text",
+                    "settings": {
+                        "video": "https://cdn.shopify.com/videos/c/o/v/b0b3403d42314f1bbc7fe1b415880bcc.mp4",
+                        "video_max_width": 400,
+                        "video_border_radius": 16,
+                        "heading": "Shop the Look \u2013 direkt aus dem Video",
+                        "text_content": "<p>Dein Shortcut zu neuen Must-haves. Produkte aus den Videos sind direkt verlinkt und mit wenigen Klicks bei dir \u2013 smart shoppen, ohne Umwege.<br/>Im <strong>SWAN Marketplace </strong>entdeckst du kuratierte Produkte, limitierte Angebote und exklusive App-Deals \u2013 verl\u00e4sslich ausgew\u00e4hlt und immer einen Klick wert.</p>",
+                        "button_text": "Learn more",
+                        "button_link": "",
+                        "section_padding": 60,
+                        "content_gap": 60,
+                        "text_padding": 20,
+                        "text_spacing": 20,
+                        "heading_size": 48,
+                        "heading_weight": "700",
+                        "text_size": 16,
+                        "button_text_size": 16,
+                        "background_color": "#f3f3f3",
+                        "heading_color": "#000000",
+                        "text_color": "#666666",
+                        "button_color": "#000000",
+                        "button_hover_color": "#333333",
+                        "button_text_color": "#ffffff",
+                        "button_padding_vertical": 14,
+                        "button_padding_horizontal": 28,
+                        "button_border_radius": 8
+                    },
+                    "blocks": {}
+                }
+            },
+            "block_order": [
+                "reelup_shoppable_videos_reels_reelup_stories_nX83Pb",
+                "reelup_shoppable_videos_reels_reelup_playlist_FfenHr",
+                "ai_gen_block_ba0b649_xwmYyC",
+                "ai_gen_block_2b816b2_HJrUdG",
+                "ai_gen_block_2b816b2_DeteKz"
+            ],
+            "custom_css": [
+                "div {font-family: var(--bossa) !important;}"
+            ],
+            "settings": {}
+        },
+        "blocks_jgG73b": {
+            "type": "_blocks",
+            "blocks": {
+                "ai_gen_block_5989830_UagdQm": {
+                    "type": "ai_gen_block_5989830",
+                    "name": "Customer reviews",
+                    "settings": {
+                        "title": "Stimmen aus der Community",
+                        "subtitle": "Das sagen unsere Nutzer",
+                        "review_1_name": "ugiguib",
+                        "review_1_stars": 5,
+                        "review_1_comment": "So ne tolle App. Viele verschiedene Tipps und Tricks von \"normalen\" Alltagsmenschen bis hin zu Profis! Liebe diese Mischung! So mega sympathisch. Freue mich so auf alles Weitere, was es zu entdecken geben wird!!",
+                        "review_2_name": "Freim\u00fcnze",
+                        "review_2_stars": 4,
+                        "review_2_comment": "Die SWAN App hat so wertvolle Videos! Bin mir sicher, da werden noch richtig coole Features kommen!",
+                        "review_3_name": "butjehh",
+                        "review_3_stars": 4,
+                        "review_3_comment": "Im Auge behalten - Gef\u00e4llt mir schon sehr gut und hat gro\u00dfes Potential.",
+                        "review_4_name": "Imbiss-Chief",
+                        "review_4_stars": 5,
+                        "review_4_comment": "Und das beste im Vergleich zu YouTube: Es gibt kein nerviges haten und trollen unter den Videos. Man ist hier halt eine coole Community.",
+                        "review_5_name": "",
+                        "review_5_stars": 5,
+                        "review_5_comment": "",
+                        "review_6_name": "",
+                        "review_6_stars": 5,
+                        "review_6_comment": "",
+                        "review_7_name": "",
+                        "review_7_stars": 5,
+                        "review_7_comment": "",
+                        "review_8_name": "",
+                        "review_8_stars": 5,
+                        "review_8_comment": "",
+                        "review_9_name": "",
+                        "review_9_stars": 5,
+                        "review_9_comment": "",
+                        "review_10_name": "",
+                        "review_10_stars": 5,
+                        "review_10_comment": "",
+                        "background_color": "#ffffff",
+                        "text_color": "#000000",
+                        "card_background": "#ffffff",
+                        "card_border_color": "#e5e5e5",
+                        "star_color": "#ffd700",
+                        "star_empty_color": "#e5e5e5",
+                        "button_background": "#ffffff",
+                        "button_color": "#000000",
+                        "button_border_color": "#e5e5e5",
+                        "button_hover_background": "#f5f5f5",
+                        "button_hover_color": "#000000",
+                        "section_padding": 48,
+                        "card_width": 320,
+                        "card_gap": 20,
+                        "card_padding": 24,
+                        "card_border_radius": 8,
+                        "title_size": 36,
+                        "subtitle_size": 17,
+                        "name_size": 14,
+                        "comment_size": 14,
+                        "star_size": 16
+                    },
+                    "blocks": {}
+                }
+            },
+            "block_order": [
+                "ai_gen_block_5989830_UagdQm"
+            ],
+            "custom_css": [
+                "div {max-width: 175ch; margin: 0 auto;}"
+            ],
+            "settings": {}
+        },
+        "collapsible_content_dpkVMU": {
+            "type": "collapsible-content",
+            "blocks": {
+                "collapsible_row_7pX9aB": {
+                    "type": "collapsible_row",
+                    "settings": {
+                        "heading": "Was ist die SWAN App und welche Funktionen bietet sie?",
+                        "icon": "none",
+                        "row_content": "<p>Die SWAN App ist eine interaktive Plattform f\u00fcr Beauty-Enthusiasten. </p><p>Sie kombiniert eine kreative Community, authentischen Content ohne Filter und einen integrierten Onlineshop. </p><p>Nutzer*innen k\u00f6nnen eigene Inhalte hochladen, Beauty-Videos anschauen und exklusive Produkte von spannenden Brands entdecken.</p>",
+                        "page": ""
+                    }
+                },
+                "collapsible_row_BMnUrK": {
+                    "type": "collapsible_row",
+                    "settings": {
+                        "heading": "Ist die App kostenlos?",
+                        "icon": "none",
+                        "row_content": "<p><strong>Die SWAN App ist komplett kostenlos zum Download und zur Nutzung.</strong></p><p>Du kannst Beauty-Videos, Tutorials, Shopping und Community-Funktionen ohne Kosten nutzen.</p><p>Es gibt keine kostenpflichtigen Abonnements oder versteckten Geb\u00fchren.</p><p>Wenn du den SWAN Mirror verwendest, erh\u00e4ltst du Zugang zu zus\u00e4tzlichen Funktionen wie KI-gest\u00fctzter Hautanalyse und HD-Videoerstellung.</p>",
+                        "page": ""
+                    }
+                },
+                "collapsible_row_YhJe6R": {
+                    "type": "collapsible_row",
+                    "settings": {
+                        "heading": "F\u00fcr welche Betriebssysteme ist die App verf\u00fcgbar?",
+                        "icon": "none",
+                        "row_content": "<p>Die App ist sowohl f\u00fcr iOS als auch f\u00fcr Android verf\u00fcgbar und kann in den jeweiligen App-Stores heruntergeladen werden.</p>",
+                        "page": ""
+                    }
+                },
+                "collapsible_row_Gqdq9Q": {
+                    "type": "collapsible_row",
+                    "settings": {
+                        "heading": "Ben\u00f6tige ich ein Benutzerkonto, um die App zu nutzen?",
+                        "icon": "none",
+                        "row_content": "<p>Ja, f\u00fcr die volle Nutzung der interaktiven Features und den Zugang zur Community ist eine Registrierung in der SWAN App erforderlich.\u00a0</p>",
+                        "page": ""
+                    }
+                },
+                "collapsible_row_hLcgfk": {
+                    "type": "collapsible_row",
+                    "settings": {
+                        "heading": "An wen kann ich mich bei technischen Problemen oder Fragen wenden?",
+                        "icon": "none",
+                        "row_content": "<p>Bei technischen Problemen oder Fragen steht der Kundenservice unter hi@swanbeauty.com zur Verf\u00fcgung.</p>",
+                        "page": ""
+                    }
+                }
+            },
+            "block_order": [
+                "collapsible_row_7pX9aB",
+                "collapsible_row_BMnUrK",
+                "collapsible_row_YhJe6R",
+                "collapsible_row_Gqdq9Q",
+                "collapsible_row_hLcgfk"
+            ],
+            "name": "t:sections.collapsible_content.presets.name",
+            "settings": {
+                "caption": "H\u00e4ufig gestellte Fragen",
+                "heading": "Fragen & Antworten",
+                "heading_size": "h1",
+                "heading_alignment": "center",
+                "layout": "row",
+                "container_color_scheme": "",
+                "color_scheme": "",
+                "open_first_collapsible_row": true,
+                "image_ratio": "adapt",
+                "desktop_layout": "image_second",
+                "padding_top": 36,
+                "padding_bottom": 36
+            }
+        },
+        "featured_blog_3YTjpM": {
+            "type": "featured-blog",
+            "name": "t:sections.featured-blog.presets.name",
+            "settings": {
+                "blog": "news",
+                "post_limit": 3,
+                "heading": "Blog-Beitr\u00e4ge",
+                "heading_size": "h1",
+                "columns_desktop": 3,
+                "show_view_all": true,
+                "show_image": true,
+                "show_date": true,
+                "show_author": false,
+                "color_scheme": "",
+                "padding_top": 36,
+                "padding_bottom": 36
+            }
+        },
+        "swan_sign_up_aYagET": {
+            "type": "swan_sign-up",
+            "settings": {
+                "header": "The future of beauty is now",
+                "text_content": "<h5>Werde SWAN Beauty Insider und verpasse keine Updates.</h5>",
+                "color_scheme": "",
+                "mirror_image": "black"
+            }
         }
-      },
-      "block_order": [
-        "heading_TRi9EE",
-        "text_bkRYYR"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "custom_id": "",
-        "custom_class": "",
-        "color_scheme": ""
-      }
     },
-    "swan_image_text_67EcKy": {
-      "type": "swan_image-text",
-      "blocks": {
-        "headline_KzJ9d6": {
-          "type": "headline",
-          "settings": {
-            "text": "Entdecke, inspiriere und werde Teil der Community",
-            "center_text": false,
-            "heading_level": "h2",
-            "custom_id": "",
-            "custom_class": ""
-          }
-        },
-        "text_area_rPJR8R": {
-          "type": "text_area",
-          "settings": {
-            "text": "<p>Dein Zugang zu Inspiration, Tutorials und einer lebendigen Community – frei nutzbar, auch ohne SWAN Mirror. Schau dir Videos Schritt für Schritt an, shoppe Produkte direkt aus den Clips im SWAN Marketplace und teile deinen eigenen Content. Authentisch, nahbar, ohne Filter. Jetzt kostenlos laden.</p><p><strong>Kurzvorteile</strong></p><ul><li><strong>Videos zum Nachmachen</strong></li><li><strong>Shopping direkt aus Clips</strong> (SWAN Marketplace)</li><li><strong>Eigene Inhalte teilen & Feedback</strong></li><li><strong>Funktioniert auch ohne Mirror</strong></li></ul>",
-            "center_text": false,
-            "custom_id": "",
-            "custom_class": ""
-          }
-        }
-      },
-      "block_order": [
-        "headline_KzJ9d6",
-        "text_area_rPJR8R"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/8T8A4866-3.jpg",
-        "image_position": "left",
-        "image_scale": "cover",
-        "image_background": "#ffffff",
-        "image_inset": "false",
-        "mirror_swap": false,
-        "text_alignment": "center",
-        "sticky_text": false,
-        "custom_id": "",
-        "custom_class": "",
-        "color_scheme": "scheme-3"
-      }
-    },
-    "rich_text_3zqCi8": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_GkABpx": {
-          "type": "heading",
-          "settings": {
-            "heading": ""
-          }
-        },
-        "text_Cxaqh3": {
-          "type": "text",
-          "settings": {
-            "text": "<h5>Lade jetzt die SWAN App herunter und lass dich von unserer kreativen Community inspirieren.</h5>"
-          }
-        },
-        "button_M9kzPW": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "button_label": "Apple Store",
-            "button_link": "https://onelink.to/swanapp",
-            "button_style_secondary": false,
-            "button_label_2": "Google Playstore",
-            "button_link_2": "https://onelink.to/swanapp",
-            "button_style_secondary_2": false
-          }
-        },
-        "button_UxyU9W": {
-          "type": "button",
-          "settings": {
-            "button_label": "Zum Download",
-            "button_link": "https://onelink.to/swanapp ?utm_source=applp&utm_medium=website&utm_campaign=ctabutton&utm_content=appstores",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_GkABpx",
-        "text_Cxaqh3",
-        "button_M9kzPW",
-        "button_UxyU9W"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
-    "17556416728320b2de": {
-      "type": "_blocks",
-      "settings": {}
-    },
-    "1755642240b7fb8d61": {
-      "type": "_blocks",
-      "blocks": {
-        "reelup_shoppable_videos_reels_reelup_stories_nX83Pb": {
-          "type": "shopify://apps/reelup-shoppable-videos-reels/blocks/reelup-stories/a8ec9e4d-d192-44f7-9c23-595f9ee7dd5b",
-          "settings": {
-            "section_id": ""
-          }
-        },
-        "reelup_shoppable_videos_reels_reelup_playlist_FfenHr": {
-          "type": "shopify://apps/reelup-shoppable-videos-reels/blocks/reelup-playlist/a8ec9e4d-d192-44f7-9c23-595f9ee7dd5b",
-          "disabled": true,
-          "settings": {
-            "playlist_id": "rl_pl_19440"
-          }
-        },
-        "ai_gen_block_ba0b649_xwmYyC": {
-          "type": "ai_gen_block_ba0b649",
-          "name": "Video with text",
-          "settings": {
-            "heading": "Routinen-Planer: Deine flexible Hautpflege",
-            "description": "<p>Stelle dir mit deinen Lieblingsprodukten eine persönliche Morgen- und Abendroutine zusammen. Passe sie jederzeit an die aktuellen Bedürfnisse deiner Haut an – flexibel, wenn sich etwas ändert. <br/>So verpasst du keinen Step & behältst die korrekte Reihenfolge täglich im Blick.</p><p>Das Beste: Deine geplante Routine erscheint direkt auf dem SWAN Mirror – für ein nahtloses Beauty-Erlebnis.</p><p></p>",
-            "button_text": "Learn more",
-            "button_link": "",
-            "video_url": "https://cdn.shopify.com/videos/c/o/v/00110fabb530489eb37d199b00512a80.mp4",
-            "video_radius": 12,
-            "heading_size": 36,
-            "heading_color": "#000000",
-            "text_size": 16,
-            "text_color": "#666666",
-            "button_text_size": 16,
-            "button_color": "#000000",
-            "button_text_color": "#ffffff",
-            "button_hover_color": "#333333",
-            "button_radius": 8
-          },
-          "blocks": {}
-        },
-        "ai_gen_block_2b816b2_HJrUdG": {
-          "type": "ai_gen_block_2b816b2",
-          "name": "Video with text",
-          "settings": {
-            "video": "https://cdn.shopify.com/videos/c/o/v/414d24a9400143c4a39106e7594b3538.mp4",
-            "video_max_width": 400,
-            "video_border_radius": 16,
-            "heading": "Wähle deine Interessen & erlebe Beauty, die zu dir passt",
-            "text_content": "<p>Gestalte deine App-Erfahrung von Anfang an individuell: Wähle deine Beauty-Interessen und entdecke Content, der wirklich zu dir passt – von Skincare über Make-up bis Hair & Wellness. </p><p>So bekommst du Inspiration, die deine Routine spürbar bereichert.</p>",
-            "button_text": "Learn more",
-            "button_link": "",
-            "section_padding": 30,
-            "content_gap": 60,
-            "text_padding": 20,
-            "text_spacing": 20,
-            "heading_size": 48,
-            "heading_weight": "700",
-            "text_size": 16,
-            "button_text_size": 16,
-            "background_color": "#f3f3f3",
-            "heading_color": "#000000",
-            "text_color": "#666666",
-            "button_color": "#000000",
-            "button_hover_color": "#333333",
-            "button_text_color": "#ffffff",
-            "button_padding_vertical": 14,
-            "button_padding_horizontal": 28,
-            "button_border_radius": 8
-          },
-          "blocks": {}
-        },
-        "ai_gen_block_2b816b2_DeteKz": {
-          "type": "ai_gen_block_2b816b2",
-          "name": "Video with text",
-          "settings": {
-            "video": "https://cdn.shopify.com/videos/c/o/v/b0b3403d42314f1bbc7fe1b415880bcc.mp4",
-            "video_max_width": 400,
-            "video_border_radius": 16,
-            "heading": "Shop the Look – direkt aus dem Video",
-            "text_content": "<p>Dein Shortcut zu neuen Must-haves. Produkte aus den Videos sind direkt verlinkt und mit wenigen Klicks bei dir – smart shoppen, ohne Umwege.<br/>Im <strong>SWAN Marketplace </strong>entdeckst du kuratierte Produkte, limitierte Angebote und exklusive App-Deals – verlässlich ausgewählt und immer einen Klick wert.</p>",
-            "button_text": "Learn more",
-            "button_link": "",
-            "section_padding": 60,
-            "content_gap": 60,
-            "text_padding": 20,
-            "text_spacing": 20,
-            "heading_size": 48,
-            "heading_weight": "700",
-            "text_size": 16,
-            "button_text_size": 16,
-            "background_color": "#f3f3f3",
-            "heading_color": "#000000",
-            "text_color": "#666666",
-            "button_color": "#000000",
-            "button_hover_color": "#333333",
-            "button_text_color": "#ffffff",
-            "button_padding_vertical": 14,
-            "button_padding_horizontal": 28,
-            "button_border_radius": 8
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "reelup_shoppable_videos_reels_reelup_stories_nX83Pb",
-        "reelup_shoppable_videos_reels_reelup_playlist_FfenHr",
-        "ai_gen_block_ba0b649_xwmYyC",
-        "ai_gen_block_2b816b2_HJrUdG",
-        "ai_gen_block_2b816b2_DeteKz"
-      ],
-      "custom_css": [
-        "div {font-family: var(--bossa) !important;}"
-      ],
-      "settings": {}
-    },
-    "blocks_jgG73b": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_5989830_UagdQm": {
-          "type": "ai_gen_block_5989830",
-          "name": "Customer reviews",
-          "settings": {
-            "title": "Stimmen aus der Community",
-            "subtitle": "Das sagen unsere Nutzer",
-            "review_1_name": "ugiguib",
-            "review_1_stars": 5,
-            "review_1_comment": "So ne tolle App. Viele verschiedene Tipps und Tricks von \"normalen\" Alltagsmenschen bis hin zu Profis! Liebe diese Mischung! So mega sympathisch. Freue mich so auf alles Weitere, was es zu entdecken geben wird!!",
-            "review_2_name": "Freimünze",
-            "review_2_stars": 4,
-            "review_2_comment": "Die SWAN App hat so wertvolle Videos! Bin mir sicher, da werden noch richtig coole Features kommen!",
-            "review_3_name": "butjehh",
-            "review_3_stars": 4,
-            "review_3_comment": "Im Auge behalten - Gefällt mir schon sehr gut und hat großes Potential.",
-            "review_4_name": "Imbiss-Chief",
-            "review_4_stars": 5,
-            "review_4_comment": "Und das beste im Vergleich zu YouTube: Es gibt kein nerviges haten und trollen unter den Videos. Man ist hier halt eine coole Community.",
-            "review_5_name": "",
-            "review_5_stars": 5,
-            "review_5_comment": "",
-            "review_6_name": "",
-            "review_6_stars": 5,
-            "review_6_comment": "",
-            "review_7_name": "",
-            "review_7_stars": 5,
-            "review_7_comment": "",
-            "review_8_name": "",
-            "review_8_stars": 5,
-            "review_8_comment": "",
-            "review_9_name": "",
-            "review_9_stars": 5,
-            "review_9_comment": "",
-            "review_10_name": "",
-            "review_10_stars": 5,
-            "review_10_comment": "",
-            "background_color": "#ffffff",
-            "text_color": "#000000",
-            "card_background": "#ffffff",
-            "card_border_color": "#e5e5e5",
-            "star_color": "#ffd700",
-            "star_empty_color": "#e5e5e5",
-            "button_background": "#ffffff",
-            "button_color": "#000000",
-            "button_border_color": "#e5e5e5",
-            "button_hover_background": "#f5f5f5",
-            "button_hover_color": "#000000",
-            "section_padding": 48,
-            "card_width": 320,
-            "card_gap": 20,
-            "card_padding": 24,
-            "card_border_radius": 8,
-            "title_size": 36,
-            "subtitle_size": 17,
-            "name_size": 14,
-            "comment_size": 14,
-            "star_size": 16
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_5989830_UagdQm"
-      ],
-      "custom_css": [
-        "div {max-width: 175ch; margin: 0 auto;}"
-      ],
-      "settings": {}
-    },
-    "collapsible_content_dpkVMU": {
-      "type": "collapsible-content",
-      "blocks": {
-        "collapsible_row_7pX9aB": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Was ist die SWAN App und welche Funktionen bietet sie?",
-            "icon": "none",
-            "row_content": "<p>Die SWAN App ist eine interaktive Plattform für Beauty-Enthusiasten. </p><p>Sie kombiniert eine kreative Community, authentischen Content ohne Filter und einen integrierten Onlineshop. </p><p>Nutzer*innen können eigene Inhalte hochladen, Beauty-Videos anschauen und exklusive Produkte von spannenden Brands entdecken.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_BMnUrK": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Ist die App kostenlos?",
-            "icon": "none",
-            "row_content": "<p><strong>Die SWAN App ist komplett kostenlos zum Download und zur Nutzung.</strong></p><p>Du kannst Beauty-Videos, Tutorials, Shopping und Community-Funktionen ohne Kosten nutzen.</p><p>Es gibt keine kostenpflichtigen Abonnements oder versteckten Gebühren.</p><p>Wenn du den SWAN Mirror verwendest, erhältst du Zugang zu zusätzlichen Funktionen wie KI-gestützter Hautanalyse und HD-Videoerstellung.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_YhJe6R": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Für welche Betriebssysteme ist die App verfügbar?",
-            "icon": "none",
-            "row_content": "<p>Die App ist sowohl für iOS als auch für Android verfügbar und kann in den jeweiligen App-Stores heruntergeladen werden.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_Gqdq9Q": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Benötige ich ein Benutzerkonto, um die App zu nutzen?",
-            "icon": "none",
-            "row_content": "<p>Ja, für die volle Nutzung der interaktiven Features und den Zugang zur Community ist eine Registrierung in der SWAN App erforderlich. </p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_hLcgfk": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "An wen kann ich mich bei technischen Problemen oder Fragen wenden?",
-            "icon": "none",
-            "row_content": "<p>Bei technischen Problemen oder Fragen steht der Kundenservice unter hi@swanbeauty.com zur Verfügung.</p>",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_7pX9aB",
-        "collapsible_row_BMnUrK",
-        "collapsible_row_YhJe6R",
-        "collapsible_row_Gqdq9Q",
-        "collapsible_row_hLcgfk"
-      ],
-      "name": "t:sections.collapsible_content.presets.name",
-      "settings": {
-        "caption": "Häufig gestellte Fragen",
-        "heading": "Fragen & Antworten",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "layout": "row",
-        "container_color_scheme": "",
-        "color_scheme": "",
-        "open_first_collapsible_row": true,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "featured_blog_3YTjpM": {
-      "type": "featured-blog",
-      "name": "t:sections.featured-blog.presets.name",
-      "settings": {
-        "blog": "news",
-        "post_limit": 3,
-        "heading": "Blog-Beiträge",
-        "heading_size": "h1",
-        "columns_desktop": 3,
-        "show_view_all": true,
-        "show_image": true,
-        "show_date": true,
-        "show_author": false,
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "swan_sign_up_aYagET": {
-      "type": "swan_sign-up",
-      "settings": {
-        "header": "The future of beauty is now",
-        "text_content": "<h5>Werde SWAN Beauty Insider und verpasse keine Updates.</h5>",
-        "color_scheme": "",
-        "mirror_image": "black"
-      }
-    }
-  },
-  "order": [
-    "main",
-    "swan_rich_text_daYrVd",
-    "swan_image_text_67EcKy",
-    "rich_text_3zqCi8",
-    "17556416728320b2de",
-    "1755642240b7fb8d61",
-    "blocks_jgG73b",
-    "collapsible_content_dpkVMU",
-    "featured_blog_3YTjpM",
-    "swan_sign_up_aYagET"
-  ]
+    "order": [
+        "main",
+        "swan_rich_text_daYrVd",
+        "swan_image_text_67EcKy",
+        "rich_text_3zqCi8",
+        "17556416728320b2de",
+        "1755642240b7fb8d61",
+        "blocks_jgG73b",
+        "collapsible_content_dpkVMU",
+        "featured_blog_3YTjpM",
+        "swan_sign_up_aYagET"
+    ]
 }
