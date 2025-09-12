@@ -5,212 +5,230 @@
 {% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
 
 {% style %}
-      .ai-tabbed-section-{{ ai_gen_id }} {
-        max-width: 100%;
-        margin: 0 auto;
-        background-color: {{ block.settings.background_color }};
-        border-radius: {{ block.settings.border_radius }}px;
-        overflow: hidden;
-      }
+        /* Desktop */
+        .block_container {
+            padding-block: {{ section.settings.padding_block_desktop }}px;
+            padding-inline: {{ section.settings.padding_inline_desktop }}px;
+            margin-block: {{ section.settings.margin_block_desktop }}px;
+            margin-inline: {{ section.settings.margin_inline_desktop }}px;
+        }
 
-      .ai-tab-nav-{{ ai_gen_id }} {
-        display: flex;
-        justify-content:space-around;
-        margin-block: {{ block.settings.tab_buttons_container_margin_block }}px;
-        background-color: {{ block.settings.tab_background_color }};
-        border-bottom: 1px solid {{ block.settings.border_color }};
-      }
+        /* Mobile */
+        @media (max-width: 767px) {
+            .block_container {
+            padding-block: {{ section.settings.padding_block_mobile }}px;
+            padding-inline: {{ section.settings.padding_inline_mobile }}px;
+            margin-block: {{ section.settings.margin_block_mobile }}px;
+            margin-inline: {{ section.settings.margin_inline_mobile }}px;
+            }
+        }
 
-      .ai-tab-button-{{ ai_gen_id }} {
-        {% comment %} flex: 1; {% endcomment %}
-        padding: {{ block.settings.tab_padding }}px;
-        border-radius: {{ block.settings.tab_button_radius }}px;
-        background: none;
-        border: none;
-        color: {{ block.settings.tab_text_color }};
-        font-size: {{ block.settings.tab_font_size }}px;
-        font-weight: 500;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        position: relative;
-        {% comment %} border-bottom: 3px solid transparent; {% endcomment %}
-      }
+        .ai-tabbed-section-{{ ai_gen_id }} {
+          max-width: 100%;
+          margin: 0 auto;
+          background-color: {{ block.settings.background_color }};
+          border-radius: {{ block.settings.border_radius }}px;
+          overflow: hidden;
+        }
 
-      .ai-tab-button-{{ ai_gen_id }}:hover {
-        background-color: {{ block.settings.tab_hover_color }};
-        color: {{ block.settings.tab_hover_text_color }};
-      }
-
-      .ai-tab-button-{{ ai_gen_id }}.active {
-        background-color: {{ block.settings.tab_active_background }};
-        color: {{ block.settings.tab_active_text_color }};
-        border-bottom-color: {{ block.settings.accent_color }};
-      }
-
-      .ai-tab-content-container-{{ ai_gen_id }} {
-        padding: {{ block.settings.tab_container_padding }}px;
-        margin-block: {{ block.settings.tab_container_margin_block }}px;
-        margin-inline: {{ block.settings.tab_container_margin_inline }}px;
-        {% comment %} background: {{ block.settings.tab_container_background }}; {% endcomment %}
-        position: relative;
-        overflow: hidden;
-        min-height: {{ block.settings.min_height }}px;
-      }
-
-      .ai-tab-content-wrapper-{{ ai_gen_id }} {
-        padding: {{ block.settings.wrapper_padding }}px;
-        display: flex;
-        width: 300%;
-        transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      }
-
-      .ai-tab-content-{{ ai_gen_id }} {
-        {% comment %} background:green; {% endcomment %}
-        display:flex;
-        align-items:center;
-        justify-content:space-between;
-        width: 33.333%;
-        padding: {{ block.settings.content_padding }}px;
-        border-radius: {{ block.settings.content_border_radius }}px;
-        color: {{ block.settings.content_text_color }};
-        background: {{ block.settings.tab_content_background }};
-        radius: {{ block.settings.tab_content_radius }};
-        opacity: 0;
-        transition: opacity 0.3s ease 0.1s;
-      }
-
-       .ai-tab-content-left-{{ ai_gen_id }} {
-        flex: 1;
-        {% comment %} background:pink; {% endcomment %}
-        padding: {{ block.settings.tab_left_content_padding }}px;
-      }
-
-        .ai-tab-content-right-{{ ai_gen_id }} {
-          flex: 1;
-          display:flex;
-      }
-
-
-      .ai-tab-content-{{ ai_gen_id }}.active {
-        opacity: 1;
-      }
-
-      .ai-tab-title-{{ ai_gen_id }} {
-        font-size: {{ block.settings.title_font_size }}px;
-        font-weight: 600;
-        margin: 0 0 16px 0;
-        color: {{ block.settings.title_color }};
-      }
-
-      .ai-tab-text-{{ ai_gen_id }} {
-        font-size: {{ block.settings.text_font_size }}px;
-        line-height: 1.6;
-        margin: 0 0 20px 0;
-      }
-
-     .ai-tab-content__icon-{{ ai_gen_id }} {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-
-
-      .ai-tab-button-link-{{ ai_gen_id }} {
-        display: inline-flex;
-        align-items:center;
-        gap:10px;
-         text-align: center;
-        {% comment %} padding: 12px 24px; {% endcomment %}
-        background-color: {{ block.settings.button_color }};
-        color: {{ block.settings.button_text_color }};
-        text-decoration: none;
-        border-radius: {{ block.settings.button_border_radius }}px;
-        font-weight: 500;
-        transition: background-color 0.3s ease;
-      }
-
-      .ai-tab-button-link-{{ ai_gen_id }}:hover {
-        color: {{ block.settings.button_hover_color }};
-      }
-
-     .ai-tab-image-{{ ai_gen_id }} {
-    width: 100%;
-    object-fit: cover;
-    border-radius: {{ block.settings.image_border_radius }}px;
-  }
-
-
-      .ai-tab-image-placeholder-{{ ai_gen_id }} {
-        width: 100%;
-        height: 200px;
-        background-color: #f4f4f4;
-        border-radius: {{ block.settings.image_border_radius }}px;
-        {% comment %} margin-bottom: 16px; {% endcomment %}
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-      }
-
-      .ai-tab-image-placeholder-{{ ai_gen_id }} svg {
-        width: 60px;
-        height: 60px;
-        opacity: 0.3;
-      }
-
-      .ai-empty-state-{{ ai_gen_id }} {
-        position: absolute;
-        bottom: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 12px;
-        color: #666;
-        text-align: center;
-      }
-
-      @media screen and (max-width: 749px) {
         .ai-tab-nav-{{ ai_gen_id }} {
-          {% comment %} flex-direction: column; {% endcomment %}
-          gap:10px;
+          display: flex;
+          justify-content:space-around;
+          margin-block: {{ block.settings.tab_buttons_container_margin_block }}px;
+          background-color: {{ block.settings.tab_background_color }};
+          border-bottom: 1px solid {{ block.settings.border_color }};
         }
 
         .ai-tab-button-{{ ai_gen_id }} {
-          text-align: left;
-          {% comment %} border-bottom: 1px solid {{ block.settings.border_color }}; {% endcomment %}
-          border-right: none;
+          {% comment %} flex: 1; {% endcomment %}
+          padding: {{ block.settings.tab_padding }}px;
+          border-radius: {{ block.settings.tab_button_radius }}px;
+          background: none;
+          border: none;
+          color: {{ block.settings.tab_text_color }};
+          font-size: {{ block.settings.tab_font_size }}px;
+          font-weight: 500;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          position: relative;
+          {% comment %} border-bottom: 3px solid transparent; {% endcomment %}
+        }
+
+        .ai-tab-button-{{ ai_gen_id }}:hover {
+          background-color: {{ block.settings.tab_hover_color }};
+          color: {{ block.settings.tab_hover_text_color }};
         }
 
         .ai-tab-button-{{ ai_gen_id }}.active {
-          {% comment %} border-bottom: 1px solid {{ block.settings.border_color }};
-          border-left: 3px solid {{ block.settings.accent_color }}; {% endcomment %}
+          background-color: {{ block.settings.tab_active_background }};
+          color: {{ block.settings.tab_active_text_color }};
+          border-bottom-color: {{ block.settings.accent_color }};
+        }
+
+        .ai-tab-content-container-{{ ai_gen_id }} {
+          padding: {{ block.settings.tab_container_padding }}px;
+          margin-block: {{ block.settings.tab_container_margin_block }}px;
+          margin-inline: {{ block.settings.tab_container_margin_inline }}px;
+          {% comment %} background: {{ block.settings.tab_container_background }}; {% endcomment %}
+          position: relative;
+          overflow: hidden;
+          min-height: {{ block.settings.min_height }}px;
         }
 
         .ai-tab-content-wrapper-{{ ai_gen_id }} {
-          {% comment %} background:yellow; {% endcomment %}
+          padding: {{ block.settings.wrapper_padding }}px;
+          display: flex;
           width: 300%;
+          transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
         .ai-tab-content-{{ ai_gen_id }} {
+          {% comment %} background:green; {% endcomment %}
           display:flex;
-          flex-direction:column;
-        align-items:center;
-        justify-content:space-between;
-          {% comment %} background:red; {% endcomment %}
+          align-items:center;
+          justify-content:space-between;
           width: 33.333%;
-          padding: {{ block.settings.content_padding | times: 0.75 }}px;
+          padding: {{ block.settings.content_padding }}px;
+          border-radius: {{ block.settings.content_border_radius }}px;
+          color: {{ block.settings.content_text_color }};
+          background: {{ block.settings.tab_content_background }};
+          radius: {{ block.settings.tab_content_radius }};
+          opacity: 0;
+          transition: opacity 0.3s ease 0.1s;
         }
-         .ai-tab-image-{{ ai_gen_id }} {
-      height: auto;
-      max-height: 200px;
+
+         .ai-tab-content-left-{{ ai_gen_id }} {
+          flex: 1;
+          {% comment %} background:pink; {% endcomment %}
+          padding: {{ block.settings.tab_left_content_padding }}px;
+        }
+
+          .ai-tab-content-right-{{ ai_gen_id }} {
+            flex: 1;
+            display:flex;
+        }
+
+
+        .ai-tab-content-{{ ai_gen_id }}.active {
+          opacity: 1;
+        }
+
+        .ai-tab-title-{{ ai_gen_id }} {
+          font-size: {{ block.settings.title_font_size }}px;
+          font-weight: 600;
+          margin: 0 0 16px 0;
+          color: {{ block.settings.title_color }};
+        }
+
+        .ai-tab-text-{{ ai_gen_id }} {
+          font-size: {{ block.settings.text_font_size }}px;
+          line-height: 1.6;
+          margin: 0 0 20px 0;
+        }
+
+       .ai-tab-content__icon-{{ ai_gen_id }} {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+
+
+        .ai-tab-button-link-{{ ai_gen_id }} {
+          display: inline-flex;
+          align-items:center;
+          gap:10px;
+           text-align: center;
+          {% comment %} padding: 12px 24px; {% endcomment %}
+          background-color: {{ block.settings.button_color }};
+          color: {{ block.settings.button_text_color }};
+          text-decoration: none;
+          border-radius: {{ block.settings.button_border_radius }}px;
+          font-weight: 500;
+          transition: background-color 0.3s ease;
+        }
+
+        .ai-tab-button-link-{{ ai_gen_id }}:hover {
+          color: {{ block.settings.button_hover_color }};
+        }
+
+       .ai-tab-image-{{ ai_gen_id }} {
+      width: 100%;
+      object-fit: cover;
       border-radius: {{ block.settings.image_border_radius }}px;
     }
-      .ai-tab-content-left-{{ ai_gen_id }} {
-    padding: calc({{ block.settings.tab_left_content_padding }}px / 2);
-  }
+
+
+        .ai-tab-image-placeholder-{{ ai_gen_id }} {
+          width: 100%;
+          height: 200px;
+          background-color: #f4f4f4;
+          border-radius: {{ block.settings.image_border_radius }}px;
+          {% comment %} margin-bottom: 16px; {% endcomment %}
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+        }
+
+        .ai-tab-image-placeholder-{{ ai_gen_id }} svg {
+          width: 60px;
+          height: 60px;
+          opacity: 0.3;
+        }
+
+        .ai-empty-state-{{ ai_gen_id }} {
+          position: absolute;
+          bottom: 10px;
+          left: 50%;
+          transform: translateX(-50%);
+          font-size: 12px;
+          color: #666;
+          text-align: center;
+        }
+
+        @media screen and (max-width: 749px) {
+          .ai-tab-nav-{{ ai_gen_id }} {
+            {% comment %} flex-direction: column; {% endcomment %}
+            gap:10px;
+          }
+
+          .ai-tab-button-{{ ai_gen_id }} {
+            text-align: left;
+            {% comment %} border-bottom: 1px solid {{ block.settings.border_color }}; {% endcomment %}
+            border-right: none;
+          }
+
+          .ai-tab-button-{{ ai_gen_id }}.active {
+            {% comment %} border-bottom: 1px solid {{ block.settings.border_color }};
+            border-left: 3px solid {{ block.settings.accent_color }}; {% endcomment %}
+          }
+
+          .ai-tab-content-wrapper-{{ ai_gen_id }} {
+            {% comment %} background:yellow; {% endcomment %}
+            width: 300%;
+          }
+
+          .ai-tab-content-{{ ai_gen_id }} {
+            display:flex;
+            flex-direction:column;
+          align-items:center;
+          justify-content:space-between;
+            {% comment %} background:red; {% endcomment %}
+            width: 33.333%;
+            padding: {{ block.settings.content_padding | times: 0.75 }}px;
+          }
+           .ai-tab-image-{{ ai_gen_id }} {
+        height: auto;
+        max-height: 200px;
+        border-radius: {{ block.settings.image_border_radius }}px;
       }
+        .ai-tab-content-left-{{ ai_gen_id }} {
+      padding: calc({{ block.settings.tab_left_content_padding }}px / 2);
+    }
+        }
 {% endstyle %}
-<tabbed-section-{{ ai_gen_id }} class="ai-tabbed-section-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+<tabbed-section-{{ ai_gen_id }} class="block_container ai-tabbed-section-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
   {% comment %}
     <div class="ai-tab-nav-{{ ai_gen_id }}">
       <button class="ai-tab-button-{{ ai_gen_id }} active" data-tab="0" aria-selected="true">
@@ -380,20 +398,19 @@
   </div>
 </tabbed-section-{{ ai_gen_id }}>
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-  <symbol 
-    id="icon-arrow-nw" 
-    viewBox="0 0 24 24" 
-    fill="none" 
-    stroke="currentColor" 
-    stroke-width="2" 
-    stroke-linecap="round" 
+  <symbol
+    id="icon-arrow-nw"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
     stroke-linejoin="round"
   >
     <!-- Horizontal line + arrow head path -->
     <path d="M5 12h14M12 5l7 7-7 7"/>
   </symbol>
 </svg>
-
 
 <script>
   (function() {
@@ -448,6 +465,88 @@
 {
   "name": "Tabbed content section",
   "settings": [
+    {
+      "type": "range",
+      "id": "padding_block_desktop",
+      "label": "Padding Block (desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_inline_desktop",
+      "label": "Padding Inline (desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "margin_block_desktop",
+      "label": "Margin Block (desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "margin_inline_desktop",
+      "label": "Margin Inline (desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 20
+    },
+
+    {
+      "type": "range",
+      "id": "padding_block_mobile",
+      "label": "Padding Block (mobile)",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_inline_mobile",
+      "label": "Padding Inline (mobile)",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "margin_block_mobile",
+      "label": "Margin Block (mobile)",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "margin_inline_mobile",
+      "label": "Margin Inline (mobile)",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 10
+    },
+
     {
       "type": "header",
       "content": "Layout"
