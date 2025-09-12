@@ -4,136 +4,147 @@
 {% endcomment %}
 
 {%- style -%}
-.block_container.stats-section-{{ section.id }} {
-  padding-block: {{ section.settings.padding_block_desktop }}px;
-  padding-inline: {{ section.settings.padding_inline_desktop }}px;
-  margin-block: {{ section.settings.margin_block_desktop }}px;
-  margin-inline: {{ section.settings.margin_inline_desktop }}px;
-}
-
-/* Mobile */
-@media (max-width: 767px) {
   .block_container.stats-section-{{ section.id }} {
-    padding-block: {{ section.settings.padding_block_mobile }}px;
-    padding-inline: {{ section.settings.padding_inline_mobile }}px;
-    margin-block: {{ section.settings.margin_block_mobile }}px;
-    margin-inline: {{ section.settings.margin_inline_mobile }}px;
-  }
-}
-
-
-  .stats-section-{{ section.id }} {
-    padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
-    background-color: {{ section.settings.background_color }};
+    padding-block: {{ section.settings.padding_block_desktop }}px;
+    padding-inline: {{ section.settings.padding_inline_desktop }}px;
+    margin-block: {{ section.settings.margin_block_desktop }}px;
+    margin-inline: {{ section.settings.margin_inline_desktop }}px;
   }
 
-  .stats-container-{{ section.id }} {
-    max-width: {{ section.settings.container_width }}px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-
-  .stats-grid-{{ section.id }} {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: {{ section.settings.grid_gap }}px;
-    /* align-items: left; */
-    /* background:yellow; */
-  }
-
-  @media (min-width: 768px) {
-    .stats-grid-{{ section.id }} {
-      grid-template-columns: repeat(4, 1fr);
-    }
-  }
-
-  .stat-item-{{ section.id }} {
-    display:flex;
-    flex-direction:column;
-    justify-content: left;
-    justify-items: left;
-    gap:{{ section.settings.item_gap }};
-    align-items:left;
-    text-align: left;
-    padding: {{ section.settings.item_padding }}px;
-    background-color: {{ section.settings.item_background }};
-    border-radius: {{ section.settings.border_radius }}px;
-    box-shadow: {{ section.settings.box_shadow }};
-    transition: transform 0.3s ease;
-     /* background:red; */
-  }
-
-  .stat-item-{{ section.id }}:hover {
-    transform: translateY(-5px);
-  }
-
-  .stat-icon-{{ section.id }} {
-    width: {{ section.settings.icon_size }}px;
-    height: {{ section.settings.icon_size }}px;
-    margin: 0 auto {{ section.settings.icon_margin }}px;
-    display: inline;
-    align-items: left;
-    justify-content: left;
-    justify-items: left;
-    /* background:red; */
-  }
-
-  .stat-icon-{{ section.id }} svg {
-    width: 100%;
-    height: 100%;
-    fill: currentColor;
-    padding: {{ section.settings.icon_padding }}px;
-    background: {{ section.settings.icon_background }}px;
-  }
-
-  .stat-counter-{{ section.id }} {
-    font-size: {{ section.settings.counter_font_size }}px;
-    font-weight: {{ section.settings.counter_font_weight }};
-    color: {{ section.settings.counter_color }};
-    line-height: 1.1;
-    /* background:red; */
-    /* margin-bottom: {{ section.settings.counter_margin }}px; */
-    font-family: {{ section.settings.counter_font_family }};
-  }
-
-  .stat-heading-{{ section.id }} {
-    font-size: {{ section.settings.heading_font_size }}px;
-    font-weight: {{ section.settings.heading_font_weight }};
-    color: {{ section.settings.heading_color }};
-    /* background-color:red; */
-    /* margin-bottom: {{ section.settings.heading_margin }}px; */
-    font-family: {{ section.settings.heading_font_family }};
-  }
-
-  .stat-description-{{ section.id }} {
-    font-size: {{ section.settings.description_font_size }}px;
-    color: {{ section.settings.description_color }};
-    line-height: 1.5;
-    font-family: {{ section.settings.description_font_family }};
-  }
-
-  /* Mobile responsiveness */
+  /* Mobile */
   @media (max-width: 767px) {
-    .stats-grid-{{ section.id }} {
-      grid-template-columns: repeat(2, 1fr);
-      gap: {{ section.settings.mobile_gap }}px;
-    }
-    
-    .stat-counter-{{ section.id }} {
-      font-size: {{ section.settings.mobile_counter_size }}px;
-    }
-    
-    .stat-icon-{{ section.id }} {
-      width: {{ section.settings.mobile_icon_size }}px;
-      height: {{ section.settings.mobile_icon_size }}px;
+    .block_container.stats-section-{{ section.id }} {
+      padding-block: {{ section.settings.padding_block_mobile }}px;
+      padding-inline: {{ section.settings.padding_inline_mobile }}px;
+      margin-block: {{ section.settings.margin_block_mobile }}px;
+      margin-inline: {{ section.settings.margin_inline_mobile }}px;
     }
   }
 
-  @media (max-width: 480px) {
-    .stats-grid-{{ section.id }} {
-      grid-template-columns: 1fr;
+
+    .stats-section-{{ section.id }} {
+      padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
+      background-color: {{ section.settings.background_color }};
     }
-  }
+
+    .stats-container-{{ section.id }} {
+      max-width: {{ section.settings.container_width }}px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .stats-grid-{{ section.id }} {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: {{ section.settings.grid_gap }}px;
+      /* align-items: left; */
+      /* background:yellow; */
+    }
+
+    @media (min-width: 768px) {
+      .stats-grid-{{ section.id }} {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .stat-item-{{ section.id }} {
+
+      justify-content: center;
+      justify-items: center;
+
+      align-items:center;
+      text-align: center;
+
+       /* background:red; */
+    }
+    }
+
+    .stat-item-{{ section.id }} {
+      display:flex;
+      flex-direction:column;
+      justify-content: left;
+      justify-items: left;
+      gap:{{ section.settings.item_gap }};
+      align-items:left;
+      text-align: left;
+      padding: {{ section.settings.item_padding }}px;
+      background-color: {{ section.settings.item_background }};
+      border-radius: {{ section.settings.border_radius }}px;
+      box-shadow: {{ section.settings.box_shadow }};
+      transition: transform 0.3s ease;
+       /* background:red; */
+    }
+
+    .stat-item-{{ section.id }}:hover {
+      transform: translateY(-5px);
+    }
+
+    .stat-icon-{{ section.id }} {
+      width: {{ section.settings.icon_size }}px;
+      height: {{ section.settings.icon_size }}px;
+      /* margin: 0 auto {{ section.settings.icon_margin }}px; */
+      display: inline;
+      align-items: left;
+      justify-content: left;
+      justify-items: left;
+      /* background:red; */
+    }
+
+    .stat-icon-{{ section.id }} svg {
+      width: 100%;
+      height: 100%;
+      fill: currentColor;
+      padding: {{ section.settings.icon_padding }}px;
+      background: {{ section.settings.icon_background }}px;
+    }
+
+    .stat-counter-{{ section.id }} {
+      font-size: {{ section.settings.counter_font_size }}px;
+      font-weight: {{ section.settings.counter_font_weight }};
+      color: {{ section.settings.counter_color }};
+      line-height: 1.1;
+      /* background:red; */
+      /* margin-bottom: {{ section.settings.counter_margin }}px; */
+      font-family: {{ section.settings.counter_font_family }};
+    }
+
+    .stat-heading-{{ section.id }} {
+      font-size: {{ section.settings.heading_font_size }}px;
+      font-weight: {{ section.settings.heading_font_weight }};
+      color: {{ section.settings.heading_color }};
+      /* background-color:red; */
+      /* margin-bottom: {{ section.settings.heading_margin }}px; */
+      font-family: {{ section.settings.heading_font_family }};
+    }
+
+    .stat-description-{{ section.id }} {
+      font-size: {{ section.settings.description_font_size }}px;
+      color: {{ section.settings.description_color }};
+      line-height: 1.5;
+      font-family: {{ section.settings.description_font_family }};
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 767px) {
+      .stats-grid-{{ section.id }} {
+        grid-template-columns: repeat(2, 1fr);
+        gap: {{ section.settings.mobile_gap }}px;
+      }
+
+      .stat-counter-{{ section.id }} {
+        font-size: {{ section.settings.mobile_counter_size }}px;
+      }
+
+      .stat-icon-{{ section.id }} {
+        width: {{ section.settings.mobile_icon_size }}px;
+        height: {{ section.settings.mobile_icon_size }}px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .stats-grid-{{ section.id }} {
+        grid-template-columns: 1fr;
+      }
+    }
 {%- endstyle -%}
 
 <section class="block_container stats-section-{{ section.id }}" id="stats-{{ section.id }}">
@@ -154,18 +165,20 @@
               {{ block.settings.icon_svg }}
             </div>
           {% endif %}
-          
-          <div class="stat-counter-{{ section.id }}" 
-               data-target="{{ block.settings.counter_value }}"
-               data-suffix="{{ block.settings.counter_suffix }}"
-               data-duration="{{ section.settings.animation_duration }}">
+
+          <div
+            class="stat-counter-{{ section.id }}"
+            data-target="{{ block.settings.counter_value }}"
+            data-suffix="{{ block.settings.counter_suffix }}"
+            data-duration="{{ section.settings.animation_duration }}"
+          >
             0{{ block.settings.counter_suffix }}
           </div>
-          
+
           {% if block.settings.sub_heading != blank %}
             <p class="stat-heading-{{ section.id }}">{{ block.settings.sub_heading }}</p>
           {% endif %}
-          
+
           {% if block.settings.description != blank %}
             <p class="stat-description-{{ section.id }}">{{ block.settings.description }}</p>
           {% endif %}
@@ -176,66 +189,66 @@
 </section>
 
 <script>
-(function() {
-  const statsSection = document.getElementById('stats-{{ section.id }}');
-  const counters = statsSection.querySelectorAll('[data-target]');
-  let hasAnimated = false;
+  (function() {
+    const statsSection = document.getElementById('stats-{{ section.id }}');
+    const counters = statsSection.querySelectorAll('[data-target]');
+    let hasAnimated = false;
 
-  function formatNumber(num) {
-    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  }
-
-  function animateCounter(counter) {
-    const target = parseInt(counter.dataset.target);
-    const suffix = counter.dataset.suffix || '';
-    const duration = parseInt(counter.dataset.duration) || 2000;
-    const startTime = performance.now();
-
-    function updateCounter(currentTime) {
-      const elapsed = currentTime - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      
-      // Easing function for smooth animation
-      const easeOutQuad = 1 - (1 - progress) * (1 - progress);
-      const current = Math.floor(target * easeOutQuad);
-      
-      counter.textContent = formatNumber(current) + suffix;
-      
-      if (progress < 1) {
-        requestAnimationFrame(updateCounter);
-      } else {
-        counter.textContent = formatNumber(target) + suffix;
-      }
+    function formatNumber(num) {
+      return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
-    
-    requestAnimationFrame(updateCounter);
-  }
 
-  function startCounterAnimations() {
-    if (hasAnimated) return;
-    
-    hasAnimated = true;
-    counters.forEach((counter, index) => {
-      setTimeout(() => {
-        animateCounter(counter);
-      }, index * {{ section.settings.stagger_delay }});
-    });
-  }
+    function animateCounter(counter) {
+      const target = parseInt(counter.dataset.target);
+      const suffix = counter.dataset.suffix || '';
+      const duration = parseInt(counter.dataset.duration) || 2000;
+      const startTime = performance.now();
 
-  // Intersection Observer for viewport detection
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && entry.intersectionRatio >= {{ section.settings.trigger_threshold }}) {
-        startCounterAnimations();
-        observer.unobserve(entry.target);
+      function updateCounter(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+
+        // Easing function for smooth animation
+        const easeOutQuad = 1 - (1 - progress) * (1 - progress);
+        const current = Math.floor(target * easeOutQuad);
+
+        counter.textContent = formatNumber(current) + suffix;
+
+        if (progress < 1) {
+          requestAnimationFrame(updateCounter);
+        } else {
+          counter.textContent = formatNumber(target) + suffix;
+        }
       }
-    });
-  }, {
-    threshold: {{ section.settings.trigger_threshold }}
-  });
 
-  observer.observe(statsSection);
-})();
+      requestAnimationFrame(updateCounter);
+    }
+
+    function startCounterAnimations() {
+      if (hasAnimated) return;
+
+      hasAnimated = true;
+      counters.forEach((counter, index) => {
+        setTimeout(() => {
+          animateCounter(counter);
+        }, index * {{ section.settings.stagger_delay }});
+      });
+    }
+
+    // Intersection Observer for viewport detection
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && entry.intersectionRatio >= {{ section.settings.trigger_threshold }}) {
+          startCounterAnimations();
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: {{ section.settings.trigger_threshold }}
+    });
+
+    observer.observe(statsSection);
+  })();
 </script>
 
 {% schema %}
@@ -439,7 +452,7 @@
       "label": "Icon padding",
       "default": 10
     },
-        {
+    {
       "type": "color",
       "id": "icon_background",
       "label": "Icon Color",
