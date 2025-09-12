@@ -51,8 +51,8 @@
       visibility: hidden;
       transition: opacity 0.6s ease, visibility 0.6s ease;
       background-color: red;
-      padding-block:{{section.settings.left_padding_block }}px;
-      padding-inline:{{section.settings.left_padding_inline }}px;
+      /* padding-block:{{section.settings.left_padding_block }}px;
+      padding-inline:{{section.settings.left_padding_inline }}px; */
     }
 
     .ai-testimonial-slider__slide-{{ ai_gen_id }}.active {
@@ -67,6 +67,8 @@
       flex-direction: column;
       justify-content: center;
       gap: 24px;
+      padding-block:{{section.settings.left_padding_block }}px;
+      padding-inline:{{section.settings.left_padding_inline }}px;
     }
 
     .ai-testimonial-slider__statistic-{{ ai_gen_id }} {
