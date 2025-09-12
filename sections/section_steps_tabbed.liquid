@@ -358,17 +358,21 @@
       {% endfor %}
     </div>
   </div>
-</step-guide-{{ ai_gen_id }}><script>
-  (function() {
+</step-guide-{{ ai_gen_id }}>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
     class StepGuide{{ ai_gen_id }} extends HTMLElement {
       constructor() {
         super();
       }
 
       connectedCallback() {
-        this.steps = this.querySelectorAll('.ai-step-guide__step-{{ ai_gen_id }}');
-        this.images = this.querySelectorAll('.ai-step-guide__image-container-{{ ai_gen_id }}');
-        this.setupEventListeners();
+        // Add a small delay to ensure all elements are rendered
+        setTimeout(() => {
+          this.steps = this.querySelectorAll('.ai-step-guide__step-{{ ai_gen_id }}');
+          this.images = this.querySelectorAll('.ai-step-guide__image-container-{{ ai_gen_id }}');
+          this.setupEventListeners();
+        }, 100);
       }
 
       setupEventListeners() {
@@ -403,7 +407,7 @@
     }
 
     customElements.define('step-guide-{{ ai_gen_id }}', StepGuide{{ ai_gen_id }});
-  })();
+  });
 </script>
 
 {% schema %}
@@ -699,7 +703,48 @@
       "id": "step_3_image",
       "label": "Image"
     },
-   
+   {
+  "type": "header",
+  "content": "Step 4"
+},
+{
+  "type": "text",
+  "id": "step_4_title",
+  "label": "Title",
+  "default": "Testing"
+},
+{
+  "type": "textarea",
+  "id": "step_4_description",
+  "label": "Description",
+  "default": "Thoroughly test your implementation to ensure everything works correctly."
+},
+{
+  "type": "image_picker",
+  "id": "step_4_image",
+  "label": "Image"
+},
+{
+  "type": "header",
+  "content": "Step 5"
+},
+{
+  "type": "text",
+  "id": "step_5_title",
+  "label": "Title",
+  "default": "Launch"
+},
+{
+  "type": "textarea",
+  "id": "step_5_description",
+  "label": "Description",
+  "default": "Go live with your fully configured and tested solution."
+},
+{
+  "type": "image_picker",
+  "id": "step_5_image",
+  "label": "Image"
+},
   ],
   "presets": [
     {
