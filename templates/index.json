@@ -1133,9 +1133,9 @@
       "type": "section_testimonial_slide",
       "name": "Testimonial slider",
       "settings": {
-        "padding_block_desktop": 44,
+        "padding_block_desktop": 0,
         "padding_inline_desktop": 0,
-        "margin_block_desktop": 48,
+        "margin_block_desktop": 0,
         "margin_inline_desktop": 4,
         "padding_block_mobile": 0,
         "padding_inline_mobile": 0,
