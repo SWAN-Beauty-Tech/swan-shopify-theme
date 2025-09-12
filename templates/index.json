@@ -700,7 +700,7 @@
         "margin_block_mobile": 0,
         "margin_inline_mobile": 0,
         "left_padding_block": 0,
-        "left_padding_inline": 0,
+        "left_padding_inline": 100,
         "autoplay_enabled": true,
         "autoplay_delay": 10,
         "background_color": "#b82e2e",
