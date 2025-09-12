@@ -1,0 +1,411 @@
+{% comment %}
+  Product Two-Column Section
+  Left: Product image, name, description, CTA
+  Right: Product video
+{% endcomment %}
+
+<section class="product-showcase">
+  <div class="product-showcase__container">
+    
+    <!-- Left Column - Product Info -->
+    <div class="product-showcase__info">
+      <!-- Product Image -->
+      <div class="product-showcase__image-wrapper">
+        {% if product.featured_media %}
+         <img 
+  src="{{ product.featured_media | image_url: width: 600 }}"
+  srcset="{{ product.featured_media | image_url: width: 300 }} 300w,
+          {{ product.featured_media | image_url: width: 600 }} 600w,
+          {{ product.featured_media | image_url: width: 800 }} 800w"
+  sizes="(max-width: 768px) 100vw, 50vw"
+  alt="{{ product.featured_media.alt | default: product.title }}"
+  class="product-showcase__image"
+  loading="lazy"
+  width="{{ product.featured_media.width }}"
+  height="{{ product.featured_media.height }}"
+>
+
+        {% else %}
+          <div class="product-showcase__image-placeholder">
+            <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="100" height="100" fill="#f3f4f6"/>
+              <path d="M30 70L50 50L70 70M40 40H40.01" stroke="#9ca3af" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+        {% endif %}
+      </div>
+
+      <!-- Product Details -->
+      <div class="product-showcase__details">
+        <h2 class="product-showcase__title">
+          {{ product.title | default: 'Product Name' }}
+        </h2>
+        
+        <div class="product-showcase__description">
+          {% if product.description != blank %}
+            {{ product.description | strip_html | truncate: 150 }}
+          {% else %}
+            Experience the perfect blend of style and functionality with this exceptional product designed to enhance your daily routine.
+          {% endif %}
+        </div>
+
+        <!-- CTA Button -->
+        <div class="product-showcase__cta">
+          {% if product.available %}
+            <button 
+              type="button" 
+              class="product-showcase__add-to-cart btn-primary"
+              data-product-id="{{ product.id }}"
+            >
+              <span class="btn-text">Add to Cart</span>
+              <span class="btn-price">
+                {% if product.price_varies %}
+                  from {{ product.price_min | money }}
+                {% else %}
+                  {{ product.price | money }}
+                {% endif %}
+              </span>
+            </button>
+          {% else %}
+            <button type="button" class="product-showcase__add-to-cart btn-secondary" disabled>
+              <span class="btn-text">Sold Out</span>
+            </button>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column - Media -->
+    <div class="product-showcase__media">
+      <div class="product-showcase__video-wrapper">
+        {% if section.settings.video_url != blank %}
+          {% if section.settings.video_url contains 'youtube' %}
+            {% assign video_id = section.settings.video_url | split: 'v=' | last | split: '&' | first %}
+            <iframe 
+              src="https://www.youtube.com/embed/{{ video_id }}?rel=0&modestbranding=1"
+              frameborder="0"
+              allowfullscreen
+              class="product-showcase__video"
+            ></iframe>
+          {% elsif section.settings.video_url contains 'vimeo' %}
+            {% assign video_id = section.settings.video_url | split: '.com/' | last %}
+            <iframe 
+              src="https://player.vimeo.com/video/{{ video_id }}?byline=0&portrait=0"
+              frameborder="0"
+              allowfullscreen
+              class="product-showcase__video"
+            ></iframe>
+          {% else %}
+            <video 
+  class="product-showcase__video"
+  src="{{ section.settings.video_url }}"
+  loop
+  muted
+  playsinline
+  preload="metadata"
+  poster="{{ section.settings.video_poster | image_url: width: 800 }}"
+></video>
+
+          {% endif %}
+        {% else %}
+          <!-- Video Placeholder -->
+          <div class="product-showcase__video-placeholder">
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="40" cy="40" r="40" fill="#f3f4f6"/>
+              <path d="M30 25L55 40L30 55V25Z" fill="#9ca3af"/>
+            </svg>
+            <p>Product Video</p>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+.product-showcase {
+  padding: 60px 20px;
+  background: #ffffff;
+  min-height: 500px;
+}
+
+.product-showcase__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Left Column - Product Info */
+.product-showcase__info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.product-showcase__image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.product-showcase__image-wrapper:hover {
+  transform: translateY(-5px);
+}
+
+.product-showcase__image,
+.product-showcase__image-placeholder {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.product-showcase__image-placeholder {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9fafb;
+  border: 2px dashed #e5e7eb;
+}
+
+.product-showcase__details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.product-showcase__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1f2937;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.product-showcase__description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #6b7280;
+  margin: 0;
+}
+
+.product-showcase__cta {
+  margin-top: 10px;
+}
+
+/* CTA Button Styles */
+.product-showcase__add-to-cart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 18px 24px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(102, 126, 234, 0.4);
+  background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background: #f3f4f6;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.btn-text {
+  flex: 1;
+  text-align: left;
+}
+
+.btn-price {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/* Right Column - Media */
+.product-showcase__media {
+  position: relative;
+}
+
+.product-showcase__video-wrapper {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  background: #000;
+}
+
+.product-showcase__video {
+  width: 100%;
+  height: auto;
+  min-height: 300px;
+  display: block;
+  border-radius: 12px;
+}
+
+.product-showcase__video-placeholder {
+  aspect-ratio: 16/9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f9fafb;
+  border: 2px dashed #e5e7eb;
+  border-radius: 12px;
+  color: #9ca3af;
+  gap: 15px;
+}
+
+.product-showcase__video-placeholder p {
+  margin: 0;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .product-showcase {
+    padding: 40px 15px;
+  }
+  
+  .product-showcase__container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .product-showcase__title {
+    font-size: 2rem;
+  }
+  
+  .product-showcase__description {
+    font-size: 1rem;
+  }
+  
+  .product-showcase__add-to-cart {
+    padding: 16px 20px;
+    font-size: 1rem;
+  }
+  
+  .btn-price {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-showcase__title {
+    font-size: 1.75rem;
+  }
+  
+  .product-showcase__add-to-cart {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+  
+  .btn-text {
+    text-align: center;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Product Showcase",
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Select product",
+      "info": "Choose which product to feature"
+    },
+    {
+      "type": "url",
+      "id": "video_url",
+      "label": "Video URL",
+      "info": "YouTube, Vimeo, or direct video file URL"
+    },
+    {
+      "type": "image_picker",
+      "id": "video_poster",
+      "label": "Video Poster Image",
+      "info": "Thumbnail image for video (optional)"
+    },
+    {
+      "type": "text",
+      "id": "custom_heading",
+      "label": "Custom Heading",
+      "default": "Featured Product"
+    },
+    {
+      "type": "richtext",
+      "id": "custom_description",
+      "label": "Custom Description",
+      "default": "<p>Experience the perfect blend of style and functionality.</p>"
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "CTA Button Text",
+      "default": "Add to Cart"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout",
+      "default": "left",
+      "options": [
+        {
+          "value": "left",
+          "label": "Image Left / Video Right"
+        },
+        {
+          "value": "right",
+          "label": "Video Left / Image Right"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Showcase",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}
