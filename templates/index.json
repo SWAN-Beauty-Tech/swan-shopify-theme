@@ -945,10 +945,13 @@
         "step_border_radius": 8,
         "step_1_title": "Getting started",
         "step_1_description": "Begin your journey with our easy-to-follow setup process.",
+        "step_1_image": "shopify://shop_images/SwanPkg01_Assets_v1_08.png",
         "step_2_title": "Configuration",
         "step_2_description": "Customize your settings to match your specific needs and preferences.",
+        "step_2_image": "shopify://shop_images/SwanPkg01_Assets_v1_07.png",
         "step_3_title": "Implementation",
-        "step_3_description": "Put your plan into action with our guided implementation process."
+        "step_3_description": "Put your plan into action with our guided implementation process.",
+        "step_3_image": "shopify://shop_images/SwanPkg01_Assets_v1_06.png"
       }
     }
   },
