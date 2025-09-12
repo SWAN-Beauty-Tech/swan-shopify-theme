@@ -275,6 +275,8 @@
 
     .ai-testimonial-slider__tab-{{ ai_gen_id }} {
       display: flex;
+      justify-content:center;
+      gap:20px;
       align-items: center;
       gap: 12px;
       cursor: pointer;
@@ -602,8 +604,8 @@
               <img
                 src="{{ tab_logo | image_url: width: 80 }}"
                 alt="{{ tab_logo.alt | escape }}"
-                width="40"
-                height="40"
+                width="60"
+                height="60"
                 loading="lazy"
               >
             {% else %}
