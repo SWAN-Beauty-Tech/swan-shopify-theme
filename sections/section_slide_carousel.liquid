@@ -270,20 +270,20 @@
           {% endif %}
         </div>
       </div>
+      <div class="ai-slider-navigation-{{ ai_gen_id }}">
+        {% for i in (1..4) -%}
+          <button
+            class="ai-slider-nav-dot-{{ ai_gen_id }} {% if forloop.first %}active{% endif %}"
+            data-slide="{{ forloop.index }}"
+            aria-label="Go to slide {{ forloop.index }}"
+          >
+            {{ forloop.index }}
+          </button>
+        {% endfor %}
+      </div>
     </div>
   {% endfor %}
 
-  <div class="ai-slider-navigation-{{ ai_gen_id }}">
-    {% for i in (1..4) -%}
-      <button
-        class="ai-slider-nav-dot-{{ ai_gen_id }} {% if forloop.first %}active{% endif %}"
-        data-slide="{{ forloop.index }}"
-        aria-label="Go to slide {{ forloop.index }}"
-      >
-        {{ forloop.index }}
-      </button>
-    {% endfor %}
-  </div>
 </slider-component-{{ ai_gen_id }}>
 <script>
   (function() {
