@@ -1153,7 +1153,7 @@
         "nav_button_hover_color": "#f0f0f0",
         "nav_icon_color": "#333333",
         "tab_text_color": "#333333",
-        "statistic_size": 140,
+        "statistic_size": 70,
         "subheading_size": 20,
         "quote_size": 18,
         "border_radius": 12,
