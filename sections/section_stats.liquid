@@ -4,6 +4,24 @@
 {% endcomment %}
 
 {%- style -%}
+.block_container.stats-section-{{ section.id }} {
+  padding-block: {{ section.settings.padding_block_desktop }}px;
+  padding-inline: {{ section.settings.padding_inline_desktop }}px;
+  margin-block: {{ section.settings.margin_block_desktop }}px;
+  margin-inline: {{ section.settings.margin_inline_desktop }}px;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .block_container.stats-section-{{ section.id }} {
+    padding-block: {{ section.settings.padding_block_mobile }}px;
+    padding-inline: {{ section.settings.padding_inline_mobile }}px;
+    margin-block: {{ section.settings.margin_block_mobile }}px;
+    margin-inline: {{ section.settings.margin_inline_mobile }}px;
+  }
+}
+
+
   .stats-section-{{ section.id }} {
     padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
     background-color: {{ section.settings.background_color }};
@@ -112,7 +130,7 @@
   }
 {%- endstyle -%}
 
-<section class="stats-section-{{ section.id }}" id="stats-{{ section.id }}">
+<section class="block_container stats-section-{{ section.id }}" id="stats-{{ section.id }}">
   <div class="stats-container-{{ section.id }}">
     {% if section.settings.section_title != blank %}
       <div style="text-align: center; margin-bottom: {{ section.settings.title_margin }}px;">
