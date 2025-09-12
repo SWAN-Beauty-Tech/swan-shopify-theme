@@ -1,6 +1,5 @@
-{% doc %}
-  @prompt
-    Create a responsive, centered video carousel with smooth transitions and infinite looping. The carousel should have the following features:
+{% comment %}
+ Create a responsive, centered video carousel with smooth transitions and infinite looping. The carousel should have the following features:
     
     Focus on the center item with adjacent items scaled down
     
@@ -13,8 +12,10 @@
     Infinite loop functionality
     
     Smooth transitions between slides
-{% enddoc %}
-{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+{% endcomment %}
+
+{% assign ai_gen_id = section.id | replace: '_', '' | downcase %}
+
 
 {% style %}
 
