@@ -24,11 +24,12 @@
         }
 
         .ai-tabbed-section-{{ ai_gen_id }} {
-          max-width: 100%;
+          {% comment %} max-width: 100%; {% endcomment %}
           margin: 0 auto;
           background-color: {{ block.settings.background_color }};
           border-radius: {{ block.settings.border_radius }}px;
           overflow: hidden;
+          max-width: 1200px;
         }
 
         .ai-tab-nav-{{ ai_gen_id }} {
