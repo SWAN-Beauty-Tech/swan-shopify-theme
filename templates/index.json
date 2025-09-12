@@ -963,7 +963,7 @@
         "product_image": "shopify://shop_images/SwanPkg01_Assets_v1_04.png",
         "image_height": 400,
         "product_title": "Premium Product Name",
-        "product_description": "<p>Discover the perfect blend of style and functionality with our premium product. Crafted with attention to detail and designed to exceed your expectations.</p>",
+        "product_description": "<p>Discover the perfect blend of style and functionality with our premium product.</p>",
         "cta_text": "Shop Now",
         "cta_link": "",
         "video_url": "",
@@ -980,16 +980,41 @@
         "description_size": 16,
         "button_bg_color": "#000000",
         "button_text_color": "#ffffff",
-        "button_hover_bg_color": "#333333",
+        "button_hover_bg_color": "#dca1a1",
         "button_hover_text_color": "#ffffff",
         "button_text_size": 16,
         "button_padding_x": 40,
-        "button_padding_y": 16,
-        "button_border_radius": 8,
+        "button_padding_y": 10,
+        "button_border_radius": 40,
         "video_border_radius": 12
       }
     },
     "video_carousel_rect_rRJwMq": {
+      "type": "video_carousel_rect",
+      "name": "Video carousel",
+      "settings": {
+        "padding_block_desktop": 40,
+        "padding_inline_desktop": 40,
+        "margin_block_desktop": 20,
+        "margin_inline_desktop": 20,
+        "padding_block_mobile": 20,
+        "padding_inline_mobile": 20,
+        "margin_block_mobile": 10,
+        "margin_inline_mobile": 10,
+        "video_width": 280,
+        "video_height": 480,
+        "video_gap": 20,
+        "inactive_scale": 80,
+        "inactive_opacity": 60,
+        "border_radius": 12,
+        "nav_button_color": "#ffffff",
+        "nav_button_hover_color": "#f0f0f0",
+        "nav_button_icon_color": "#000000",
+        "autoplay_enabled": true,
+        "autoplay_duration": 5
+      }
+    },
+    "video_carousel_rect_nF7h6b": {
       "type": "video_carousel_rect",
       "name": "Video carousel",
       "settings": {
@@ -1036,6 +1061,7 @@
     "section_tabbed_xCQdjR",
     "section_steps_tabbed_k4HXUX",
     "section_product_video_3ecwJp",
-    "video_carousel_rect_rRJwMq"
+    "video_carousel_rect_rRJwMq",
+    "video_carousel_rect_nF7h6b"
   ]
 }
