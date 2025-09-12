@@ -1,0 +1,709 @@
+{% comment %}
+  Animated Stats Section
+  Features: Responsive design, intersection observer animation, customizable icons and styling
+{% endcomment %}
+
+{%- style -%}
+  .stats-section-{{ section.id }} {
+    padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
+    background-color: {{ section.settings.background_color }};
+  }
+
+  .stats-container-{{ section.id }} {
+    max-width: {{ section.settings.container_width }}px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .stats-grid-{{ section.id }} {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: {{ section.settings.grid_gap }}px;
+    align-items: stretch;
+  }
+
+  @media (min-width: 768px) {
+    .stats-grid-{{ section.id }} {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .stat-item-{{ section.id }} {
+    display:flex;
+    flex-direction:column;
+    gap:{{ section.settings.item_gap }};
+    align-items:left;
+    text-align: left;
+    padding: {{ section.settings.item_padding }}px;
+    background-color: {{ section.settings.item_background }};
+    border-radius: {{ section.settings.border_radius }}px;
+    box-shadow: {{ section.settings.box_shadow }};
+    transition: transform 0.3s ease;
+  }
+
+  .stat-item-{{ section.id }}:hover {
+    transform: translateY(-5px);
+  }
+
+  .stat-icon-{{ section.id }} {
+    width: {{ section.settings.icon_size }}px;
+    height: {{ section.settings.icon_size }}px;
+    margin: 0 auto {{ section.settings.icon_margin }}px;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+  }
+
+  .stat-icon-{{ section.id }} svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+    padding: {{ section.settings.icon_padding }}px;
+    background: {{ section.settings.icon_background }}px;
+  }
+
+  .stat-counter-{{ section.id }} {
+    font-size: {{ section.settings.counter_font_size }}px;
+    font-weight: {{ section.settings.counter_font_weight }};
+    color: {{ section.settings.counter_color }};
+    line-height: 1.1;
+    /* background:red; */
+    /* margin-bottom: {{ section.settings.counter_margin }}px; */
+    font-family: {{ section.settings.counter_font_family }};
+  }
+
+  .stat-heading-{{ section.id }} {
+    font-size: {{ section.settings.heading_font_size }}px;
+    font-weight: {{ section.settings.heading_font_weight }};
+    color: {{ section.settings.heading_color }};
+    /* background-color:red; */
+    /* margin-bottom: {{ section.settings.heading_margin }}px; */
+    font-family: {{ section.settings.heading_font_family }};
+  }
+
+  .stat-description-{{ section.id }} {
+    font-size: {{ section.settings.description_font_size }}px;
+    color: {{ section.settings.description_color }};
+    line-height: 1.5;
+    font-family: {{ section.settings.description_font_family }};
+  }
+
+  /* Mobile responsiveness */
+  @media (max-width: 767px) {
+    .stats-grid-{{ section.id }} {
+      grid-template-columns: repeat(2, 1fr);
+      gap: {{ section.settings.mobile_gap }}px;
+    }
+    
+    .stat-counter-{{ section.id }} {
+      font-size: {{ section.settings.mobile_counter_size }}px;
+    }
+    
+    .stat-icon-{{ section.id }} {
+      width: {{ section.settings.mobile_icon_size }}px;
+      height: {{ section.settings.mobile_icon_size }}px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .stats-grid-{{ section.id }} {
+      grid-template-columns: 1fr;
+    }
+  }
+{%- endstyle -%}
+
+<section class="stats-section-{{ section.id }}" id="stats-{{ section.id }}">
+  <div class="stats-container-{{ section.id }}">
+    {% if section.settings.section_title != blank %}
+      <div style="text-align: center; margin-bottom: {{ section.settings.title_margin }}px;">
+        <h2 style="font-size: {{ section.settings.title_font_size }}px; color: {{ section.settings.title_color }}; font-weight: {{ section.settings.title_font_weight }};">
+          {{ section.settings.section_title }}
+        </h2>
+      </div>
+    {% endif %}
+
+    <div class="stats-grid-{{ section.id }}">
+      {% for block in section.blocks %}
+        <div class="stat-item-{{ section.id }}" {{ block.shopify_attributes }}>
+          {% if block.settings.icon_svg != blank %}
+            <div class="stat-icon-{{ section.id }}" style="color: {{ block.settings.icon_color }};">
+              {{ block.settings.icon_svg }}
+            </div>
+          {% endif %}
+          
+          <div class="stat-counter-{{ section.id }}" 
+               data-target="{{ block.settings.counter_value }}"
+               data-suffix="{{ block.settings.counter_suffix }}"
+               data-duration="{{ section.settings.animation_duration }}">
+            0{{ block.settings.counter_suffix }}
+          </div>
+          
+          {% if block.settings.sub_heading != blank %}
+            <p class="stat-heading-{{ section.id }}">{{ block.settings.sub_heading }}</p>
+          {% endif %}
+          
+          {% if block.settings.description != blank %}
+            <p class="stat-description-{{ section.id }}">{{ block.settings.description }}</p>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<script>
+(function() {
+  const statsSection = document.getElementById('stats-{{ section.id }}');
+  const counters = statsSection.querySelectorAll('[data-target]');
+  let hasAnimated = false;
+
+  function formatNumber(num) {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+
+  function animateCounter(counter) {
+    const target = parseInt(counter.dataset.target);
+    const suffix = counter.dataset.suffix || '';
+    const duration = parseInt(counter.dataset.duration) || 2000;
+    const startTime = performance.now();
+
+    function updateCounter(currentTime) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      
+      // Easing function for smooth animation
+      const easeOutQuad = 1 - (1 - progress) * (1 - progress);
+      const current = Math.floor(target * easeOutQuad);
+      
+      counter.textContent = formatNumber(current) + suffix;
+      
+      if (progress < 1) {
+        requestAnimationFrame(updateCounter);
+      } else {
+        counter.textContent = formatNumber(target) + suffix;
+      }
+    }
+    
+    requestAnimationFrame(updateCounter);
+  }
+
+  function startCounterAnimations() {
+    if (hasAnimated) return;
+    
+    hasAnimated = true;
+    counters.forEach((counter, index) => {
+      setTimeout(() => {
+        animateCounter(counter);
+      }, index * {{ section.settings.stagger_delay }});
+    });
+  }
+
+  // Intersection Observer for viewport detection
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && entry.intersectionRatio >= {{ section.settings.trigger_threshold }}) {
+        startCounterAnimations();
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: {{ section.settings.trigger_threshold }}
+  });
+
+  observer.observe(statsSection);
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Animated Stats Section",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Settings"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "Our Achievements"
+    },
+    {
+      "type": "range",
+      "id": "title_font_size",
+      "min": 16,
+      "max": 72,
+      "step": 2,
+      "unit": "px",
+      "label": "Title Font Size",
+      "default": 36
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title Color",
+      "default": "#333333"
+    },
+    {
+      "type": "range",
+      "id": "title_font_weight",
+      "min": 300,
+      "max": 900,
+      "step": 100,
+      "label": "Title Font Weight",
+      "default": 700
+    },
+    {
+      "type": "range",
+      "id": "title_margin",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Title Bottom Margin",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "Layout Settings"
+    },
+    {
+      "type": "range",
+      "id": "container_width",
+      "min": 800,
+      "max": 1600,
+      "step": 50,
+      "unit": "px",
+      "label": "Container Max Width",
+      "default": 1200
+    },
+    {
+      "type": "range",
+      "id": "grid_gap",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "label": "Grid Gap",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "mobile_gap",
+      "min": 10,
+      "max": 40,
+      "step": 5,
+      "unit": "px",
+      "label": "Mobile Grid Gap",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "label": "Section Padding Top",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "label": "Section Padding Bottom",
+      "default": 80
+    },
+    {
+      "type": "header",
+      "content": "Colors & Styling"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Section Background Color",
+      "default": "#f8f9fa"
+    },
+    {
+      "type": "color",
+      "id": "item_background",
+      "label": "Item Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "item_padding",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "label": "Item Padding",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "item_gap",
+      "min": 2,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Item gap",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Border Radius",
+      "default": 12
+    },
+    {
+      "type": "text",
+      "id": "box_shadow",
+      "label": "Box Shadow CSS",
+      "default": "0 4px 20px rgba(0,0,0,0.1)"
+    },
+    {
+      "type": "header",
+      "content": "Icon Settings"
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "min": 20,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Icon Size",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "mobile_icon_size",
+      "min": 10,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "label": "Mobile Icon Size",
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "icon_margin",
+      "min": 6,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Icon Bottom Margin",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "icon_padding",
+      "min": 5,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "label": "Icon padding",
+      "default": 10
+    },
+        {
+      "type": "color",
+      "id": "icon_background",
+      "label": "Icon Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Counter Settings"
+    },
+    {
+      "type": "range",
+      "id": "counter_font_size",
+      "min": 24,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "label": "Counter Font Size",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "mobile_counter_size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Mobile Counter Font Size",
+      "default": 36
+    },
+    {
+      "type": "color",
+      "id": "counter_color",
+      "label": "Counter Color",
+      "default": "#007bff"
+    },
+    {
+      "type": "range",
+      "id": "counter_font_weight",
+      "min": 300,
+      "max": 900,
+      "step": 100,
+      "label": "Counter Font Weight",
+      "default": 700
+    },
+    {
+      "type": "select",
+      "id": "counter_font_family",
+      "label": "Counter Font Family",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "Arial, sans-serif", "label": "Arial" },
+        { "value": "Georgia, serif", "label": "Georgia" },
+        { "value": "'Helvetica Neue', sans-serif", "label": "Helvetica Neue" },
+        { "value": "'Times New Roman', serif", "label": "Times New Roman" }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "range",
+      "id": "counter_margin",
+      "min": 4,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Counter Bottom Margin",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Heading Settings"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "min": 14,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "label": "Heading Font Size",
+      "default": 20
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#333333"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_weight",
+      "min": 300,
+      "max": 900,
+      "step": 100,
+      "label": "Heading Font Weight",
+      "default": 600
+    },
+    {
+      "type": "select",
+      "id": "heading_font_family",
+      "label": "Heading Font Family",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "Arial, sans-serif", "label": "Arial" },
+        { "value": "Georgia, serif", "label": "Georgia" },
+        { "value": "'Helvetica Neue', sans-serif", "label": "Helvetica Neue" },
+        { "value": "'Times New Roman', serif", "label": "Times New Roman" }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "range",
+      "id": "heading_margin",
+      "min": 4,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Heading Bottom Margin",
+      "default": 10
+    },
+    {
+      "type": "header",
+      "content": "Description Settings"
+    },
+    {
+      "type": "range",
+      "id": "description_font_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Description Font Size",
+      "default": 14
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description Color",
+      "default": "#666666"
+    },
+    {
+      "type": "select",
+      "id": "description_font_family",
+      "label": "Description Font Family",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "Arial, sans-serif", "label": "Arial" },
+        { "value": "Georgia, serif", "label": "Georgia" },
+        { "value": "'Helvetica Neue', sans-serif", "label": "Helvetica Neue" },
+        { "value": "'Times New Roman', serif", "label": "Times New Roman" }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "header",
+      "content": "Animation Settings"
+    },
+    {
+      "type": "range",
+      "id": "animation_duration",
+      "min": 1000,
+      "max": 5000,
+      "step": 100,
+      "unit": "ms",
+      "label": "Animation Duration",
+      "default": 2000
+    },
+    {
+      "type": "range",
+      "id": "stagger_delay",
+      "min": 0,
+      "max": 500,
+      "step": 50,
+      "unit": "ms",
+      "label": "Stagger Delay Between Items",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "trigger_threshold",
+      "min": 0.1,
+      "max": 1,
+      "step": 0.1,
+      "label": "Trigger Threshold (0.1 = 10% visible)",
+      "default": 0.3
+    }
+  ],
+  "blocks": [
+    {
+      "type": "stat_item",
+      "name": "Stat Counter",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Icon Settings"
+        },
+        {
+          "type": "html",
+          "id": "icon_svg",
+          "label": "Icon SVG Code",
+          "info": "Paste your SVG code here. The SVG should include viewBox for proper scaling."
+        },
+        {
+          "type": "color",
+          "id": "icon_color",
+          "label": "Icon Color",
+          "default": "#000000"
+        },
+        {
+          "type": "header",
+          "content": "Counter Settings"
+        },
+        {
+          "type": "number",
+          "id": "counter_value",
+          "label": "Counter Target Value",
+          "default": 10000
+        },
+        {
+          "type": "text",
+          "id": "counter_suffix",
+          "label": "Counter Suffix (e.g., +, %, k)",
+          "default": "+"
+        },
+        {
+          "type": "header",
+          "content": "Content"
+        },
+        {
+          "type": "text",
+          "id": "sub_heading",
+          "label": "Sub Heading",
+          "default": "Happy Customers"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Satisfied customers who trust our services worldwide"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Animated Stats Section",
+      "blocks": [
+        {
+          "type": "stat_item",
+          "settings": {
+            "icon_svg": "<svg viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z\"/></svg>",
+            "counter_value": 10000,
+            "counter_suffix": "+",
+            "sub_heading": "Happy Customers",
+            "description": "Satisfied customers worldwide"
+          }
+        },
+        {
+          "type": "stat_item",
+          "settings": {
+            "icon_svg": "<svg viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M9 11H7v9h2v-9zm4 0h-2v9h2v-9zm4 0h-2v9h2v-9zm2.5-9H18V1h-2v1H8V1H6v1H4.5C3.12 2 2 3.12 2 4.5v15C2 20.88 3.12 22 4.5 22h15c1.38 0 2.5-1.12 2.5-2.5v-15C22 3.12 20.88 2 19.5 2z\"/></svg>",
+            "counter_value": 95,
+            "counter_suffix": "%",
+            "sub_heading": "Success Rate",
+            "description": "Project completion success rate"
+          }
+        },
+        {
+          "type": "stat_item",
+          "settings": {
+            "icon_svg": "<svg viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M14 6V4h-4v2h4zM4 8v11h16V8H4zm16-2c1.11 0 2 .89 2 2v11c0 1.11-.89 2-2 2H4c-1.11 0-2-.89-2-2V8c0-1.11.89-2 2-2h16z\"/></svg>",
+            "counter_value": 500,
+            "counter_suffix": "+",
+            "sub_heading": "Projects Completed",
+            "description": "Successfully delivered projects"
+          }
+        },
+        {
+          "type": "stat_item",
+          "settings": {
+            "icon_svg": "<svg viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\"/></svg>",
+            "counter_value": 20000,
+            "counter_suffix": "",
+            "sub_heading": "Hours Saved",
+            "description": "Time saved for our clients through automation"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
