@@ -10,12 +10,6 @@
     margin-inline: {{ section.settings.margin_inline_desktop }}px;
     margin: 0 auto;
     background:red;
-    position: relative;
-      /* max-width: 1200px; */
-      margin: 0 auto;
-      /* padding: 60px 20px; */
-      /* background-color: red; */
-      overflow: hidden;
   }
 
   /* Mobile */
@@ -28,14 +22,14 @@
     }
   }
 
-    /* .ai-testimonial-slider-{{ ai_gen_id }} {
+    .ai-testimonial-slider-{{ ai_gen_id }} {
       position: relative;
-      /* max-width: 1200px; */
+      max-width: 1200px;
       margin: 0 auto;
       /* padding: 60px 20px; */
       /* background-color: red; */
       overflow: hidden;
-    } */
+    }
 
     .ai-testimonial-slider__container-{{ ai_gen_id }} {
       position: relative;
@@ -436,7 +430,7 @@
   class="block_container ai-testimonial-slider-{{ ai_gen_id }}"
   data-autoplay="{{ section.settings.autoplay_enabled }}"
   data-autoplay-delay="{{ section.settings.autoplay_delay }}"
-  {{ section.shopify_attributes }}
+  {% comment %} {{ section.shopify_attributes }} {% endcomment %}
 >
   <div class="ai-testimonial-slider__container-{{ ai_gen_id }}">
     {% for i in (1..8) %}
