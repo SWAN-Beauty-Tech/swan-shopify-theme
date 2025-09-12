@@ -13,6 +13,7 @@
   padding-inline: {{ section.settings.padding_inline_desktop }}px;
   margin-block: {{ section.settings.margin_block_desktop }}px;
   margin-inline: {{ section.settings.margin_inline_desktop }}px;
+  max-width: 1200px;
 }
 
 /* Mobile */
@@ -35,9 +36,9 @@
 
   .ai-step-guide__content-{{ ai_gen_id }} {
     display: flex;
-     {% comment %} padding: {{ block.settings.step_container_padding }}px;
+     padding: {{ block.settings.step_container_padding }}px;
         margin-block: {{ block.settings.step_container_margin_block }}px;
-        margin-inline: {{ block.settings.step_container_margin_inline }}px; {% endcomment %}
+        margin-inline: {{ block.settings.step_container_margin_inline }}px;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
