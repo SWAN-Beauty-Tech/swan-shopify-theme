@@ -1,0 +1,951 @@
+{% doc %}
+  @prompt
+    make a tabbed section with content sliding out as tab is switches
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+      .ai-tabbed-section-{{ ai_gen_id }} {
+        max-width: 100%;
+        margin: 0 auto;
+        background-color: {{ block.settings.background_color }};
+        border-radius: {{ block.settings.border_radius }}px;
+        overflow: hidden;
+      }
+
+      .ai-tab-nav-{{ ai_gen_id }} {
+        display: flex;
+        justify-content:space-around;
+        margin-block: {{ block.settings.tab_buttons_container_margin_block }}px;
+        background-color: {{ block.settings.tab_background_color }};
+        border-bottom: 1px solid {{ block.settings.border_color }};
+      }
+
+      .ai-tab-button-{{ ai_gen_id }} {
+        {% comment %} flex: 1; {% endcomment %}
+        padding: {{ block.settings.tab_padding }}px;
+        border-radius: {{ block.settings.tab_button_radius }}px;
+        background: none;
+        border: none;
+        color: {{ block.settings.tab_text_color }};
+        font-size: {{ block.settings.tab_font_size }}px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        {% comment %} border-bottom: 3px solid transparent; {% endcomment %}
+      }
+
+      .ai-tab-button-{{ ai_gen_id }}:hover {
+        background-color: {{ block.settings.tab_hover_color }};
+        color: {{ block.settings.tab_hover_text_color }};
+      }
+
+      .ai-tab-button-{{ ai_gen_id }}.active {
+        background-color: {{ block.settings.tab_active_background }};
+        color: {{ block.settings.tab_active_text_color }};
+        border-bottom-color: {{ block.settings.accent_color }};
+      }
+
+      .ai-tab-content-container-{{ ai_gen_id }} {
+        padding: {{ block.settings.tab_container_padding }}px;
+        margin-block: {{ block.settings.tab_container_margin_block }}px;
+        margin-inline: {{ block.settings.tab_container_margin_inline }}px;
+        {% comment %} background: {{ block.settings.tab_container_background }}; {% endcomment %}
+        position: relative;
+        overflow: hidden;
+        min-height: {{ block.settings.min_height }}px;
+      }
+
+      .ai-tab-content-wrapper-{{ ai_gen_id }} {
+        padding: {{ block.settings.wrapper_padding }}px;
+        display: flex;
+        width: 300%;
+        transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+
+      .ai-tab-content-{{ ai_gen_id }} {
+        {% comment %} background:green; {% endcomment %}
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        width: 33.333%;
+        padding: {{ block.settings.content_padding }}px;
+        border-radius: {{ block.settings.content_border_radius }}px;
+        color: {{ block.settings.content_text_color }};
+        background: {{ block.settings.tab_content_background }};
+        radius: {{ block.settings.tab_content_radius }};
+        opacity: 0;
+        transition: opacity 0.3s ease 0.1s;
+      }
+
+       .ai-tab-content-left-{{ ai_gen_id }} {
+        flex: 1;
+        {% comment %} background:pink; {% endcomment %}
+        padding: {{ block.settings.tab_left_content_padding }}px;
+      }
+
+        .ai-tab-content-right-{{ ai_gen_id }} {
+          flex: 1;
+          display:flex;
+      }
+
+
+      .ai-tab-content-{{ ai_gen_id }}.active {
+        opacity: 1;
+      }
+
+      .ai-tab-title-{{ ai_gen_id }} {
+        font-size: {{ block.settings.title_font_size }}px;
+        font-weight: 600;
+        margin: 0 0 16px 0;
+        color: {{ block.settings.title_color }};
+      }
+
+      .ai-tab-text-{{ ai_gen_id }} {
+        font-size: {{ block.settings.text_font_size }}px;
+        line-height: 1.6;
+        margin: 0 0 20px 0;
+      }
+
+     .ai-tab-content__icon-{{ ai_gen_id }} {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+
+
+      .ai-tab-button-link-{{ ai_gen_id }} {
+        display: inline-flex;
+        align-items:center;
+        gap:10px;
+         text-align: center;
+        {% comment %} padding: 12px 24px; {% endcomment %}
+        background-color: {{ block.settings.button_color }};
+        color: {{ block.settings.button_text_color }};
+        text-decoration: none;
+        border-radius: {{ block.settings.button_border_radius }}px;
+        font-weight: 500;
+        transition: background-color 0.3s ease;
+      }
+
+      .ai-tab-button-link-{{ ai_gen_id }}:hover {
+        color: {{ block.settings.button_hover_color }};
+      }
+
+     .ai-tab-image-{{ ai_gen_id }} {
+    width: 100%;
+    object-fit: cover;
+    border-radius: {{ block.settings.image_border_radius }}px;
+  }
+
+
+      .ai-tab-image-placeholder-{{ ai_gen_id }} {
+        width: 100%;
+        height: 200px;
+        background-color: #f4f4f4;
+        border-radius: {{ block.settings.image_border_radius }}px;
+        {% comment %} margin-bottom: 16px; {% endcomment %}
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+
+      .ai-tab-image-placeholder-{{ ai_gen_id }} svg {
+        width: 60px;
+        height: 60px;
+        opacity: 0.3;
+      }
+
+      .ai-empty-state-{{ ai_gen_id }} {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 12px;
+        color: #666;
+        text-align: center;
+      }
+
+      @media screen and (max-width: 749px) {
+        .ai-tab-nav-{{ ai_gen_id }} {
+          {% comment %} flex-direction: column; {% endcomment %}
+          gap:10px;
+        }
+
+        .ai-tab-button-{{ ai_gen_id }} {
+          text-align: left;
+          {% comment %} border-bottom: 1px solid {{ block.settings.border_color }}; {% endcomment %}
+          border-right: none;
+        }
+
+        .ai-tab-button-{{ ai_gen_id }}.active {
+          {% comment %} border-bottom: 1px solid {{ block.settings.border_color }};
+          border-left: 3px solid {{ block.settings.accent_color }}; {% endcomment %}
+        }
+
+        .ai-tab-content-wrapper-{{ ai_gen_id }} {
+          {% comment %} background:yellow; {% endcomment %}
+          width: 300%;
+        }
+
+        .ai-tab-content-{{ ai_gen_id }} {
+          display:flex;
+          flex-direction:column;
+        align-items:center;
+        justify-content:space-between;
+          {% comment %} background:red; {% endcomment %}
+          width: 33.333%;
+          padding: {{ block.settings.content_padding | times: 0.75 }}px;
+        }
+         .ai-tab-image-{{ ai_gen_id }} {
+      height: auto;
+      max-height: 200px;
+      border-radius: {{ block.settings.image_border_radius }}px;
+    }
+      .ai-tab-content-left-{{ ai_gen_id }} {
+    padding: calc({{ block.settings.tab_left_content_padding }}px / 2);
+  }
+      }
+{% endstyle %}
+<tabbed-section-{{ ai_gen_id }} class="ai-tabbed-section-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  {% comment %}
+    <div class="ai-tab-nav-{{ ai_gen_id }}">
+      <button class="ai-tab-button-{{ ai_gen_id }} active" data-tab="0" aria-selected="true">
+        {{ block.settings.tab_1_title }}
+      </button>
+      <button class="ai-tab-button-{{ ai_gen_id }}" data-tab="1" aria-selected="false">
+        {{ block.settings.tab_2_title }}
+      </button>
+      <button class="ai-tab-button-{{ ai_gen_id }}" data-tab="2" aria-selected="false">
+        {{ block.settings.tab_3_title }}
+      </button>
+    </div>
+  {% endcomment %}
+
+  <div class="ai-tab-content-container-{{ ai_gen_id }}">
+    <div class="ai-tab-content-wrapper-{{ ai_gen_id }}">
+      <div class="ai-tab-content-{{ ai_gen_id }} active" data-content="0">
+        <div class="ai-tab-content-left-{{ ai_gen_id }}">
+          {% if block.settings.tab_1_heading != blank %}
+            <div class="ai-tab-content__icon-{{ ai_gen_id }}">
+              {% render 'icon-picker',
+                icon: block.settings.tab_1_icon,
+                color: block.settings.icon_color,
+                size: block.settings.icon_size
+              %}
+            </div>
+            <h3 class="ai-tab-title-{{ ai_gen_id }}">{{ block.settings.tab_1_heading }}</h3>
+          {% endif %}
+
+          {% if block.settings.tab_1_content != blank %}
+            <div class="ai-tab-text-{{ ai_gen_id }}">{{ block.settings.tab_1_content }}</div>
+          {% endif %}
+
+          {% if block.settings.tab_1_button_text != blank and block.settings.tab_1_button_link != blank %}
+            <a href="{{ block.settings.tab_1_button_link }}" class="ai-tab-button-link-{{ ai_gen_id }}">
+              {{ block.settings.tab_1_button_text }}
+              <svg width="16" height="16" stroke="{{ block.settings.icon_color }}">
+                <use xlink:href="#icon-arrow-nw"></use>
+              </svg>
+            </a>
+          {% endif %}
+        </div>
+
+        <div class="ai-tab-content-right-{{ ai_gen_id }}">
+          {% if block.settings.tab_1_image %}
+            <img
+              src="{{ block.settings.tab_1_image | image_url: width: 800 }}"
+              alt="{{ block.settings.tab_1_image.alt | escape }}"
+              class="ai-tab-image-{{ ai_gen_id }}"
+              loading="lazy"
+              width="800"
+              height="400"
+            >
+          {% else %}
+            <div class="ai-tab-image-placeholder-{{ ai_gen_id }}">
+              {{ 'image' | placeholder_svg_tag }}
+              <div class="ai-empty-state-{{ ai_gen_id }}">Add an image for tab 1</div>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="ai-tab-content-{{ ai_gen_id }}" data-content="1">
+        <div class="ai-tab-content-left-{{ ai_gen_id }}">
+          {% if block.settings.tab_2_heading != blank %}
+            <div class="ai-tab-content__icon-{{ ai_gen_id }}">
+              {% render 'icon-picker',
+                icon: block.settings.tab_2_icon,
+                color: block.settings.icon_color,
+                size: block.settings.icon_size
+              %}
+            </div>
+            <h3 class="ai-tab-title-{{ ai_gen_id }}">{{ block.settings.tab_2_heading }}</h3>
+          {% endif %}
+
+          {% if block.settings.tab_2_content != blank %}
+            <div class="ai-tab-text-{{ ai_gen_id }}">{{ block.settings.tab_2_content }}</div>
+          {% endif %}
+
+          {% if block.settings.tab_2_button_text != blank and block.settings.tab_2_button_link != blank %}
+            <a href="{{ block.settings.tab_1_button_link }}" class="ai-tab-button-link-{{ ai_gen_id }}">
+              {{ block.settings.tab_1_button_text }}
+              <svg width="16" height="16" stroke="{{ block.settings.icon_color }}">
+                <use xlink:href="#icon-arrow-nw"></use>
+              </svg>
+            </a>
+          {% endif %}
+        </div>
+
+        <div class="ai-tab-content-right-{{ ai_gen_id }}">
+          {% if block.settings.tab_2_image %}
+            <img
+              src="{{ block.settings.tab_2_image | image_url: width: 800 }}"
+              alt="{{ block.settings.tab_2_image.alt | escape }}"
+              class="ai-tab-image-{{ ai_gen_id }}"
+              loading="lazy"
+              width="800"
+              height="400"
+            >
+          {% else %}
+            <div class="ai-tab-image-placeholder-{{ ai_gen_id }}">
+              {{ 'image' | placeholder_svg_tag }}
+              <div class="ai-empty-state-{{ ai_gen_id }}">Add an image for tab 2</div>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="ai-tab-content-{{ ai_gen_id }}" data-content="2">
+        <div class="ai-tab-content-left-{{ ai_gen_id }}">
+          {% if block.settings.tab_3_heading != blank %}
+            <div class="ai-tab-content__icon-{{ ai_gen_id }}">
+              {% render 'icon-picker',
+                icon: block.settings.tab_3_icon,
+                color: block.settings.icon_color,
+                size: block.settings.icon_size
+              %}
+            </div>
+
+            <h3 class="ai-tab-title-{{ ai_gen_id }}">{{ block.settings.tab_3_heading }}</h3>
+          {% endif %}
+
+          {% if block.settings.tab_3_content != blank %}
+            <div class="ai-tab-text-{{ ai_gen_id }}">{{ block.settings.tab_3_content }}</div>
+          {% endif %}
+
+          {% if block.settings.tab_3_button_text != blank and block.settings.tab_3_button_link != blank %}
+            <a href="{{ block.settings.tab_1_button_link }}" class="ai-tab-button-link-{{ ai_gen_id }}">
+              {{ block.settings.tab_1_button_text }}
+              <svg width="16" height="16" stroke="{{ block.settings.icon_color }}">
+                <use xlink:href="#icon-arrow-nw"></use>
+              </svg>
+            </a>
+          {% endif %}
+        </div>
+        <div class="ai-tab-content-right-{{ ai_gen_id }}">
+          {% if block.settings.tab_3_image %}
+            <img
+              src="{{ block.settings.tab_3_image | image_url: width: 800 }}"
+              alt="{{ block.settings.tab_3_image.alt | escape }}"
+              class="ai-tab-image-{{ ai_gen_id }}"
+              loading="lazy"
+              width="800"
+              height="400"
+            >
+          {% else %}
+            <div class="ai-tab-image-placeholder-{{ ai_gen_id }}">
+              {{ 'image' | placeholder_svg_tag }}
+              <div class="ai-empty-state-{{ ai_gen_id }}">Add an image for tab 3</div>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ai-tab-nav-{{ ai_gen_id }}">
+    <button class="ai-tab-button-{{ ai_gen_id }} active" data-tab="0" aria-selected="true">
+      {{ block.settings.tab_1_title }}
+    </button>
+    <button class="ai-tab-button-{{ ai_gen_id }}" data-tab="1" aria-selected="false">
+      {{ block.settings.tab_2_title }}
+    </button>
+    <button class="ai-tab-button-{{ ai_gen_id }}" data-tab="2" aria-selected="false">
+      {{ block.settings.tab_3_title }}
+    </button>
+  </div>
+</tabbed-section-{{ ai_gen_id }}>
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol 
+    id="icon-arrow-nw" 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    stroke-width="2" 
+    stroke-linecap="round" 
+    stroke-linejoin="round"
+  >
+    <!-- Horizontal line + arrow head path -->
+    <path d="M5 12h14M12 5l7 7-7 7"/>
+  </symbol>
+</svg>
+
+
+<script>
+  (function() {
+    class TabbedSection{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.currentTab = 0;
+      }
+
+      connectedCallback() {
+        this.tabButtons = this.querySelectorAll('.ai-tab-button-{{ ai_gen_id }}');
+        this.tabContents = this.querySelectorAll('.ai-tab-content-{{ ai_gen_id }}');
+        this.contentWrapper = this.querySelector('.ai-tab-content-wrapper-{{ ai_gen_id }}');
+        
+        this.setupEventListeners();
+      }
+
+      setupEventListeners() {
+        this.tabButtons.forEach((button, index) => {
+          button.addEventListener('click', () => {
+            this.switchTab(index);
+          });
+        });
+      }
+
+      switchTab(tabIndex) {
+        if (tabIndex === this.currentTab) return;
+
+        this.tabButtons[this.currentTab].classList.remove('active');
+        this.tabButtons[this.currentTab].setAttribute('aria-selected', 'false');
+        this.tabContents[this.currentTab].classList.remove('active');
+
+        this.tabButtons[tabIndex].classList.add('active');
+        this.tabButtons[tabIndex].setAttribute('aria-selected', 'true');
+
+        const translateX = -tabIndex * 33.333;
+        this.contentWrapper.style.transform = `translateX(${translateX}%)`;
+
+        setTimeout(() => {
+          this.tabContents[tabIndex].classList.add('active');
+        }, 100);
+
+        this.currentTab = tabIndex;
+      }
+    }
+
+    customElements.define('tabbed-section-{{ ai_gen_id }}', TabbedSection{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Tabbed content section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "min_height",
+      "min": 200,
+      "max": 600,
+      "step": 20,
+      "unit": "px",
+      "label": "Minimum content height",
+      "default": 400
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 8
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border color",
+      "default": "#e0e0e0"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent color",
+      "default": "#000f9f"
+    },
+    {
+      "type": "header",
+      "content": "Tab navigation"
+    },
+    {
+      "type": "color",
+      "id": "tab_background_color",
+      "label": "Tab background",
+      "default": "#f8f8f8"
+    },
+    {
+      "type": "color",
+      "id": "tab_text_color",
+      "label": "Tab text color",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "tab_hover_color",
+      "label": "Tab hover background",
+      "default": "#eeeeee"
+    },
+    {
+      "type": "color",
+      "id": "tab_hover_text_color",
+      "label": "Tab hover text color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "tab_active_background",
+      "label": "Active tab background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "tab_active_text_color",
+      "label": "Active tab text color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "tab_padding",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Tab padding",
+      "default": 16
+    },
+
+    {
+      "type": "range",
+      "id": "tab_font_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Tab font size",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Content styling"
+    },
+    {
+      "type": "color",
+      "id": "content_text_color",
+      "label": "Content text color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Icon color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "min": 20,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Icon size",
+      "default": 20
+    },
+    {
+      "type": "select",
+      "id": "tab_1_icon",
+      "label": "Tab 1 Icon",
+      "options": [
+        { "value": "info", "label": "Info" },
+        { "value": "star", "label": "Star" },
+        { "value": "check", "label": "Check" },
+        { "value": "heart", "label": "Heart" },
+        { "value": "arrow", "label": "Arrow" }
+      ],
+      "default": "info"
+    },
+    {
+      "type": "select",
+      "id": "tab_2_icon",
+      "label": "Tab 2 Icon",
+      "options": [
+        { "value": "info", "label": "Info" },
+        { "value": "star", "label": "Star" },
+        { "value": "check", "label": "Check" },
+        { "value": "heart", "label": "Heart" },
+        { "value": "arrow", "label": "Arrow" }
+      ],
+      "default": "star"
+    },
+    {
+      "type": "select",
+      "id": "tab_3_icon",
+      "label": "Tab 3 Icon",
+      "options": [
+        { "value": "info", "label": "Info" },
+        { "value": "star", "label": "Star" },
+        { "value": "check", "label": "Check" },
+        { "value": "heart", "label": "Heart" },
+        { "value": "arrow", "label": "Arrow" }
+      ],
+      "default": "check"
+    },
+    {
+      "type": "range",
+      "id": "content_padding",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Content padding",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "wrapper_padding",
+      "min": 0,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "label": "wrapper padding",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "container_padding",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "container padding",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "tab_left_content_padding",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Left content padding",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "content_border_radius",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Content border radius",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "tab_container_padding",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Tab container padding",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "tab_container_margin_block",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Tab container margin block",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "tab_container_margin_inline",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Tab container margin inline",
+      "default": 0
+    },
+    {
+      "type": "color",
+      "id": "tab_container_background",
+      "label": "Tab container background",
+      "default": "#F3F3F3"
+    },
+    {
+      "type": "color",
+      "id": "tab_content_background",
+      "label": "Tab content background",
+      "default": "#F3F3F3"
+    },
+    {
+      "type": "range",
+      "id": "tab_content_radius",
+      "min": 10,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Tab content radius",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "tab_buttons_container_margin_block",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Tab buttons container margin block",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "title_font_size",
+      "min": 18,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Title font size",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "text_font_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Text font size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Image border radius",
+      "default": 6
+    },
+    {
+      "type": "header",
+      "content": "Button styling"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button background",
+      "default": "#000f9f"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_color",
+      "label": "Button hover background",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Button border radius",
+      "default": 6
+    },
+    {
+      "type": "range",
+      "id": "tab_button_radius",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Tab button radius",
+      "default": 20
+    },
+    {
+      "type": "color",
+      "id": "tab_button_color",
+      "label": "Tab button color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "tab_button_font_size",
+      "min": 12,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "label": "Tab button font size",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Tab 1"
+    },
+    {
+      "type": "text",
+      "id": "tab_1_title",
+      "label": "Tab title",
+      "default": "Features"
+    },
+    {
+      "type": "image_picker",
+      "id": "tab_1_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "tab_1_heading",
+      "label": "Heading",
+      "default": "Amazing Features"
+    },
+    {
+      "type": "richtext",
+      "id": "tab_1_content",
+      "label": "Content",
+      "default": "<p>Discover the incredible features that make our product stand out from the competition.</p>"
+    },
+    {
+      "type": "text",
+      "id": "tab_1_button_text",
+      "label": "Button text",
+      "default": "Learn more"
+    },
+    {
+      "type": "url",
+      "id": "tab_1_button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "header",
+      "content": "Tab 2"
+    },
+    {
+      "type": "text",
+      "id": "tab_2_title",
+      "label": "Tab title",
+      "default": "Benefits"
+    },
+    {
+      "type": "image_picker",
+      "id": "tab_2_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "tab_2_heading",
+      "label": "Heading",
+      "default": "Key Benefits"
+    },
+    {
+      "type": "richtext",
+      "id": "tab_2_content",
+      "label": "Content",
+      "default": "<p>Experience the benefits that will transform your daily routine and improve your life.</p>"
+    },
+    {
+      "type": "text",
+      "id": "tab_2_button_text",
+      "label": "Button text",
+      "default": "Explore benefits"
+    },
+    {
+      "type": "url",
+      "id": "tab_2_button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "header",
+      "content": "Tab 3"
+    },
+    {
+      "type": "text",
+      "id": "tab_3_title",
+      "label": "Tab title",
+      "default": "Reviews"
+    },
+    {
+      "type": "image_picker",
+      "id": "tab_3_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "tab_3_heading",
+      "label": "Heading",
+      "default": "Customer Reviews"
+    },
+    {
+      "type": "richtext",
+      "id": "tab_3_content",
+      "label": "Content",
+      "default": "<p>Read what our satisfied customers have to say about their experience with our product.</p>"
+    },
+    {
+      "type": "text",
+      "id": "tab_3_button_text",
+      "label": "Button text",
+      "default": "Read reviews"
+    },
+    {
+      "type": "url",
+      "id": "tab_3_button_link",
+      "label": "Button link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Tabbed content section"
+    }
+  ],
+  "tag": null
+}
+{% endschema %}
