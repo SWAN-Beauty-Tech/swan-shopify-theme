@@ -13,7 +13,6 @@
   padding-inline: {{ section.settings.padding_inline_desktop }}px;
   margin-block: {{ section.settings.margin_block_desktop }}px;
   margin-inline: {{ section.settings.margin_inline_desktop }}px;
-  max-width: 1200px;
 }
 
 /* Mobile */
@@ -32,6 +31,7 @@
     align-items: stretch;
     background-color: {{ block.settings.background_color }};
     overflow: hidden;
+    max-width: 1200px;
   }
 
   .ai-step-guide__content-{{ ai_gen_id }} {
