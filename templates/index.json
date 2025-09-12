@@ -1135,8 +1135,8 @@
       "settings": {
         "padding_block_desktop": 0,
         "padding_inline_desktop": 0,
-        "margin_block_desktop": 0,
-        "margin_inline_desktop": 0,
+        "margin_block_desktop": 8,
+        "margin_inline_desktop": 4,
         "padding_block_mobile": 0,
         "padding_inline_mobile": 0,
         "margin_block_mobile": 0,
