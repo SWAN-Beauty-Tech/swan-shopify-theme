@@ -1,6 +1,10 @@
 
 {% assign ai_gen_id = section.id | replace: '_', '' | downcase %}
-
+<script>
+console.log('Generated ID: {{ ai_gen_id }}');
+console.log('Section ID: {{ section.id }}');
+console.log('slide carousel: {{ section.id }}');
+</script>
 {% style %}
   /* Desktop */
   .block_container.ai-slider-container-{{ ai_gen_id }} {
