@@ -885,20 +885,7 @@
         "step_3_image": "shopify://shop_images/SwanPkg01_Assets_v1_06.png"
       }
     },
-    "section_product_video_3ecwJp": {
-      "type": "section_product_video",
-      "name": "Product layout",
-      "settings": {
-        "product": "",
-        "video_url": "",
-        "custom_heading": "Featured Product",
-        "custom_description": "<p>Experience the perfect blend of style and functionality.</p>",
-        "cta_text": "Shop Now",
-        "background_color": "#ffffff",
-        "layout": "left"
-      }
-    },
-    "video_carousel_rect_rRJwMq": {
+    "video_carousel_rect_yT3Qmi": {
       "type": "video_carousel_rect",
       "name": "Video carousel",
       "settings": {
@@ -910,6 +897,11 @@
         "padding_inline_mobile": 20,
         "margin_block_mobile": 10,
         "margin_inline_mobile": 10,
+        "video_1": "shopify://files/videos/Protopie_Mirror.mp4",
+        "video_2": "shopify://files/videos/3 Mirror Mood Leni cream loop V2.mov",
+        "video_3": "shopify://files/videos/3 Mirror Mood Bathroom - 3 (Favorit graded and looped).mov",
+        "video_4": "shopify://files/videos/Video in Ivory Grey Scrapbook Scrapbook Style.mp4",
+        "video_5": "shopify://files/videos/ScreenRecording_08-11-2025 23-12-13_1.mp4",
         "video_width": 280,
         "video_height": 480,
         "video_gap": 20,
@@ -923,29 +915,100 @@
         "autoplay_duration": 5
       }
     },
-    "video_carousel_rect_nF7h6b": {
-      "type": "video_carousel_rect",
-      "name": "Video carousel",
+    "section_stats_gYrxq6": {
+      "type": "section_stats",
+      "blocks": {
+        "stat_item_V4L8hg": {
+          "type": "stat_item",
+          "settings": {
+            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z\"></path></svg>",
+            "icon_color": "#000000",
+            "counter_value": 10000,
+            "counter_suffix": "+",
+            "sub_heading": "Happy Customers",
+            "description": "Satisfied customers worldwide"
+          }
+        },
+        "stat_item_NNHYVk": {
+          "type": "stat_item",
+          "settings": {
+            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M9 11H7v9h2v-9zm4 0h-2v9h2v-9zm4 0h-2v9h2v-9zm2.5-9H18V1h-2v1H8V1H6v1H4.5C3.12 2 2 3.12 2 4.5v15C2 20.88 3.12 22 4.5 22h15c1.38 0 2.5-1.12 2.5-2.5v-15C22 3.12 20.88 2 19.5 2z\"></path></svg>",
+            "icon_color": "#000000",
+            "counter_value": 95,
+            "counter_suffix": "%",
+            "sub_heading": "Success Rate",
+            "description": "Project completion success rate"
+          }
+        },
+        "stat_item_Tk6Bic": {
+          "type": "stat_item",
+          "settings": {
+            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M14 6V4h-4v2h4zM4 8v11h16V8H4zm16-2c1.11 0 2 .89 2 2v11c0 1.11-.89 2-2 2H4c-1.11 0-2-.89-2-2V8c0-1.11.89-2 2-2h16z\"></path></svg>",
+            "icon_color": "#000000",
+            "counter_value": 500,
+            "counter_suffix": "+",
+            "sub_heading": "Projects Completed",
+            "description": "Successfully delivered projects"
+          }
+        },
+        "stat_item_CdBMLC": {
+          "type": "stat_item",
+          "settings": {
+            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\"></path></svg>",
+            "icon_color": "#000000",
+            "counter_value": 20000,
+            "counter_suffix": "+",
+            "sub_heading": "Hours Saved",
+            "description": "Time saved for our clients through automation"
+          }
+        }
+      },
+      "block_order": [
+        "stat_item_V4L8hg",
+        "stat_item_NNHYVk",
+        "stat_item_Tk6Bic",
+        "stat_item_CdBMLC"
+      ],
+      "name": "Animated Stats Section",
       "settings": {
-        "padding_block_desktop": 40,
-        "padding_inline_desktop": 40,
-        "margin_block_desktop": 20,
-        "margin_inline_desktop": 20,
-        "padding_block_mobile": 20,
-        "padding_inline_mobile": 20,
-        "margin_block_mobile": 10,
-        "margin_inline_mobile": 10,
-        "video_width": 280,
-        "video_height": 480,
-        "video_gap": 20,
-        "inactive_scale": 80,
-        "inactive_opacity": 60,
+        "section_title": "Our Achievements",
+        "title_font_size": 36,
+        "title_color": "#333333",
+        "title_font_weight": 700,
+        "title_margin": 40,
+        "container_width": 1600,
+        "grid_gap": 30,
+        "mobile_gap": 20,
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "background_color": "#f8f9fa",
+        "item_background": "#ffffff",
+        "item_padding": 30,
+        "item_gap": 30,
         "border_radius": 12,
-        "nav_button_color": "#ffffff",
-        "nav_button_hover_color": "#f0f0f0",
-        "nav_button_icon_color": "#000000",
-        "autoplay_enabled": true,
-        "autoplay_duration": 5
+        "box_shadow": "0 4px 20px rgba(0,0,0,0.1)",
+        "icon_size": 60,
+        "mobile_icon_size": 45,
+        "icon_margin": 20,
+        "icon_padding": 10,
+        "icon_background": "#ffffff",
+        "counter_font_size": 48,
+        "mobile_counter_size": 36,
+        "counter_color": "#dca1a1",
+        "counter_font_weight": 700,
+        "counter_font_family": "inherit",
+        "counter_margin": 16,
+        "heading_font_size": 20,
+        "heading_color": "#333333",
+        "heading_font_weight": 600,
+        "heading_font_family": "inherit",
+        "heading_margin": 10,
+        "description_font_size": 14,
+        "description_color": "#666666",
+        "description_font_family": "inherit",
+        "animation_duration": 2000,
+        "stagger_delay": 100,
+        "trigger_threshold": 0.3
       }
     }
   },
@@ -968,8 +1031,7 @@
     "section_testimonial_slide_QUhEL8",
     "section_slide_carousel_rWNp3W",
     "section_steps_tabbed_k4HXUX",
-    "section_product_video_3ecwJp",
-    "video_carousel_rect_rRJwMq",
-    "video_carousel_rect_nF7h6b"
+    "video_carousel_rect_yT3Qmi",
+    "section_stats_gYrxq6"
   ]
 }
