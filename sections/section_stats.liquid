@@ -37,8 +37,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: {{ section.settings.grid_gap }}px;
-    align-items: left;
-    background:yellow;
+    /* align-items: left; */
+    /* background:yellow; */
   }
 
   @media (min-width: 768px) {
@@ -71,7 +71,7 @@
     width: {{ section.settings.icon_size }}px;
     height: {{ section.settings.icon_size }}px;
     margin: 0 auto {{ section.settings.icon_margin }}px;
-    display: flex;
+    display: inline;
     align-items: left;
     justify-content: left;
     justify-items: left;
