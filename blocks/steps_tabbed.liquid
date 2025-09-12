@@ -6,6 +6,25 @@
 {% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
 
 {% style %}
+
+/* Desktop */
+.block_container {
+  padding-block: {{ section.settings.padding_block_desktop }}px;
+  padding-inline: {{ section.settings.padding_inline_desktop }}px;
+  margin-block: {{ section.settings.margin_block_desktop }}px;
+  margin-inline: {{ section.settings.margin_inline_desktop }}px;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .block_container {
+    padding-block: {{ section.settings.padding_block_mobile }}px;
+    padding-inline: {{ section.settings.padding_inline_mobile }}px;
+    margin-block: {{ section.settings.margin_block_mobile }}px;
+    margin-inline: {{ section.settings.margin_inline_mobile }}px;
+  }
+}
+
   .ai-step-guide-{{ ai_gen_id }} {
     height: 100vh;
     display: flex;
@@ -274,7 +293,7 @@
   class="ai-step-guide-{{ ai_gen_id }}"
   {{ block.shopify_attributes }}
 >
-  <div class="ai-step-guide__content-{{ ai_gen_id }}">
+  <div class="block_container ai-step-guide__content-{{ ai_gen_id }}">
     <div class="ai-step-guide__left-{{ ai_gen_id }}">
       {% for i in (1..5) %}
         {% liquid
@@ -392,6 +411,88 @@
 {
   "name": "Step guide",
   "settings": [
+
+  {
+  "type": "range",
+  "id": "padding_block_desktop",
+  "label": "Padding Block (desktop)",
+  "min": 0,
+  "max": 100,
+  "step": 4,
+  "unit": "px",
+  "default": 40
+},
+{
+  "type": "range",
+  "id": "padding_inline_desktop",
+  "label": "Padding Inline (desktop)",
+  "min": 0,
+  "max": 100,
+  "step": 4,
+  "unit": "px",
+  "default": 40
+},
+{
+  "type": "range",
+  "id": "margin_block_desktop",
+  "label": "Margin Block (desktop)",
+  "min": 0,
+  "max": 100,
+  "step": 4,
+  "unit": "px",
+  "default": 20
+},
+{
+  "type": "range",
+  "id": "margin_inline_desktop",
+  "label": "Margin Inline (desktop)",
+  "min": 0,
+  "max": 100,
+  "step": 4,
+  "unit": "px",
+  "default": 20
+},
+
+{
+  "type": "range",
+  "id": "padding_block_mobile",
+  "label": "Padding Block (mobile)",
+  "min": 0,
+  "max": 60,
+  "step": 2,
+  "unit": "px",
+  "default": 20
+},
+{
+  "type": "range",
+  "id": "padding_inline_mobile",
+  "label": "Padding Inline (mobile)",
+  "min": 0,
+  "max": 60,
+  "step": 2,
+  "unit": "px",
+  "default": 20
+},
+{
+  "type": "range",
+  "id": "margin_block_mobile",
+  "label": "Margin Block (mobile)",
+  "min": 0,
+  "max": 60,
+  "step": 2,
+  "unit": "px",
+  "default": 10
+},
+{
+  "type": "range",
+  "id": "margin_inline_mobile",
+  "label": "Margin Inline (mobile)",
+  "min": 0,
+  "max": 60,
+  "step": 2,
+  "unit": "px",
+  "default": 10
+},
    {
       "type": "range",
       "id": "step_container_padding",
