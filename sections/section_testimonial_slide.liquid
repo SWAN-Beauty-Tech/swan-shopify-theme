@@ -1,0 +1,1495 @@
+
+{% assign ai_gen_id = section.id | replace: '_', '' | downcase %}
+
+{% style %}
+  /* Desktop */
+  .block_container {
+    padding-block: {{ section.settings.padding_block_desktop }}px;
+    padding-inline: {{ section.settings.padding_inline_desktop }}px;
+    margin-block: {{ section.settings.margin_block_desktop }}px;
+    margin-inline: {{ section.settings.margin_inline_desktop }}px;
+  }
+
+  /* Mobile */
+  @media (max-width: 767px) {
+    .block_container {
+      padding-block: {{ section.settings.padding_block_mobile }}px;
+      padding-inline: {{ section.settings.padding_inline_mobile }}px;
+      margin-block: {{ section.settings.margin_block_mobile }}px;
+      margin-inline: {{ section.settings.margin_inline_mobile }}px;
+    }
+  }
+
+    .ai-testimonial-slider-{{ ai_gen_id }} {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 20px;
+      background-color: {{ section.settings.background_color }};
+      overflow: hidden;
+    }
+
+    .ai-testimonial-slider__container-{{ ai_gen_id }} {
+      position: relative;
+      width: 100%;
+      height: 500px;
+      border-radius: {{ section.settings.border_radius }}px;
+      overflow: hidden;
+    }
+
+    .ai-testimonial-slider__slide-{{ ai_gen_id }} {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.6s ease, visibility 0.6s ease;
+      background-color: {{ section.settings.slide_background_color }};
+    }
+
+    .ai-testimonial-slider__slide-{{ ai_gen_id }}.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .ai-testimonial-slider__content-{{ ai_gen_id }} {
+      flex: 1.5;
+      padding: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 24px;
+    }
+
+    .ai-testimonial-slider__statistic-{{ ai_gen_id }} {
+      font-size: {{ section.settings.statistic_size }}px;
+      font-weight: 800;
+      color: {{ section.settings.statistic_color }};
+      line-height: 0.8;
+      margin: 0;
+      letter-spacing: -4px;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .ai-testimonial-slider__subheading-{{ ai_gen_id }} {
+      font-size: {{ section.settings.subheading_size }}px;
+      font-weight: 500;
+      color: {{ section.settings.text_color }};
+      margin: 0;
+      line-height: 1.2;
+      opacity: 0.9;
+    }
+
+    .ai-testimonial-slider__quote-{{ ai_gen_id }} {
+      font-size: {{ section.settings.quote_size | times: 1.5}}px;
+      font-weight: 500;
+      color: {{ section.settings.text_color }};
+      line-height: 1.2;
+      font-style: italic;
+      margin-block: 5px;
+      position: relative;
+    }
+
+    {% comment %} .ai-testimonial-slider__quote-{{ ai_gen_id }}::before {
+      content: '"';
+      font-size: 1.5em;
+      color: {{ section.settings.statistic_color }};
+      position: absolute;
+      left: -20px;
+      top: -10px;
+    }
+     .ai-testimonial-slider__quote-{{ ai_gen_id }}::after {
+      content: '"';
+      font-size: 1.5em;
+      color: {{ section.settings.statistic_color }};
+      position: absolute;
+      right: -20px;
+      bottom: -10px;
+    } {% endcomment %}
+    .author-cta {
+      display:flex;
+      justify-content: space-between;
+      align-items:center;
+    }
+
+    .ai-testimonial-slider__author-{{ ai_gen_id }} {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .ai-testimonial-slider__author-photo-{{ ai_gen_id }} {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .ai-testimonial-slider__author-photo-{{ ai_gen_id }} img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .ai-testimonial-slider__author-photo-placeholder-{{ ai_gen_id }} {
+      width: 100%;
+      height: 100%;
+      background-color: #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .ai-testimonial-slider__author-photo-placeholder-{{ ai_gen_id }} svg {
+      width: 30px;
+      height: 30px;
+      color: #ccc;
+    }
+
+    .ai-testimonial-slider__author-info-{{ ai_gen_id }} {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .ai-testimonial-slider__author-name-{{ ai_gen_id }} {
+      font-size: 16px;
+      font-weight: 600;
+      color: {{ section.settings.text_color }};
+      margin: 0;
+    }
+
+    .ai-testimonial-slider__author-role-{{ ai_gen_id }} {
+      font-size: 14px;
+      color: {{ section.settings.text_color }};
+      opacity: 0.7;
+      margin: 0;
+    }
+
+    .ai-testimonial-slider__cta-{{ ai_gen_id }} {
+      display: inline-flex;
+      align-items: center;
+      {% comment %} justify-content:start; {% endcomment %}
+      gap: 8px;
+      color: {{ section.settings.cta_color }};
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      transition: color 0.3s ease;
+      margin-top: 8px;
+    }
+
+    .ai-testimonial-slider__cta-{{ ai_gen_id }}:hover {
+      color: {{ section.settings.cta_hover_color }};
+    }
+
+    .ai-testimonial-slider__cta-arrow-{{ ai_gen_id }} {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.3s ease;
+      rotate:300deg;
+    }
+
+    .ai-testimonial-slider__cta-{{ ai_gen_id }}:hover .ai-testimonial-slider__cta-arrow-{{ ai_gen_id }} {
+      transform: translateX(4px);
+    }
+
+    .ai-testimonial-slider__image-{{ ai_gen_id }} {
+      flex: 1;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ai-testimonial-slider__image-{{ ai_gen_id }} img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .ai-testimonial-slider__image-placeholder-{{ ai_gen_id }} {
+      width: 100%;
+      height: 100%;
+      background-color: #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .ai-testimonial-slider__image-placeholder-{{ ai_gen_id }} svg {
+      width: 80px;
+      height: 80px;
+      color: #ccc;
+    }
+
+    .ai-testimonial-slider__nav-{{ ai_gen_id }} {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50px;
+      height: 50px;
+      background-color: {{ section.settings.nav_button_color }};
+      border: none;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      z-index: 2;
+    }
+
+    .ai-testimonial-slider__nav-{{ ai_gen_id }}:hover {
+      background-color: {{ section.settings.nav_button_hover_color }};
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    .ai-testimonial-slider__nav-{{ ai_gen_id }}--prev {
+      display:none;
+      left: 20px;
+    }
+
+    .ai-testimonial-slider__nav-{{ ai_gen_id }}--next {
+      right: 20px;
+    }
+
+    .ai-testimonial-slider__nav-icon-{{ ai_gen_id }} {
+      width: 20px;
+      height: 20px;
+      color: {{ section.settings.nav_icon_color }};
+    }
+
+    .ai-testimonial-slider__tabs-{{ ai_gen_id }} {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .ai-testimonial-slider__tab-{{ ai_gen_id }} {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      padding: 8px 16px;
+      border-radius: 8px;
+      opacity: 0.6;
+    }
+
+    .ai-testimonial-slider__tab-{{ ai_gen_id }}:hover {
+      opacity: 0.8;
+    }
+
+    .ai-testimonial-slider__tab-{{ ai_gen_id }}.active {
+      opacity: 1;
+    }
+
+    .ai-testimonial-slider__tab-logo-{{ ai_gen_id }} {
+      width: 40px;
+      height: 40px;
+      border-radius: 4px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .ai-testimonial-slider__tab-logo-{{ ai_gen_id }} img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .ai-testimonial-slider__tab-logo-placeholder-{{ ai_gen_id }} {
+      width: 100%;
+      height: 100%;
+      background-color: #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .ai-testimonial-slider__tab-logo-placeholder-{{ ai_gen_id }} svg {
+      width: 20px;
+      height: 20px;
+      color: #ccc;
+    }
+
+    .ai-testimonial-slider__tab-text-{{ ai_gen_id }} {
+      font-size: 16px;
+      font-weight: 700;
+      color: {{ section.settings.tab_text_color }};
+    }
+
+    @media screen and (max-width: 768px) {
+      .ai-testimonial-slider-{{ ai_gen_id }} {
+        padding: 40px 16px;
+      }
+
+      .ai-testimonial-slider__container-{{ ai_gen_id }} {
+        height: auto;
+        min-height: 600px;
+      }
+
+      .ai-testimonial-slider__slide-{{ ai_gen_id }} {
+        flex-direction: column;
+      }
+
+      .ai-testimonial-slider__content-{{ ai_gen_id }} {
+        padding: 40px 24px;
+        order: 2;
+      }
+
+      .ai-testimonial-slider__image-{{ ai_gen_id }} {
+        order: 1;
+        height: 250px;
+        flex: none;
+      }
+
+      .ai-testimonial-slider__statistic-{{ ai_gen_id }} {
+        font-size: {{ section.settings.statistic_size | times: 0.5 }}px;
+        letter-spacing: -2px;
+      }
+
+      .ai-testimonial-slider__subheading-{{ ai_gen_id }} {
+        font-size: {{ section.settings.subheading_size | times: 0.8 }}px;
+      }
+
+      .ai-testimonial-slider__quote-{{ ai_gen_id }} {
+        font-size: {{ section.settings.quote_size | times: 0.8 }}px;
+      }
+
+      .author-cta {
+      display:flex;
+      flex-direction:column;
+      justify-content: space-between;
+      align-items:stretch;
+    }
+
+      .ai-testimonial-slider__author-name-{{ ai_gen_id }} {
+      font-size: 12px;
+      font-weight: 600;
+      {% comment %} color: {{ section.settings.text_color }};
+      margin: 0; {% endcomment %}
+    }
+
+    .ai-testimonial-slider__author-role-{{ ai_gen_id }} {
+      font-size: 10px;
+      {% comment %} color: {{ section.settings.text_color }};
+      opacity: 0.7; {% endcomment %}
+      margin: 0;
+    }
+      .ai-testimonial-slider__nav-{{ ai_gen_id }} {
+        width: 40px;
+        height: 40px;
+      }
+
+      .ai-testimonial-slider__nav-{{ ai_gen_id }}--prev {
+        left: 10px;
+      }
+
+      .ai-testimonial-slider__nav-{{ ai_gen_id }}--next {
+        right: 10px;
+      }
+
+      .ai-testimonial-slider__nav-icon-{{ ai_gen_id }} {
+        width: 16px;
+        height: 16px;
+      }
+
+      .ai-testimonial-slider__tabs-{{ ai_gen_id }} {
+        gap: 16px;
+        margin-top: 24px;
+      }
+
+      .ai-testimonial-slider__tab-{{ ai_gen_id }} {
+        padding: 6px 12px;
+        gap: 8px;
+      }
+
+      .ai-testimonial-slider__tab-logo-{{ ai_gen_id }} {
+        width: 32px;
+        height: 32px;
+      }
+
+      .ai-testimonial-slider__tab-text-{{ ai_gen_id }} {
+        font-size: 14px;
+      }
+    }
+{% endstyle %}
+
+<testimonial-slider-{{ ai_gen_id }}
+  class="block_container ai-testimonial-slider-{{ ai_gen_id }}"
+  data-autoplay="{{ section.settings.autoplay_enabled }}"
+  data-autoplay-delay="{{ section.settings.autoplay_delay }}"
+  {{ section.shopify_attributes }}
+>
+  <div class="ai-testimonial-slider__container-{{ ai_gen_id }}">
+    {% for i in (1..8) %}
+      {% liquid
+        assign slide_enabled_key = 'slide_' | append: i | append: '_enabled'
+        assign statistic_key = 'slide_' | append: i | append: '_statistic'
+        assign subheading_key = 'slide_' | append: i | append: '_subheading'
+        assign quote_key = 'slide_' | append: i | append: '_quote'
+        assign author_name_key = 'slide_' | append: i | append: '_author_name'
+        assign author_role_key = 'slide_' | append: i | append: '_author_role'
+        assign author_photo_key = 'slide_' | append: i | append: '_author_photo'
+        assign cta_text_key = 'slide_' | append: i | append: '_cta_text'
+        assign cta_link_key = 'slide_' | append: i | append: '_cta_link'
+        assign image_key = 'slide_' | append: i | append: '_image'
+        assign tab_label_key = 'slide_' | append: i | append: '_tab_label'
+        assign tab_logo_key = 'slide_' | append: i | append: '_tab_logo'
+
+        assign slide_enabled = section.settings[slide_enabled_key]
+        assign statistic = section.settings[statistic_key]
+        assign subheading = section.settings[subheading_key]
+        assign quote = section.settings[quote_key]
+        assign author_name = section.settings[author_name_key]
+        assign author_role = section.settings[author_role_key]
+        assign author_photo = section.settings[author_photo_key]
+        assign cta_text = section.settings[cta_text_key]
+        assign cta_link = section.settings[cta_link_key]
+        assign image = section.settings[image_key]
+        assign tab_label = section.settings[tab_label_key]
+        assign tab_logo = section.settings[tab_logo_key]
+      %}
+
+      {% if slide_enabled %}
+        <div
+          class="ai-testimonial-slider__slide-{{ ai_gen_id }} {% if forloop.first %}active{% endif %}"
+          data-slide="{{ forloop.index0 }}"
+        >
+          <div class="ai-testimonial-slider__content-{{ ai_gen_id }}">
+            {% if statistic != blank %}
+              <p class="ai-testimonial-slider__statistic-{{ ai_gen_id }}">{{ statistic }}</p>
+            {% endif %}
+
+            {% if subheading != blank %}
+              <p class="ai-testimonial-slider__subheading-{{ ai_gen_id }}">{{ subheading }}</p>
+            {% endif %}
+
+            {% if quote != blank %}
+              <p class="ai-testimonial-slider__quote-{{ ai_gen_id }}">"{{ quote }}"</p>
+            {% endif %}
+            <div class="author-cta">
+              {% if author_name != blank or author_role != blank %}
+                <div class="ai-testimonial-slider__author-{{ ai_gen_id }}">
+                  <div class="ai-testimonial-slider__author-photo-{{ ai_gen_id }}">
+                    {% if author_photo %}
+                      <img
+                        src="{{ author_photo | image_url: width: 120}}"
+                        alt="{{ author_photo.alt | escape }}"
+                        width="60"
+                        height="60"
+                        loading="lazy"
+                      >
+                    {% else %}
+                      <div class="ai-testimonial-slider__author-photo-placeholder-{{ ai_gen_id }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                        </svg>
+                      </div>
+                    {% endif %}
+                  </div>
+                  <div class="ai-testimonial-slider__author-info-{{ ai_gen_id }}">
+                    {% if author_name != blank %}
+                      <p class="ai-testimonial-slider__author-name-{{ ai_gen_id }}">{{ author_name }}</p>
+                    {% endif %}
+                    {% if author_role != blank %}
+                      <p class="ai-testimonial-slider__author-role-{{ ai_gen_id }}">{{ author_role }}</p>
+                    {% endif %}
+                  </div>
+                </div>
+              {% endif %}
+
+              {% if cta_text != blank and cta_link != blank %}
+                <a href="{{ cta_link }}" class="ai-testimonial-slider__cta-{{ ai_gen_id }}">
+                  {{ cta_text }}
+                  <svg
+                    class="ai-testimonial-slider__cta-arrow-{{ ai_gen_id }}"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
+                </a>
+              {% endif %}
+            </div>
+          </div>
+
+          <div class="ai-testimonial-slider__image-{{ ai_gen_id }}">
+            {% if image %}
+              <img
+                src="{{ image | image_url: width: 800 }}"
+                alt="{{ image.alt | escape }}"
+                width="{{ image.width }}"
+                height="{{ image.height }}"
+                loading="lazy"
+              >
+            {% else %}
+              <div class="ai-testimonial-slider__image-placeholder-{{ ai_gen_id }}">
+                {{ 'image' | placeholder_svg_tag }}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      {% endif %}
+    {% endfor -%}
+    <button
+      class="ai-testimonial-slider__nav-{{ ai_gen_id }} ai-testimonial-slider__nav-{{ ai_gen_id }}--prev"
+      aria-label="Previous slide"
+    >
+      <svg
+        class="ai-testimonial-slider__nav-icon-{{ ai_gen_id }}"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path d="M15 18l-6-6 6-6"/>
+      </svg>
+    </button>
+
+    <button
+      class="ai-testimonial-slider__nav-{{ ai_gen_id }} ai-testimonial-slider__nav-{{ ai_gen_id }}--next"
+      aria-label="Next slide"
+    >
+      <svg
+        class="ai-testimonial-slider__nav-icon-{{ ai_gen_id }}"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path d="M9 18l6-6-6-6"/>
+      </svg>
+    </button>
+  </div>
+
+  <div class="ai-testimonial-slider__tabs-{{ ai_gen_id }}">
+    {% assign tab_index = 0 %}
+    {% for i in (1..8) %}
+      {% liquid
+        assign slide_enabled_key = 'slide_' | append: i | append: '_enabled'
+        assign tab_label_key = 'slide_' | append: i | append: '_tab_label'
+        assign tab_logo_key = 'slide_' | append: i | append: '_tab_logo'
+        assign slide_enabled = section.settings[slide_enabled_key]
+        assign tab_label = section.settings[tab_label_key]
+        assign tab_logo = section.settings[tab_logo_key]
+      %}
+
+      {% if slide_enabled %}
+        <div
+          class="ai-testimonial-slider__tab-{{ ai_gen_id }} {% if tab_index == 0 %}active{% endif %}"
+          data-slide="{{ tab_index }}"
+          role="button"
+          tabindex="0"
+          aria-label="Go to slide {{ tab_index | plus: 1 }}"
+        >
+          <div class="ai-testimonial-slider__tab-logo-{{ ai_gen_id }}">
+            {% if tab_logo %}
+              <img
+                src="{{ tab_logo | image_url: width: 80 }}"
+                alt="{{ tab_logo.alt | escape }}"
+                width="40"
+                height="40"
+                loading="lazy"
+              >
+            {% else %}
+              <div class="ai-testimonial-slider__tab-logo-placeholder-{{ ai_gen_id }}">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+              </div>
+            {% endif %}
+          </div>
+          <div class="ai-testimonial-slider__tab-text-{{ ai_gen_id }}">
+            {% if tab_label != blank %}
+              {{ tab_label }}
+            {% else %}
+              Company {{ tab_index | plus: 1 }}
+            {% endif %}
+          </div>
+        </div>
+        {% assign tab_index = tab_index | plus: 1 %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</testimonial-slider-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class TestimonialSlider{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.currentSlide = 0;
+        this.slides = [];
+        this.tabs = [];
+        this.autoplayTimer = null;
+        this.isHovered = false;
+      }
+
+      connectedCallback() {
+        this.slides = Array.from(this.querySelectorAll('.ai-testimonial-slider__slide-{{ ai_gen_id }}'));
+        this.tabs = Array.from(this.querySelectorAll('.ai-testimonial-slider__tab-{{ ai_gen_id }}'));
+        this.prevButton = this.querySelector('.ai-testimonial-slider__nav-{{ ai_gen_id }}--prev');
+        this.nextButton = this.querySelector('.ai-testimonial-slider__nav-{{ ai_gen_id }}--next');
+
+        this.autoplayEnabled = this.dataset.autoplay === 'true';
+        this.autoplayDelay = parseInt(this.dataset.autoplayDelay) * 1000;
+
+        this.setupEventListeners();
+        this.startAutoplay();
+      }
+
+      setupEventListeners() {
+        this.prevButton.addEventListener('click', () => this.prevSlide());
+        this.nextButton.addEventListener('click', () => this.nextSlide());
+
+        this.tabs.forEach((tab, index) => {
+          tab.addEventListener('click', () => this.goToSlide(index));
+          tab.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              this.goToSlide(index);
+            }
+          });
+        });
+
+        this.addEventListener('mouseenter', () => {
+          this.isHovered = true;
+          this.stopAutoplay();
+        });
+
+        this.addEventListener('mouseleave', () => {
+          this.isHovered = false;
+          this.startAutoplay();
+        });
+      }
+
+      goToSlide(index) {
+        if (index === this.currentSlide || index >= this.slides.length) return;
+
+        this.slides[this.currentSlide].classList.remove('active');
+        this.tabs[this.currentSlide].classList.remove('active');
+
+        this.currentSlide = index;
+
+        this.slides[this.currentSlide].classList.add('active');
+        this.tabs[this.currentSlide].classList.add('active');
+      }
+
+      nextSlide() {
+        const nextIndex = (this.currentSlide + 1) % this.slides.length;
+        this.goToSlide(nextIndex);
+      }
+
+      prevSlide() {
+        const prevIndex = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
+        this.goToSlide(prevIndex);
+      }
+
+      startAutoplay() {
+        if (!this.autoplayEnabled || this.isHovered || this.slides.length <= 1) return;
+
+        this.stopAutoplay();
+        this.autoplayTimer = setInterval(() => {
+          this.nextSlide();
+        }, this.autoplayDelay);
+      }
+
+      stopAutoplay() {
+        if (this.autoplayTimer) {
+          clearInterval(this.autoplayTimer);
+          this.autoplayTimer = null;
+        }
+      }
+
+      disconnectedCallback() {
+        this.stopAutoplay();
+      }
+    }
+
+    customElements.define('testimonial-slider-{{ ai_gen_id }}', TestimonialSlider{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Testimonial slider",
+  "settings": [
+    {
+      "type": "range",
+      "id": "padding_block_desktop",
+      "label": "Padding Block (desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_inline_desktop",
+      "label": "Padding Inline (desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "margin_block_desktop",
+      "label": "Margin Block (desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "margin_inline_desktop",
+      "label": "Margin Inline (desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 20
+    },
+
+    {
+      "type": "range",
+      "id": "padding_block_mobile",
+      "label": "Padding Block (mobile)",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_inline_mobile",
+      "label": "Padding Inline (mobile)",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "margin_block_mobile",
+      "label": "Margin Block (mobile)",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "margin_inline_mobile",
+      "label": "Margin Inline (mobile)",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 10
+    },
+    {
+      "type": "header",
+      "content": "Autoplay"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay_enabled",
+      "label": "Enable autoplay",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "autoplay_delay",
+      "min": 3,
+      "max": 15,
+      "step": 1,
+      "unit": "s",
+      "label": "Autoplay delay",
+      "default": 10
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "slide_background_color",
+      "label": "Slide background color",
+      "default": "#f8f8f8"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "statistic_color",
+      "label": "Statistic color",
+      "default": "#2563eb"
+    },
+    {
+      "type": "color",
+      "id": "cta_color",
+      "label": "CTA color",
+      "default": "#2563eb"
+    },
+    {
+      "type": "color",
+      "id": "cta_hover_color",
+      "label": "CTA hover color",
+      "default": "#1d4ed8"
+    },
+    {
+      "type": "header",
+      "content": "Navigation"
+    },
+    {
+      "type": "color",
+      "id": "nav_button_color",
+      "label": "Navigation button color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "nav_button_hover_color",
+      "label": "Navigation button hover color",
+      "default": "#f0f0f0"
+    },
+    {
+      "type": "color",
+      "id": "nav_icon_color",
+      "label": "Navigation icon color",
+      "default": "#333333"
+    },
+    {
+      "type": "header",
+      "content": "Tabs"
+    },
+    {
+      "type": "color",
+      "id": "tab_text_color",
+      "label": "Tab text color",
+      "default": "#333333"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "statistic_size",
+      "min": 40,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "label": "Statistic size",
+      "default": 140
+    },
+    {
+      "type": "range",
+      "id": "subheading_size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Subheading size",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "quote_size",
+      "min": 14,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Quote size",
+      "default": 18
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Slide 1"
+    },
+    {
+      "type": "checkbox",
+      "id": "slide_1_enabled",
+      "label": "Enable slide 1",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "slide_1_statistic",
+      "label": "Statistic",
+      "default": "10,000+"
+    },
+    {
+      "type": "text",
+      "id": "slide_1_subheading",
+      "label": "Subheading",
+      "default": "Happy customers worldwide"
+    },
+    {
+      "type": "textarea",
+      "id": "slide_1_quote",
+      "label": "Quote",
+      "default": "This product has completely transformed our business operations and exceeded all expectations."
+    },
+    {
+      "type": "text",
+      "id": "slide_1_author_name",
+      "label": "Author name",
+      "default": "Sarah Johnson"
+    },
+    {
+      "type": "text",
+      "id": "slide_1_author_role",
+      "label": "Author role",
+      "default": "CEO, TechCorp"
+    },
+    {
+      "type": "image_picker",
+      "id": "slide_1_author_photo",
+      "label": "Author photo"
+    },
+    {
+      "type": "text",
+      "id": "slide_1_cta_text",
+      "label": "CTA text",
+      "default": "Read Case Study"
+    },
+    {
+      "type": "url",
+      "id": "slide_1_cta_link",
+      "label": "CTA link"
+    },
+    {
+      "type": "image_picker",
+      "id": "slide_1_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "slide_1_tab_label",
+      "label": "Tab label",
+      "default": "TechCorp"
+    },
+    {
+      "type": "image_picker",
+      "id": "slide_1_tab_logo",
+      "label": "Tab logo"
+    },
+    {
+      "type": "header",
+      "content": "Slide 2"
+    },
+    {
+      "type": "checkbox",
+      "id": "slide_2_enabled",
+      "label": "Enable slide 2",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "slide_2_statistic",
+      "label": "Statistic",
+      "default": "500%"
+    },
+    {
+      "type": "text",
+      "id": "slide_2_subheading",
+      "label": "Subheading",
+      "default": "Increase in productivity"
+    },
+    {
+      "type": "textarea",
+      "id": "slide_2_quote",
+      "label": "Quote",
+      "default": "The implementation was seamless and the results speak for themselves. Our team is more efficient than ever."
+    },
+    {
+      "type": "text",
+      "id": "slide_2_author_name",
+      "label": "Author name",
+      "default": "Michael Chen"
+    },
+    {
+      "type": "text",
+      "id": "slide_2_author_role",
+      "label": "Author role",
+      "default": "Operations Manager, StartupXYZ"
+    },
+    {
+      "type": "image_picker",
+      "id": "slide_2_author_photo",
+      "label": "Author photo"
+    },
+    {
+      "type": "text",
+      "id": "slide_2_cta_text",
+      "label": "CTA text",
+      "default": "View Success Story"
+    },
+    {
+      "type": "url",
+      "id": "slide_2_cta_link",
+      "label": "CTA link"
+    },
+    {
+      "type": "image_picker",
+      "id": "slide_2_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "slide_2_tab_label",
+      "label": "Tab label",
+      "default": "StartupXYZ"
+    },
+    {
+      "type": "image_picker",
+      "id": "slide_2_tab_logo",
+      "label": "Tab logo"
+    },
+    {
+      "type": "header",
+      "content": "Slide 3"
+    },
+    {
+      "type": "checkbox",
+      "id": "slide_3_enabled",
+      "label": "Enable slide 3",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "slide_3_statistic",
+      "label": "Statistic",
+      "default": "99.9%"
+    },
+    {
+      "type": "text",
+      "id": "slide_3_subheading",
+      "label": "Subheading",
+      "default": "Customer satisfaction rate"
+    },
+    {
+      "type": "textarea",
+      "id": "slide_3_quote",
+      "label": "Quote",
+      "default": "Outstanding service and support. The team went above and beyond to ensure our success."
+    },
+    {
+      "type": "text",
+      "id": "slide_3_author_name",
+      "label": "Author name",
+      "default": "Emily Rodriguez"
+    },
+    {
+      "type": "text",
+      "id": "slide_3_author_role",
+      "label": "Author role",
+      "default": "Director, InnovateCo"
+    },
+    {
+      "type": "image_picker",
+      "id": "slide_3_author_photo",
+      "label": "Author photo"
+    },
+    {
+      "type": "text",
+      "id": "slide_3_cta_text",
+      "label": "CTA text",
+      "default": "Learn More"
+    },
+    {
+      "type": "url",
+      "id": "slide_3_cta_link",
+      "label": "CTA link"
+    },
+    {
+      "type": "image_picker",
+      "id": "slide_3_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "slide_3_tab_label",
+      "label": "Tab label",
+      "default": "InnovateCo"
+    },
+    {
+      "type": "image_picker",
+      "id": "slide_3_tab_logo",
+      "label": "Tab logo"
+    },
+    {
+      "type": "header",
+      "content": "Slide 4"
+    },
+    {
+      "type": "checkbox",
+      "id": "slide_4_enabled",
+      "label": "Enable slide 4"
+    },
+    {
+      "type": "text",
+      "id": "slide_4_statistic",
+      "label": "Statistic"
+    },
+    {
+      "type": "text",
+      "id": "slide_4_subheading",
+      "label": "Subheading"
+    },
+    {
+      "type": "textarea",
+      "id": "slide_4_quote",
+      "label": "Quote"
+    },
+    {
+      "type": "text",
+      "id": "slide_4_author_name",
+      "label": "Author name"
+    },
+    {
+      "type": "text",
+      "id": "slide_4_author_role",
+      "label": "Author role"
+    },
+    {
+      "type": "image_picker",
+      "id": "slide_4_author_photo",
+      "label": "Author photo"
+    },
+    {
+      "type": "text",
+      "id": "slide_4_cta_text",
+      "label": "CTA text"
+    },
+    {
+      "type": "url",
+      "id": "slide_4_cta_link",
+      "label": "CTA link"
+    },
+    {
+      "type": "image_picker",
+      "id": "slide_4_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "slide_4_tab_label",
+      "label": "Tab label"
+    },
+    {
+      "type": "image_picker",
+      "id": "slide_4_tab_logo",
+      "label": "Tab logo"
+    },
+    {
+      "type": "header",
+      "content": "Slide 5"
+    },
+    {
+      "type": "checkbox",
+      "id": "slide_5_enabled",
+      "label": "Enable slide 5"
+    },
+    {
+      "type": "text",
+      "id": "slide_5_statistic",
+      "label": "Statistic"
+    },
+    {
+      "type": "text",
+      "id": "slide_5_subheading",
+      "label": "Subheading"
+    },
+    {
+      "type": "textarea",
+      "id": "slide_5_quote",
+      "label": "Quote"
+    },
+    {
+      "type": "text",
+      "id": "slide_5_author_name",
+      "label": "Author name"
+    },
+    {
+      "type": "text",
+      "id": "slide_5_author_role",
+      "label": "Author role"
+    },
+    {
+      "type": "image_picker",
+      "id": "slide_5_author_photo",
+      "label": "Author photo"
+    },
+    {
+      "type": "text",
+      "id": "slide_5_cta_text",
+      "label": "CTA text"
+    },
+    {
+      "type": "url",
+      "id": "slide_5_cta_link",
+      "label": "CTA link"
+    },
+    {
+      "type": "image_picker",
+      "id": "slide_5_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "slide_5_tab_label",
+      "label": "Tab label"
+    },
+    {
+      "type": "image_picker",
+      "id": "slide_5_tab_logo",
+      "label": "Tab logo"
+    },
+    {
+      "type": "header",
+      "content": "Slide 6"
+    },
+    {
+      "type": "checkbox",
+      "id": "slide_6_enabled",
+      "label": "Enable slide 6"
+    },
+    {
+      "type": "text",
+      "id": "slide_6_statistic",
+      "label": "Statistic"
+    },
+    {
+      "type": "text",
+      "id": "slide_6_subheading",
+      "label": "Subheading"
+    },
+    {
+      "type": "textarea",
+      "id": "slide_6_quote",
+      "label": "Quote"
+    },
+    {
+      "type": "text",
+      "id": "slide_6_author_name",
+      "label": "Author name"
+    },
+    {
+      "type": "text",
+      "id": "slide_6_author_role",
+      "label": "Author role"
+    },
+    {
+      "type": "image_picker",
+      "id": "slide_6_author_photo",
+      "label": "Author photo"
+    },
+    {
+      "type": "text",
+      "id": "slide_6_cta_text",
+      "label": "CTA text"
+    },
+    {
+      "type": "url",
+      "id": "slide_6_cta_link",
+      "label": "CTA link"
+    },
+    {
+      "type": "image_picker",
+      "id": "slide_6_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "slide_6_tab_label",
+      "label": "Tab label"
+    },
+    {
+      "type": "image_picker",
+      "id": "slide_6_tab_logo",
+      "label": "Tab logo"
+    },
+    {
+      "type": "header",
+      "content": "Slide 7"
+    },
+    {
+      "type": "checkbox",
+      "id": "slide_7_enabled",
+      "label": "Enable slide 7"
+    },
+    {
+      "type": "text",
+      "id": "slide_7_statistic",
+      "label": "Statistic"
+    },
+    {
+      "type": "text",
+      "id": "slide_7_subheading",
+      "label": "Subheading"
+    },
+    {
+      "type": "textarea",
+      "id": "slide_7_quote",
+      "label": "Quote"
+    },
+    {
+      "type": "text",
+      "id": "slide_7_author_name",
+      "label": "Author name"
+    },
+    {
+      "type": "text",
+      "id": "slide_7_author_role",
+      "label": "Author role"
+    },
+    {
+      "type": "image_picker",
+      "id": "slide_7_author_photo",
+      "label": "Author photo"
+    },
+    {
+      "type": "text",
+      "id": "slide_7_cta_text",
+      "label": "CTA text"
+    },
+    {
+      "type": "url",
+      "id": "slide_7_cta_link",
+      "label": "CTA link"
+    },
+    {
+      "type": "image_picker",
+      "id": "slide_7_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "slide_7_tab_label",
+      "label": "Tab label"
+    },
+    {
+      "type": "image_picker",
+      "id": "slide_7_tab_logo",
+      "label": "Tab logo"
+    },
+    {
+      "type": "header",
+      "content": "Slide 8"
+    },
+    {
+      "type": "checkbox",
+      "id": "slide_8_enabled",
+      "label": "Enable slide 8"
+    },
+    {
+      "type": "text",
+      "id": "slide_8_statistic",
+      "label": "Statistic"
+    },
+    {
+      "type": "text",
+      "id": "slide_8_subheading",
+      "label": "Subheading"
+    },
+    {
+      "type": "textarea",
+      "id": "slide_8_quote",
+      "label": "Quote"
+    },
+    {
+      "type": "text",
+      "id": "slide_8_author_name",
+      "label": "Author name"
+    },
+    {
+      "type": "text",
+      "id": "slide_8_author_role",
+      "label": "Author role"
+    },
+    {
+      "type": "image_picker",
+      "id": "slide_8_author_photo",
+      "label": "Author photo"
+    },
+    {
+      "type": "text",
+      "id": "slide_8_cta_text",
+      "label": "CTA text"
+    },
+    {
+      "type": "url",
+      "id": "slide_8_cta_link",
+      "label": "CTA link"
+    },
+    {
+      "type": "image_picker",
+      "id": "slide_8_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "slide_8_tab_label",
+      "label": "Tab label"
+    },
+    {
+      "type": "image_picker",
+      "id": "slide_8_tab_logo",
+      "label": "Tab logo"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonial slider"
+    }
+  ]
+}
+{% endschema %}
