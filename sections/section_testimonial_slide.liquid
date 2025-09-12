@@ -51,6 +51,8 @@
       visibility: hidden;
       transition: opacity 0.6s ease, visibility 0.6s ease;
       background-color: red;
+      padding-block:{{section.settings.left_padding_block }}px;
+      padding-inline:{{section.settings.left_padding_inline }}px;
     }
 
     .ai-testimonial-slider__slide-{{ ai_gen_id }}.active {
@@ -807,6 +809,26 @@
       "label": "Margin Inline (mobile)",
       "min": 0,
       "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "left_padding_block",
+      "label": "Left padding block",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "left_padding_inline",
+      "label": "Left padding Inline",
+      "min": 0,
+      "max": 200,
       "step": 2,
       "unit": "px",
       "default": 10
