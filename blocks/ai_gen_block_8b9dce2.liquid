@@ -354,7 +354,7 @@
   </div>
 
   <div class="ai-product-showcase-column-{{ ai_gen_id }}">
-    <div class="ai-product-showcase-video-container-{{ ai_gen_id }}">
+    {% comment %} <div class="ai-product-showcase-video-container-{{ ai_gen_id }}">
       {% if block.settings.video_type == 'upload' and block.settings.video_file %}
         <video
           autoplay
@@ -403,7 +403,56 @@
           </div>
         </div>
       {% endif %}
+    </div> {% endcomment %}
+    <div class="ai-product-showcase-video-container-{{ ai_gen_id }}">
+  {% if block.settings.video_type == 'upload' and block.settings.video_file %}
+    {{ block.settings.video_file 
+      | video_tag: 
+        autoplay: true, 
+        loop: true, 
+        muted: true, 
+        controls: false, 
+        playsinline: true 
+    }}
+  {% elsif block.settings.video_type == 'url' and block.settings.video_url != blank %}
+    {% assign video_id = block.settings.video_url | split: '/' | last %}
+    {% if block.settings.video_url contains 'youtube.com' or block.settings.video_url contains 'youtu.be' %}
+      {% if block.settings.video_url contains 'youtu.be' %}
+        {% assign video_id = block.settings.video_url | split: '/' | last | split: '?' | first %}
+      {% elsif block.settings.video_url contains 'watch?v=' %}
+        {% assign video_id = block.settings.video_url | split: 'watch?v=' | last | split: '&' | first %}
+      {% endif %}
+      <iframe
+        src="https://www.youtube.com/embed/{{ video_id }}?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&showinfo=0&loop=1&playlist={{ video_id }}"
+        title="Product video"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        data-video-id="{{ ai_gen_id }}"
+        data-video-type="youtube"
+      ></iframe>
+    {% elsif block.settings.video_url contains 'vimeo.com' %}
+      {% assign video_id = block.settings.video_url | split: '/' | last %}
+      <iframe
+        src="https://player.vimeo.com/video/{{ video_id }}?autoplay=1&muted=1&controls=0&loop=1&background=1"
+        title="Product video"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen
+        data-video-id="{{ ai_gen_id }}"
+        data-video-type="vimeo"
+      ></iframe>
+    {% endif %}
+  {% else %}
+    <div class="ai-product-showcase-video-placeholder-{{ ai_gen_id }}">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="5,3 19,12 5,21 5,3"></polygon>
+      </svg>
+      <div class="ai-product-showcase-video-empty-state-{{ ai_gen_id }}">
+        Add a video file or URL
+      </div>
     </div>
+  {% endif %}
+</div>
+
   </div>
 </product-showcase-video-{{ ai_gen_id }}>
 
