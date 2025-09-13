@@ -308,7 +308,6 @@
       "blocks": {
         "ai_gen_block_8e10786_PHgELQ": {
           "type": "ai_gen_block_8e10786",
-          "disabled": true,
           "settings": {
             "desktop_image": "shopify://shop_images/8T8A4877-3_44bc9094-e0bb-45fa-8157-2ddc685df4ab.jpg",
             "hotspot_size": 24,
@@ -387,95 +386,11 @@
       ],
       "settings": {}
     },
-    "17569402223a881207": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_3202828_QfPATa": {
-          "type": "ai_gen_block_3202828",
-          "disabled": true,
-          "settings": {
-            "video_1": "shopify://files/videos/swan-intro.mp4",
-            "video_2": "shopify://files/videos/3 Mirror Mood Bathroom - 3 (Favorit graded and looped).mov",
-            "video_3": "shopify://files/videos/3 Mirror Mood Leni Full Facial.mov",
-            "background_color": "#ffffff",
-            "text_color": "#000000",
-            "nav_button_color": "#000000",
-            "nav_button_text_color": "#ffffff",
-            "nav_button_hover_color": "#333333",
-            "video_border_radius": 8,
-            "section_padding": 40
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_3202828_QfPATa"
-      ],
-      "settings": {}
-    },
-    "1756606764d59b2a1b": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_710080f_9FTLgf": {
-          "type": "ai_gen_block_710080f",
-          "disabled": true,
-          "settings": {
-            "layout": "side-by-side",
-            "color_scheme": "scheme-1",
-            "video": "shopify://files/videos/Video in Ivory Grey Scrapbook Scrapbook Style.mp4",
-            "autoplay": false,
-            "muted": true,
-            "loop": false,
-            "product": "zz-sensitive-system-anti-stress-aufbauende-nachtcreme-annemarie-borling",
-            "show_product_image": true,
-            "show_description": true,
-            "button_text": "Shop now"
-          },
-          "blocks": {}
-        },
-        "ai_gen_block_1c2bbdf_MgFCyC": {
-          "type": "ai_gen_block_1c2bbdf",
-          "disabled": true,
-          "settings": {
-            "video": "shopify://files/videos/Video in Ivory Grey Scrapbook Scrapbook Style.mp4",
-            "autoplay": false,
-            "muted": true,
-            "loop": false,
-            "video_border_radius": 12,
-            "product": "dr-emi-arpa-better-balm-kopie",
-            "show_description": true,
-            "button_text": "Shop now",
-            "product_image_size": 200,
-            "product_image_border_radius": 12,
-            "mobile_layout": "video_top",
-            "gap": 64,
-            "padding": 40,
-            "background_color": "#ffffff",
-            "text_color": "#000000",
-            "price_color": "#000000",
-            "button_color": "#000000",
-            "button_text_color": "#ffffff",
-            "button_hover_color": "#333333",
-            "product_title_size": 32,
-            "product_price_size": 24,
-            "product_description_size": 16,
-            "button_border_radius": 8
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_710080f_9FTLgf",
-        "ai_gen_block_1c2bbdf_MgFCyC"
-      ],
-      "settings": {}
-    },
     "1756607302649791a7": {
       "type": "_blocks",
       "blocks": {
         "ai_gen_block_62e4169_Cmbp9L": {
           "type": "ai_gen_block_62e4169",
-          "disabled": true,
           "settings": {
             "logo_1": "shopify://shop_images/597720-logo-1737030702.png",
             "logo_2": "shopify://shop_images/IVY001_Logo_rot_1200x1200_bbee04b2-af2e-4491-94ee-01c4a6327f23.webp",
@@ -500,190 +415,6 @@
       },
       "block_order": [
         "ai_gen_block_62e4169_Cmbp9L"
-      ],
-      "settings": {}
-    },
-    "1756607884b53defc4": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_0776ed8_BkGMAC": {
-          "type": "ai_gen_block_0776ed8",
-          "disabled": true,
-          "settings": {
-            "title": "Case studies",
-            "subtitle": "<p>See how our clients achieved remarkable results</p>",
-            "text_alignment": "center",
-            "section_padding": 60,
-            "grid_gap": 32,
-            "case_1_image": "shopify://shop_images/applications-medical-wearables-hero-GettyImages-1421771110-2.avif",
-            "case_1_category": "E-commerce",
-            "case_1_title": "Online Store Transformation",
-            "case_1_description": "Complete redesign and optimization of an e-commerce platform resulting in significant performance improvements.",
-            "case_1_metric1_value": "+150%",
-            "case_1_metric1_label": "Sales increase",
-            "case_1_metric2_value": "45%",
-            "case_1_metric2_label": "Faster loading",
-            "case_1_link": "",
-            "case_2_category": "Mobile App",
-            "case_2_title": "Mobile Experience Redesign",
-            "case_2_description": "User-centered mobile app redesign that improved engagement and user satisfaction across all demographics.",
-            "case_2_metric1_value": "+200%",
-            "case_2_metric1_label": "User engagement",
-            "case_2_metric2_value": "4.8",
-            "case_2_metric2_label": "App store rating",
-            "case_2_link": "",
-            "case_3_category": "Branding",
-            "case_3_title": "Brand Identity Refresh",
-            "case_3_description": "Complete brand identity overhaul including logo, messaging, and digital presence for a growing startup.",
-            "case_3_metric1_value": "+300%",
-            "case_3_metric1_label": "Brand recognition",
-            "case_3_metric2_value": "85%",
-            "case_3_metric2_label": "Customer satisfaction",
-            "case_3_link": "",
-            "link_text": "View case study",
-            "title_size": 36,
-            "subtitle_size": 18,
-            "background_color": "#ffffff",
-            "title_color": "#000000",
-            "subtitle_color": "#666666",
-            "card_background_color": "#ffffff",
-            "card_title_color": "#000000",
-            "card_text_color": "#666666",
-            "category_background_color": "#f0f0f0",
-            "category_text_color": "#333333",
-            "metric_color": "#007acc",
-            "link_color": "#007acc",
-            "link_hover_color": "#005999",
-            "card_border_radius": 8
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_0776ed8_BkGMAC"
-      ],
-      "settings": {}
-    },
-    "1756608292307a69c2": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_75d0dac_rk4NJQ": {
-          "type": "ai_gen_block_75d0dac",
-          "disabled": true,
-          "settings": {
-            "title": "Steps",
-            "description": "<p>Follow these simple steps to get started</p>",
-            "text_alignment": "center",
-            "step_1_title": "Choose your product",
-            "step_1_text": "<p>Browse our collection and select the perfect item for you</p>",
-            "step_2_title": "Add to cart",
-            "step_2_text": "<p>Select your size and quantity, then add to your shopping cart</p>",
-            "step_3_title": "Secure checkout",
-            "step_3_text": "<p>Complete your purchase with our secure payment system</p>",
-            "step_4_title": "",
-            "step_4_text": "",
-            "step_5_title": "",
-            "step_5_text": "",
-            "max_width": 1200,
-            "section_padding": 40,
-            "header_spacing": 40,
-            "step_spacing": 30,
-            "content_spacing": 16,
-            "step_padding": 25,
-            "title_size": 32,
-            "description_size": 16,
-            "step_title_size": 20,
-            "step_text_size": 15,
-            "number_size": 40,
-            "number_font_size": 18,
-            "number_background": "#000000",
-            "number_text_color": "#ffffff",
-            "title_color": "#000000",
-            "description_color": "#666666",
-            "step_title_color": "#000000",
-            "step_text_color": "#666666",
-            "step_background": "#ffffff",
-            "border_radius": 8,
-            "border_width": 1,
-            "border_color": "#e5e5e5"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_75d0dac_rk4NJQ"
-      ],
-      "settings": {}
-    },
-    "1756608397ad5395e1": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_f451576_KEWhqk": {
-          "type": "ai_gen_block_f451576",
-          "disabled": true,
-          "settings": {
-            "number_1": "100+",
-            "label_1": "Happy customers",
-            "number_2": "50",
-            "label_2": "Products sold",
-            "number_3": "24/7",
-            "label_3": "Customer support",
-            "number_4": "5★",
-            "label_4": "Average rating",
-            "columns_desktop": 4,
-            "columns_mobile": "2",
-            "text_alignment": "center",
-            "gap": 20,
-            "background_color": "#ffffff",
-            "item_background_color": "#f8f8f8",
-            "number_color": "#000000",
-            "label_color": "#666666",
-            "number_size": 48,
-            "number_weight": "700",
-            "label_size": 16,
-            "number_margin_bottom": 8,
-            "item_padding": 20,
-            "border_radius": 8,
-            "border_width": 0,
-            "border_color": "#e0e0e0",
-            "padding_top": 40,
-            "padding_bottom": 40
-          },
-          "blocks": {}
-        },
-        "ai_gen_block_1cdaf88_zwjpab": {
-          "type": "ai_gen_block_1cdaf88",
-          "disabled": true,
-          "settings": {
-            "image_1": "shopify://shop_images/12115795_1.webp",
-            "image_2": "shopify://shop_images/loreal-uv-patch-today-003-160106.webp",
-            "image_3": "shopify://shop_images/applications-medical-wearables-hero-GettyImages-1421771110-2.avif",
-            "image_4": "shopify://shop_images/406-1920w.webp",
-            "slideshow_height": 650,
-            "border_radius": 8,
-            "background_color": "#f4f4f4",
-            "show_controls": false,
-            "control_size": 55,
-            "control_spacing": 30,
-            "control_background": "#ffffff",
-            "control_color": "#000000",
-            "show_indicators": true,
-            "indicator_size": 44,
-            "indicator_gap": 12,
-            "indicator_spacing": 30,
-            "indicator_background": "#ffffff",
-            "indicator_color": "#000000",
-            "indicator_active_background": "#000000",
-            "indicator_active_color": "#ffffff",
-            "autoplay": true,
-            "autoplay_speed": 3500
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_f451576_KEWhqk",
-        "ai_gen_block_1cdaf88_zwjpab"
       ],
       "settings": {}
     },
@@ -1062,12 +793,7 @@
     "swan_image_text_diHnaA",
     "swan_sign_up_yYi4Dj",
     "1756594554f0ec837f",
-    "17569402223a881207",
-    "1756606764d59b2a1b",
     "1756607302649791a7",
-    "1756607884b53defc4",
-    "1756608292307a69c2",
-    "1756608397ad5395e1",
     "section_testimonial_slide_QUhEL8",
     "section_steps_tabbed_k4HXUX",
     "video_carousel_rect_yT3Qmi",
