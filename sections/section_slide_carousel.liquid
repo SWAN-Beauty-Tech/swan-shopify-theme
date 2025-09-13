@@ -210,7 +210,7 @@ console.log('slide carousel Section ID: {{ section.id }}');
       }
 {% endstyle %}
 
-<slider-component class="block_container ai-slider-container-{{ ai_gen_id }}" {{ section.shopify_attributes }}>
+<slider-component-{{ ai_gen_id }} class="block_container ai-slider-container-{{ ai_gen_id }}" {{ section.shopify_attributes }}>
   {% for i in (1..4) %}
     {% liquid
       assign slide_image_key = 'slide_' | append: i | append: '_image'
@@ -285,27 +285,40 @@ console.log('slide carousel Section ID: {{ section.id }}');
       </button>
     {% endfor %}
   </div>
-
-</slider-component>
+</slider-component-{{ ai_gen_id }}>
 <script>
-  (function() {
-    class SliderComponent extends HTMLElement {
+console.log('Slider script loading for {{ ai_gen_id }}');
+
+(function() {
+  'use strict';
+  
+  // Wait for DOM to be ready
+  document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM ready, initializing slider {{ ai_gen_id }}');
+    
+    class SliderComponent{{ ai_gen_id }} extends HTMLElement {
       constructor() {
         super();
         this.currentSlide = 1;
         this.totalSlides = 4;
         this.autoSlideInterval = null;
+        this.genId = '{{ ai_gen_id }}'; // Use the Liquid variable directly
       }
 
       connectedCallback() {
-        // Get the dynamic ID from the class name
-        const container = this.querySelector('[class*="ai-slider-container-"]');
-        const classList = container.className.split(' ');
-        const sliderClass = classList.find(cls => cls.startsWith('ai-slider-container-'));
-        this.genId = sliderClass.replace('ai-slider-container-', '');
+        console.log('Slider connected with ID:', this.genId);
         
+        // Use the genId directly instead of trying to extract from class
         this.slides = this.querySelectorAll('.ai-slider-slide-' + this.genId);
         this.navDots = this.querySelectorAll('.ai-slider-nav-dot-' + this.genId);
+        
+        console.log('Found slides:', this.slides.length);
+        console.log('Found nav dots:', this.navDots.length);
+
+        if (this.slides.length === 0 || this.navDots.length === 0) {
+          console.error('Slides or nav dots not found for ID:', this.genId);
+          return;
+        }
 
         this.setupEventListeners();
         this.startAutoSlide();
@@ -317,7 +330,8 @@ console.log('slide carousel Section ID: {{ section.id }}');
 
       setupEventListeners() {
         this.navDots.forEach((dot, index) => {
-          dot.addEventListener('click', () => {
+          dot.addEventListener('click', (e) => {
+            console.log('Nav dot clicked:', index + 1);
             this.goToSlide(index + 1);
             this.resetAutoSlide();
           });
@@ -333,6 +347,8 @@ console.log('slide carousel Section ID: {{ section.id }}');
       }
 
       goToSlide(slideNumber) {
+        console.log('Going to slide:', slideNumber);
+        
         this.slides.forEach((slide, index) => {
           slide.classList.toggle('active', index + 1 === slideNumber);
         });
@@ -352,7 +368,7 @@ console.log('slide carousel Section ID: {{ section.id }}');
       startAutoSlide() {
         this.autoSlideInterval = setInterval(() => {
           this.nextSlide();
-        }, 5000); // Changed to 5 seconds for better testing
+        }, 5000);
       }
 
       stopAutoSlide() {
@@ -368,9 +384,14 @@ console.log('slide carousel Section ID: {{ section.id }}');
       }
     }
 
-    customElements.define('slider-component', SliderComponent);
-  })();
+    // Use a unique custom element name
+    customElements.define('slider-component-{{ ai_gen_id }}', SliderComponent{{ ai_gen_id }});
+    
+    console.log('Slider {{ ai_gen_id }} initialized successfully');
+  });
+})();
 </script>
+
 
 {% schema %}
 {
