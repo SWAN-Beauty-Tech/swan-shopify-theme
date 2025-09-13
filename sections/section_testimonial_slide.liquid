@@ -429,12 +429,7 @@
     }
 {% endstyle %}
 
-<testimonial-slider-{{ ai_gen_id }}
-  class="block_container ai-testimonial-slider-{{ ai_gen_id }}"
-  data-autoplay="{{ section.settings.autoplay_enabled }}"
-  data-autoplay-delay="{{ section.settings.autoplay_delay }}"
-  {{ section.shopify_attributes }}
->
+<testimonial-slider-component class="block_container ai-testimonial-slider-{{ ai_gen_id }}" ...>
   <div class="ai-testimonial-slider__container-{{ ai_gen_id }}">
     {% for i in (1..8) %}
       {% liquid
@@ -631,102 +626,103 @@
       {% endif %}
     {% endfor %}
   </div>
-</testimonial-slider-{{ ai_gen_id }}>
+</testimonial-slider-component>
 
 <script>
   (function() {
-    class TestimonialSlider{{ ai_gen_id }} extends HTMLElement {
-      constructor() {
-        super();
-        this.currentSlide = 0;
-        this.slides = [];
-        this.tabs = [];
-        this.autoplayTimer = null;
-        this.isHovered = false;
-      }
+    class TestimonialSlider extends HTMLElement {
+  constructor() {
+    super();
+    this.genId = '{{ ai_gen_id }}';
+    this.currentSlide = 0;
+    this.slides = [];
+    this.tabs = [];
+    this.autoplayTimer = null;
+    this.isHovered = false;
+  }
 
-      connectedCallback() {
-        this.slides = Array.from(this.querySelectorAll('.ai-testimonial-slider__slide-{{ ai_gen_id }}'));
-        this.tabs = Array.from(this.querySelectorAll('.ai-testimonial-slider__tab-{{ ai_gen_id }}'));
-        this.prevButton = this.querySelector('.ai-testimonial-slider__nav-{{ ai_gen_id }}--prev');
-        this.nextButton = this.querySelector('.ai-testimonial-slider__nav-{{ ai_gen_id }}--next');
+  connectedCallback() {
+    this.slides = Array.from(this.querySelectorAll('.ai-testimonial-slider__slide-' + this.genId));
+    this.tabs = Array.from(this.querySelectorAll('.ai-testimonial-slider__tab-' + this.genId));
+    this.prevButton = this.querySelector('.ai-testimonial-slider__nav-' + this.genId + '--prev');
+    this.nextButton = this.querySelector('.ai-testimonial-slider__nav-' + this.genId + '--next');
 
-        this.autoplayEnabled = this.dataset.autoplay === 'true';
-        this.autoplayDelay = parseInt(this.dataset.autoplayDelay) * 1000;
+    this.autoplayEnabled = this.dataset.autoplay === 'true';
+    this.autoplayDelay = parseInt(this.dataset.autoplayDelay) * 1000;
 
-        this.setupEventListeners();
-        this.startAutoplay();
-      }
+    this.setupEventListeners();
+    this.startAutoplay();
+  }
 
-      setupEventListeners() {
-        this.prevButton.addEventListener('click', () => this.prevSlide());
-        this.nextButton.addEventListener('click', () => this.nextSlide());
+  setupEventListeners() {
+    this.prevButton.addEventListener('click', () => this.prevSlide());
+    this.nextButton.addEventListener('click', () => this.nextSlide());
 
-        this.tabs.forEach((tab, index) => {
-          tab.addEventListener('click', () => this.goToSlide(index));
-          tab.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-              e.preventDefault();
-              this.goToSlide(index);
-            }
-          });
-        });
-
-        this.addEventListener('mouseenter', () => {
-          this.isHovered = true;
-          this.stopAutoplay();
-        });
-
-        this.addEventListener('mouseleave', () => {
-          this.isHovered = false;
-          this.startAutoplay();
-        });
-      }
-
-      goToSlide(index) {
-        if (index === this.currentSlide || index >= this.slides.length) return;
-
-        this.slides[this.currentSlide].classList.remove('active');
-        this.tabs[this.currentSlide].classList.remove('active');
-
-        this.currentSlide = index;
-
-        this.slides[this.currentSlide].classList.add('active');
-        this.tabs[this.currentSlide].classList.add('active');
-      }
-
-      nextSlide() {
-        const nextIndex = (this.currentSlide + 1) % this.slides.length;
-        this.goToSlide(nextIndex);
-      }
-
-      prevSlide() {
-        const prevIndex = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
-        this.goToSlide(prevIndex);
-      }
-
-      startAutoplay() {
-        if (!this.autoplayEnabled || this.isHovered || this.slides.length <= 1) return;
-
-        this.stopAutoplay();
-        this.autoplayTimer = setInterval(() => {
-          this.nextSlide();
-        }, this.autoplayDelay);
-      }
-
-      stopAutoplay() {
-        if (this.autoplayTimer) {
-          clearInterval(this.autoplayTimer);
-          this.autoplayTimer = null;
+    this.tabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => this.goToSlide(index));
+      tab.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          this.goToSlide(index);
         }
-      }
+      });
+    });
 
-      disconnectedCallback() {
-        this.stopAutoplay();
-      }
+    this.addEventListener('mouseenter', () => {
+      this.isHovered = true;
+      this.stopAutoplay();
+    });
+
+    this.addEventListener('mouseleave', () => {
+      this.isHovered = false;
+      this.startAutoplay();
+    });
+  }
+
+  goToSlide(index) {
+    if (index === this.currentSlide || index >= this.slides.length) return;
+
+    this.slides[this.currentSlide].classList.remove('active');
+    this.tabs[this.currentSlide].classList.remove('active');
+
+    this.currentSlide = index;
+
+    this.slides[this.currentSlide].classList.add('active');
+    this.tabs[this.currentSlide].classList.add('active');
+  }
+
+  nextSlide() {
+    const nextIndex = (this.currentSlide + 1) % this.slides.length;
+    this.goToSlide(nextIndex);
+  }
+
+  prevSlide() {
+    const prevIndex = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
+    this.goToSlide(prevIndex);
+  }
+
+  startAutoplay() {
+    if (!this.autoplayEnabled || this.isHovered || this.slides.length <= 1) return;
+
+    this.stopAutoplay();
+    this.autoplayTimer = setInterval(() => {
+      this.nextSlide();
+    }, this.autoplayDelay);
+  }
+
+  stopAutoplay() {
+    if (this.autoplayTimer) {
+      clearInterval(this.autoplayTimer);
+      this.autoplayTimer = null;
     }
+  }
 
-    customElements.define('testimonial-slider-{{ ai_gen_id }}', TestimonialSlider{{ ai_gen_id }});
+  disconnectedCallback() {
+    this.stopAutoplay();
+  }
+}
+
+customElements.define('testimonial-slider-component', TestimonialSlider);
   })();
 </script>
 
