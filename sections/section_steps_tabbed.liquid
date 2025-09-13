@@ -292,10 +292,7 @@ console.log('steps tabbed Section ID: {{ section.id }}');
       }
     }
   }
-{% endstyle %}<step-guide-{{ ai_gen_id }}
-  class="ai-step-guide-{{ ai_gen_id }}"
-  {{ section.shopify_attributes }}
->
+{% endstyle %}<step-guide-component class="ai-step-guide-{{ ai_gen_id }}" {{ section.shopify_attributes }}>
   <div class="block_container ai-step-guide__content-{{ ai_gen_id }}">
     <div class="ai-step-guide__left-{{ ai_gen_id }}">
       {% for i in (1..5) %}
@@ -362,10 +359,10 @@ console.log('steps tabbed Section ID: {{ section.id }}');
       {% endfor %}
     </div>
   </div>
-</step-guide-{{ ai_gen_id }}>
+</step-guide-component>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    class StepGuide{{ ai_gen_id }} extends HTMLElement {
+    class StepGuide extends HTMLElement {
       constructor() {
         super();
       }
@@ -373,22 +370,24 @@ console.log('steps tabbed Section ID: {{ section.id }}');
       connectedCallback() {
         // Add a small delay to ensure all elements are rendered
         setTimeout(() => {
-          this.steps = this.querySelectorAll('.ai-step-guide__step-{{ ai_gen_id }}');
-          this.images = this.querySelectorAll('.ai-step-guide__image-container-{{ ai_gen_id }}');
+          const genId = '{{ ai_gen_id }}';
+          this.steps = this.querySelectorAll('.ai-step-guide__step-' + genId);
+          this.images = this.querySelectorAll('.ai-step-guide__image-container-' + genId);
           this.setupEventListeners();
         }, 100);
       }
 
       setupEventListeners() {
+        const genId = '{{ ai_gen_id }}';
         this.steps.forEach((step) => {
           step.addEventListener('click', () => {
             const stepNumber = step.dataset.step;
-            this.setActiveStep(stepNumber);
+            this.setActiveStep(stepNumber, genId);
           });
         });
       }
 
-      setActiveStep(stepNumber) {
+      setActiveStep(stepNumber, genId) {
         this.steps.forEach((step) => {
           step.classList.remove('active');
         });
@@ -397,8 +396,8 @@ console.log('steps tabbed Section ID: {{ section.id }}');
           image.classList.remove('active');
         });
 
-        const activeStep = this.querySelector(`[data-step="${stepNumber}"].ai-step-guide__step-{{ ai_gen_id }}`);
-        const activeImage = this.querySelector(`[data-step="${stepNumber}"].ai-step-guide__image-container-{{ ai_gen_id }}`);
+        const activeStep = this.querySelector(`[data-step="${stepNumber}"].ai-step-guide__step-${genId}`);
+        const activeImage = this.querySelector(`[data-step="${stepNumber}"].ai-step-guide__image-container-${genId}`);
 
         if (activeStep) {
           activeStep.classList.add('active');
@@ -410,7 +409,8 @@ console.log('steps tabbed Section ID: {{ section.id }}');
       }
     }
 
-    customElements.define('step-guide-{{ ai_gen_id }}', StepGuide{{ ai_gen_id }});
+    // Register the custom element with a fixed name
+    customElements.define('step-guide-component', StepGuide);
   });
 </script>
 
