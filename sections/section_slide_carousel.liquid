@@ -211,10 +211,7 @@ console.log('slide carousel Section ID: {{ section.id }}');
       }
 {% endstyle %}
 
-<slider-component-{{ ai_gen_id }}
-  class="block_container ai-slider-container-{{ ai_gen_id }}"
-  {{ section.shopify_attributes }}
->
+<slider-component class="block_container ai-slider-container-{{ ai_gen_id }}" {{ section.shopify_attributes }}>
   {% for i in (1..4) %}
     {% liquid
       assign slide_image_key = 'slide_' | append: i | append: '_image'
@@ -288,20 +285,21 @@ console.log('slide carousel Section ID: {{ section.id }}');
     </div>
   {% endfor %}
 
-</slider-component-{{ ai_gen_id }}>
+</slider-component>
 <script>
   (function() {
-    class SliderComponent{{ ai_gen_id }} extends HTMLElement {
+    class SliderComponent extends HTMLElement {
       constructor() {
         super();
         this.currentSlide = 1;
         this.totalSlides = 4;
         this.autoSlideInterval = null;
+        this.genId = '{{ ai_gen_id }}';
       }
 
       connectedCallback() {
-        this.slides = this.querySelectorAll('.ai-slider-slide-{{ ai_gen_id }}');
-        this.navDots = this.querySelectorAll('.ai-slider-nav-dot-{{ ai_gen_id }}');
+        this.slides = this.querySelectorAll('.ai-slider-slide-' + this.genId);
+        this.navDots = this.querySelectorAll('.ai-slider-nav-dot-' + this.genId);
 
         this.setupEventListeners();
         this.startAutoSlide();
@@ -364,7 +362,7 @@ console.log('slide carousel Section ID: {{ section.id }}');
       }
     }
 
-    customElements.define('slider-component-{{ ai_gen_id }}', SliderComponent{{ ai_gen_id }});
+    customElements.define('slider-component', SliderComponent);
   })();
 </script>
 
