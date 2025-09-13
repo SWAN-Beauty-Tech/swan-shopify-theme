@@ -224,10 +224,7 @@
     }
   }
 {% endstyle %}
-<video-carousel-{{ ai_gen_id }}
-  class="ai-video-carousel-{{ ai_gen_id }}"
-  {{ section.shopify_attributes }}
->
+<video-carousel-component class="ai-video-carousel-{{ ai_gen_id }}" {{ section.shopify_attributes }}>
   {% assign has_videos = false %}
   {% for i in (1..5) %}
     {% assign video_key = 'video_' | append: i %}
@@ -346,13 +343,14 @@
       </p>
     </div>
   {% endif %}
-</video-carousel-{{ ai_gen_id }}>
+</video-carousel-component>
 
 <script>
   (function() {
-    class VideoCarousel{{ ai_gen_id }} extends HTMLElement {
+    class VideoCarousel extends HTMLElement {
       constructor() {
         super();
+        this.genId = '{{ ai_gen_id }}';
         this.currentIndex = 0;
         this.slides = [];
         this.videos = [];
@@ -360,12 +358,12 @@
       }
 
       connectedCallback() {
-        this.slides = Array.from(this.querySelectorAll('.ai-video-carousel__slide-{{ ai_gen_id }}'));
-        this.videos = Array.from(this.querySelectorAll('.ai-video-carousel__video-{{ ai_gen_id }}'));
-        this.track = this.querySelector('.ai-video-carousel__track-{{ ai_gen_id }}');
-        this.prevButton = this.querySelector('.ai-video-carousel__nav-button-{{ ai_gen_id }}--prev');
-        this.nextButton = this.querySelector('.ai-video-carousel__nav-button-{{ ai_gen_id }}--next');
-        this.muteButtons = Array.from(this.querySelectorAll('.ai-video-carousel__mute-button-{{ ai_gen_id }}'));
+        this.slides = Array.from(this.querySelectorAll('.ai-video-carousel__slide-' + this.genId));
+        this.videos = Array.from(this.querySelectorAll('.ai-video-carousel__video-' + this.genId));
+        this.track = this.querySelector('.ai-video-carousel__track-' + this.genId);
+        this.prevButton = this.querySelector('.ai-video-carousel__nav-button-' + this.genId + '--prev');
+        this.nextButton = this.querySelector('.ai-video-carousel__nav-button-' + this.genId + '--next');
+        this.muteButtons = Array.from(this.querySelectorAll('.ai-video-carousel__mute-button-' + this.genId));
 
         if (this.slides.length === 0) return;
 
@@ -437,8 +435,8 @@
       toggleMute(videoIndex) {
         const video = this.videos[videoIndex];
         const button = this.muteButtons[videoIndex];
-        const muteIcon = button.querySelector('.ai-video-carousel__mute-icon-{{ ai_gen_id }}');
-        const unmuteIcon = button.querySelector('.ai-video-carousel__unmute-icon-{{ ai_gen_id }}');
+        const muteIcon = button.querySelector('.ai-video-carousel__mute-icon-' + this.genId);
+        const unmuteIcon = button.querySelector('.ai-video-carousel__unmute-icon-' + this.genId);
 
         if (video.muted) {
           video.muted = false;
@@ -467,7 +465,7 @@
       }
     }
 
-    customElements.define('video-carousel-{{ ai_gen_id }}', VideoCarousel{{ ai_gen_id }});
+    customElements.define('video-carousel-component', VideoCarousel);
   })();
 </script>
 
