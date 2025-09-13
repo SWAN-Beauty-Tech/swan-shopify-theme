@@ -1,4 +1,3 @@
-
 {% assign ai_gen_id = section.id | replace: '_', '' | downcase %}
 <script>
 console.log('slide carousel Generated ID: {{ ai_gen_id }}');
@@ -272,18 +271,20 @@ console.log('slide carousel Section ID: {{ section.id }}');
         </div>
       </div>
     </div>
-    <div class="ai-slider-navigation-{{ ai_gen_id }}">
-      {% for i in (1..4) -%}
-        <button
-          class="ai-slider-nav-dot-{{ ai_gen_id }} {% if forloop.first %}active{% endif %}"
-          data-slide="{{ forloop.index }}"
-          aria-label="Go to slide {{ forloop.index }}"
-        >
-          {{ forloop.index }}
-        </button>
-      {% endfor %}
-    </div>
   {% endfor %}
+
+  <!-- Navigation moved outside of slides -->
+  <div class="ai-slider-navigation-{{ ai_gen_id }}">
+    {% for i in (1..4) -%}
+      <button
+        class="ai-slider-nav-dot-{{ ai_gen_id }} {% if forloop.first %}active{% endif %}"
+        data-slide="{{ forloop.index }}"
+        aria-label="Go to slide {{ forloop.index }}"
+      >
+        {{ forloop.index }}
+      </button>
+    {% endfor %}
+  </div>
 
 </slider-component>
 <script>
@@ -294,10 +295,15 @@ console.log('slide carousel Section ID: {{ section.id }}');
         this.currentSlide = 1;
         this.totalSlides = 4;
         this.autoSlideInterval = null;
-        this.genId = '{{ ai_gen_id }}';
       }
 
       connectedCallback() {
+        // Get the dynamic ID from the class name
+        const container = this.querySelector('[class*="ai-slider-container-"]');
+        const classList = container.className.split(' ');
+        const sliderClass = classList.find(cls => cls.startsWith('ai-slider-container-'));
+        this.genId = sliderClass.replace('ai-slider-container-', '');
+        
         this.slides = this.querySelectorAll('.ai-slider-slide-' + this.genId);
         this.navDots = this.querySelectorAll('.ai-slider-nav-dot-' + this.genId);
 
@@ -346,7 +352,7 @@ console.log('slide carousel Section ID: {{ section.id }}');
       startAutoSlide() {
         this.autoSlideInterval = setInterval(() => {
           this.nextSlide();
-        }, 15000);
+        }, 5000); // Changed to 5 seconds for better testing
       }
 
       stopAutoSlide() {
