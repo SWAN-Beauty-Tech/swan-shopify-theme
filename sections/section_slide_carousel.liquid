@@ -130,11 +130,11 @@ console.log('slide carousel Section ID: {{ section.id }}');
       }
 
       .ai-slider-navigation-{{ ai_gen_id }} {
-        margin-left: 60px;
-        background:red;
+        /* margin-left: {{section.settings.nav_margin_left}}px; */
+        /* background:red; */
         position: absolute;
         bottom: 30px;
-        left: 60px;
+        left: {{section.settings.nav_margin_left}}px;
         z-index: 3;
         display: flex;
         gap: 12px;
@@ -178,7 +178,7 @@ console.log('slide carousel Section ID: {{ section.id }}');
           text-align: center;
         }
          .ai-slider-navigation-{{ ai_gen_id }} {
-        margin-left: 20px;
+       left: {{section.settings.nav_margin_left_mobile}}px;
       }
         .ai-slider-icon-{{ ai_gen_id }} {
           {% comment %} background:red; {% endcomment %}
@@ -577,7 +577,27 @@ console.log('Slider script loading for {{ ai_gen_id }}');
       "unit": "px",
       "label": "CTA text size",
       "default": 16
-    },
+    }, 
+    {
+      "type": "range",
+      "id": "nav_margin_left",
+      "min": 10,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Nav margin left",
+      "default": 16
+    }, 
+    {
+      "type": "range",
+      "id": "nav_margin_left_mobile",
+      "min": 10,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Nav margin left mobile",
+      "default": 16
+    }, 
     {
       "type": "header",
       "content": "Navigation styling"
