@@ -9,14 +9,13 @@
     
     Mute button at bottom right of each video
     
-    Infinite loop functionality with duplicated videos
+    Infinite loop functionality
     
     Smooth transitions between slides
-    
-    Optimized for mobile with minimal side padding
 {% endcomment %}
 
 {% assign ai_gen_id = section.id | replace: '_', '' | downcase %}
+
 
 {% style %}
 
@@ -43,8 +42,9 @@
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 60px 50px;
+    padding: 100px 60px;
     overflow: hidden;
+    max-width: 1200px;
   }
 
   .ai-video-carousel__container-{{ ai_gen_id }} {
@@ -53,15 +53,13 @@
     align-items: center;
     justify-content: center;
     height: {{ section.settings.video_height }}px;
-    overflow: hidden;
   }
 
   .ai-video-carousel__track-{{ ai_gen_id }} {
     display: flex;
     align-items: center;
     gap: {{ section.settings.video_gap }}px;
-    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    will-change: transform;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);will-change: transform;
   }
 
   .ai-video-carousel__slide-{{ ai_gen_id }} {
@@ -77,8 +75,7 @@
   }
 
   .ai-video-carousel__slide-{{ ai_gen_id }}.active {
-    transform: scale(1);
-    z-index: 2;
+    transform: scale(1);z-index: 2;
   }
 
   .ai-video-carousel__slide-{{ ai_gen_id }}:not(.active) {
@@ -164,11 +161,11 @@
   }
 
   .ai-video-carousel__nav-button-{{ ai_gen_id }}--prev {
-    left: 5px;
+    left: 10px;
   }
 
   .ai-video-carousel__nav-button-{{ ai_gen_id }}--next {
-    right: 5px;
+    right: 10px;
   }
 
   .ai-video-carousel__nav-button-{{ ai_gen_id }} svg {
@@ -192,15 +189,14 @@
     font-size: 14px;
   }
 
-  /* Mobile optimizations */
   @media screen and (max-width: 768px) {
     .ai-video-carousel-{{ ai_gen_id }} {
-      padding: 40px 10px; /* Reduced side padding for mobile */
+      padding: 60px 40px;
     }
 
     .ai-video-carousel__slide-{{ ai_gen_id }} {
-      width: {{ section.settings.video_width | times: 0.75 }}px;
-      height: {{ section.settings.video_height | times: 0.75 }}px;
+      width: {{ section.settings.video_width | times: 0.8 }}px;
+      height: {{ section.settings.video_height | times: 0.8 }}px;
     }
 
     .ai-video-carousel__nav-button-{{ ai_gen_id }} {
@@ -209,55 +205,32 @@
     }
 
     .ai-video-carousel__nav-button-{{ ai_gen_id }}--prev {
-      left: 2px;
+      left: 5px;
     }
 
     .ai-video-carousel__nav-button-{{ ai_gen_id }}--next {
-      right: 2px;
-    }
-
-    .ai-video-carousel__nav-button-{{ ai_gen_id }} svg {
-      width: 16px;
-      height: 16px;
-    }
-
-    .ai-video-carousel__mute-button-{{ ai_gen_id }} {
-      width: 32px;
-      height: 32px;
-      bottom: 8px;
-      right: 8px;
-    }
-
-    .ai-video-carousel__mute-button-{{ ai_gen_id }} svg {
-      width: 14px;
-      height: 14px;
+      right: 5px;
     }
   }
 
   @media screen and (max-width: 480px) {
     .ai-video-carousel-{{ ai_gen_id }} {
-      padding: 30px 5px; /* Minimal side padding for small screens */
+      padding: 20px;
     }
 
     .ai-video-carousel__slide-{{ ai_gen_id }} {
       width: {{ section.settings.video_width | times: 0.6 }}px;
       height: {{ section.settings.video_height | times: 0.6 }}px;
     }
-
-    .ai-video-carousel__container-{{ ai_gen_id }} {
-      height: {{ section.settings.video_height | times: 0.6 }}px;
-    }
   }
 {% endstyle %}
-
 <video-carousel-component class="ai-video-carousel-{{ ai_gen_id }}" {{ section.shopify_attributes }}>
   {% assign has_videos = false %}
-  {% assign video_count = 0 %}
   {% for i in (1..5) %}
     {% assign video_key = 'video_' | append: i %}
     {% if section.settings[video_key] != blank %}
       {% assign has_videos = true %}
-      {% assign video_count = video_count | plus: 1 %}
+      {% break %}
     {% endif %}
   {% endfor %}
 
@@ -281,7 +254,6 @@
       </button>
 
       <div class="ai-video-carousel__track-{{ ai_gen_id }}">
-        {% comment %} Original videos {% endcomment %}
         {% for i in (1..5) %}
           {% assign video_key = 'video_' | append: i %}
           {% assign video = section.settings[video_key] %}
@@ -296,7 +268,7 @@
             {% endfor %}
 
             {% if preferred_source != '' %}
-              <div class="ai-video-carousel__slide-{{ ai_gen_id }}" data-slide-index="{{ forloop.index0 }}" data-original-index="{{ forloop.index0 }}">
+              <div class="ai-video-carousel__slide-{{ ai_gen_id }}" data-slide-index="{{ forloop.index0 }}">
                 <video
                   class="ai-video-carousel__video-{{ ai_gen_id }}"
                   src="{{ preferred_source }}"
@@ -310,71 +282,6 @@
                   class="ai-video-carousel__mute-button-{{ ai_gen_id }}"
                   aria-label="Toggle mute"
                   data-video-index="{{ forloop.index0 }}"
-                >
-                  <svg
-                    class="ai-video-carousel__mute-icon-{{ ai_gen_id }}"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <polygon points="11,5 6,9 2,9 2,15 6,15 11,19"></polygon>
-                    <line x1="23" y1="9" x2="17" y2="15"></line>
-                    <line x1="17" y1="9" x2="23" y2="15"></line>
-                  </svg>
-                  <svg
-                    class="ai-video-carousel__unmute-icon-{{ ai_gen_id }}"
-                    style="display: none;"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <polygon points="11,5 6,9 2,9 2,15 6,15 11,19"></polygon>
-                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
-                  </svg>
-                </button>
-              </div>
-            {% endif %}
-          {% endif %}
-        {% endfor %}
-
-        {% comment %} Duplicate videos for infinite scroll {% endcomment %}
-        {% for i in (1..5) %}
-          {% assign video_key = 'video_' | append: i %}
-          {% assign video = section.settings[video_key] %}
-
-          {% if video != blank %}
-            {% assign preferred_source = '' %}
-            {% for source in video.sources %}
-              {% unless source.format contains 'm3u8' %}
-                {% assign preferred_source = source.url %}
-                {% break %}
-              {% endunless %}
-            {% endfor %}
-
-            {% if preferred_source != '' %}
-              <div class="ai-video-carousel__slide-{{ ai_gen_id }}" data-slide-index="{{ forloop.index0 | plus: video_count }}" data-original-index="{{ forloop.index0 }}">
-                <video
-                  class="ai-video-carousel__video-{{ ai_gen_id }}"
-                  src="{{ preferred_source }}"
-                  loop
-                  muted
-                  playsinline
-                  preload="metadata"
-                ></video>
-
-                <button
-                  class="ai-video-carousel__mute-button-{{ ai_gen_id }}"
-                  aria-label="Toggle mute"
-                  data-video-index="{{ forloop.index0 | plus: video_count }}"
-                  data-original-index="{{ forloop.index0 }}"
                 >
                   <svg
                     class="ai-video-carousel__mute-icon-{{ ai_gen_id }}"
@@ -447,9 +354,7 @@
         this.currentIndex = 0;
         this.slides = [];
         this.videos = [];
-        this.originalVideoCount = 0;
         this.autoplayInterval = null;
-        this.isTransitioning = false;
       }
 
       connectedCallback() {
@@ -462,7 +367,6 @@
 
         if (this.slides.length === 0) return;
 
-        this.originalVideoCount = this.slides.length / 2; // Since we duplicate videos
         this.setupEventListeners();
         this.updateCarousel();
         this.startAutoplay();
@@ -483,44 +387,6 @@
         this.addEventListener('mouseenter', () => this.stopAutoplay());
         this.addEventListener('mouseleave', () => this.startAutoplay());
 
-        // Add touch/swipe support for mobile
-        let startX, startY, currentX, currentY;
-        let isSwiping = false;
-
-        this.addEventListener('touchstart', (e) => {
-          startX = e.touches[0].clientX;
-          startY = e.touches[0].clientY;
-          isSwiping = true;
-        });
-
-        this.addEventListener('touchmove', (e) => {
-          if (!isSwiping) return;
-          currentX = e.touches[0].clientX;
-          currentY = e.touches[0].clientY;
-          
-          // Prevent vertical scrolling when swiping horizontally
-          if (Math.abs(currentX - startX) > Math.abs(currentY - startY)) {
-            e.preventDefault();
-          }
-        });
-
-        this.addEventListener('touchend', (e) => {
-          if (!isSwiping) return;
-          
-          const deltaX = currentX - startX;
-          const threshold = 50;
-
-          if (Math.abs(deltaX) > threshold) {
-            if (deltaX > 0) {
-              this.goToPrevious();
-            } else {
-              this.goToNext();
-            }
-          }
-          
-          isSwiping = false;
-        });
-
         this.videos.forEach((video, index) => {
           video.addEventListener('loadeddata', () => {
             if (index === this.currentIndex) {
@@ -528,82 +394,28 @@
             }
           });
         });
-
-        // Handle infinite scroll reset
-        this.track.addEventListener('transitionend', () => {
-          this.handleInfiniteScroll();
-          this.isTransitioning = false;
-        });
       }
 
       goToNext() {
-        if (this.isTransitioning) return;
-        this.isTransitioning = true;
         this.currentIndex = (this.currentIndex + 1) % this.slides.length;
         this.updateCarousel();
       }
 
       goToPrevious() {
-        if (this.isTransitioning) return;
-        this.isTransitioning = true;
         this.currentIndex = this.currentIndex === 0 ? this.slides.length - 1 : this.currentIndex - 1;
         this.updateCarousel();
       }
 
-      handleInfiniteScroll() {
-        if (this.currentIndex >= this.originalVideoCount) {
-          // Reset to beginning without animation
-          this.track.style.transition = 'none';
-          this.currentIndex = this.currentIndex - this.originalVideoCount;
-          this.updateCarouselPosition();
-          
-          // Re-enable transition after a brief delay
-          setTimeout(() => {
-            this.track.style.transition = 'transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-          }, 50);
-        } else if (this.currentIndex < 0) {
-          // Reset to end without animation
-          this.track.style.transition = 'none';
-          this.currentIndex = this.currentIndex + this.originalVideoCount;
-          this.updateCarouselPosition();
-          
-          // Re-enable transition after a brief delay
-          setTimeout(() => {
-            this.track.style.transition = 'transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-          }, 50);
-        }
-      }
-
       updateCarousel() {
-        this.updateCarouselPosition();
-        this.updateVideoStates();
-      }
-
-      updateCarouselPosition() {
         if (this.slides.length === 0) return;
 
-        let slideWidth, gap;
-        
-        // Adjust slide width and gap based on screen size
-        if (window.innerWidth <= 480) {
-          slideWidth = {{ section.settings.video_width }} * 0.5;
-          gap = {{ section.settings.video_gap }} * 0.7;
-        } else if (window.innerWidth <= 768) {
-          slideWidth = {{ section.settings.video_width }} * 0.65;
-          gap = {{ section.settings.video_gap }} * 0.8;
-        } else {
-          slideWidth = {{ section.settings.video_width }};
-          gap = {{ section.settings.video_gap }};
-        }
-
+        const slideWidth = {{ section.settings.video_width }};
+        const gap = {{ section.settings.video_gap }};
         const containerWidth = this.track.parentElement.offsetWidth;
         const centerOffset = containerWidth / 2 - slideWidth / 2;
         const translateX = centerOffset - (this.currentIndex * (slideWidth + gap));
-        
         this.track.style.transform = `translateX(${translateX}px)`;
-      }
 
-      updateVideoStates() {
         this.slides.forEach((slide, index) => {
           const video = this.videos[index];
           if (index === this.currentIndex) {
@@ -630,48 +442,15 @@
           video.muted = false;
           muteIcon.style.display = 'none';
           unmuteIcon.style.display = 'block';
-          
-          // Sync mute state with duplicate video
-          const originalIndex = button.dataset.originalIndex;
-          if (originalIndex !== undefined) {
-            this.syncMuteState(parseInt(originalIndex), false);
-          }
         } else {
           video.muted = true;
           muteIcon.style.display = 'block';
           unmuteIcon.style.display = 'none';
-          
-          // Sync mute state with duplicate video
-          const originalIndex = button.dataset.originalIndex;
-          if (originalIndex !== undefined) {
-            this.syncMuteState(parseInt(originalIndex), true);
-          }
         }
       }
 
-      syncMuteState(originalIndex, muted) {
-        // Find all videos with the same original index and sync their mute state
-        this.muteButtons.forEach((button, index) => {
-          const buttonOriginalIndex = parseInt(button.dataset.originalIndex || button.dataset.videoIndex);
-          if (buttonOriginalIndex === originalIndex && index !== this.currentIndex) {
-            const video = this.videos[index];
-            const muteIcon = button.querySelector('.ai-video-carousel__mute-icon-' + this.genId);
-            const unmuteIcon = button.querySelector('.ai-video-carousel__unmute-icon-' + this.genId);
-            
-            video.muted = muted;
-            if (muted) {
-              muteIcon.style.display = 'block';
-              unmuteIcon.style.display = 'none';
-            } else {
-              muteIcon.style.display = 'none';
-              unmuteIcon.style.display = 'block';
-            }
-          }
-        });
-      }
-
       startAutoplay() {
-        if ({{ section.settings.autoplay_enabled | json }} && this.originalVideoCount > 1) {
+        if ({{ section.settings.autoplay_enabled | json }} && this.slides.length > 1) {
           this.autoplayInterval = setInterval(() => {
             this.goToNext();
           }, {{ section.settings.autoplay_duration }} * 1000);
@@ -753,7 +532,7 @@
   "max": 60,
   "step": 2,
   "unit": "px",
-  "default": 6
+  "default": 20
 },
 {
   "type": "range",
@@ -773,7 +552,7 @@
   "max": 60,
   "step": 2,
   "unit": "px",
-  "default": 6
+  "default": 10
 },
     {
       "type": "header",
