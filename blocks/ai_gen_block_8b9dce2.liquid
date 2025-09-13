@@ -82,7 +82,7 @@
     display:flex;
     flex-direction:column;
     justify-content:center;
-    background:red;
+    {% comment %} background:red; {% endcomment %}
     align-items:center;
     position: relative;
     z-index: 2;
@@ -100,6 +100,7 @@
     height: {{section.settings.img_height}};
     display: block;
     margin:0 auto;
+    background:red;
   }
 
   .ai-product-showcase-image-placeholder-{{ ai_gen_id }} {
