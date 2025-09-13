@@ -1024,6 +1024,7 @@
             "overlay_color": "#e1d9d9",
             "overlay_opacity": 30,
             "product_image": "shopify://shop_images/mirror.png",
+            "image_height": "200px",
             "product_title": "<strong>Premium Product Name</strong>",
             "product_description": "<p>Discover the perfect blend of style and functionality with our premium product. Crafted with attention to detail and designed to exceed your expectations.</p>",
             "cta_text": "Shop Now",
