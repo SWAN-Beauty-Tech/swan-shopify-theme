@@ -582,8 +582,20 @@
       updateCarouselPosition() {
         if (this.slides.length === 0) return;
 
-        const slideWidth = {{ section.settings.video_width }};
-        const gap = {{ section.settings.video_gap }};
+        let slideWidth, gap;
+        
+        // Adjust slide width and gap based on screen size
+        if (window.innerWidth <= 480) {
+          slideWidth = {{ section.settings.video_width }} * 0.5;
+          gap = {{ section.settings.video_gap }} * 0.7;
+        } else if (window.innerWidth <= 768) {
+          slideWidth = {{ section.settings.video_width }} * 0.65;
+          gap = {{ section.settings.video_gap }} * 0.8;
+        } else {
+          slideWidth = {{ section.settings.video_width }};
+          gap = {{ section.settings.video_gap }};
+        }
+
         const containerWidth = this.track.parentElement.offsetWidth;
         const centerOffset = containerWidth / 2 - slideWidth / 2;
         const translateX = centerOffset - (this.currentIndex * (slideWidth + gap));
