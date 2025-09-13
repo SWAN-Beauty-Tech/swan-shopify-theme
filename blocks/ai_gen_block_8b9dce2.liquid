@@ -92,7 +92,7 @@
 
   .ai-product-showcase-image-container-{{ ai_gen_id }} img {
     width: 100%;
-    height: auto;
+    height: {{section.settings.img_height}};
     display: block;
   }
 
@@ -299,23 +299,27 @@
 >
   <div class="ai-product-showcase-column-{{ ai_gen_id }} ai-product-showcase-left-column-{{ ai_gen_id }}">
     <div class="ai-product-showcase-left-content-{{ ai_gen_id }}">
-      <div class="ai-product-showcase-image-container-{{ ai_gen_id }}">
-        {% if block.settings.product_image %}
-          <img
-            src="{{ block.settings.product_image | image_url: width: 800 }}"
-            alt="{{ block.settings.product_image.alt | escape }}"
-            loading="lazy"
-            width="{{ block.settings.product_image.width }}"
-            height="{{ block.settings.product_image.height }}"
-          >
-        {% else %}
-          <div class="ai-product-showcase-image-placeholder-{{ ai_gen_id }}">
-            {{ 'product-1' | placeholder_svg_tag }}<div class="ai-product-showcase-empty-state-{{ ai_gen_id }}">
-              Add a product image
-            </div>
-          </div>
-        {% endif %}
+    <div class="ai-product-showcase-image-container-{{ ai_gen_id }}">
+  {% if block.settings.product_image %}
+    <img 
+      src="{{ block.settings.product_image | image_url: width: 800 }}" 
+      alt="{{ block.settings.product_image.alt | escape }}" 
+      loading="lazy" 
+      width="800"
+      height="{{ block.settings.product_image.height | times: 800 | divided_by: block.settings.product_image.width | round }}"
+      style="height: {{ block.settings.image_height }}; width: auto;"
+      class="ai-product-showcase-image-{{ ai_gen_id }}"
+    >
+  {% else %}
+    <div class="ai-product-showcase-image-placeholder-{{ ai_gen_id }}">
+      {{ 'product-1' | placeholder_svg_tag }}
+      <div class="ai-product-showcase-empty-state-{{ ai_gen_id }}">
+        Add a product image
       </div>
+    </div>
+  {% endif %}
+</div>
+
 
       <div class="ai-product-showcase-content-{{ ai_gen_id }}">
         {% if block.settings.product_title != blank %}
@@ -525,6 +529,13 @@
       "id": "product_image",
       "label": "Product image"
     },
+    {
+          "type": "text",
+          "id": "image_height",
+          "label": "Image height (CSS)",
+          "default": "400px",
+          "info": "Enter any CSS value (e.g. 300px, 50%, auto, 60vh)"
+        },
     {
       "type": "inline_richtext",
       "id": "product_title",
