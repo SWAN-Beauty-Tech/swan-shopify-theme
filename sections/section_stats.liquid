@@ -58,7 +58,7 @@
 
       @media (min-width: 768px) {
         .stats-grid-{{ section.id }} {
-          grid-template-columns: repeat(4, 1fr);
+          grid-template-columns: repeat(4, 2fr);
         }
 
         .stat-item-{{ section.id }} {
@@ -130,7 +130,7 @@
       /* Mobile responsiveness */
       @media (max-width: 767px) {
         .stats-grid-{{ section.id }} {
-          grid-template-columns: repeat(2, 1fr);
+          grid-template-columns: repeat(2, 2fr);
           gap: {{ section.settings.mobile_gap }}px;
         }
 
@@ -146,7 +146,7 @@
 
       @media (max-width: 480px) {
         .stats-grid-{{ section.id }} {
-          grid-template-columns: 1fr;
+          grid-template-columns: 2fr;
         }
       }
 {%- endstyle -%}
