@@ -46,7 +46,7 @@
       flex-direction:column;
       justify-content: left;
       justify-items: left;
-      gap:20px;
+      gap:{{ section.settings.item_gap }};
       align-items:left;
       text-align: left;
       padding: {{ section.settings.item_padding }}px;
@@ -383,7 +383,7 @@
     {
       "type": "range",
       "id": "item_gap",
-      "min": 2,
+      "min": 0,
       "max": 100,
       "step": 2,
       "unit": "px",
@@ -393,7 +393,7 @@
       {
       "type": "range",
       "id": "mobile_item_gap",
-      "min": 2,
+      "min": 0,
       "max": 60,
       "step": 2,
       "unit": "px",
