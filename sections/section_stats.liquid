@@ -104,7 +104,7 @@
         font-size: {{ section.settings.counter_font_size }}px;
         font-weight: {{ section.settings.counter_font_weight }};
         color: {{ section.settings.counter_color }};
-        line-height: 1.1;
+        /* line-height: 1.1; */
         /* background:red; */
         /* margin-bottom: {{ section.settings.counter_margin }}px; */
         font-family: {{ section.settings.counter_font_family }};
@@ -194,12 +194,8 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const counters = document.querySelectorAll(
-      ".stat-number-{{ section.id }}"
-    );
-    const statsSection = document.querySelector(
-      ".stats-section-{{ section.id }}"
-    );
+    const counters = document.querySelectorAll(".stat-number-{{ section.id }}");
+    const statsSection = document.querySelector(".stats-section-{{ section.id }}");
 
     function animateCounter(counter) {
       const target = +counter.dataset.target;
@@ -208,7 +204,6 @@
       const steps = Math.ceil(duration / stepTime);
       let current = 0;
       const increment = target / steps;
-
       const suffix = counter.dataset.suffix || "";
 
       const timer = setInterval(() => {
@@ -223,7 +218,7 @@
 
     function startCounterAnimations() {
       counters.forEach((counter, index) => {
-        // Reset each time it becomes visible
+        // reset counter every time
         counter.textContent = "0" + (counter.dataset.suffix || "");
         setTimeout(() => {
           animateCounter(counter);
@@ -235,7 +230,12 @@
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            startCounterAnimations();
+            startCounterAnimations(); // trigger when section appears
+          } else {
+            // reset numbers when leaving so it re-triggers next time
+            counters.forEach((counter) => {
+              counter.textContent = "0" + (counter.dataset.suffix || "");
+            });
           }
         });
       },
@@ -245,6 +245,7 @@
     observer.observe(statsSection);
   });
 </script>
+
 
 {% schema %}
 {
