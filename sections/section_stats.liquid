@@ -189,67 +189,59 @@
 </section>
 
 <script>
-  (function() {
-    const statsSection = document.getElementById('stats-{{ section.id }}');
-    const counters = statsSection.querySelectorAll('[data-target]');
-    let hasAnimated = false;
-
-    function formatNumber(num) {
-      return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    }
+  document.addEventListener("DOMContentLoaded", function () {
+    const counters = document.querySelectorAll(
+      ".stat-number-{{ section.id }}"
+    );
+    const statsSection = document.querySelector(
+      ".stats-section-{{ section.id }}"
+    );
 
     function animateCounter(counter) {
-      const target = parseInt(counter.dataset.target);
-      const suffix = counter.dataset.suffix || '';
-      const duration = parseInt(counter.dataset.duration) || 2000;
-      const startTime = performance.now();
+      const target = +counter.dataset.target;
+      const duration = 2000;
+      const stepTime = 50;
+      const steps = Math.ceil(duration / stepTime);
+      let current = 0;
+      const increment = target / steps;
 
-      function updateCounter(currentTime) {
-        const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / duration, 1);
+      const suffix = counter.dataset.suffix || "";
 
-        // Easing function for smooth animation
-        const easeOutQuad = 1 - (1 - progress) * (1 - progress);
-        const current = Math.floor(target * easeOutQuad);
-
-        counter.textContent = formatNumber(current) + suffix;
-
-        if (progress < 1) {
-          requestAnimationFrame(updateCounter);
-        } else {
-          counter.textContent = formatNumber(target) + suffix;
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          current = target;
+          clearInterval(timer);
         }
-      }
-
-      requestAnimationFrame(updateCounter);
+        counter.textContent = Math.floor(current) + suffix;
+      }, stepTime);
     }
 
     function startCounterAnimations() {
-      if (hasAnimated) return;
-
-      hasAnimated = true;
       counters.forEach((counter, index) => {
+        // Reset each time it becomes visible
+        counter.textContent = "0" + (counter.dataset.suffix || "");
         setTimeout(() => {
           animateCounter(counter);
         }, index * {{ section.settings.stagger_delay }});
       });
     }
 
-    // Intersection Observer for viewport detection
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting && entry.intersectionRatio >= {{ section.settings.trigger_threshold }}) {
-          startCounterAnimations();
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {
-      threshold: {{ section.settings.trigger_threshold }}
-    });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            startCounterAnimations();
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
 
     observer.observe(statsSection);
-  })();
+  });
 </script>
+
 
 {% schema %}
 {
