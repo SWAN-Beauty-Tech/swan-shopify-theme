@@ -58,7 +58,7 @@
 
       @media (min-width: 768px) {
         .stats-grid-{{ section.id }} {
-          grid-template-columns: repeat(4, 2fr);
+          grid-template-columns: repeat(4, 1fr);
         }
 
         .stat-item-{{ section.id }} {
@@ -130,7 +130,7 @@
       /* Mobile responsiveness */
       @media (max-width: 767px) {
         .stats-grid-{{ section.id }} {
-          grid-template-columns: repeat(2, 2fr);
+          grid-template-columns: repeat(2, 1fr);
           gap: {{ section.settings.mobile_gap }}px;
         }
 
@@ -141,12 +141,6 @@
         .stat-icon-{{ section.id }} {
           width: {{ section.settings.mobile_icon_size }}px;
           height: {{ section.settings.mobile_icon_size }}px;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .stats-grid-{{ section.id }} {
-          grid-template-columns: 2fr;
         }
       }
 {%- endstyle -%}
