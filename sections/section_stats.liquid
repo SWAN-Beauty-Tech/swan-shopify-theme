@@ -193,57 +193,58 @@
 </section>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const counters = document.querySelectorAll(".stat-number-{{ section.id }}");
-    const statsSection = document.querySelector(".stats-section-{{ section.id }}");
+ document.addEventListener("DOMContentLoaded", function () {
+  const counters = document.querySelectorAll(".stat-counter-{{ section.id }}");
+  const statsSection = document.querySelector(".stats-section-{{ section.id }}");
 
-    function animateCounter(counter) {
-      const target = +counter.dataset.target;
-      const duration = 2000;
-      const stepTime = 50;
-      const steps = Math.ceil(duration / stepTime);
-      let current = 0;
-      const increment = target / steps;
-      const suffix = counter.dataset.suffix || "";
+  function animateCounter(counter) {
+    const target = +counter.dataset.target;
+    const duration = +counter.dataset.duration || 2000;
+    const stepTime = 50;
+    const steps = Math.ceil(duration / stepTime);
+    let current = 0;
+    const increment = target / steps;
+    const suffix = counter.dataset.suffix || "";
 
-      const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-          current = target;
-          clearInterval(timer);
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= target) {
+        current = target;
+        clearInterval(timer);
+      }
+      counter.textContent = Math.floor(current) + suffix;
+    }, stepTime);
+  }
+
+  function startCounterAnimations() {
+    counters.forEach((counter, index) => {
+      // reset counter every time
+      counter.textContent = "0" + (counter.dataset.suffix || "");
+      setTimeout(() => {
+        animateCounter(counter);
+      }, index * {{ section.settings.stagger_delay }});
+    });
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          startCounterAnimations(); // trigger when section appears
+        } else {
+          // reset numbers when leaving so it re-triggers next time
+          counters.forEach((counter) => {
+            counter.textContent = "0" + (counter.dataset.suffix || "");
+          });
         }
-        counter.textContent = Math.floor(current) + suffix;
-      }, stepTime);
-    }
-
-    function startCounterAnimations() {
-      counters.forEach((counter, index) => {
-        // reset counter every time
-        counter.textContent = "0" + (counter.dataset.suffix || "");
-        setTimeout(() => {
-          animateCounter(counter);
-        }, index * {{ section.settings.stagger_delay }});
       });
-    }
+    },
+    { threshold: 0.3 }
+  );
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            startCounterAnimations(); // trigger when section appears
-          } else {
-            // reset numbers when leaving so it re-triggers next time
-            counters.forEach((counter) => {
-              counter.textContent = "0" + (counter.dataset.suffix || "");
-            });
-          }
-        });
-      },
-      { threshold: 0.3 }
-    );
+  observer.observe(statsSection);
+});
 
-    observer.observe(statsSection);
-  });
 </script>
 
 
