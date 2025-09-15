@@ -724,7 +724,7 @@
         "item_background": "#ffffff",
         "item_padding": 10,
         "item_gap": 2,
-        "mobile_item_gap": 30,
+        "mobile_item_gap": 10,
         "border_radius": 0,
         "box_shadow": "",
         "icon_size": 60,
