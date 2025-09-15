@@ -41,6 +41,22 @@
       /* background:yellow; */
     }
 
+     .stat-item-{{ section.id }} {
+      display:flex;
+      flex-direction:column;
+      justify-content: left;
+      justify-items: left;
+      gap:{{ section.settings.item_gap }};
+      align-items:left;
+      text-align: left;
+      padding: {{ section.settings.item_padding }}px;
+      background-color: {{ section.settings.item_background }};
+      border-radius: {{ section.settings.border_radius }}px;
+      box-shadow: {{ section.settings.box_shadow }};
+      transition: transform 0.3s ease;
+       /* background:red; */
+    }
+
     @media (min-width: 768px) {
       .stats-grid-{{ section.id }} {
         grid-template-columns: repeat(4, 1fr);
@@ -63,7 +79,7 @@
       flex-direction:column;
       justify-content: left;
       justify-items: left;
-      gap:{{ section.settings.item_gap }};
+      gap:{{ section.settings.mobile_item_gap }};
       align-items:left;
       text-align: left;
       padding: {{ section.settings.item_padding }}px;
@@ -302,7 +318,7 @@
       "type": "range",
       "id": "container_width",
       "min": 800,
-      "max": 1600,
+      "max": 2000,
       "step": 50,
       "unit": "px",
       "label": "Container Max Width",
@@ -377,6 +393,16 @@
     {
       "type": "range",
       "id": "item_gap",
+      "min": 2,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Item gap",
+      "default": 30
+    },
+      {
+      "type": "range",
+      "id": "mobile_item_gap",
       "min": 2,
       "max": 60,
       "step": 2,
