@@ -733,7 +733,7 @@
         "icon_padding": 10,
         "icon_background": "#ffffff",
         "counter_font_size": 48,
-        "mobile_counter_size": 36,
+        "mobile_counter_size": 30,
         "counter_color": "#dca1a1",
         "counter_font_weight": 700,
         "counter_font_family": "inherit",
