@@ -589,7 +589,7 @@
         "video_5": "shopify://files/videos/ScreenRecording_08-11-2025 23-12-13_1.mp4",
         "video_width": 280,
         "video_height": 480,
-        "video_gap": 20,
+        "video_gap": 10,
         "inactive_scale": 80,
         "inactive_opacity": 60,
         "border_radius": 12,
