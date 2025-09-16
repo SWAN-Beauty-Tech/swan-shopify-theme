@@ -211,6 +211,13 @@
     .ai-video-carousel__nav-button-{{ ai_gen_id }}--next {
       right: 5px;
     }
+
+     .ai-video-carousel__track-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: {{ section.settings.mobile_video_gap }}px;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);will-change: transform;
+  }
   }
 
   @media screen and (max-width: 480px) {
@@ -615,6 +622,16 @@
       "step": 5,
       "unit": "px",
       "label": "Gap between videos",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "mobile_video_gap",
+      "min": 2,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Mobile gap between videos",
       "default": 20
     },
     {
