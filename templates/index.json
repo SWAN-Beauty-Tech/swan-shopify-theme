@@ -572,7 +572,6 @@
     },
     "video_carousel_rect_yT3Qmi": {
       "type": "video_carousel_rect",
-      "disabled": true,
       "name": "Video carousel",
       "settings": {
         "padding_block_desktop": 40,
