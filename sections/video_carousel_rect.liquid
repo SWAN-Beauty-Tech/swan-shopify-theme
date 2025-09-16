@@ -20,7 +20,7 @@
 {% style %}
 
 /* Desktop */
-.block_container.ai-video-carousel__container-{{ ai_gen_id }} {
+.block_container {
   padding-block: {{ section.settings.padding_block_desktop }}px;
   padding-inline: {{ section.settings.padding_inline_desktop }}px;
   margin-block: {{ section.settings.margin_block_desktop }}px;
@@ -29,7 +29,7 @@
 
 /* Mobile */
 @media (max-width: 767px) {
-  .block_container.ai-video-carousel__container-{{ ai_gen_id }} {
+  .block_container {
     padding-block: {{ section.settings.padding_block_mobile }}px;
     padding-inline: {{ section.settings.padding_inline_mobile }}px;
     margin-block: {{ section.settings.margin_block_mobile }}px;
