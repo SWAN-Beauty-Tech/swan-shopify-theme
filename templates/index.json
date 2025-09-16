@@ -278,7 +278,6 @@
         "headline_NrTkfh",
         "headline_9cRcFx"
       ],
-      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/home-quote-image.png",
         "image_position": "right",
@@ -308,7 +307,6 @@
       "blocks": {
         "ai_gen_block_8e10786_PHgELQ": {
           "type": "ai_gen_block_8e10786",
-          "disabled": true,
           "settings": {
             "desktop_image": "shopify://shop_images/8T8A4877-3_44bc9094-e0bb-45fa-8157-2ddc685df4ab.jpg",
             "hotspot_size": 24,
@@ -392,7 +390,6 @@
       "blocks": {
         "ai_gen_block_62e4169_Cmbp9L": {
           "type": "ai_gen_block_62e4169",
-          "disabled": true,
           "settings": {
             "logo_1": "shopify://shop_images/597720-logo-1737030702.png",
             "logo_2": "shopify://shop_images/IVY001_Logo_rot_1200x1200_bbee04b2-af2e-4491-94ee-01c4a6327f23.webp",
@@ -422,7 +419,6 @@
     },
     "section_testimonial_slide_QUhEL8": {
       "type": "section_testimonial_slide",
-      "disabled": true,
       "name": "Testimonial slider",
       "settings": {
         "padding_block_desktop": 0,
@@ -530,7 +526,6 @@
     },
     "section_steps_tabbed_k4HXUX": {
       "type": "section_steps_tabbed",
-      "disabled": true,
       "name": "Step guide",
       "settings": {
         "padding_block_desktop": 0,
@@ -572,7 +567,6 @@
     },
     "video_carousel_rect_yT3Qmi": {
       "type": "video_carousel_rect",
-      "disabled": true,
       "name": "Video carousel",
       "settings": {
         "padding_block_desktop": 40,
@@ -604,7 +598,6 @@
     },
     "section_slide_carousel_rWNp3W": {
       "type": "section_slide_carousel",
-      "disabled": true,
       "name": "Responsive slider",
       "settings": {
         "padding_block_desktop": 40,
@@ -788,7 +781,6 @@
       "block_order": [
         "ai_gen_block_8b9dce2_Bqfgdy"
       ],
-      "disabled": true,
       "settings": {}
     }
   },
