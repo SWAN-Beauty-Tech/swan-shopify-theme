@@ -709,6 +709,7 @@
         "stat_item_Tk6Bic",
         "stat_item_CdBMLC"
       ],
+      "disabled": true,
       "name": "Animated Stats Section",
       "settings": {
         "section_title": "Our Achievements",
