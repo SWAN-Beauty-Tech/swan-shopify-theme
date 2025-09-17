@@ -145,14 +145,6 @@
         "disabled": false,
         "settings": {}
       },
-      "9356323809658795675": {
-        "type": "shopify://apps/reelup-shoppable-videos-reels/blocks/reelup/a8ec9e4d-d192-44f7-9c23-595f9ee7dd5b",
-        "disabled": false,
-        "settings": {
-          "debugging_global_script": "",
-          "enable_reelPops": true
-        }
-      },
       "6251270934270006384": {
         "type": "shopify://apps/stape-server-gtm/blocks/gtm/7e13c847-7971-409d-8fe0-29ec14d5f048",
         "disabled": false,
