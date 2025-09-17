@@ -54,10 +54,21 @@
         "padding_top": 16,
         "padding_bottom": 16
       }
+    },
+    "custom_liquid_Pme9Yz": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div id=\"my-js-block\"></div>\n<script>\n  document.addEventListener('DOMContentLoaded', function () {\n    // dein JS\n    console.log('👋 test');\n  });\n</script>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "announcement-bar",
-    "header"
+    "header",
+    "custom_liquid_Pme9Yz"
   ]
 }
