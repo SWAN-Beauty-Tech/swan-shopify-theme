@@ -149,6 +149,13 @@
         "type": "shopify://apps/stape-server-gtm/blocks/gtm/7e13c847-7971-409d-8fe0-29ec14d5f048",
         "disabled": false,
         "settings": {}
+      },
+      "14926935257333466880": {
+        "type": "shopify://apps/geos-geolocation/blocks/location-selector-core/3cd5a431-7aea-4ecd-a807-59b3321c525b",
+        "disabled": false,
+        "settings": {
+          "body_font": "sans_serif_n4"
+        }
       }
     },
     "color_schemes": {
