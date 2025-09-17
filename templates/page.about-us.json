@@ -45,24 +45,6 @@
         "color_scheme": "scheme-1"
       }
     },
-    "landing_image_banner_NmPPaq": {
-      "type": "landing-image-banner",
-      "name": "Landing Image Banner",
-      "settings": {
-        "video_intro": "shopify://files/videos/3 Mirror Mood Leni Full Facial.mov",
-        "playback_speed": 1,
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "image_behavior": "none",
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
-        "show_text_box": true,
-        "color_scheme": "",
-        "stack_images_on_mobile": true,
-        "mobile_content_alignment": "center",
-        "show_text_below": true
-      }
-    },
     "video_nVB6z7": {
       "type": "video",
       "disabled": true,
@@ -558,6 +540,24 @@
         "padding_bottom": 36
       }
     },
+    "landing_image_banner_NmPPaq": {
+      "type": "landing-image-banner",
+      "name": "Landing Image Banner",
+      "settings": {
+        "video_intro": "shopify://files/videos/3 Mirror Mood Leni Full Facial.mov",
+        "playback_speed": 1,
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
     "collapsible_content_TkqmVL": {
       "type": "collapsible-content",
       "blocks": {
@@ -687,12 +687,12 @@
   "order": [
     "main",
     "swan_rich_text_FK6WPi",
-    "landing_image_banner_NmPPaq",
     "video_nVB6z7",
     "swan_image_text_8yYbnC",
     "featured_product_imLJVN",
     "1756214345b5c620e8",
     "17552366850a6e1abb",
+    "landing_image_banner_NmPPaq",
     "blocks_R3JYbW",
     "blocks_pPzc37",
     "image_with_text_HdjJfc",
