@@ -150,12 +150,10 @@
         "disabled": false,
         "settings": {}
       },
-      "14926935257333466880": {
-        "type": "shopify://apps/geos-geolocation/blocks/location-selector-core/3cd5a431-7aea-4ecd-a807-59b3321c525b",
+      "15134163510845626300": {
+        "type": "shopify://apps/geoip-country-redirect/blocks/speeedup_link/a3fa1a12-9aad-4707-ab56-45ccf9191aa7",
         "disabled": false,
-        "settings": {
-          "body_font": "sans_serif_n4"
-        }
+        "settings": {}
       }
     },
     "color_schemes": {
