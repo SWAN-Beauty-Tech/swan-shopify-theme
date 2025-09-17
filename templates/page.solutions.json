@@ -155,12 +155,51 @@
         "color_scheme": "",
         "mirror_image": "black"
       }
+    },
+    "section_steps_tabbed_rPWzJp": {
+      "type": "section_steps_tabbed",
+      "name": "Step guide",
+      "settings": {
+        "padding_block_desktop": 40,
+        "padding_inline_desktop": 40,
+        "margin_block_desktop": 20,
+        "margin_inline_desktop": 20,
+        "padding_block_mobile": 20,
+        "padding_inline_mobile": 20,
+        "margin_block_mobile": 10,
+        "margin_inline_mobile": 10,
+        "step_container_padding": 0,
+        "step_container_margin_block": 0,
+        "step_container_margin_inline": 0,
+        "background_color": "#ffffff",
+        "step_hover_color": "#f8f8f8",
+        "active_step_color": "#f0f8ff",
+        "active_border_color": "#0066cc",
+        "number_bg_color": "#e0e0e0",
+        "number_text_color": "#333333",
+        "active_number_bg_color": "#0066cc",
+        "active_number_text_color": "#ffffff",
+        "title_color": "#333333",
+        "active_title_color": "#0066cc",
+        "description_color": "#666666",
+        "active_description_color": "#333333",
+        "title_font_size": 20,
+        "description_font_size": 14,
+        "step_border_radius": 8,
+        "step_1_title": "Getting started",
+        "step_1_description": "Begin your journey with our easy-to-follow setup process.",
+        "step_2_title": "Configuration",
+        "step_2_description": "Customize your settings to match your specific needs and preferences.",
+        "step_3_title": "Implementation",
+        "step_3_description": "Put your plan into action with our guided implementation process."
+      }
     }
   },
   "order": [
     "main",
     "swan_rich_text_CPiJV8",
     "swan_image_text_N8YXGx",
+    "section_steps_tabbed_rPWzJp",
     "swan_image_text_mBFxFG",
     "swan_sign_up_wrac9X"
   ]
