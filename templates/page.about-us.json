@@ -150,7 +150,7 @@
       ],
       "name": "t:sections.featured-product.presets.name",
       "settings": {
-        "product": "swan-mirror-cleo",
+        "product": "swan-mirror",
         "color_scheme": "scheme-1",
         "secondary_background": false,
         "media_size": "small",
