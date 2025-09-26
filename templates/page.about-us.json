@@ -256,24 +256,6 @@
       "name": "Video left",
       "settings": {}
     },
-    "landing_image_banner_NmPPaq": {
-      "type": "landing-image-banner",
-      "name": "Landing Image Banner",
-      "settings": {
-        "video_intro": "shopify://files/videos/3 Mirror Mood Leni Full Facial.mov",
-        "playback_speed": 1,
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "image_behavior": "none",
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
-        "show_text_box": true,
-        "color_scheme": "",
-        "stack_images_on_mobile": true,
-        "mobile_content_alignment": "center",
-        "show_text_below": true
-      }
-    },
     "video_nVB6z7": {
       "type": "video",
       "disabled": true,
@@ -433,6 +415,24 @@
       ],
       "name": "Video left",
       "settings": {}
+    },
+    "landing_image_banner_NmPPaq": {
+      "type": "landing-image-banner",
+      "name": "Landing Image Banner",
+      "settings": {
+        "video_intro": "shopify://files/videos/3 Mirror Mood Leni Full Facial.mov",
+        "playback_speed": 1,
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
     },
     "blocks_pPzc37": {
       "type": "_blocks",
@@ -682,12 +682,34 @@
         "custom_class": "",
         "color_scheme": "scheme-3"
       }
+    },
+    "17588879453650ec50": {
+      "type": "apps",
+      "blocks": {
+        "klarna_on_site_messaging_app_block_kKAnFN": {
+          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
+          "settings": {
+            "data_key": "top-strip-promotion-badge",
+            "theme": "default",
+            "topPadding": "0",
+            "bottomPadding": "0",
+            "messagePrefix": ""
+          }
+        }
+      },
+      "block_order": [
+        "klarna_on_site_messaging_app_block_kKAnFN"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "main",
     "swan_rich_text_FK6WPi",
     "swan_image_text_8yYbnC",
+    "17588879453650ec50",
     "featured_product_imLJVN",
     "1756214345b5c620e8",
     "17552366850a6e1abb",
