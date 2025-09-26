@@ -1206,7 +1206,7 @@ product-info, product-recommendations {
 }
 
 h1.main-page-title.page-title {
-    font-size: clamp(3rem, 3.5vw, 2rem) !important;
+    font-size: clamp(3rem, 3vw, 3rem) !important;
     font-style: normal;
     font-weight: 300 !important;
     text-transform: none;
