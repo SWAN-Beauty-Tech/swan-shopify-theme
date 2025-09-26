@@ -154,6 +154,11 @@
         "type": "shopify://apps/geoip-country-redirect/blocks/speeedup_link/a3fa1a12-9aad-4707-ab56-45ccf9191aa7",
         "disabled": false,
         "settings": {}
+      },
+      "10864971697205422121": {
+        "type": "shopify://apps/gorgias-live-chat-helpdesk/blocks/gorgias/a66db725-7b96-4e3f-916e-6c8e6f87aaaa",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
