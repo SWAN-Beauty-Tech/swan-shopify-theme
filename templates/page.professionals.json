@@ -17,6 +17,36 @@
         "padding_bottom": 28
       }
     },
+    "rich_text_9xhcmp": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_RTGxHP": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h1>SWAN Squad</h1>"
+          }
+        },
+        "text_yj7Wbx": {
+          "type": "text",
+          "settings": {
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_RTGxHP",
+        "text_yj7Wbx"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "image_banner_z94hFA": {
       "type": "image-banner",
       "settings": {
@@ -39,7 +69,7 @@
         "heading_mVXyEC": {
           "type": "heading",
           "settings": {
-            "heading": "<h1>{{ page.title }}</h1>"
+            "heading": ""
           }
         },
         "text_ftVfr4": {
@@ -120,6 +150,30 @@
         "color_scheme": "scheme-3"
       }
     },
+    "blocks_Xw6txH": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_3202828_TQ9Wg9": {
+          "type": "ai_gen_block_3202828",
+          "name": "Video carousel",
+          "settings": {
+            "background_color": "#ffffff",
+            "text_color": "#000000",
+            "nav_button_color": "#000000",
+            "nav_button_text_color": "#ffffff",
+            "nav_button_hover_color": "#333333",
+            "video_border_radius": 8,
+            "section_padding": 40
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_3202828_TQ9Wg9"
+      ],
+      "name": "Video carousel",
+      "settings": {}
+    },
     "swan_sign_up_7wJRrF": {
       "type": "swan_sign-up",
       "settings": {
@@ -132,9 +186,11 @@
   },
   "order": [
     "main",
+    "rich_text_9xhcmp",
     "image_banner_z94hFA",
     "swan_rich_text_AiyzpU",
     "swan_image_text_bUttRB",
+    "blocks_Xw6txH",
     "swan_sign_up_7wJRrF"
   ]
 }
