@@ -37,6 +37,7 @@
         "heading_RTGxHP",
         "text_yj7Wbx"
       ],
+      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
@@ -171,6 +172,7 @@
       "block_order": [
         "ai_gen_block_3202828_TQ9Wg9"
       ],
+      "disabled": true,
       "name": "Video carousel",
       "settings": {}
     },
