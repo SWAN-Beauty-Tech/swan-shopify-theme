@@ -154,25 +154,40 @@
     "blocks_Xw6txH": {
       "type": "_blocks",
       "blocks": {
-        "ai_gen_block_3202828_TQ9Wg9": {
-          "type": "ai_gen_block_3202828",
+        "video_carousel_rect_yLrw9m": {
+          "type": "video_carousel_rect",
           "name": "Video carousel",
           "settings": {
-            "background_color": "#ffffff",
-            "text_color": "#000000",
-            "nav_button_color": "#000000",
-            "nav_button_text_color": "#ffffff",
-            "nav_button_hover_color": "#333333",
-            "video_border_radius": 8,
-            "section_padding": 40
+            "padding_block_desktop": 40,
+            "padding_inline_desktop": 40,
+            "margin_block_desktop": 20,
+            "margin_inline_desktop": 20,
+            "padding_block_mobile": 20,
+            "padding_inline_mobile": 20,
+            "margin_block_mobile": 10,
+            "margin_inline_mobile": 10,
+            "video_1": "shopify://files/videos/Design ohne Titel (1).mp4",
+            "video_2": "shopify://files/videos/Website  Reels (1).mp4",
+            "video_3": "shopify://files/videos/Website  Reels (3).mp4",
+            "video_4": "shopify://files/videos/Website  Reels (2).mp4",
+            "video_width": 280,
+            "video_height": 480,
+            "video_gap": 20,
+            "inactive_scale": 80,
+            "inactive_opacity": 60,
+            "border_radius": 12,
+            "nav_button_color": "#ffffff",
+            "nav_button_hover_color": "#f0f0f0",
+            "nav_button_icon_color": "#000000",
+            "autoplay_enabled": true,
+            "autoplay_duration": 5
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "ai_gen_block_3202828_TQ9Wg9"
+        "video_carousel_rect_yLrw9m"
       ],
-      "disabled": true,
       "name": "Video carousel",
       "settings": {}
     },
