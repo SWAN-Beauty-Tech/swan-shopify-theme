@@ -94,7 +94,7 @@
           "type": "button",
           "settings": {
             "button_text": "Jetzt bewerben",
-            "button_link": "shopify://pages/app",
+            "button_link": "https://forms.cloud.microsoft/r/e492mA6tEP",
             "button_style_secondary": false,
             "custom_id": "",
             "custom_class": ""
