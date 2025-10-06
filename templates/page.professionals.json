@@ -128,7 +128,7 @@
             "nav_button_hover_color": "#f0f0f0",
             "nav_button_icon_color": "#000000",
             "autoplay_enabled": true,
-            "autoplay_duration": 5
+            "autoplay_duration": 7
           },
           "blocks": {}
         }
