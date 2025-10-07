@@ -99,8 +99,74 @@
         "color_scheme": ""
       }
     },
+    "video_slider_D9Nqcc": {
+      "type": "video-slider",
+      "blocks": {
+        "carousel_video_chwgFp": {
+          "type": "carousel_video",
+          "settings": {
+            "media": "https://cdn.shopify.com/videos/c/o/v/4ca18f066b9a4d0f944bcfc0ee88eaa9.mp4"
+          }
+        },
+        "carousel_video_tUJBqM": {
+          "type": "carousel_video",
+          "settings": {
+            "media": "https://cdn.shopify.com/videos/c/o/v/ffd95449a25e4452b1685afcd732a916.mp4"
+          }
+        },
+        "carousel_video_8hX6cQ": {
+          "type": "carousel_video",
+          "settings": {
+            "media": "https://cdn.shopify.com/videos/c/o/v/c4b9b4f46fbf4c5181c3006cc8b86679.mp4"
+          }
+        },
+        "carousel_video_HUeRA3": {
+          "type": "carousel_video",
+          "settings": {
+            "media": "https://cdn.shopify.com/videos/c/o/v/90cf35ab4067429fbb2da2535ebef9b3.mp4"
+          }
+        },
+        "carousel_video_qyxAFc": {
+          "type": "carousel_video",
+          "settings": {
+            "media": "https://cdn.shopify.com/videos/c/o/v/eeca8e5b96b74defa5dbae49f240a99d.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "carousel_video_chwgFp",
+        "carousel_video_tUJBqM",
+        "carousel_video_8hX6cQ",
+        "carousel_video_HUeRA3",
+        "carousel_video_qyxAFc"
+      ],
+      "name": "Videos Slider",
+      "settings": {
+        "section_heading": "",
+        "heading_alignment": "center",
+        "heading_size": "medium",
+        "full_width": false,
+        "section_bg_color": "#ffffff",
+        "section_padding_top": 40,
+        "section_padding_bottom": 40,
+        "auto_slide": true,
+        "auto_slide_speed": 6000,
+        "show_arrows": true,
+        "arrow_shape": "circle",
+        "arrow_bg_color": "#000000",
+        "visible_slides": 4,
+        "visible_mobile": 1,
+        "image_shape": "circle",
+        "image_size": "small",
+        "media_size": "medium",
+        "media_design": "adapt",
+        "media_shadow": false,
+        "testimonial_name_size": 20
+      }
+    },
     "video_carousel_rect_braWeg": {
       "type": "video_carousel_rect",
+      "disabled": true,
       "name": "Video carousel",
       "settings": {
         "padding_block_desktop": 40,
@@ -197,6 +263,7 @@
     "rich_text_9xhcmp",
     "image_banner_z94hFA",
     "swan_rich_text_AiyzpU",
+    "video_slider_D9Nqcc",
     "video_carousel_rect_braWeg",
     "swan_image_text_bUttRB",
     "swan_sign_up_7wJRrF"
