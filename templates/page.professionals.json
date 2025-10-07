@@ -156,7 +156,7 @@
         "arrow_bg_color": "#666666",
         "visible_slides": 3,
         "visible_mobile": 1,
-        "image_shape": "circle",
+        "image_shape": "square",
         "image_size": "small",
         "media_size": "medium",
         "media_design": "adapt",
