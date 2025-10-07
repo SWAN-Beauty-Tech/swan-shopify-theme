@@ -105,7 +105,7 @@
                 {% if block.type == "carousel_image" %}
                   <img class="media-element" src="{{ block.settings.media | img_url: section.settings.media_size }}" alt="Carousel Image">
                 {% elsif block.type == "carousel_video" %}
-                  <video class="media-element" controls muted autoplay loop>
+                  <video class="media-element carousel-video" controls muted loop>
                     <source src="{{ block.settings.media }}">
                   </video>
                 {% endif %}
@@ -119,7 +119,7 @@
                 {% if block.type == "carousel_image" %}
                   <img class="media-element" src="{{ block.settings.media | img_url: section.settings.media_size }}" alt="Carousel Image">
                 {% elsif block.type == "carousel_video" %}
-                  <video class="media-element" controls muted autoplay loop>
+                  <video class="media-element carousel-video" controls muted loop>
                     <source src="{{ block.settings.media }}">
                   </video>
                 {% endif %}
@@ -133,7 +133,7 @@
                 {% if block.type == "carousel_image" %}
                   <img class="media-element" src="{{ block.settings.media | img_url: section.settings.media_size }}" alt="Carousel Image">
                 {% elsif block.type == "carousel_video" %}
-                  <video class="media-element" controls>
+                  <video class="media-element carousel-video" controls muted loop>
                     <source src="{{ block.settings.media }}">
                   </video>
                 {% endif %}
@@ -170,6 +170,18 @@ document.addEventListener("DOMContentLoaded", function() {
   }
   
   updateSlidePosition();
+  
+  // Staggered video autoplay with delay
+  var videos = container.querySelectorAll(".carousel-video");
+  var videoDelayMs = {{ section.settings.video_start_delay | default: 500 }}; // Delay between each video start
+  
+  videos.forEach(function(video, index) {
+    setTimeout(function() {
+      video.play().catch(function(err) {
+        console.log("Video autoplay prevented:", err);
+      });
+    }, index * videoDelayMs);
+  });
   
   function nextSlide() {
     currentIndex++;
@@ -301,6 +313,15 @@ document.addEventListener("DOMContentLoaded", function() {
       "max": 9000,
       "step": 100,
       "default": 6000
+    },
+    {
+      "type": "range",
+      "id": "video_start_delay",
+      "label": "Video Start Delay (ms between each video)",
+      "min": 0,
+      "max": 3000,
+      "step": 100,
+      "default": 500
     },
     {
       "type": "checkbox",
