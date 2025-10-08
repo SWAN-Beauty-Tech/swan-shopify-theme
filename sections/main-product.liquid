@@ -114,6 +114,13 @@
                     price_class: 'price--large'
                   -%}
                 </div>
+
+                  <!-- Klarna OSM: dynamischer Betrag basierend auf ausgewählter Variante -->
+  <div class="klarna-placement"
+       data-key="credit-promotion-auto-size"
+       data-purchase-amount="{{ product.selected_or_first_available_variant.price | times: 100 }}">
+  </div>
+  
                 {%- if product.quantity_price_breaks_configured? -%}
                   <div class="volume-pricing-note" id="Volume-Note-{{ section.id }}">
                     <span>{{ 'products.product.volume_pricing.note' | t }}</span>
