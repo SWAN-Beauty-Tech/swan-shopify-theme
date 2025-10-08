@@ -67,6 +67,7 @@
     },
     "custom_liquid_kzPqRT": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
         "custom_liquid": "<div class=\"klarna-placement\"\n     data-key=\"credit-promotion-auto-size\"\n     data-purchase-amount=\"59900\">\n</div>",
