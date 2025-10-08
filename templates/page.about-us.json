@@ -87,10 +87,10 @@
         "color_scheme": "scheme-3"
       }
     },
-    "17588879453650ec50": {
+    "1759905683f6dc52c7": {
       "type": "apps",
       "blocks": {
-        "klarna_on_site_messaging_app_block_kKAnFN": {
+        "klarna_on_site_messaging_app_block_LUgVDt": {
           "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
           "settings": {
             "data_key": "credit-promotion-badge",
@@ -102,10 +102,10 @@
         }
       },
       "block_order": [
-        "klarna_on_site_messaging_app_block_kKAnFN"
+        "klarna_on_site_messaging_app_block_LUgVDt"
       ],
       "settings": {
-        "include_margins": false
+        "include_margins": true
       }
     },
     "featured_product_imLJVN": {
@@ -709,7 +709,7 @@
     "main",
     "swan_rich_text_FK6WPi",
     "swan_image_text_8yYbnC",
-    "17588879453650ec50",
+    "1759905683f6dc52c7",
     "featured_product_imLJVN",
     "1756214345b5c620e8",
     "17552366850a6e1abb",
