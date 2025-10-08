@@ -70,7 +70,7 @@
       "disabled": true,
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div class=\"klarna-placement\"\n     data-key=\"credit-promotion-auto-size\"\n     data-purchase-amount=\"59900\">\n</div>",
+        "custom_liquid": "<div class=\"klarna-placement\"\n     data-key=\"credit-promotion-auto-size\"\n     data-purchase-amount=\"59900\">\n</div>\n<script>\n  if (window.Klarna && window.Klarna.OnsiteMessaging) {\n    try { window.Klarna.OnsiteMessaging.refresh(); } catch(e) {}\n  }\n</script>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
