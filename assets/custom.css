@@ -1214,3 +1214,7 @@ h1.main-page-title.page-title, h1:not(.header__heading) {
     letter-spacing: 0em !important;
     text-align: left;
 }
+
+h1.seo {
+    text-align: center;
+}
