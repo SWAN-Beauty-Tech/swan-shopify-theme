@@ -29,7 +29,7 @@
         "text_bkRYYR": {
           "type": "text",
           "settings": {
-            "text": "<h2>SWAN App</h2>"
+            "text": "<h2>Smart Make-up Artist</h2>"
           }
         }
       },
@@ -86,6 +86,150 @@
         "color_scheme": "scheme-3"
       }
     },
+    "image_with_text_WjNQgC": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_HgtMt4": {
+          "type": "heading",
+          "settings": {
+            "heading": "Bild mit Text",
+            "heading_size": "h1"
+          }
+        },
+        "text_4d7ATz": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_Cenhbr": {
+          "type": "button",
+          "settings": {
+            "button_label": "Schaltflächenbeschriftung",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_HgtMt4",
+        "text_4d7ATz",
+        "button_Cenhbr"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/74.jpg",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_cpLEB4": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_HV7ztb": {
+          "type": "heading",
+          "settings": {
+            "heading": "Bild mit Text",
+            "heading_size": "h1"
+          }
+        },
+        "text_F9hNcD": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_w3k7Nj": {
+          "type": "button",
+          "settings": {
+            "button_label": "Schaltflächenbeschriftung",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_HV7ztb",
+        "text_F9hNcD",
+        "button_w3k7Nj"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Carolina.jpg",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_8pjiA4": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_AeJ6Vq": {
+          "type": "heading",
+          "settings": {
+            "heading": "Bild mit Text",
+            "heading_size": "h1"
+          }
+        },
+        "text_NGECRy": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_gLpbDT": {
+          "type": "button",
+          "settings": {
+            "button_label": "Schaltflächenbeschriftung",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_AeJ6Vq",
+        "text_NGECRy",
+        "button_gLpbDT"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Eyes_-_primer.jpg",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "rich_text_3zqCi8": {
       "type": "rich-text",
       "blocks": {
@@ -131,6 +275,7 @@
         "button_M9kzPW",
         "button_UxyU9W"
       ],
+      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
@@ -151,6 +296,7 @@
         "ai_gen_block_ba0b649_xwmYyC": {
           "type": "ai_gen_block_ba0b649",
           "name": "Video with text",
+          "disabled": true,
           "settings": {
             "heading": "Routinen-Planer: Deine flexible Hautpflege",
             "description": "<p>Stelle dir mit deinen Lieblingsprodukten eine persönliche Morgen- und Abendroutine zusammen. Passe sie jederzeit an die aktuellen Bedürfnisse deiner Haut an – flexibel, wenn sich etwas ändert. <br/>So verpasst du keinen Step & behältst die korrekte Reihenfolge täglich im Blick.</p><p>Das Beste: Deine geplante Routine erscheint direkt auf dem SWAN Mirror – für ein nahtloses Beauty-Erlebnis.</p><p></p>",
@@ -173,6 +319,7 @@
         "ai_gen_block_2b816b2_HJrUdG": {
           "type": "ai_gen_block_2b816b2",
           "name": "Video with text",
+          "disabled": true,
           "settings": {
             "video": "https://cdn.shopify.com/videos/c/o/v/414d24a9400143c4a39106e7594b3538.mp4",
             "video_max_width": 400,
@@ -262,6 +409,7 @@
         "ai_gen_block_ba0b649_VjyGrF",
         "ai_gen_block_2b816b2_DeteKz"
       ],
+      "disabled": true,
       "custom_css": [
         "div {font-family: var(--bossa) !important;}"
       ],
@@ -443,6 +591,9 @@
     "main",
     "swan_rich_text_daYrVd",
     "swan_image_text_67EcKy",
+    "image_with_text_WjNQgC",
+    "image_with_text_cpLEB4",
+    "image_with_text_8pjiA4",
     "rich_text_3zqCi8",
     "17556416728320b2de",
     "1755642240b7fb8d61",
