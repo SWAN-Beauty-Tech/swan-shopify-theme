@@ -96,7 +96,7 @@
           "type": "button",
           "settings": {
             "button_text": "MEHR",
-            "button_link": "shopify://pages/about-us",
+            "button_link": "shopify://pages/mirror",
             "button_style_secondary": true,
             "custom_id": "",
             "custom_class": ""
