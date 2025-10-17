@@ -88,17 +88,132 @@
           "dateModified": "{{ 'now' | date: '%Y-%m-%d' }}"
         },
         {
+          "@type": "WebSite",
+          "@id": "{{ shop.url }}/#website",
+          "url": "{{ shop.url }}/",
+          "name": "SWAN Beauty Tech",
+          "inLanguage": "de-DE"
+        },
+        {
+          "@type": "Organization",
+          "@id": "{{ shop.url }}/#organization",
+          "name": "SWAN Beauty Tech GmbH",
+          "legalName": "SWAN Beauty Tech GmbH",
+          "url": "{{ shop.url }}/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "{{ shop.url }}/cdn/shop/files/Swan_Logo_Horizontal_Black.png?v=1756885042",
+            "caption": "SWAN Beauty Tech Logo"
+          },
+          "image": {
+            "@type": "ImageObject",
+            "url": "{{ shop.url }}/",
+            "caption": "SWAN Beauty – Smart Mirror & App"
+          },
+          "sameAs": [
+            "https://www.instagram.com/swanbeauty_de/",
+            "https://www.youtube.com/@swanbeauty_de",
+            "https://www.tiktok.com/@swanbeauty_de"
+          ],
+          "email": "hi@swanbeauty.com",
+          "contactPoint": [{
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "email": "hi@swanbeauty.com",
+            "availableLanguage": ["de", "en"]
+          }],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Alter Wandrahm 8",
+            "postalCode": "20457",
+            "addressLocality": "Hamburg",
+            "addressCountry": "DE"
+          }
+        },
+        {
           "@type": "Product",
-          "@id": "{{ shop.url }}/products/swan-mirror#product",
+          "@id": "{{ shop.url }}/pages/mirror#product",
           "name": "SWAN Mirror",
           "brand": { "@type": "Brand", "name": "SWAN Beauty Tech" },
           "category": "Smart Mirror",
-          "description": "Smart Mirror mit KI-gestützter Hautanalyse, 13-MP-Kamera, Mikrofon, dimmbarem Beauty-Light und nahtloser App-Verbindung.",
-          "url": "{{ shop.url }}/products/swan-mirror",
+          "description": "Smart Mirror mit KI-gestützter Hautanalyse (mit Dermatolog*innen entwickelt), 13-MP-Kamera & Mikrofon, dimmbarem Beauty-Light und nahtloser SWAN App-Anbindung. 15,6\" Multi-Touch-Display; Farben: Schwarz oder Weiß. Auslieferung im November.",
+          "url": "{{ shop.url }}/pages/mirror",
           "image": [
             "https://cdn.shopify.com/s/files/1/0666/1312/1772/products/SWAN_Mirror_Black_Front.png?v=1750885828",
-            "https://cdn.shopify.com/s/files/1/0666/1312/1772/products/SWAN_Mirror_White_Front.png?v=1750885828"
-          ]
+            "https://cdn.shopify.com/s/files/1/0666/1312/1772/products/SWAN_Mirror_White_Front.png?v=1750885828",
+            "https://cdn.shopify.com/s/files/1/0666/1312/1772/products/SWAN_Mirror_Black_Side.png?v=1750885828",
+            "https://cdn.shopify.com/s/files/1/0666/1312/1772/products/SWAN_Mirror_White_Side.png?v=1750885828",
+            "https://cdn.shopify.com/s/files/1/0666/1312/1772/products/SWAN_Mirror_Black_Back.png?v=1750885828",
+            "https://cdn.shopify.com/s/files/1/0666/1312/1772/products/SWAN_Mirror_White_Back.png?v=1750885828"
+          ],
+          "color": ["Schwarz", "Weiß"],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "ratingCount": "127",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "isAccessoryOrSparePartFor": {
+            "@type": "MobileApplication",
+            "@id": "{{ shop.url }}/pages/app#app"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "599.00",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/OutOfStock",
+            "url": "{{ shop.url }}/pages/mirror",
+            "priceValidUntil": "2026-12-31",
+            "shippingDetails": {
+              "@type": "OfferShippingDetails",
+              "shippingRate": {
+                "@type": "MonetaryAmount",
+                "value": "0.00",
+                "currency": "EUR"
+              },
+              "shippingDestination": {
+                "@type": "DefinedRegion",
+                "addressCountry": "DE"
+              },
+              "deliveryTime": {
+                "@type": "ShippingDeliveryTime",
+                "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "d" },
+                "transitTime":  { "@type": "QuantitativeValue", "minValue": 2, "maxValue": 4, "unitCode": "d" }
+              }
+            },
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": "DE",
+              "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+              "merchantReturnDays": 14,
+              "returnMethod": "https://schema.org/ReturnByMail",
+              "returnFees": "https://schema.org/FreeReturn"
+            }
+          }
+        },
+        {
+          "@type": "MobileApplication",
+          "@id": "{{ shop.url }}/pages/app#app",
+          "name": "SWAN App",
+          "applicationCategory": "LifestyleApplication",
+          "operatingSystem": "iOS, Android",
+          "description": "Beauty-Community, Tutorials und Shopping direkt aus Videos. Funktioniert auch ohne SWAN Mirror.",
+          "url": "{{ shop.url }}/pages/app",
+          "downloadUrl": "https://onelink.to/swanapp",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "ratingCount": "245",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "EUR"
+          },
+          "publisher": { "@id": "{{ shop.url }}/#organization" }
         },
         {
           "@type": "FAQPage",
@@ -106,10 +221,42 @@
           "mainEntity": [
             {
               "@type": "Question",
+              "name": "Brauche ich ein spezielles Abonnement oder eine App für die Nutzung?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Der SWAN Mirror kann ohne Abonnement kostenfrei genutzt werden. Für den Zugriff auf Funktionen wie Beauty-Videos, Produkt-Shopping, Content-Erstellung und Hautanalyse ist die kostenlose SWAN App erforderlich."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Unterstützt der SWAN Mirror Drittanbieter-Apps?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nein. Der SWAN Mirror ist so konzipiert, dass er ausschließlich mit der SWAN App funktioniert. Alle Funktionen sind direkt integriert – für ein nahtloses, sicheres und performantes Erlebnis."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Welche Rückgabemöglichkeiten gibt es?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Wir bieten eine 14-tägige Rückgabemöglichkeit. Der SWAN Mirror kann innerhalb von 14 Tagen im Originalzustand und in Originalverpackung zurückgegeben werden. Zur Einleitung bitte den Kundenservice per E-Mail (hi@swanbeauty.com) kontaktieren."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "An wen kann ich mich bei technischen Problemen oder Fragen wenden?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Der Kundenservice ist per E-Mail unter hi@swanbeauty.com erreichbar."
+              }
+            },
+            {
+              "@type": "Question",
               "name": "Benötige ich WLAN für den SWAN Mirror?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Ja, für volle Funktionalität wird WLAN benötigt, um Inhalte, Updates und Community-Funktionen bereitzustellen."
+                "text": "Ja. Für die volle Funktionalität wird eine WLAN-Verbindung sowie ein Stromanschluss benötigt. Der Spiegel verbindet sich mit der SWAN App und dem Internet, um Inhalte, Updates und Community-Funktionen bereitzustellen."
               }
             }
           ]
