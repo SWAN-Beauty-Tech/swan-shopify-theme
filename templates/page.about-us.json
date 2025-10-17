@@ -651,6 +651,16 @@
         "padding_bottom": 36
       }
     },
+    "swan_sign_up_mmTBbY": {
+      "type": "swan_sign-up",
+      "name": "SWAN Signup",
+      "settings": {
+        "header": "Werde SWAN Beauty Insider",
+        "text_content": "<p>Melde dich zu unserem Newsletter an! Verpasse kein Update mehr & erhalte exklusive Rabatte vor allen anderen</p>",
+        "color_scheme": "",
+        "mirror_image": "white"
+      }
+    },
     "swan_image_text_6nbE3P": {
       "type": "swan_image-text",
       "blocks": {
@@ -719,6 +729,7 @@
     "blocks_pPzc37",
     "image_with_text_HdjJfc",
     "collapsible_content_TkqmVL",
+    "swan_sign_up_mmTBbY",
     "swan_image_text_6nbE3P"
   ]
 }
