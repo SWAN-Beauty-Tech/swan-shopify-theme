@@ -202,6 +202,81 @@
       ]
     }
     </script>
+
+    {%- elsif template contains 'product' and product.handle == 'swan-mirror' -%}
+    <!-- ✅ SWAN Mirror Product Page JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "{{ shop.url }}/products/{{ product.handle }}#webpage",
+          "url": "{{ shop.url }}/products/{{ product.handle }}",
+          "name": "{{ product.title | escape }} – Smart Mirror mit KI-Hautanalyse & Beauty-Light",
+          "inLanguage": "de-DE",
+          "isPartOf": { "@id": "{{ shop.url }}/#website" },
+          "about": { "@id": "{{ shop.url }}/#organization" },
+          "dateModified": "{{ 'now' | date: '%Y-%m-%d' }}"
+        },
+        {
+          "@type": "Product",
+          "@id": "{{ shop.url }}/products/{{ product.handle }}#product",
+          "name": "{{ product.title | escape }}",
+          "brand": { "@type": "Brand", "name": "SWAN Beauty Tech" },
+          "category": "Smart Mirror",
+          "description": "{{ product.description | strip_html | strip_newlines | escape }}",
+          "url": "{{ shop.url }}/products/{{ product.handle }}",
+          "image": [{% for image in product.images %}"{{ image.src | img_url: 'master' }}"{% unless forloop.last %}, {% endunless %}{% endfor %}],
+          "color": ["Schwarz", "Weiß"],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "ratingCount": "127",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "{{ product.price | divided_by: 100.0 }}",
+            "priceCurrency": "{{ cart.currency.iso_code | default: 'EUR' }}",
+            "availability": "https://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}",
+            "url": "{{ shop.url }}/products/{{ product.handle }}"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "{{ shop.url }}/products/{{ product.handle }}#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Brauche ich ein spezielles Abonnement oder eine App für die Nutzung?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Der SWAN Mirror kann ohne Abonnement kostenfrei genutzt werden. Für erweiterte Funktionen wie Tutorials, Shopping und Hautanalyse ist die kostenlose SWAN App erforderlich."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Benötige ich WLAN für den SWAN Mirror?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ja. Für die volle Funktionalität wird WLAN benötigt, um Inhalte, Updates und Community-Funktionen bereitzustellen."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Welche Rückgabemöglichkeiten gibt es?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Wir bieten eine 14-tägige Rückgabemöglichkeit. Der SWAN Mirror kann innerhalb von 14 Tagen im Originalzustand und in Originalverpackung zurückgegeben werden. Bitte kontaktiere den Kundenservice per E-Mail unter hi@swanbeauty.com."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
     {%- endif -%}
 
     <style>
