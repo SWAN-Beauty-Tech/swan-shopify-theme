@@ -10,20 +10,19 @@
 
     {% assign current_path = request.path %}
     {% assign current_host = request.host %}
+    {% assign de_paths = "/,/pages/mirror,/products/swan-mirror,/pages/contact" | split: "," %}
+    {% assign en_paths = "/,/pages/mirror,/products/swan-mirror,/pages/contact" | split: "," %}
 
-    {% assign hreflang_map = {
-      "/": "/",
-      "/pages/mirror": "/pages/mirror",
-      "/products/swan-mirror": "/products/swan-mirror",
-      "/pages/contact": "/pages/contact"
-    } %}
+    {% assign path_match = false %}
+    {% assign mapped_path = "" %}
 
-    {%- assign path_match = false -%}
-    {%- for key in hreflang_map %}
-      {%- if current_path == key[0] -%}
-        {%- assign path_match = true -%}
-        {%- assign mapped_path = key[1] -%}
-      {%- endif -%}
+    {%- for de_path in de_paths -%}
+      {% assign index = forloop.index0 %}
+      {% assign en_path = en_paths[index] %}
+      {% if current_path == de_path %}
+        {% assign path_match = true %}
+        {% assign mapped_path = en_path %}
+      {% endif %}
     {%- endfor -%}
 
     {%- if current_host contains "de.swanbeauty.com" -%}
@@ -36,7 +35,7 @@
         <link rel="alternate" hreflang="x-default" href="{{ canonical_url }}" />
       {%- endif -%}
 
-    {%- elsif current_host contains "swanbeauty.com" -%}
+    {%- elsif current_host == "swanbeauty.com" -%}
       {%- if path_match -%}
         <link rel="alternate" hreflang="en" href="https://swanbeauty.com{{ mapped_path }}" />
         <link rel="alternate" hreflang="de" href="https://de.swanbeauty.com{{ mapped_path }}" />
