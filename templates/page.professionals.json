@@ -151,6 +151,7 @@
         "section_padding_bottom": 40,
         "auto_slide": true,
         "auto_slide_speed": 6000,
+        "video_start_delay": 500,
         "show_arrows": true,
         "arrow_shape": "circle",
         "arrow_bg_color": "#666666",
@@ -251,8 +252,8 @@
     "swan_sign_up_7wJRrF": {
       "type": "swan_sign-up",
       "settings": {
-        "header": "Werde SWAN Beauty Insider",
-        "text_content": "<h3>Let’s create. Let’s collaborate. <br/>Let’s SWAN. </h3>",
+        "header": "the future of beauty is now.",
+        "text_content": "<h5>Werde SWAN Beauty Insider und verpasse keine Updates.</h5>",
         "color_scheme": "",
         "mirror_image": "white"
       }
