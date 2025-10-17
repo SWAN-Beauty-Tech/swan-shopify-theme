@@ -95,7 +95,7 @@
         "button_NUqHNF": {
           "type": "button",
           "settings": {
-            "button_text": "MEHR",
+            "button_text": "Mehr zum SWAN Mirror",
             "button_link": "shopify://pages/mirror",
             "button_style_secondary": true,
             "custom_id": "",
@@ -147,7 +147,7 @@
         "button_LQANHL": {
           "type": "button",
           "settings": {
-            "button_text": "MEHR",
+            "button_text": "Mehr zur SWAN App",
             "button_link": "shopify://pages/marketplace",
             "button_style_secondary": true,
             "custom_id": "",
