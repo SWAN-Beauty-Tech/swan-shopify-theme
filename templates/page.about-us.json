@@ -655,8 +655,8 @@
       "type": "swan_sign-up",
       "name": "SWAN Signup",
       "settings": {
-        "header": "Werde SWAN Beauty Insider",
-        "text_content": "<p>Melde dich zu unserem Newsletter an! Verpasse kein Update mehr & erhalte exklusive Rabatte vor allen anderen</p>",
+        "header": "The future of beauty is now.",
+        "text_content": "<h5>Werde SWAN Beauty Insider und verpasse keine Updates.</h5>",
         "color_scheme": "",
         "mirror_image": "white"
       }
