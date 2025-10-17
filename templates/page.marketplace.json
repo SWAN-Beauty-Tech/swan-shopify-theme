@@ -432,7 +432,7 @@
     "swan_sign_up_aYagET": {
       "type": "swan_sign-up",
       "settings": {
-        "header": "The future of beauty is now",
+        "header": "The future of beauty is now.",
         "text_content": "<h5>Werde SWAN Beauty Insider und verpasse keine Updates.</h5>",
         "color_scheme": "",
         "mirror_image": "black"
