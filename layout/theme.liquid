@@ -7,10 +7,45 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}" />
+
     {% assign current_path = request.path %}
-    <link rel="alternate" hreflang="de" href="{{ canonical_url }}" />
-    <link rel="alternate" hreflang="en" href="https://swanbeauty.com{{ current_path }}" />
-    <link rel="alternate" hreflang="x-default" href="https://swanbeauty.com{{ current_path }}" />
+    {% assign current_host = request.host %}
+
+    {% assign hreflang_map = {
+      "/": "/",
+      "/pages/mirror": "/pages/mirror",
+      "/products/swan-mirror": "/products/swan-mirror",
+      "/pages/contact": "/pages/contact"
+    } %}
+
+    {%- assign path_match = false -%}
+    {%- for key in hreflang_map %}
+      {%- if current_path == key[0] -%}
+        {%- assign path_match = true -%}
+        {%- assign mapped_path = key[1] -%}
+      {%- endif -%}
+    {%- endfor -%}
+
+    {%- if current_host contains "de.swanbeauty.com" -%}
+      {%- if path_match -%}
+        <link rel="alternate" hreflang="de" href="https://de.swanbeauty.com{{ mapped_path }}" />
+        <link rel="alternate" hreflang="en" href="https://swanbeauty.com{{ mapped_path }}" />
+        <link rel="alternate" hreflang="x-default" href="https://swanbeauty.com{{ mapped_path }}" />
+      {%- else -%}
+        <link rel="alternate" hreflang="de" href="{{ canonical_url }}" />
+        <link rel="alternate" hreflang="x-default" href="{{ canonical_url }}" />
+      {%- endif -%}
+
+    {%- elsif current_host contains "swanbeauty.com" -%}
+      {%- if path_match -%}
+        <link rel="alternate" hreflang="en" href="https://swanbeauty.com{{ mapped_path }}" />
+        <link rel="alternate" hreflang="de" href="https://de.swanbeauty.com{{ mapped_path }}" />
+        <link rel="alternate" hreflang="x-default" href="https://swanbeauty.com{{ mapped_path }}" />
+      {%- else -%}
+        <link rel="alternate" hreflang="en" href="{{ canonical_url }}" />
+        <link rel="alternate" hreflang="x-default" href="{{ canonical_url }}" />
+      {%- endif -%}
+    {%- endif -%}
 
     {%- assign path = request.path | downcase -%}
 
