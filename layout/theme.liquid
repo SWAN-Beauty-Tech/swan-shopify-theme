@@ -15,7 +15,7 @@
     {%- assign path = request.path | downcase -%}
 
     {%- if template == 'index' -%}
-    <!-- ✅ Startseite JSON-LD -->
+    <!-- Home JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -71,8 +71,8 @@
     }
     </script>
 
-    {%- elsif path contains '/pages/mirror' and product.handle == 'mirror' -%}
-    <!-- ✅ Mirror-Page JSON-LD -->
+    {%- elsif path contains '/pages/mirror' -%}
+    <!-- Mirror Landing Page JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -89,28 +89,16 @@
         },
         {
           "@type": "Product",
-          "@id": "{{ shop.url }}/pages/mirror#product",
-          "name": "{{ product.title | escape }}",
+          "@id": "{{ shop.url }}/products/swan-mirror#product",
+          "name": "SWAN Mirror",
           "brand": { "@type": "Brand", "name": "SWAN Beauty Tech" },
           "category": "Smart Mirror",
-          "description": "{{ product.description | strip_html | strip_newlines | escape }}",
-          "url": "{{ shop.url }}/pages/mirror",
-          "image": [{% for image in product.images %}"{{ image.src | img_url: 'master' }}"{% unless forloop.last %}, {% endunless %}{% endfor %}],
-          "color": ["Schwarz", "Weiß"],
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5.0",
-            "ratingCount": "127",
-            "bestRating": "5",
-            "worstRating": "1"
-          },
-          "offers": {
-            "@type": "Offer",
-            "price": "{{ product.price | divided_by: 100.0 }}",
-            "priceCurrency": "{{ cart.currency.iso_code }}",
-            "availability": "https://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}",
-            "url": "{{ shop.url }}/pages/mirror"
-          }
+          "description": "Smart Mirror mit KI-gestützter Hautanalyse, 13-MP-Kamera, Mikrofon, dimmbarem Beauty-Light und nahtloser App-Verbindung.",
+          "url": "{{ shop.url }}/products/swan-mirror",
+          "image": [
+            "https://cdn.shopify.com/s/files/1/0666/1312/1772/products/SWAN_Mirror_Black_Front.png?v=1750885828",
+            "https://cdn.shopify.com/s/files/1/0666/1312/1772/products/SWAN_Mirror_White_Front.png?v=1750885828"
+          ]
         },
         {
           "@type": "FAQPage",
@@ -118,18 +106,10 @@
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "Brauche ich ein spezielles Abonnement oder eine App für die Nutzung?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Der SWAN Mirror kann ohne Abonnement kostenfrei genutzt werden. Für den Zugriff auf Funktionen wie Beauty-Videos, Produkt-Shopping, Content-Erstellung und Hautanalyse ist die kostenlose SWAN App erforderlich."
-              }
-            },
-            {
-              "@type": "Question",
               "name": "Benötige ich WLAN für den SWAN Mirror?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Ja. Für die volle Funktionalität wird WLAN benötigt, um Inhalte, Updates und Community-Funktionen bereitzustellen."
+                "text": "Ja, für volle Funktionalität wird WLAN benötigt, um Inhalte, Updates und Community-Funktionen bereitzustellen."
               }
             }
           ]
@@ -139,7 +119,7 @@
     </script>
 
     {%- elsif path contains '/pages/app' -%}
-    <!-- ✅ App-Page JSON-LD -->
+    <!-- App Page JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -204,7 +184,7 @@
     </script>
 
     {%- elsif template contains 'product' and product.handle == 'swan-mirror' -%}
-    <!-- ✅ SWAN Mirror Product Page JSON-LD -->
+    <!-- Mirror Product Page JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
