@@ -61,7 +61,7 @@
         "color_scheme": "",
         "stack_images_on_mobile": false,
         "mobile_content_alignment": "center",
-        "show_text_below": false
+        "show_text_below": true
       }
     },
     "swan_rich_text_AiyzpU": {
@@ -152,7 +152,7 @@
         "auto_slide": true,
         "auto_slide_speed": 6000,
         "video_start_delay": 500,
-        "show_arrows": true,
+        "show_arrows": false,
         "arrow_shape": "circle",
         "arrow_bg_color": "#666666",
         "visible_slides": 3,
