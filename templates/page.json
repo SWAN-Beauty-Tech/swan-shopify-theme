@@ -74,20 +74,11 @@
             "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
             "text_style": "body"
           }
-        },
-        "button_kLxWj3": {
-          "type": "button",
-          "settings": {
-            "button_label": "Schaltflächenbeschriftung",
-            "button_link": "",
-            "button_style_secondary": false
-          }
         }
       },
       "block_order": [
         "heading_Y6g6LA",
-        "text_dTq6bx",
-        "button_kLxWj3"
+        "text_dTq6bx"
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
@@ -122,20 +113,11 @@
             "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
             "text_style": "body"
           }
-        },
-        "button_DQ6aCb": {
-          "type": "button",
-          "settings": {
-            "button_label": "Schaltflächenbeschriftung",
-            "button_link": "",
-            "button_style_secondary": false
-          }
         }
       },
       "block_order": [
         "heading_mHp3pB",
-        "text_ahUY8j",
-        "button_DQ6aCb"
+        "text_ahUY8j"
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
@@ -202,45 +184,95 @@
         "padding_bottom": 36
       }
     },
-    "collage_wnHUq7": {
-      "type": "collage",
+    "featured_product_driex8": {
+      "type": "featured-product",
       "blocks": {
-        "image_n7zmRa": {
-          "type": "image",
+        "text_cYxjzm": {
+          "type": "text",
           "settings": {
-            "image": "shopify://shop_images/Under_Paint_-_Product.jpg"
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
           }
         },
-        "product_fkrqXM": {
-          "type": "product",
+        "title_EkQJwB": {
+          "type": "title",
           "settings": {
-            "product": "",
-            "second_image": false
+            "heading_size": "h1"
           }
         },
-        "collection_jmRmcE": {
-          "type": "collection",
+        "price_YF3EwU": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_Qe9nDt": {
+          "type": "variant_picker",
           "settings": {
-            "collection": ""
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector_jLFcFx": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_Eng6ga": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_dqzpBU": {
+          "type": "share",
+          "settings": {
+            "share_label": "Teilen"
           }
         }
       },
       "block_order": [
-        "image_n7zmRa",
-        "product_fkrqXM",
-        "collection_jmRmcE"
+        "text_cYxjzm",
+        "title_EkQJwB",
+        "price_YF3EwU",
+        "variant_picker_Qe9nDt",
+        "quantity_selector_jLFcFx",
+        "buy_buttons_Eng6ga",
+        "share_dqzpBU"
       ],
-      "disabled": true,
-      "name": "t:sections.collage.presets.name",
+      "name": "t:sections.featured-product.presets.name",
       "settings": {
-        "heading": "Multimedia-Collage",
-        "heading_size": "h1",
-        "desktop_layout": "left",
-        "mobile_layout": "column",
-        "card_styles": "product-card-wrapper",
+        "product": "swan-mirror",
         "color_scheme": "",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "1760960645842ca7ef": {
+      "type": "apps",
+      "blocks": {
+        "klarna_on_site_messaging_app_block_6FidPY": {
+          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
+          "settings": {
+            "data_key": "top-strip-promotion-badge",
+            "theme": "default",
+            "topPadding": "0",
+            "bottomPadding": "0",
+            "messagePrefix": ""
+          }
+        }
+      },
+      "block_order": [
+        "klarna_on_site_messaging_app_block_6FidPY"
+      ],
+      "settings": {
+        "include_margins": true
       }
     }
   },
@@ -250,6 +282,7 @@
     "image_with_text_HD9jKM",
     "image_with_text_6ajfcp",
     "image_with_text_E7MApp",
-    "collage_wnHUq7"
+    "featured_product_driex8",
+    "1760960645842ca7ef"
   ]
 }
