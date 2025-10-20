@@ -86,6 +86,48 @@
         "color_scheme": "scheme-3"
       }
     },
+    "rich_text_NJJnxg": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_FJdjiq": {
+          "type": "heading",
+          "settings": {
+            "heading": ""
+          }
+        },
+        "text_R67QiU": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Lade jetzt die SWAN App herunter und lass dich von unserer kreativen Community inspirieren.</p>"
+          }
+        },
+        "button_BJQhwN": {
+          "type": "button",
+          "settings": {
+            "button_label": "Zum Download",
+            "button_link": "https://onelink.to/swanapp?utm_source=applp&utm_medium=website&utm_campaign=ctabutton&utm_content=appstores",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_FJdjiq",
+        "text_R67QiU",
+        "button_BJQhwN"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "image_with_text_WjNQgC": {
       "type": "image-with-text",
       "blocks": {
@@ -117,6 +159,7 @@
         "text_4d7ATz",
         "button_Cenhbr"
       ],
+      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/74.jpg",
@@ -165,6 +208,7 @@
         "text_F9hNcD",
         "button_w3k7Nj"
       ],
+      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/Carolina.jpg",
@@ -213,6 +257,7 @@
         "text_NGECRy",
         "button_gLpbDT"
       ],
+      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/Eyes_-_primer.jpg",
@@ -296,7 +341,6 @@
         "ai_gen_block_ba0b649_xwmYyC": {
           "type": "ai_gen_block_ba0b649",
           "name": "Video with text",
-          "disabled": true,
           "settings": {
             "heading": "Routinen-Planer: Deine flexible Hautpflege",
             "description": "<p>Stelle dir mit deinen Lieblingsprodukten eine persönliche Morgen- und Abendroutine zusammen. Passe sie jederzeit an die aktuellen Bedürfnisse deiner Haut an – flexibel, wenn sich etwas ändert. <br/>So verpasst du keinen Step & behältst die korrekte Reihenfolge täglich im Blick.</p><p>Das Beste: Deine geplante Routine erscheint direkt auf dem SWAN Mirror – für ein nahtloses Beauty-Erlebnis.</p><p></p>",
@@ -319,7 +363,6 @@
         "ai_gen_block_2b816b2_HJrUdG": {
           "type": "ai_gen_block_2b816b2",
           "name": "Video with text",
-          "disabled": true,
           "settings": {
             "video": "https://cdn.shopify.com/videos/c/o/v/414d24a9400143c4a39106e7594b3538.mp4",
             "video_max_width": 400,
@@ -373,7 +416,6 @@
         "ai_gen_block_2b816b2_DeteKz": {
           "type": "ai_gen_block_2b816b2",
           "name": "Video with text",
-          "disabled": true,
           "settings": {
             "video": "https://cdn.shopify.com/videos/c/o/v/b0b3403d42314f1bbc7fe1b415880bcc.mp4",
             "video_max_width": 400,
@@ -409,7 +451,6 @@
         "ai_gen_block_ba0b649_VjyGrF",
         "ai_gen_block_2b816b2_DeteKz"
       ],
-      "disabled": true,
       "custom_css": [
         "div {font-family: var(--bossa) !important;}"
       ],
@@ -591,6 +632,7 @@
     "main",
     "swan_rich_text_daYrVd",
     "swan_image_text_67EcKy",
+    "rich_text_NJJnxg",
     "image_with_text_WjNQgC",
     "image_with_text_cpLEB4",
     "image_with_text_8pjiA4",
