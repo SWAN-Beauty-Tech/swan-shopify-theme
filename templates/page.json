@@ -175,6 +175,70 @@
         "padding_bottom": 36
       }
     },
+    "rich_text_BDq9mn": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_M3EhTy": {
+          "type": "heading",
+          "settings": {
+            "heading": ""
+          }
+        },
+        "text_ptaaAp": {
+          "type": "text",
+          "settings": {
+            "text": "<h5>Bestelle jetzt deinen SWAN Mirror versandkostenfrei nach Hause und werde selbst zum Make-up Artist.</h5>"
+          }
+        },
+        "button_g849HN": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Schaltflächenbeschriftung",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_M3EhTy",
+        "text_ptaaAp",
+        "button_g849HN"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "1760960645842ca7ef": {
+      "type": "apps",
+      "blocks": {
+        "klarna_on_site_messaging_app_block_6FidPY": {
+          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
+          "settings": {
+            "data_key": "top-strip-promotion-badge",
+            "theme": "default",
+            "topPadding": "0",
+            "bottomPadding": "0",
+            "messagePrefix": ""
+          }
+        }
+      },
+      "block_order": [
+        "klarna_on_site_messaging_app_block_6FidPY"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "featured_product_driex8": {
       "type": "featured-product",
       "blocks": {
@@ -246,27 +310,6 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "1760960645842ca7ef": {
-      "type": "apps",
-      "blocks": {
-        "klarna_on_site_messaging_app_block_6FidPY": {
-          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
-          "settings": {
-            "data_key": "top-strip-promotion-badge",
-            "theme": "default",
-            "topPadding": "0",
-            "bottomPadding": "0",
-            "messagePrefix": ""
-          }
-        }
-      },
-      "block_order": [
-        "klarna_on_site_messaging_app_block_6FidPY"
-      ],
-      "settings": {
-        "include_margins": true
-      }
     }
   },
   "order": [
@@ -275,7 +318,8 @@
     "image_with_text_HD9jKM",
     "image_with_text_6ajfcp",
     "image_with_text_E7MApp",
-    "featured_product_driex8",
-    "1760960645842ca7ef"
+    "rich_text_BDq9mn",
+    "1760960645842ca7ef",
+    "featured_product_driex8"
   ]
 }
