@@ -51,7 +51,7 @@
     "image_banner_z94hFA": {
       "type": "image-banner",
       "settings": {
-        "image": "shopify://shop_images/leire-cavia-5r8yCIwJMn4-unsplash_7c4e9a0b-a2bc-499a-b9b5-6efa15c6002f.jpg",
+        "image": "shopify://shop_images/Design_ohne_Titel.jpg",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "image_behavior": "none",
@@ -249,6 +249,53 @@
         "color_scheme": "scheme-3"
       }
     },
+    "image_with_text_kLGAey": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_LeyeKW": {
+          "type": "heading",
+          "settings": {
+            "heading": "App herunterladen & loslegen",
+            "heading_size": "h1"
+          }
+        },
+        "text_PWFdVF": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_yzCtHe": {
+          "type": "button",
+          "settings": {
+            "button_label": "Schaltflächenbeschriftung",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_LeyeKW",
+        "text_PWFdVF",
+        "button_yzCtHe"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "swan_sign_up_7wJRrF": {
       "type": "swan_sign-up",
       "settings": {
@@ -267,6 +314,7 @@
     "video_slider_D9Nqcc",
     "video_carousel_rect_braWeg",
     "swan_image_text_bUttRB",
+    "image_with_text_kLGAey",
     "swan_sign_up_7wJRrF"
   ]
 }
