@@ -22,7 +22,7 @@
         "headline_EBVGed": {
           "type": "headline",
           "settings": {
-            "text": "Platzhalter",
+            "text": "Smart Make-up ARTist",
             "center_text": false,
             "heading_level": "h2",
             "custom_id": "",
@@ -32,7 +32,7 @@
         "text_area_WBUpUn": {
           "type": "text_area",
           "settings": {
-            "text": "<p>Platzhalter</p>",
+            "text": "<p>Entdecke ein völlig neues, personalisiertes AR-Erlebnis.<br/>Unsere intelligentes Feature erkennt <strong>deine Gesichtsform</strong>, kombiniert sie mit deinem <strong>gewünschten Make-up Look </strong>und zeigt dir mithilfe interaktiver <strong>Guides</strong>, <strong>wie und wo du deine Produkte optimal aufträgst</strong>.</p><p>So erhältst du eine <strong>maßgeschneiderte Make-up-Beratung</strong>, die sich an deinen individuellen Look anpasst – <strong>präzise, kreativ und professionell angeleitet</strong>, direkt über deinen SWAN Mirror.</p><p>Erlebe, wie Technologie und Beauty miteinander verschmelzen – für ein Make-up-Ergebnis, mit dem du immer den perfekten Look schminkst.</p>",
             "center_text": false,
             "custom_id": "",
             "custom_class": ""
@@ -118,7 +118,7 @@
         "text_dTq6bx": {
           "type": "text",
           "settings": {
-            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
+            "text": "<p>Das Feature ermöglicht es dir:</p><ul><li>deine <strong>Gesichtsform automatisch zu erkennen</strong>,</li><li><strong>vordefinierte Make-up-Ziele</strong> auszuwählen (z. B. Everyday Glow, Sculpted Look, Natural Radiance),</li><li>auf Basis professioneller Expertise <strong>individuelle Face Maps</strong> zu generieren,</li><li><strong>Produkt- und Tool-Platzierungen</strong> direkt auf deinem Gesicht zu visualisieren,</li><li>und <strong>regionale Anwendungen</strong> zu wählen – etwa nur für Lippen, Augen oder Nase.</li></ul>",
             "text_style": "body"
           }
         }
@@ -157,7 +157,7 @@
         "text_ahUY8j": {
           "type": "text",
           "settings": {
-            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
+            "text": "<p>Das Feature ermöglicht es dir:</p><ul><li>deine <strong>Gesichtsform automatisch zu erkennen</strong>,</li><li><strong>vordefinierte Make-up-Ziele</strong> auszuwählen (z. B. Everyday Glow, Sculpted Look, Natural Radiance),</li><li>auf Basis professioneller Expertise <strong>individuelle Face Maps</strong> zu generieren,</li><li><strong>Produkt- und Tool-Platzierungen</strong> direkt auf deinem Gesicht zu visualisieren,</li><li>und <strong>regionale Anwendungen</strong> zu wählen – etwa nur für Lippen, Augen oder Nase.</li></ul>",
             "text_style": "body"
           }
         }
