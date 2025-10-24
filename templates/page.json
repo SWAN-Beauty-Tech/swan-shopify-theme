@@ -369,6 +369,24 @@
         "padding_bottom": 36
       }
     },
+    "featured_blog_Jinfg6": {
+      "type": "featured-blog",
+      "name": "t:sections.featured-blog.presets.name",
+      "settings": {
+        "blog": "",
+        "post_limit": 3,
+        "heading": "Blog-Beiträge",
+        "heading_size": "h1",
+        "columns_desktop": 3,
+        "show_view_all": true,
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "swan_sign_up_ptqnVH": {
       "type": "swan_sign-up",
       "name": "SWAN Signup",
@@ -390,6 +408,7 @@
     "rich_text_BDq9mn",
     "1760960645842ca7ef",
     "featured_product_driex8",
+    "featured_blog_Jinfg6",
     "swan_sign_up_ptqnVH"
   ]
 }
