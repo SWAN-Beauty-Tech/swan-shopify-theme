@@ -58,6 +58,45 @@
         "color_scheme": "scheme-3"
       }
     },
+    "image_with_text_HD9jKM": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_Y6g6LA": {
+          "type": "heading",
+          "settings": {
+            "heading": "Entdecke exklusive Make-up Looks – kuratiert von den Stars der Beauty-Welt",
+            "heading_size": "h1"
+          }
+        },
+        "text_dTq6bx": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Du kannst aus <strong>Make-up Looks</strong> wählen, die von <strong>international renommierten Make-up Artists</strong> entwickelt und speziell für dich zusammengestellt wurden.</p><p>Von <strong>Foxy Eyes</strong> über <strong>Hollywood Bombshell</strong> bis hin zu <strong>90s Siren</strong> – hier findest du den perfekten Look für jeden Anlass.</p><p>Aktuell stehen dir exklusive Looks von <strong>Allan Avendaño</strong> und <strong>Carolina Gonzalez</strong> zur Verfügung.</p><p>Doch das ist erst der Anfang: Im Hintergrund arbeiten wir bereits an vielen weiteren inspirierenden Looks, die bald für dich verfügbar sein werden.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Y6g6LA",
+        "text_dTq6bx"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/74.jpg",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "multirow_BKCiz4": {
       "type": "multirow",
       "blocks": {
@@ -101,45 +140,6 @@
         "mobile_content_alignment": "left",
         "section_color_scheme": "",
         "row_color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "image_with_text_HD9jKM": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_Y6g6LA": {
-          "type": "heading",
-          "settings": {
-            "heading": "Bild mit Text",
-            "heading_size": "h1"
-          }
-        },
-        "text_dTq6bx": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Das Feature ermöglicht es dir:</p><ul><li>deine <strong>Gesichtsform automatisch zu erkennen</strong>,</li><li><strong>vordefinierte Make-up-Ziele</strong> auszuwählen (z. B. Everyday Glow, Sculpted Look, Natural Radiance),</li><li>auf Basis professioneller Expertise <strong>individuelle Face Maps</strong> zu generieren,</li><li><strong>Produkt- und Tool-Platzierungen</strong> direkt auf deinem Gesicht zu visualisieren,</li><li>und <strong>regionale Anwendungen</strong> zu wählen – etwa nur für Lippen, Augen oder Nase.</li></ul>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "heading_Y6g6LA",
-        "text_dTq6bx"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/74.jpg",
-        "height": "adapt",
-        "desktop_image_width": "small",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "",
-        "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -362,8 +362,8 @@
   "order": [
     "main",
     "swan_image_text_7fNpfG",
-    "multirow_BKCiz4",
     "image_with_text_HD9jKM",
+    "multirow_BKCiz4",
     "image_with_text_6ajfcp",
     "image_with_text_E7MApp",
     "rich_text_BDq9mn",
