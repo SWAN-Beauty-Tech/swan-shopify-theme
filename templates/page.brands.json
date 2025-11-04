@@ -1,0 +1,322 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_9xhcmp": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_RTGxHP": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h1>SWAN Squad</h1>"
+          }
+        },
+        "text_yj7Wbx": {
+          "type": "text",
+          "settings": {
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_RTGxHP",
+        "text_yj7Wbx"
+      ],
+      "disabled": true,
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_banner_z94hFA": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify://shop_images/Design_ohne_Titel.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": false,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "swan_rich_text_AiyzpU": {
+      "type": "swan_rich-text",
+      "blocks": {
+        "heading_mVXyEC": {
+          "type": "heading",
+          "settings": {
+            "heading": ""
+          }
+        },
+        "text_ftVfr4": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Deine exklusive </h2><h2>Beauty Community</h2>"
+          }
+        },
+        "text_TkerxH": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Unser SWAN Squad vereint ausgewählte Creator in einer langfristigen Partnerschaft. </p><p>Hier geht’s um Beauty, Austausch und Inspiration: Tipps teilen, neue Produkte kennenlernen und andere motivieren, den Beauty-Kosmos mit uns zu entdecken.</p><p><strong>Einfache Monetarisierung</strong><br/>Als Squad-Mitglied erhältst du eine feste Provision auf Produkte, die über deine Videos verkauft werden. So baust du dir unkompliziert Einnahmen auf – während du Inhalte erstellst, die begeistern und deine Community wachsen lassen.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_mVXyEC",
+        "text_ftVfr4",
+        "text_TkerxH"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "custom_id": "",
+        "custom_class": "",
+        "color_scheme": ""
+      }
+    },
+    "video_slider_D9Nqcc": {
+      "type": "video-slider",
+      "blocks": {
+        "carousel_video_chwgFp": {
+          "type": "carousel_video",
+          "settings": {
+            "media": "https://cdn.shopify.com/videos/c/o/v/4ca18f066b9a4d0f944bcfc0ee88eaa9.mp4"
+          }
+        },
+        "carousel_video_tUJBqM": {
+          "type": "carousel_video",
+          "settings": {
+            "media": "https://cdn.shopify.com/videos/c/o/v/ffd95449a25e4452b1685afcd732a916.mp4"
+          }
+        },
+        "carousel_video_8hX6cQ": {
+          "type": "carousel_video",
+          "settings": {
+            "media": "https://cdn.shopify.com/videos/c/o/v/c4b9b4f46fbf4c5181c3006cc8b86679.mp4"
+          }
+        },
+        "carousel_video_HUeRA3": {
+          "type": "carousel_video",
+          "settings": {
+            "media": "https://cdn.shopify.com/videos/c/o/v/90cf35ab4067429fbb2da2535ebef9b3.mp4"
+          }
+        },
+        "carousel_video_qyxAFc": {
+          "type": "carousel_video",
+          "settings": {
+            "media": "https://cdn.shopify.com/videos/c/o/v/eeca8e5b96b74defa5dbae49f240a99d.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "carousel_video_chwgFp",
+        "carousel_video_tUJBqM",
+        "carousel_video_8hX6cQ",
+        "carousel_video_HUeRA3",
+        "carousel_video_qyxAFc"
+      ],
+      "disabled": true,
+      "name": "Videos Slider",
+      "settings": {
+        "section_heading": "",
+        "heading_alignment": "center",
+        "heading_size": "medium",
+        "full_width": false,
+        "section_bg_color": "#ffffff",
+        "section_padding_top": 40,
+        "section_padding_bottom": 40,
+        "auto_slide": true,
+        "auto_slide_speed": 6000,
+        "video_start_delay": 500,
+        "show_arrows": false,
+        "arrow_shape": "circle",
+        "arrow_bg_color": "#666666",
+        "visible_slides": 3,
+        "visible_mobile": 1,
+        "image_shape": "square",
+        "image_size": "small",
+        "media_size": "medium",
+        "media_design": "adapt",
+        "media_shadow": false,
+        "testimonial_name_size": 20
+      }
+    },
+    "video_carousel_rect_braWeg": {
+      "type": "video_carousel_rect",
+      "disabled": true,
+      "name": "Video carousel",
+      "settings": {
+        "padding_block_desktop": 40,
+        "padding_inline_desktop": 40,
+        "margin_block_desktop": 20,
+        "margin_inline_desktop": 20,
+        "padding_block_mobile": 20,
+        "padding_inline_mobile": 20,
+        "margin_block_mobile": 10,
+        "margin_inline_mobile": 10,
+        "video_1": "shopify://files/videos/3.mp4",
+        "video_2": "shopify://files/videos/1.mp4",
+        "video_3": "shopify://files/videos/5.mp4",
+        "video_4": "shopify://files/videos/4.mp4",
+        "video_5": "shopify://files/videos/Ohne Titel.mp4",
+        "video_width": 280,
+        "video_height": 480,
+        "video_gap": 20,
+        "mobile_video_gap": 2,
+        "inactive_scale": 80,
+        "inactive_opacity": 60,
+        "border_radius": 12,
+        "nav_button_color": "#ffffff",
+        "nav_button_hover_color": "#f0f0f0",
+        "nav_button_icon_color": "#000000",
+        "autoplay_enabled": true,
+        "autoplay_duration": 8
+      }
+    },
+    "swan_image_text_bUttRB": {
+      "type": "swan_image-text",
+      "blocks": {
+        "headline_i9mhXX": {
+          "type": "headline",
+          "settings": {
+            "text": "Werde von Brands entdeckt",
+            "center_text": false,
+            "heading_level": "h2",
+            "custom_id": "",
+            "custom_class": ""
+          }
+        },
+        "text_area_GUr6Y9": {
+          "type": "text_area",
+          "settings": {
+            "text": "<p>Als <strong>SWANie</strong> erhältst du regelmäßig Produktpakete angesagter Beauty- und Lifestyle-Marken – zum Testen, Kreieren und Teilen mit deiner Community.</p><p>Der <strong>SWAN Squad</strong> ist deine Bühne: Top-Brands verfolgen aktiv deine Inhalte. Jede Kooperation ist eine Chance, direkt entdeckt und für exklusive Kampagnen gebucht zu werden – mit SWAN als starkem Partner an deiner Seite.</p>",
+            "center_text": false,
+            "custom_id": "",
+            "custom_class": ""
+          }
+        },
+        "button_VFhwzD": {
+          "type": "button",
+          "settings": {
+            "button_text": "Jetzt bewerben",
+            "button_link": "https://forms.cloud.microsoft/r/e492mA6tEP",
+            "button_style_secondary": false,
+            "custom_id": "",
+            "custom_class": ""
+          }
+        }
+      },
+      "block_order": [
+        "headline_i9mhXX",
+        "text_area_GUr6Y9",
+        "button_VFhwzD"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Website_Header.jpg",
+        "image_position": "left",
+        "image_scale": "cover",
+        "image_background": "#ffffff",
+        "image_inset": "false",
+        "mirror_swap": false,
+        "text_alignment": "flex-end",
+        "sticky_text": false,
+        "custom_id": "",
+        "custom_class": "",
+        "color_scheme": "scheme-3"
+      }
+    },
+    "image_with_text_kLGAey": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_LeyeKW": {
+          "type": "heading",
+          "settings": {
+            "heading": "App herunterladen & loslegen",
+            "heading_size": "h1"
+          }
+        },
+        "text_PWFdVF": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Dein Zugang zu Inspiration, Tutorials und einer lebendigen Community – kostenlos nutzbar, auch ohne SWAN Mirror. </p><p>Schau dir Videos Schritt für Schritt an, shoppe Produkte direkt aus den Clips im SWAN Marketplace und teile deinen eigenen Content. </p><p>Authentisch, nahbar, ohne Filter. </p>",
+            "text_style": "body"
+          }
+        },
+        "button_yzCtHe": {
+          "type": "button",
+          "settings": {
+            "button_label": "Zum Download",
+            "button_link": "https://onelink.to/swanapp?utm_source=applp&utm_medium=website&utm_campaign=ctabutton&utm_content=appstores",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_LeyeKW",
+        "text_PWFdVF",
+        "button_yzCtHe"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/4.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "swan_sign_up_7wJRrF": {
+      "type": "swan_sign-up",
+      "settings": {
+        "header": "the future of beauty is now.",
+        "text_content": "<h5>Werde SWAN Beauty Insider und verpasse keine Updates.</h5>",
+        "color_scheme": "",
+        "mirror_image": "white"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_9xhcmp",
+    "image_banner_z94hFA",
+    "swan_rich_text_AiyzpU",
+    "video_slider_D9Nqcc",
+    "video_carousel_rect_braWeg",
+    "swan_image_text_bUttRB",
+    "image_with_text_kLGAey",
+    "swan_sign_up_7wJRrF"
+  ]
+}
