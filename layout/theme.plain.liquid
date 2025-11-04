@@ -1,11 +1,444 @@
 <!doctype html>
 <html class="js" lang="{{ request.locale.iso_code }}">
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
-    <link rel="canonical" href="{{ canonical_url }}">
+    <link rel="canonical" href="{{ canonical_url }}" />
+
+    {% assign current_path = request.path %}
+    {% assign current_host = request.host %}
+    {% assign de_paths = "/,/pages/mirror,/products/swan-mirror,/pages/contact" | split: "," %}
+    {% assign en_paths = "/,/pages/mirror,/products/swan-mirror,/pages/contact" | split: "," %}
+
+    {% assign path_match = false %}
+    {% assign mapped_path = "" %}
+
+    {%- for de_path in de_paths -%}
+      {% assign index = forloop.index0 %}
+      {% assign en_path = en_paths[index] %}
+      {% if current_path == de_path %}
+        {% assign path_match = true %}
+        {% assign mapped_path = en_path %}
+      {% endif %}
+    {%- endfor -%}
+
+    {%- if current_host contains "de.swanbeauty.com" -%}
+      {%- if path_match -%}
+        <link rel="alternate" hreflang="de" href="https://de.swanbeauty.com{{ mapped_path }}" />
+        <link rel="alternate" hreflang="en" href="https://swanbeauty.com{{ mapped_path }}" />
+        <link rel="alternate" hreflang="x-default" href="https://swanbeauty.com{{ mapped_path }}" />
+      {%- else -%}
+        <link rel="alternate" hreflang="de" href="{{ canonical_url }}" />
+        <link rel="alternate" hreflang="x-default" href="{{ canonical_url }}" />
+      {%- endif -%}
+
+    {%- elsif current_host == "swanbeauty.com" -%}
+      {%- if path_match -%}
+        <link rel="alternate" hreflang="en" href="https://swanbeauty.com{{ mapped_path }}" />
+        <link rel="alternate" hreflang="de" href="https://de.swanbeauty.com{{ mapped_path }}" />
+        <link rel="alternate" hreflang="x-default" href="https://swanbeauty.com{{ mapped_path }}" />
+      {%- else -%}
+        <link rel="alternate" hreflang="en" href="{{ canonical_url }}" />
+        <link rel="alternate" hreflang="x-default" href="{{ canonical_url }}" />
+      {%- endif -%}
+    {%- endif -%}
+
+    {%- assign path = request.path | downcase -%}
+
+    {%- if template == 'index' -%}
+    <!-- Home JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "{{ shop.url }}/#website",
+          "url": "{{ shop.url }}/",
+          "name": "SWAN Beauty Tech",
+          "inLanguage": "de-DE"
+        },
+        {
+          "@type": "Organization",
+          "@id": "{{ shop.url }}/#organization",
+          "name": "SWAN Beauty Tech GmbH",
+          "legalName": "SWAN Beauty Tech GmbH",
+          "url": "{{ shop.url }}/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "{{ shop.url }}/cdn/shop/files/Swan_Logo_Horizontal_Black.png?v=1756885042"
+          },
+          "sameAs": [
+            "https://www.instagram.com/swanbeauty_de/",
+            "https://www.youtube.com/@swanbeauty_de",
+            "https://www.tiktok.com/@swanbeauty_de"
+          ],
+          "email": "hi@swanbeauty.com",
+          "contactPoint": [{
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "email": "hi@swanbeauty.com",
+            "availableLanguage": ["de", "en"]
+          }],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Alter Wandrahm 8",
+            "postalCode": "20457",
+            "addressLocality": "Hamburg",
+            "addressCountry": "DE"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "{{ shop.url }}/#webpage",
+          "url": "{{ shop.url }}/",
+          "name": "SWAN Beauty - Smart Mirror & App | Offizielle Webseite und Shop",
+          "isPartOf": { "@id": "{{ shop.url }}/#website" },
+          "about": { "@id": "{{ shop.url }}/#organization" },
+          "inLanguage": "de-DE",
+          "dateModified": "{{ 'now' | date: '%Y-%m-%d' }}"
+        }
+      ]
+    }
+    </script>
+
+    {%- elsif path contains '/pages/mirror' -%}
+    <!-- Mirror Landing Page JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "{{ shop.url }}/pages/mirror#webpage",
+          "url": "{{ shop.url }}/pages/mirror",
+          "name": "SWAN Beauty Mirror - Smart Mirror mit KI-Hautanalyse & Beauty-Light",
+          "inLanguage": "de-DE",
+          "isPartOf": { "@id": "{{ shop.url }}/#website" },
+          "about": { "@id": "{{ shop.url }}/#organization" },
+          "dateModified": "{{ 'now' | date: '%Y-%m-%d' }}"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "{{ shop.url }}/#website",
+          "url": "{{ shop.url }}/",
+          "name": "SWAN Beauty Tech",
+          "inLanguage": "de-DE"
+        },
+        {
+          "@type": "Organization",
+          "@id": "{{ shop.url }}/#organization",
+          "name": "SWAN Beauty Tech GmbH",
+          "legalName": "SWAN Beauty Tech GmbH",
+          "url": "{{ shop.url }}/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "{{ shop.url }}/cdn/shop/files/Swan_Logo_Horizontal_Black.png?v=1756885042",
+            "caption": "SWAN Beauty Tech Logo"
+          },
+          "image": {
+            "@type": "ImageObject",
+            "url": "{{ shop.url }}/",
+            "caption": "SWAN Beauty – Smart Mirror & App"
+          },
+          "sameAs": [
+            "https://www.instagram.com/swanbeauty_de/",
+            "https://www.youtube.com/@swanbeauty_de",
+            "https://www.tiktok.com/@swanbeauty_de"
+          ],
+          "email": "hi@swanbeauty.com",
+          "contactPoint": [{
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "email": "hi@swanbeauty.com",
+            "availableLanguage": ["de", "en"]
+          }],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Alter Wandrahm 8",
+            "postalCode": "20457",
+            "addressLocality": "Hamburg",
+            "addressCountry": "DE"
+          }
+        },
+        {
+          "@type": "Product",
+          "@id": "{{ shop.url }}/pages/mirror#product",
+          "name": "SWAN Mirror",
+          "brand": { "@type": "Brand", "name": "SWAN Beauty Tech" },
+          "category": "Smart Mirror",
+          "description": "Smart Mirror mit KI-gestützter Hautanalyse (mit Dermatolog*innen entwickelt), 13-MP-Kamera & Mikrofon, dimmbarem Beauty-Light und nahtloser SWAN App-Anbindung. 15,6\" Multi-Touch-Display; Farben: Schwarz oder Weiß. Auslieferung im November.",
+          "url": "{{ shop.url }}/pages/mirror",
+          "image": [
+            "https://cdn.shopify.com/s/files/1/0666/1312/1772/products/SWAN_Mirror_Black_Front.png?v=1750885828",
+            "https://cdn.shopify.com/s/files/1/0666/1312/1772/products/SWAN_Mirror_White_Front.png?v=1750885828",
+            "https://cdn.shopify.com/s/files/1/0666/1312/1772/products/SWAN_Mirror_Black_Side.png?v=1750885828",
+            "https://cdn.shopify.com/s/files/1/0666/1312/1772/products/SWAN_Mirror_White_Side.png?v=1750885828",
+            "https://cdn.shopify.com/s/files/1/0666/1312/1772/products/SWAN_Mirror_Black_Back.png?v=1750885828",
+            "https://cdn.shopify.com/s/files/1/0666/1312/1772/products/SWAN_Mirror_White_Back.png?v=1750885828"
+          ],
+          "color": ["Schwarz", "Weiß"],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "ratingCount": "127",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "isAccessoryOrSparePartFor": {
+            "@type": "MobileApplication",
+            "@id": "{{ shop.url }}/pages/app#app"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "599.00",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/OutOfStock",
+            "url": "{{ shop.url }}/pages/mirror",
+            "priceValidUntil": "2026-12-31",
+            "shippingDetails": {
+              "@type": "OfferShippingDetails",
+              "shippingRate": {
+                "@type": "MonetaryAmount",
+                "value": "0.00",
+                "currency": "EUR"
+              },
+              "shippingDestination": {
+                "@type": "DefinedRegion",
+                "addressCountry": "DE"
+              },
+              "deliveryTime": {
+                "@type": "ShippingDeliveryTime",
+                "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "d" },
+                "transitTime":  { "@type": "QuantitativeValue", "minValue": 2, "maxValue": 4, "unitCode": "d" }
+              }
+            },
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": "DE",
+              "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+              "merchantReturnDays": 14,
+              "returnMethod": "https://schema.org/ReturnByMail",
+              "returnFees": "https://schema.org/FreeReturn"
+            }
+          }
+        },
+        {
+          "@type": "MobileApplication",
+          "@id": "{{ shop.url }}/pages/app#app",
+          "name": "SWAN App",
+          "applicationCategory": "LifestyleApplication",
+          "operatingSystem": "iOS, Android",
+          "description": "Beauty-Community, Tutorials und Shopping direkt aus Videos. Funktioniert auch ohne SWAN Mirror.",
+          "url": "{{ shop.url }}/pages/app",
+          "downloadUrl": "https://onelink.to/swanapp",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "ratingCount": "245",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "EUR"
+          },
+          "publisher": { "@id": "{{ shop.url }}/#organization" }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "{{ shop.url }}/pages/mirror#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Brauche ich ein spezielles Abonnement oder eine App für die Nutzung?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Der SWAN Mirror kann ohne Abonnement kostenfrei genutzt werden. Für den Zugriff auf Funktionen wie Beauty-Videos, Produkt-Shopping, Content-Erstellung und Hautanalyse ist die kostenlose SWAN App erforderlich."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Unterstützt der SWAN Mirror Drittanbieter-Apps?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nein. Der SWAN Mirror ist so konzipiert, dass er ausschließlich mit der SWAN App funktioniert. Alle Funktionen sind direkt integriert – für ein nahtloses, sicheres und performantes Erlebnis."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Welche Rückgabemöglichkeiten gibt es?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Wir bieten eine 14-tägige Rückgabemöglichkeit. Der SWAN Mirror kann innerhalb von 14 Tagen im Originalzustand und in Originalverpackung zurückgegeben werden. Zur Einleitung bitte den Kundenservice per E-Mail (hi@swanbeauty.com) kontaktieren."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "An wen kann ich mich bei technischen Problemen oder Fragen wenden?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Der Kundenservice ist per E-Mail unter hi@swanbeauty.com erreichbar."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Benötige ich WLAN für den SWAN Mirror?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ja. Für die volle Funktionalität wird eine WLAN-Verbindung sowie ein Stromanschluss benötigt. Der Spiegel verbindet sich mit der SWAN App und dem Internet, um Inhalte, Updates und Community-Funktionen bereitzustellen."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    {%- elsif path contains '/pages/app' -%}
+    <!-- App Page JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "{{ shop.url }}/pages/app#webpage",
+          "url": "{{ shop.url }}/pages/app",
+          "name": "SWAN App – Tutorials, Community & Shopping aus Videos",
+          "inLanguage": "de-DE",
+          "isPartOf": { "@id": "{{ shop.url }}/#website" },
+          "about": { "@id": "{{ shop.url }}/#organization" },
+          "dateModified": "{{ 'now' | date: '%Y-%m-%d' }}"
+        },
+        {
+          "@type": "MobileApplication",
+          "@id": "{{ shop.url }}/pages/app#app",
+          "name": "SWAN App",
+          "applicationCategory": "LifestyleApplication",
+          "operatingSystem": "iOS, Android",
+          "description": "Beauty-Community, Tutorials & Shopping direkt aus Videos. Funktioniert auch ohne SWAN Mirror.",
+          "url": "{{ shop.url }}/pages/app",
+          "downloadUrl": "https://onelink.to/swanapp",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "ratingCount": "245",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "EUR"
+          },
+          "publisher": { "@id": "{{ shop.url }}/#organization" }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "{{ shop.url }}/pages/app#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Was ist die SWAN App und welche Funktionen bietet sie?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Die SWAN App ist eine interaktive Plattform für Beauty-Enthusiasten mit Community, authentischen Videos und integriertem Shop."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Ist die App kostenlos?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ja, die App ist komplett kostenlos nutzbar und enthält keine kostenpflichtigen Abonnements."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    {%- elsif template contains 'product' and product.handle == 'swan-mirror' -%}
+    <!-- Mirror Product Page JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "{{ shop.url }}/products/{{ product.handle }}#webpage",
+          "url": "{{ shop.url }}/products/{{ product.handle }}",
+          "name": "{{ product.title | escape }} – Smart Mirror mit KI-Hautanalyse & Beauty-Light",
+          "inLanguage": "de-DE",
+          "isPartOf": { "@id": "{{ shop.url }}/#website" },
+          "about": { "@id": "{{ shop.url }}/#organization" },
+          "dateModified": "{{ 'now' | date: '%Y-%m-%d' }}"
+        },
+        {
+          "@type": "Product",
+          "@id": "{{ shop.url }}/products/{{ product.handle }}#product",
+          "name": "{{ product.title | escape }}",
+          "brand": { "@type": "Brand", "name": "SWAN Beauty Tech" },
+          "category": "Smart Mirror",
+          "description": "{{ product.description | strip_html | strip_newlines | escape }}",
+          "url": "{{ shop.url }}/products/{{ product.handle }}",
+          "image": [{% for image in product.images %}"{{ image.src | img_url: 'master' }}"{% unless forloop.last %}, {% endunless %}{% endfor %}],
+          "color": ["Schwarz", "Weiß"],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "ratingCount": "127",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "{{ product.price | divided_by: 100.0 }}",
+            "priceCurrency": "{{ cart.currency.iso_code | default: 'EUR' }}",
+            "availability": "https://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}",
+            "url": "{{ shop.url }}/products/{{ product.handle }}"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "{{ shop.url }}/products/{{ product.handle }}#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Brauche ich ein spezielles Abonnement oder eine App für die Nutzung?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Der SWAN Mirror kann ohne Abonnement kostenfrei genutzt werden. Für erweiterte Funktionen wie Tutorials, Shopping und Hautanalyse ist die kostenlose SWAN App erforderlich."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Benötige ich WLAN für den SWAN Mirror?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ja. Für die volle Funktionalität wird WLAN benötigt, um Inhalte, Updates und Community-Funktionen bereitzustellen."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Welche Rückgabemöglichkeiten gibt es?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Wir bieten eine 14-tägige Rückgabemöglichkeit. Der SWAN Mirror kann innerhalb von 14 Tagen im Originalzustand und in Originalverpackung zurückgegeben werden. Bitte kontaktiere den Kundenservice per E-Mail unter hi@swanbeauty.com."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+    {%- endif -%}
 
     <style>
           @font-face {
@@ -352,7 +785,6 @@
         font-family: var(--font-body-family);
         font-style: var(--font-body-style);
         font-weight: var(--font-body-weight);
-        padding: 16px;
       }
 
       @media screen and (min-width: 750px) {
@@ -363,6 +795,15 @@
     {% endstyle %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
+    <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
+
+    {%- if settings.cart_type == 'drawer' -%}
+      {{ 'component-cart-drawer.css' | asset_url | stylesheet_tag }}
+      {{ 'component-cart.css' | asset_url | stylesheet_tag }}
+      {{ 'component-totals.css' | asset_url | stylesheet_tag }}
+      {{ 'component-price.css' | asset_url | stylesheet_tag }}
+      {{ 'component-discounts.css' | asset_url | stylesheet_tag }}
+    {%- endif -%}
 
     {%- unless settings.type_body_font.system? -%}
       {% comment %}theme-check-disable AssetPreload{% endcomment %}
@@ -374,6 +815,20 @@
       <link rel="preload" as="font" href="{{ settings.type_header_font | font_url }}" type="font/woff2" crossorigin>
       {% comment %}theme-check-enable AssetPreload{% endcomment %}
     {%- endunless -%}
+
+    {%- if localization.available_countries.size > 1 or localization.available_languages.size > 1 -%}
+      {{ 'component-localization-form.css' | asset_url | stylesheet_tag: preload: true }}
+      <script src="{{ 'localization-form.js' | asset_url }}" defer="defer"></script>
+    {%- endif -%}
+
+    {%- if settings.predictive_search_enabled -%}
+      <link
+        rel="stylesheet"
+        href="{{ 'component-predictive-search.css' | asset_url }}"
+        media="print"
+        onload="this.media='all'"
+      >
+    {%- endif -%}
 
     <script>
       if (Shopify.designMode) {
