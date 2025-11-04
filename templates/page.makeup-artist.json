@@ -1,0 +1,414 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "swan_image_text_7fNpfG": {
+      "type": "swan_image-text",
+      "blocks": {
+        "headline_EBVGed": {
+          "type": "headline",
+          "settings": {
+            "text": "Smart Make-up ARTist",
+            "center_text": false,
+            "heading_level": "h2",
+            "custom_id": "",
+            "custom_class": ""
+          }
+        },
+        "text_area_WBUpUn": {
+          "type": "text_area",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Entdecke ein völlig neues, personalisiertes AR-Erlebnis.<br/>Unsere intelligentes Feature erkennt <strong>deine Gesichtsform</strong>, kombiniert sie mit deinem <strong>gewünschten Make-up Look </strong>und zeigt dir mithilfe interaktiver <strong>Guides</strong>, <strong>wie und wo du deine Produkte optimal aufträgst</strong>.</p><p>So erhältst du eine <strong>maßgeschneiderte Make-up-Beratung</strong>, die sich an deinen individuellen Look anpasst – <strong>präzise, kreativ und professionell angeleitet</strong>, direkt über deinen SWAN Mirror.</p><p>Erlebe, wie Technologie und Beauty miteinander verschmelzen – für ein Make-up-Ergebnis, mit dem du immer den perfekten Look schminkst.</p>",
+            "center_text": false,
+            "custom_id": "",
+            "custom_class": ""
+          }
+        },
+        "text_area_xX73yd": {
+          "type": "text_area",
+          "settings": {
+            "text": "<p>Der <strong>SmARt Make-up Artist</strong> nutzt <strong>Echtzeit-Gesichtserkennung</strong> und <strong>dynamische AR-Overlays</strong>, um dich Schritt für Schritt durch den perfekten Make-up-Look zu führen – individuell abgestimmt auf deine <strong>Gesichtsform und deinen persönlichen Stil</strong>.</p><p>Mit <strong>professionellen Face Maps</strong>, <strong>intelligenten Produktempfehlungen</strong> und <strong>inspirierenden Influencer-Features </strong>verwandelt unser neues Feature deinen <strong>SWAN Mirror</strong> in einen <strong>aktiven Beauty-Coach</strong> – weit mehr als ein gewöhnlicher Spiegel.</p>",
+            "center_text": false,
+            "custom_id": "",
+            "custom_class": ""
+          }
+        }
+      },
+      "block_order": [
+        "headline_EBVGed",
+        "text_area_WBUpUn",
+        "text_area_xX73yd"
+      ],
+      "name": "SWAN Image & Text",
+      "settings": {
+        "image": "shopify://shop_images/Website_Header_9790a6d9-3037-45ae-bffe-fa4beef99c97.jpg",
+        "image_position": "left",
+        "image_scale": "cover",
+        "image_background": "#ffffff",
+        "image_inset": "none",
+        "mirror_swap": false,
+        "text_alignment": "center",
+        "sticky_text": false,
+        "custom_id": "",
+        "custom_class": "",
+        "color_scheme": "scheme-3"
+      }
+    },
+    "image_with_text_HD9jKM": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_Y6g6LA": {
+          "type": "heading",
+          "settings": {
+            "heading": "Entdecke exklusive Make-up Looks – kuratiert von den Stars der Beauty-Welt",
+            "heading_size": "h1"
+          }
+        },
+        "text_dTq6bx": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Du kannst aus <strong>Make-up Looks</strong> wählen, die von <strong>international renommierten Make-up Artists</strong> entwickelt und speziell für dich zusammengestellt wurden.</p><p>Von <strong>Foxy Eyes</strong> über <strong>Hollywood Bombshell</strong> bis hin zu <strong>90s Siren</strong> – hier findest du den perfekten Look für jeden Anlass.</p><p>Aktuell stehen dir exklusive Looks von <strong>Allan Avendaño</strong> und <strong>Carolina Gonzalez</strong> zur Verfügung.</p><p>Doch das ist erst der Anfang: Im Hintergrund arbeiten wir bereits an vielen weiteren inspirierenden Looks, die bald für dich verfügbar sein werden.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Y6g6LA",
+        "text_dTq6bx"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/6_259b7fdc-b5f7-49c6-ab85-d335844857db.jpg",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "multirow_BKCiz4": {
+      "type": "multirow",
+      "blocks": {
+        "row_dctHMB": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/SMAU.jpg",
+            "caption": "",
+            "heading": "Carolina Gonzalez",
+            "text": "<p>ist eine in New York City ansässige Make-up-Artistin und Markenbotschafterin. </p><p>Sie arbeitet in den Bereichen Editorial, Mode und Werbung. Ihr Portfolio umfasst Veröffentlichungen in führenden Mode- und Beauty-Medien sowie Shootings mit renommierten Fotografen der Branche. </p><p>Außerdem hat sie Looks für bekannte Persönlichkeiten und Werbekampagnen in den Bereichen Beauty, Lifestyle und Mode kreiert, wie Gigi Hadid und Sabrina Carpenter.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_rpBCLT": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/SMAU_1.jpg",
+            "caption": "",
+            "heading": "Allan Avendaño",
+            "text": "<p>ist ein in Los Angeles ansässiger Make-up-Artist, der für einen Emmy nominiert wurde und einen Hollywood Beauty Award gewonnen hat. </p><p>Bekannt für seine ausgefeilte Technik und seine Liebe zum Detail, umfasst seine Arbeit Red-Carpet-Looks, Editorials und Modekampagnen. </p><p>Seine Kunst zeichnet sich durch eine Balance aus Präzision, Kreativität und moderner Eleganz aus.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_dctHMB",
+        "row_rpBCLT"
+      ],
+      "name": "t:sections.multirow.presets.name",
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "image_layout": "alternate-left",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_6ajfcp": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_mHp3pB": {
+          "type": "heading",
+          "settings": {
+            "heading": "Erlebe, wie Smart Beauty funktioniert",
+            "heading_size": "h1"
+          }
+        },
+        "text_ahUY8j": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Echtzeit-AR-Technologie:</strong> erkennt dein Gesicht sofort und blendet präzise Overlays ein</p><p><strong>Individuelle Anpassung:</strong> reagiert dynamisch auf deine Gesichtsform und zeigt dir, wo Produkte perfekt aufgetragen werden </p><p><strong>Präzision & Personalisierung:</strong> schafft ein Make-up-Erlebnis, das weit über das klassische Tutorial hinausgeht</p><p><strong>Interaktive Beratung:</strong> macht den Spiegel zu deinem persönlichen Make-up-Coach</p><p><strong>Smart Recommendations:</strong> maßgeschneiderte Tool- und Produktempfehlungen</p><p><strong>In Zusammenarbeit mit echten Profis:</strong> Looks und Face Maps entstehen gemeinsam mit renommierten <strong>Make-up Artists</strong>– und bieten Raum für Features mit bekannten <strong>Influencer*innen</strong></p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_mHp3pB",
+        "text_ahUY8j"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/5_49cb7076-f53e-4d12-ae65-5bd9f916984f.jpg",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_E7MApp": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_UbzXVj": {
+          "type": "heading",
+          "settings": {
+            "heading": "Coming soon - bald auf dem SWAN Mirror verfügbar",
+            "heading_size": "h1"
+          }
+        },
+        "text_7JjDA8": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Das neue Feature wird im Laufe des Novembers auf jedem SWAN Mirror ausgerollt. </p><p>Wenn du deinen smarten Spiegel bereits in den letzten Monaten gekauft hast, kannst du das Update ganz einfach über die angezeigte Push-Nachricht im rechten Bildschirmrand updaten. </p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_UbzXVj",
+        "text_7JjDA8"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/4_5b73c429-8543-439d-ac54-7bcb4c2c7738.jpg",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_BDq9mn": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_M3EhTy": {
+          "type": "heading",
+          "settings": {
+            "heading": ""
+          }
+        },
+        "text_ptaaAp": {
+          "type": "text",
+          "settings": {
+            "text": "<h5>Bestelle jetzt deinen SWAN Mirror versandkostenfrei nach Hause und werde selbst zum Make-up Artist.</h5>"
+          }
+        },
+        "button_g849HN": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Schaltflächenbeschriftung",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_M3EhTy",
+        "text_ptaaAp",
+        "button_g849HN"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "1760960645842ca7ef": {
+      "type": "apps",
+      "blocks": {
+        "klarna_on_site_messaging_app_block_6FidPY": {
+          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
+          "settings": {
+            "data_key": "top-strip-promotion-badge",
+            "theme": "default",
+            "topPadding": "0",
+            "bottomPadding": "0",
+            "messagePrefix": ""
+          }
+        }
+      },
+      "block_order": [
+        "klarna_on_site_messaging_app_block_6FidPY"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "featured_product_driex8": {
+      "type": "featured-product",
+      "blocks": {
+        "text_cYxjzm": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_EkQJwB": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_YF3EwU": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_Qe9nDt": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector_jLFcFx": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {}
+        },
+        "buy_buttons_Eng6ga": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_dqzpBU": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "share_label": "Teilen"
+          }
+        }
+      },
+      "block_order": [
+        "text_cYxjzm",
+        "title_EkQJwB",
+        "price_YF3EwU",
+        "variant_picker_Qe9nDt",
+        "quantity_selector_jLFcFx",
+        "buy_buttons_Eng6ga",
+        "share_dqzpBU"
+      ],
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "product": "swan-mirror",
+        "color_scheme": "",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "swan_sign_up_ptqnVH": {
+      "type": "swan_sign-up",
+      "name": "SWAN Signup",
+      "settings": {
+        "header": "The future of beauty is now.",
+        "text_content": "<h5>Werde SWAN Beauty Insider und verpasse keine Updates.</h5>",
+        "color_scheme": "",
+        "mirror_image": "white"
+      }
+    },
+    "featured_blog_Jinfg6": {
+      "type": "featured-blog",
+      "name": "t:sections.featured-blog.presets.name",
+      "settings": {
+        "blog": "news",
+        "post_limit": 3,
+        "heading": "Blog-Beiträge",
+        "heading_size": "h1",
+        "columns_desktop": 3,
+        "show_view_all": true,
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "swan_image_text_7fNpfG",
+    "image_with_text_HD9jKM",
+    "multirow_BKCiz4",
+    "image_with_text_6ajfcp",
+    "image_with_text_E7MApp",
+    "rich_text_BDq9mn",
+    "1760960645842ca7ef",
+    "featured_product_driex8",
+    "swan_sign_up_ptqnVH",
+    "featured_blog_Jinfg6"
+  ]
+}
