@@ -145,21 +145,32 @@
     {%- else -%}
       Versandkostenfrei.
     {%- endif -%}
-  </div>
 <div class="product__tax caption rte">
-  {%- comment -%} 1) Steuern {%- endcomment -%}
+  {%- comment -%} 1) Steuern: DE/EN ohne fehlenden i18n-Key {%- endcomment -%}
   {%- if shop.taxes_included or cart.taxes_included -%}
-    {{ 'products.product.taxes_included' | t }}
+    {%- if request.locale.iso_code == 'de' -%}
+      Inkl. Steuern.
+    {%- else -%}
+      Including taxes.
+    {%- endif -%}
   {%- else -%}
-    {{ 'products.product.taxes_excluded' | t }}
+    {%- if request.locale.iso_code == 'de' -%}
+      Zzgl. Steuern.
+    {%- else -%}
+      Excluding taxes.
+    {%- endif -%}
   {%- endif -%}
   <br>
 
-  {%- comment -%} 2) Versand – Priorität: Text-Metafield > Boolean > Standardhinweis {%- endcomment -%}
+  {%- comment -%} 2) Versand: Metafield > Boolean > Fallback Policy {%- endcomment -%}
   {%- if product.metafields.custom.shipping_notice != blank -%}
     {{ product.metafields.custom.shipping_notice }}
   {%- elsif product.metafields.custom.free_shipping == true -%}
-    Versandkostenfrei.
+    {%- if request.locale.iso_code == 'de' -%}
+      Versandkostenfrei.
+    {%- else -%}
+      Free shipping.
+    {%- endif -%}
   {%- else -%}
     {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
   {%- endif -%}
