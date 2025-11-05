@@ -110,6 +110,104 @@
         "color_scheme": "scheme-3"
       }
     },
+    "1759931982223fd3f6": {
+      "type": "apps",
+      "blocks": {
+        "klarna_on_site_messaging_app_block_FXNR8E": {
+          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
+          "settings": {
+            "data_key": "top-strip-promotion-standard",
+            "theme": "default",
+            "topPadding": "0",
+            "bottomPadding": "0",
+            "messagePrefix": ""
+          }
+        }
+      },
+      "block_order": [
+        "klarna_on_site_messaging_app_block_FXNR8E"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "featured_product_imLJVN": {
+      "type": "featured-product",
+      "blocks": {
+        "text_xmRTjb": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_qa3HEt": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_tNMBew": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_KEdYDX": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "none"
+          }
+        },
+        "quantity_selector_CyqVpz": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {}
+        },
+        "buy_buttons_d7RqM7": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "share_wTGkkx": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "share_label": "Teilen"
+          }
+        }
+      },
+      "block_order": [
+        "text_xmRTjb",
+        "title_qa3HEt",
+        "price_tNMBew",
+        "variant_picker_KEdYDX",
+        "quantity_selector_CyqVpz",
+        "buy_buttons_d7RqM7",
+        "share_wTGkkx"
+      ],
+      "custom_css": [
+        ".section-featured-product {max-width: 1200px; margin: 0 auto; font-family: var(--bossa) !important; padding-right: 1.5rem; padding-top: 36px;}",
+        "div.product__info-wrapper {padding: 1.5rem;}",
+        ".slider-buttons {text-align: center;}"
+      ],
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "product": "swan-mirror",
+        "color_scheme": "scheme-1",
+        "secondary_background": false,
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
     "blocks_c7ywbP": {
       "type": "_blocks",
       "blocks": {
@@ -244,104 +342,6 @@
       ],
       "name": "Text hotspots",
       "settings": {}
-    },
-    "1759931982223fd3f6": {
-      "type": "apps",
-      "blocks": {
-        "klarna_on_site_messaging_app_block_FXNR8E": {
-          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
-          "settings": {
-            "data_key": "top-strip-promotion-standard",
-            "theme": "default",
-            "topPadding": "0",
-            "bottomPadding": "0",
-            "messagePrefix": ""
-          }
-        }
-      },
-      "block_order": [
-        "klarna_on_site_messaging_app_block_FXNR8E"
-      ],
-      "settings": {
-        "include_margins": true
-      }
-    },
-    "featured_product_imLJVN": {
-      "type": "featured-product",
-      "blocks": {
-        "text_xmRTjb": {
-          "type": "text",
-          "settings": {
-            "text": "{{ section.settings.product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
-        "title_qa3HEt": {
-          "type": "title",
-          "settings": {
-            "heading_size": "h1"
-          }
-        },
-        "price_tNMBew": {
-          "type": "price",
-          "settings": {}
-        },
-        "variant_picker_KEdYDX": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button",
-            "swatch_shape": "none"
-          }
-        },
-        "quantity_selector_CyqVpz": {
-          "type": "quantity_selector",
-          "disabled": true,
-          "settings": {}
-        },
-        "buy_buttons_d7RqM7": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
-          }
-        },
-        "share_wTGkkx": {
-          "type": "share",
-          "disabled": true,
-          "settings": {
-            "share_label": "Teilen"
-          }
-        }
-      },
-      "block_order": [
-        "text_xmRTjb",
-        "title_qa3HEt",
-        "price_tNMBew",
-        "variant_picker_KEdYDX",
-        "quantity_selector_CyqVpz",
-        "buy_buttons_d7RqM7",
-        "share_wTGkkx"
-      ],
-      "custom_css": [
-        ".section-featured-product {max-width: 1200px; margin: 0 auto; font-family: var(--bossa) !important; padding-right: 1.5rem; padding-top: 36px;}",
-        "div.product__info-wrapper {padding: 1.5rem;}",
-        ".slider-buttons {text-align: center;}"
-      ],
-      "name": "t:sections.featured-product.presets.name",
-      "settings": {
-        "product": "swan-mirror",
-        "color_scheme": "scheme-1",
-        "secondary_background": false,
-        "media_size": "small",
-        "constrain_to_viewport": true,
-        "media_fit": "contain",
-        "media_position": "left",
-        "image_zoom": "lightbox",
-        "hide_variants": true,
-        "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 0
-      }
     },
     "1756214345b5c620e8": {
       "type": "_blocks",
