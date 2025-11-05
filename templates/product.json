@@ -66,16 +66,6 @@
             "show_gift_card_recipient": true
           }
         },
-        "collapsible-row-3": {
-          "type": "collapsible_tab",
-          "disabled": true,
-          "settings": {
-            "heading": "Features",
-            "icon": "heart",
-            "content": "<p>- Dimmbares LED Beauty (warm und kaltes Licht)</p><p>- Full HD Multi-Touch Display</p><p>- Smarte Synchronisierung von App und Mirror</p><p>- Beauty Tutorials zum Nachmachen im Spiegel</p><p>- Routinen-Planer und UV-Index-Anzeige</p>",
-            "page": ""
-          }
-        },
         "collapsible-row-1": {
           "type": "collapsible_tab",
           "settings": {
@@ -93,6 +83,15 @@
             "content": "<p>- 15,6” rahmenlose Spiegelfläche</p><p>- Wand- oder Standspiegel </p><p>- Gewicht: 2,3 kg</p>",
             "page": ""
           }
+        },
+        "collapsible-row-3": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Versand & Rücksendung",
+            "icon": "box",
+            "content": "<p><strong>Kostenloser Versand in Deutschland. </strong>Lieferzeit: <strong>2–4 Werktage </strong>ab Zahlungseingang. Versand mit DHL (versichert & Sendungsverfolgung inklusive). Internationale Lieferungen auf Anfrage.</p><p><strong>14 Tage Rückgaberecht.                       </strong>Rückgabe nur im Originalzustand und in der Originalverpackung möglich. Nach Prüfung der Ware erfolgt die Rückerstattung innerhalb von <strong>5 Werktagen</strong>.</p><p></p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -105,9 +104,9 @@
         "quantity_selector",
         "description",
         "buy_buttons",
-        "collapsible-row-3",
         "collapsible-row-1",
-        "collapsible-row-2"
+        "collapsible-row-2",
+        "collapsible-row-3"
       ],
       "custom_css": [
         ".product {padding-top: 10vh; max-width: 175ch; margin: 0 auto;}"
