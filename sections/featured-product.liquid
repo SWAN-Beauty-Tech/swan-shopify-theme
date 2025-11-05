@@ -131,21 +131,23 @@
               {%- assign shipping_notice = product.metafields.custom.shipping_notice -%}
 
 {%- if shipping_notice != blank or product.metafields.custom.free_shipping == true -%}
-  <div class="product__tax caption rte">
-    {%- if cart.duties_included and cart.taxes_included -%}
-      {{ 'products.product.duties_and_taxes_included' | t }}
-    {%- elsif cart.taxes_included -%}
+<div class="product__tax caption rte">
+  <p class="product__tax-line">
+    {%- if shop.taxes_included or cart.taxes_included -%}
       {{ 'products.product.taxes_included' | t }}
     {%- elsif cart.duties_included -%}
       {{ 'products.product.duties_included' | t }}
     {%- endif -%}
-    <br>
-    {%- if shipping_notice != blank -%}
-      {{ shipping_notice }}
-    {%- else -%}
+  </p>
+  <p class="product__shipping-line">
+    {%- if product.metafields.custom.shipping_notice != blank -%}
+      {{ product.metafields.custom.shipping_notice }}
+    {%- elsif product.metafields.custom.free_shipping == true -%}
       Versandkostenfrei.
+    {%- elsif shop.shipping_policy.body != blank -%}
+      {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
     {%- endif -%}
-  </br>
+  </p>
 </div>
 {%- endif -%}
                   {%- unless placeholder -%}
