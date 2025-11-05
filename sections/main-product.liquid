@@ -135,8 +135,14 @@
                     {%- elsif cart.duties_included -%}
                       {{ 'products.product.duties_included' | t }}
                     {%- endif -%}
-                    {%- if shop.shipping_policy.body != blank -%}
-                      {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
+{% if product.metafields.custom.shipping_notice != blank %}
+  <p class="product__shipping-notice">
+    {{ product.metafields.custom.shipping_notice }}
+  </p>
+{% else %}
+  <p class="product__shipping-notice">
+    {{ 'products.product.shipping_policy_html' | t }}
+  </p>
                     {%- endif -%}
                   </div>
                 {%- endif -%}
