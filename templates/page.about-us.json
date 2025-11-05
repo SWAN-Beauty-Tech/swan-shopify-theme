@@ -115,27 +115,6 @@
         "color_scheme": "scheme-3"
       }
     },
-    "1759931982223fd3f6": {
-      "type": "apps",
-      "blocks": {
-        "klarna_on_site_messaging_app_block_FXNR8E": {
-          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
-          "settings": {
-            "data_key": "top-strip-promotion-standard",
-            "theme": "default",
-            "topPadding": "0",
-            "bottomPadding": "0",
-            "messagePrefix": ""
-          }
-        }
-      },
-      "block_order": [
-        "klarna_on_site_messaging_app_block_FXNR8E"
-      ],
-      "settings": {
-        "include_margins": true
-      }
-    },
     "featured_product_imLJVN": {
       "type": "featured-product",
       "blocks": {
@@ -181,6 +160,16 @@
           "settings": {
             "share_label": "Teilen"
           }
+        },
+        "klarna_on_site_messaging_app_block_8tQDVy": {
+          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
+          "settings": {
+            "data_key": "top-strip-promotion-badge",
+            "theme": "default",
+            "topPadding": "0",
+            "bottomPadding": "0",
+            "messagePrefix": ""
+          }
         }
       },
       "block_order": [
@@ -190,7 +179,8 @@
         "variant_picker_KEdYDX",
         "quantity_selector_CyqVpz",
         "buy_buttons_d7RqM7",
-        "share_wTGkkx"
+        "share_wTGkkx",
+        "klarna_on_site_messaging_app_block_8tQDVy"
       ],
       "custom_css": [
         ".section-featured-product {max-width: 1200px; margin: 0 auto; font-family: var(--bossa) !important; padding-right: 1.5rem; padding-top: 36px;}",
@@ -882,7 +872,6 @@
     "main",
     "swan_rich_text_FK6WPi",
     "swan_image_text_8yYbnC",
-    "1759931982223fd3f6",
     "featured_product_imLJVN",
     "blocks_c7ywbP",
     "1756214345b5c620e8",

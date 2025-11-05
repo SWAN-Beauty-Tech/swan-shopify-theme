@@ -55,16 +55,16 @@
           "type": "quantity_selector",
           "settings": {}
         },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": true
           }
-        },
-        "description": {
-          "type": "description",
-          "settings": {}
         },
         "collapsible-row-3": {
           "type": "collapsible_tab",
@@ -103,8 +103,8 @@
         "klarna_on_site_messaging_app_block_cgJTxM",
         "variant_picker",
         "quantity_selector",
-        "buy_buttons",
         "description",
+        "buy_buttons",
         "collapsible-row-3",
         "collapsible-row-1",
         "collapsible-row-2"
