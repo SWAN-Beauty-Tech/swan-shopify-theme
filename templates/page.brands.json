@@ -250,6 +250,60 @@
         "color_scheme": "scheme-3"
       }
     },
+    "multicolumn_pAcYqY": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_GXQyfE": {
+          "type": "column",
+          "settings": {
+            "title": "Spalte",
+            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_xEDacJ": {
+          "type": "column",
+          "settings": {
+            "title": "Spalte",
+            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_w3zMEm": {
+          "type": "column",
+          "settings": {
+            "title": "Spalte",
+            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_GXQyfE",
+        "column_xEDacJ",
+        "column_w3zMEm"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Mit mehreren Spalten",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Schaltflächenbeschriftung",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "image_with_text_kLGAey": {
       "type": "image-with-text",
       "blocks": {
@@ -316,6 +370,7 @@
     "video_slider_D9Nqcc",
     "video_carousel_rect_braWeg",
     "swan_image_text_bUttRB",
+    "multicolumn_pAcYqY",
     "image_with_text_kLGAey",
     "swan_sign_up_7wJRrF"
   ]
