@@ -947,6 +947,7 @@
       "blocks": {
         "ai_gen_block_22e2aa8_7ThVCg": {
           "type": "ai_gen_block_22e2aa8",
+          "disabled": true,
           "settings": {
             "heading": "Compare products",
             "button_text": "",
@@ -958,7 +959,7 @@
             "feature_2_label": "Ringlicht",
             "product_1_feature_2": "",
             "product_2_feature_2": "",
-            "feature_3_label": "",
+            "feature_3_label": "Feature 3",
             "product_1_feature_3": "",
             "product_2_feature_3": "",
             "feature_4_label": "",
