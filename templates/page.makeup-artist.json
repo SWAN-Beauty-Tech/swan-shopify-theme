@@ -332,7 +332,7 @@
         "buy_buttons_Eng6ga": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": true,
+            "show_dynamic_checkout": false,
             "show_gift_card_recipient": true
           }
         },
@@ -359,7 +359,7 @@
         "color_scheme": "",
         "secondary_background": false,
         "media_size": "medium",
-        "constrain_to_viewport": true,
+        "constrain_to_viewport": false,
         "media_fit": "contain",
         "media_position": "left",
         "image_zoom": "lightbox",
