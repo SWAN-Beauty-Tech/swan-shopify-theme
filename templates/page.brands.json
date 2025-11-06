@@ -256,8 +256,8 @@
         "column_GXQyfE": {
           "type": "column",
           "settings": {
-            "title": "Spalte",
-            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
+            "title": "<strong>Step 1</strong>",
+            "text": "<h5><strong>Brand Page erstellen</strong></h5><p>Erstelle dein eigenes Profil in der <strong>SWAN App</strong> – so werden deine Marke, deine Produkte und deine Videos direkt sichtbar. </p><p>Präsentiere, wer du bist, wofür du stehst und was deine Brand besonders macht.</p>",
             "link_label": "",
             "link": ""
           }
@@ -265,8 +265,8 @@
         "column_xEDacJ": {
           "type": "column",
           "settings": {
-            "title": "Spalte",
-            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
+            "title": "Step 2",
+            "text": "<h5><strong>Content, der verbindet</strong></h5><p>Erstelle authentischen Content – Tutorials, Looks, Tipps. Der Content deiner Marke macht den Unterschied. </p><p>Mehr Inhalte bedeuten mehr Sichtbarkeit im <strong>Mirror</strong>, in der <strong>App</strong> und in der <strong>Community</strong>.</p>",
             "link_label": "",
             "link": ""
           }
@@ -274,8 +274,8 @@
         "column_w3zMEm": {
           "type": "column",
           "settings": {
-            "title": "Spalte",
-            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
+            "title": "Step 3",
+            "text": "<h5>Einfach angebunden, direkt verkauft</h5><p>Mit <strong>Shopify Connect</strong> bist du in Minuten startklar. Verkäufe erfolgen direkt aus den Videos – ohne Umwege, ohne Streuverluste. Werde Teil von SWAN und wachse mit uns.</p>",
             "link_label": "",
             "link": ""
           }
