@@ -214,7 +214,7 @@
         "text_area_GUr6Y9": {
           "type": "text_area",
           "settings": {
-            "text": "<p>Der SWAN Marketplace ist kein weiterer Online-Shop – er ist die Zukunft des Beauty Commerce.<br/>Ein Ort, an dem Marken sichtbar werden, weil Menschen über sie sprechen, sie ausprobieren und lieben. </p><p>Der Mix aus <strong>SWAN App</strong> und <strong>SWAN Mirror</strong> schafft etwas völlig Neues:<br/>eine Verbindung aus Community, Content und Commerce.<br/>Hier entsteht <strong>Social Beauty E-Commerce</strong> – authentisch, inspirierend, direkt.</p><p>Marken werden nicht nur angezeigt, sondern erlebt.<br/><br/>Produkte werden im echten Kontext entdeckt – in Tutorials, Looks und Empfehlungen.<br/><br/>Kein anonymer Feed, sondern ein kuratierter Space, in dem Echtheit zählt.</p>",
+            "text": "<p>Der <strong>SWAN Marketplace</strong> ist kein weiterer Online-Shop – er ist die Zukunft des Beauty Commerce. Ein Ort, an dem Marken sichtbar werden, weil Menschen über sie sprechen, sie ausprobieren und lieben. </p><p>Der Mix aus <strong>SWAN App</strong> und <strong>SWAN Mirror</strong> schafft etwas völlig Neues:<br/>eine Verbindung aus Community, Content und Commerce.<br/>Hier entsteht <strong>Social Beauty E-Commerce</strong> – authentisch, inspirierend, direkt.</p><p>Marken werden nicht nur angezeigt, sondern erlebt.<br/>Kein anonymer Feed, sondern ein kuratierter Space, in dem Echtheit zählt.</p>",
             "center_text": false,
             "custom_id": "",
             "custom_class": ""
@@ -310,14 +310,14 @@
         "heading_LeyeKW": {
           "type": "heading",
           "settings": {
-            "heading": "App herunterladen & loslegen",
+            "heading": "<strong>DU WILLST SICHTBAR WERDEN?</strong>",
             "heading_size": "h1"
           }
         },
         "text_PWFdVF": {
           "type": "text",
           "settings": {
-            "text": "<p>Dein Zugang zu Inspiration, Tutorials und einer lebendigen Community – kostenlos nutzbar, auch ohne SWAN Mirror. </p><p>Schau dir Videos Schritt für Schritt an, shoppe Produkte direkt aus den Clips im SWAN Marketplace und teile deinen eigenen Content. </p><p>Authentisch, nahbar, ohne Filter. </p>",
+            "text": "<p>Du willst sichtbar werden – aber echt?<br/>Dann ist SWAN dein Place to be.</p><p>Werde Teil einer Bewegung, die anders denkt, echt spricht und gemeinsam wächst.<br/><br/><strong>Be part of SWAN. Be part of what’s next.</strong></p>",
             "text_style": "body"
           }
         },
