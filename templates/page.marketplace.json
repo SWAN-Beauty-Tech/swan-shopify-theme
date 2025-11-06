@@ -37,6 +37,11 @@
         "heading_TRi9EE",
         "text_bkRYYR"
       ],
+      "custom_css": [
+        "/* Weißer Bereich kompakter machen */.section[data-section-type=\"swan-text\"],.swan-text,.swan-text .page-width {padding-top: 40px !important; /* statt ~120px Standard */ padding-bottom: 40px !important; max-width: 800px; /* schmaler zentrierter Block */ margin: 0 auto;}",
+        " /* Überschrift etwas kleiner & harmonischer */.swan-text h2,.swan-text h1 {font-size: 32px !important; line-height: 1.2;}",
+        "@media (max-width: 768px) {.section[data-section-type=\"swan-text\"] {padding-top: 20px !important; padding-bottom: 20px !important; }}"
+      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
