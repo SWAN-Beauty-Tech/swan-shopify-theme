@@ -82,7 +82,7 @@
         "text_dTq6bx": {
           "type": "text",
           "settings": {
-            "text": "<p>Du kannst aus <strong>Make-up Looks</strong> wählen, die von <strong>international renommierten Make-up Artists</strong> entwickelt und speziell für dich zusammengestellt wurden.</p><p>Von <strong>Foxy Eyes</strong> über <strong>Hollywood Bombshell</strong> bis hin zu <strong>90s Siren</strong> – hier findest du den perfekten Look für jeden Anlass.</p><p>Aktuell stehen dir exklusive Looks von <strong>Allan Avendaño</strong> und <strong>Carolina Gonzalez</strong> zur Verfügung.</p><p>Doch das ist erst der Anfang: Im Hintergrund arbeiten wir bereits an vielen weiteren inspirierenden Looks, die bald für dich verfügbar sein werden.</p>",
+            "text": "<p>Wähle aus professionell entwickelten Looks, die von international renommierten Make-up Artists kreiert und individuell auf dich abgestimmt wurden.</p><p>Ob Foxy Eyes, Hollywood Bombshell oder 90s Siren – finde den Look, der perfekt zu deinem Stil und Anlass passt.</p><p>Aktuell erwarten dich exklusive Signature-Looks von <strong>Allan Avendaño</strong> und <strong>Carolina Gonzalez</strong> – zwei der gefragtesten Artists der Branche.</p><p>Und das ist erst der Anfang: Schon bald folgen weitere inspirierende Looks, die deine Make-up Routine neu definieren.</p>",
             "text_style": "body"
           }
         }
@@ -189,7 +189,7 @@
         "desktop_content_alignment": "left",
         "mobile_content_alignment": "left",
         "section_color_scheme": "",
-        "color_scheme": "scheme-1",
+        "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 36
       }
