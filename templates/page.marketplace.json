@@ -513,8 +513,8 @@
         "ai_gen_block_eb0586b_bg4GrH": {
           "type": "ai_gen_block_eb0586b",
           "settings": {
-            "heading": "Image Gallery",
-            "subheading": "Explore our collection",
+            "heading": "Marketplace Bestseller",
+            "subheading": "Shoppe die Hottest Brands mit Rabatten von bis zu 30 Prozent",
             "text_alignment": "left",
             "heading_size": 36,
             "subheading_size": 16,
@@ -565,6 +565,7 @@
     },
     "featured_collection_RF88mc": {
       "type": "featured-collection",
+      "disabled": true,
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
         "collection": "marketplace-bestellers",
