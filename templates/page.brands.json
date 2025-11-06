@@ -204,7 +204,7 @@
         "headline_i9mhXX": {
           "type": "headline",
           "settings": {
-            "text": "Werde von Brands entdeckt",
+            "text": "SEI TEIL VON ETWAS ECHTEM",
             "center_text": false,
             "heading_level": "h2",
             "custom_id": "",
@@ -238,7 +238,7 @@
       ],
       "settings": {
         "image": "shopify://shop_images/8_1_2ac6cff2-1d48-448f-bc7a-e80465880dbd.png",
-        "image_position": "left",
+        "image_position": "right",
         "image_scale": "cover",
         "image_background": "#ffffff",
         "image_inset": "false",
