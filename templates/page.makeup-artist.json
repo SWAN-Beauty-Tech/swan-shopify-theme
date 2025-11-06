@@ -21,6 +21,29 @@
         "padding_bottom": 16
       }
     },
+    "rich_text_ngqBeE": {
+      "type": "rich-text",
+      "blocks": {
+        "text_ghJwHF": {
+          "type": "text",
+          "settings": {
+            "text": "<h1>Smart Make-up Artist</h1>"
+          }
+        }
+      },
+      "block_order": [
+        "text_ghJwHF"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "swan_image_text_7fNpfG": {
       "type": "swan_image-text",
       "blocks": {
@@ -405,6 +428,7 @@
   },
   "order": [
     "main",
+    "rich_text_ngqBeE",
     "swan_image_text_7fNpfG",
     "image_with_text_HD9jKM",
     "multirow_BKCiz4",
