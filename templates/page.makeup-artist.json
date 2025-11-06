@@ -76,7 +76,7 @@
         "text_area_xX73yd": {
           "type": "text_area",
           "settings": {
-            "text": "<p>Der <strong>SmARt Make-up Artist</strong> nutzt <strong>Echtzeit-Gesichtserkennung</strong> und <strong>dynamische AR-Overlays</strong>, um dich Schritt für Schritt durch den perfekten Make-up-Look zu führen – individuell abgestimmt auf deine Gesichtsform und deinen persönlichen Stil.</p><p>Mit professionellen <strong>Face Maps</strong>, intelligenten <strong>Produktempfehlungen </strong>und inspirierenden <strong>Creator-Insights</strong> verwandelt er deinen SWAN Mirror in einen aktiven <strong>Beauty-Coach.</strong></p><p>Erlebe Make-up auf einem neuen Level: <strong>präzise, personalisiert, interaktiv</strong>.</p>",
+            "text": "<p>Der <strong>SmARt Make-up Artist</strong> nutzt Echtzeit-<strong>Gesichtserkennung</strong> und dynamische<strong> AR-Overlays</strong>, um dich Schritt für Schritt durch den perfekten Make-up-Look zu führen – individuell abgestimmt auf deine Gesichtsform und deinen persönlichen Stil.</p><p>Mit professionellen <strong>Face Maps</strong>, intelligenten <strong>Produktempfehlungen </strong>und inspirierenden Creator-Insights verwandelt er deinen SWAN Mirror in einen aktiven <strong>Beauty-Coach.</strong></p><p>Erlebe Make-up auf einem neuen Level: präzise, personalisiert, interaktiv.</p>",
             "center_text": false,
             "custom_id": "",
             "custom_class": ""
@@ -151,7 +151,7 @@
             "image": "shopify://shop_images/SMAU.jpg",
             "caption": "",
             "heading": "Carolina Gonzalez",
-            "text": "<p>ist eine in New York City ansässige Make-up-Artistin und Markenbotschafterin. </p><p>Sie arbeitet in den Bereichen Editorial, Mode und Werbung. Ihr Portfolio umfasst Veröffentlichungen in führenden Mode- und Beauty-Medien sowie Shootings mit renommierten Fotografen der Branche. </p><p>Außerdem hat sie Looks für bekannte Persönlichkeiten und Werbekampagnen in den Bereichen Beauty, Lifestyle und Mode kreiert, wie Gigi Hadid und Sabrina Carpenter.</p>",
+            "text": "<p>Die in New York City ansässige Make-up-Artist und Brand Ambassador arbeitet in den Bereichen Editorial, Fashion und Advertising. Ihr Portfolio umfasst Veröffentlichungen in führenden Mode- und Beauty-Magazinen sowie Produktionen mit renommierten Fotograf:innen der Branche.</p><p>Carolina hat Looks für bekannte Persönlichkeiten und globale Kampagnen aus Beauty, Lifestyle und Fashion geschaffen – darunter <strong>Gigi Hadid</strong> und <strong>Sabrina Carpenter</strong>.</p>",
             "button_label": "",
             "button_link": ""
           }
