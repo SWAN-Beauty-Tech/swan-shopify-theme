@@ -310,7 +310,7 @@
         "heading_LeyeKW": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>DU WILLST SICHTBAR WERDEN?</strong>",
+            "heading": "BEAUTY, BUT MAKE IT MEANINGFUL.",
             "heading_size": "h1"
           }
         },
@@ -324,8 +324,8 @@
         "button_yzCtHe": {
           "type": "button",
           "settings": {
-            "button_label": "Zum Download",
-            "button_link": "https://onelink.to/swanapp?utm_source=applp&utm_medium=website&utm_campaign=ctabutton&utm_content=appstores",
+            "button_label": "Jetzt als brand bewerben",
+            "button_link": "https://forms.office.com/r/Bpc0vZVAQV",
             "button_style_secondary": false
           }
         }
