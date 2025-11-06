@@ -1,6 +1,601 @@
+{% doc %}
+  @prompt
+    I want a comparison between two products with bullet points and pictures, it should look more like a sheet
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-product-comparison-{{ ai_gen_id }} {
+    padding: 40px 20px;
+    background-color: {{ block.settings.background_color }};
+  }
+
+  .ai-product-comparison__container-{{ ai_gen_id }} {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .ai-product-comparison__heading-{{ ai_gen_id }} {
+    text-align: center;
+    margin: 0 0 40px;
+    font-size: {{ block.settings.heading_size }}px;
+    color: {{ block.settings.text_color }};
+  }
+
+  .ai-product-comparison__table-{{ ai_gen_id }} {
+    background-color: {{ block.settings.card_background_color }};
+    border-radius: {{ block.settings.card_border_radius }}px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .ai-product-comparison__header-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr;
+    border-bottom: 2px solid {{ block.settings.border_color }};
+  }
+
+  .ai-product-comparison__header-cell-{{ ai_gen_id }} {
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .ai-product-comparison__header-label-{{ ai_gen_id }} {
+    font-size: 14px;
+    font-weight: 600;
+    color: {{ block.settings.label_color }};
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .ai-product-comparison__image-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    max-width: 200px;
+    margin: 15px auto 10px;
+    border-radius: {{ block.settings.image_border_radius }}px;
+    overflow: hidden;
+    background-color: #f4f4f4;
+  }
+
+  .ai-product-comparison__image-{{ ai_gen_id }} {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .ai-product-comparison__image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+  }
+
+  .ai-product-comparison__image-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    max-width: 120px;
+    max-height: 120px;
+  }
+
+  .ai-product-comparison__product-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.product_title_size }}px;
+    font-weight: 600;
+    margin: 0 0 8px;
+    color: {{ block.settings.text_color }};
+  }
+
+  .ai-product-comparison__product-price-{{ ai_gen_id }} {
+    font-size: {{ block.settings.price_size }}px;
+    font-weight: 700;
+    color: {{ block.settings.price_color }};
+    margin-bottom: 15px;
+  }
+
+  .ai-product-comparison__button-{{ ai_gen_id }} {
+    display: inline-block;
+    padding: 10px 24px;
+    background-color: {{ block.settings.button_color }};
+    color: {{ block.settings.button_text_color }};
+    text-align: center;
+    text-decoration: none;
+    border-radius: {{ block.settings.button_border_radius }}px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+
+  .ai-product-comparison__button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.button_hover_color }};
+  }
+
+  .ai-product-comparison__row-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr;
+    border-bottom: 1px solid {{ block.settings.border_color }};
+  }
+
+  .ai-product-comparison__row-{{ ai_gen_id }}:last-child {
+    border-bottom: none;
+  }
+
+  .ai-product-comparison__row-label-{{ ai_gen_id }} {
+    padding: 20px;
+    font-weight: 600;
+    color: {{ block.settings.text_color }};
+    background-color: {{ block.settings.row_label_background }};
+    display: flex;
+    align-items: center;
+    font-size: {{ block.settings.feature_size }}px;
+  }
+
+  .ai-product-comparison__cell-{{ ai_gen_id }} {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: {{ block.settings.feature_size }}px;
+    color: {{ block.settings.text_color }};
+  }
+
+  .ai-product-comparison__feature-icon-{{ ai_gen_id }} {
+    width: 24px;
+    height: 24px;
+    margin: 0 auto;
+  }
+
+  .ai-product-comparison__feature-icon-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    fill: {{ block.settings.icon_color }};
+  }
+
+  .ai-product-comparison__empty-state-{{ ai_gen_id }} {
+    text-align: center;
+    padding: 40px 20px;
+    color: #999;
+    font-style: italic;
+  }
+
+  @media screen and (max-width: 768px) {
+    .ai-product-comparison__header-{{ ai_gen_id }},
+    .ai-product-comparison__row-{{ ai_gen_id }} {
+      grid-template-columns: 120px 1fr 1fr;
+    }
+
+    .ai-product-comparison__heading-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.heading_size }}px * 0.8);
+    }
+
+    .ai-product-comparison__row-label-{{ ai_gen_id }},
+    .ai-product-comparison__cell-{{ ai_gen_id }} {
+      padding: 15px 10px;
+      font-size: calc({{ block.settings.feature_size }}px * 0.9);
+    }
+
+    .ai-product-comparison__image-wrapper-{{ ai_gen_id }} {
+      max-width: 100px;
+    }
+
+    .ai-product-comparison__product-title-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.product_title_size }}px * 0.8);
+    }
+  }
+{% endstyle %}
+
+<div class="ai-product-comparison-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-product-comparison__container-{{ ai_gen_id }}">
+    {% if block.settings.heading != blank %}
+      <h2 class="ai-product-comparison__heading-{{ ai_gen_id }}">{{ block.settings.heading }}</h2>
+    {% endif %}
+
+    {% liquid
+      assign product_1 = block.settings.product_1
+      assign product_2 = block.settings.product_2
+    %}
+
+    {% if product_1 != blank or product_2 != blank %}
+      <div class="ai-product-comparison__table-{{ ai_gen_id }}">
+        <div class="ai-product-comparison__header-{{ ai_gen_id }}">
+          <div class="ai-product-comparison__header-cell-{{ ai_gen_id }}">
+            <div class="ai-product-comparison__header-label-{{ ai_gen_id }}">Compare</div>
+          </div>
+          
+          <div class="ai-product-comparison__header-cell-{{ ai_gen_id }}">
+            {% if product_1 != blank %}
+              <div class="ai-product-comparison__image-wrapper-{{ ai_gen_id }}">
+                {% if product_1.featured_image %}
+                  <img
+                    src="{{ product_1.featured_image | image_url: width: 400 }}"
+                    alt="{{ product_1.featured_image.alt | escape }}"
+                    class="ai-product-comparison__image-{{ ai_gen_id }}"
+                    loading="lazy"
+                    width="400"
+                    height="{{ 400 | divided_by: product_1.featured_image.aspect_ratio | round }}"
+                  >
+                {% else %}
+                  <div class="ai-product-comparison__image-placeholder-{{ ai_gen_id }}">
+                    {{ 'product-1' | placeholder_svg_tag }}
+                  </div>
+                {% endif %}
+              </div>
+              <h3 class="ai-product-comparison__product-title-{{ ai_gen_id }}">{{ product_1.title }}</h3>
+              <div class="ai-product-comparison__product-price-{{ ai_gen_id }}">{{ product_1.price | money }}</div>
+              <a href="{{ product_1.url }}" class="ai-product-comparison__button-{{ ai_gen_id }}">
+                {{ block.settings.button_text }}
+              </a>
+            {% endif %}
+          </div>
+
+          <div class="ai-product-comparison__header-cell-{{ ai_gen_id }}">
+            {% if product_2 != blank %}
+              <div class="ai-product-comparison__image-wrapper-{{ ai_gen_id }}">
+                {% if product_2.featured_image %}
+                  <img
+                    src="{{ product_2.featured_image | image_url: width: 400 }}"
+                    alt="{{ product_2.featured_image.alt | escape }}"
+                    class="ai-product-comparison__image-{{ ai_gen_id }}"
+                    loading="lazy"
+                    width="400"
+                    height="{{ 400 | divided_by: product_2.featured_image.aspect_ratio | round }}"
+                  >
+                {% else %}
+                  <div class="ai-product-comparison__image-placeholder-{{ ai_gen_id }}">
+                    {{ 'product-1' | placeholder_svg_tag }}
+                  </div>
+                {% endif %}
+              </div>
+              <h3 class="ai-product-comparison__product-title-{{ ai_gen_id }}">{{ product_2.title }}</h3>
+              <div class="ai-product-comparison__product-price-{{ ai_gen_id }}">{{ product_2.price | money }}</div>
+              <a href="{{ product_2.url }}" class="ai-product-comparison__button-{{ ai_gen_id }}">
+                {{ block.settings.button_text }}
+              </a>
+            {% endif %}
+          </div>
+        </div>
+
+        {% for i in (1..5) %}
+          {% liquid
+            assign feature_label_key = 'feature_' | append: i | append: '_label'
+            assign product_1_feature_key = 'product_1_feature_' | append: i
+            assign product_2_feature_key = 'product_2_feature_' | append: i
+
+            assign feature_label = block.settings[feature_label_key]
+            assign product_1_feature = block.settings[product_1_feature_key]
+            assign product_2_feature = block.settings[product_2_feature_key]
+          %}
+
+          {% if feature_label != blank %}
+            <div class="ai-product-comparison__row-{{ ai_gen_id }}">
+              <div class="ai-product-comparison__row-label-{{ ai_gen_id }}">
+                {{ feature_label }}
+              </div>
+              
+              <div class="ai-product-comparison__cell-{{ ai_gen_id }}">
+                {% if product_1_feature != blank %}
+                  {% if product_1_feature == 'yes' or product_1_feature == 'Yes' %}
+                    <span class="ai-product-comparison__feature-icon-{{ ai_gen_id }}">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                      </svg>
+                    </span>
+                  {% else %}
+                    {{ product_1_feature }}
+                  {% endif %}
+                {% endif %}
+              </div>
+
+              <div class="ai-product-comparison__cell-{{ ai_gen_id }}">
+                {% if product_2_feature != blank %}
+                  {% if product_2_feature == 'yes' or product_2_feature == 'Yes' %}
+                    <span class="ai-product-comparison__feature-icon-{{ ai_gen_id }}">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                      </svg>
+                    </span>
+                  {% else %}
+                    {{ product_2_feature }}
+                  {% endif %}
+                {% endif %}
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="ai-product-comparison__empty-state-{{ ai_gen_id }}">
+        Next, select products to compare
+      </div>
+    {% endif %}
+  </div>
+</div>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Product comparison",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Compare products"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "View product"
+    },
+    {
+      "type": "header",
+      "content": "Products"
+    },
+    {
+      "type": "product",
+      "id": "product_1",
+      "label": "Product 1"
+    },
+    {
+      "type": "product",
+      "id": "product_2",
+      "label": "Product 2"
+    },
+    {
+      "type": "header",
+      "content": "Feature 1"
+    },
+    {
+      "type": "text",
+      "id": "feature_1_label",
+      "label": "Label"
+    },
+    {
+      "type": "text",
+      "id": "product_1_feature_1",
+      "label": "Product 1 value"
+    },
+    {
+      "type": "text",
+      "id": "product_2_feature_1",
+      "label": "Product 2 value"
+    },
+    {
+      "type": "header",
+      "content": "Feature 2"
+    },
+    {
+      "type": "text",
+      "id": "feature_2_label",
+      "label": "Label"
+    },
+    {
+      "type": "text",
+      "id": "product_1_feature_2",
+      "label": "Product 1 value"
+    },
+    {
+      "type": "text",
+      "id": "product_2_feature_2",
+      "label": "Product 2 value"
+    },
+    {
+      "type": "header",
+      "content": "Feature 3"
+    },
+    {
+      "type": "text",
+      "id": "feature_3_label",
+      "label": "Label"
+    },
+    {
+      "type": "text",
+      "id": "product_1_feature_3",
+      "label": "Product 1 value"
+    },
+    {
+      "type": "text",
+      "id": "product_2_feature_3",
+      "label": "Product 2 value"
+    },
+    {
+      "type": "header",
+      "content": "Feature 4"
+    },
+    {
+      "type": "text",
+      "id": "feature_4_label",
+      "label": "Label"
+    },
+    {
+      "type": "text",
+      "id": "product_1_feature_4",
+      "label": "Product 1 value"
+    },
+    {
+      "type": "text",
+      "id": "product_2_feature_4",
+      "label": "Product 2 value"
+    },
+    {
+      "type": "header",
+      "content": "Feature 5"
+    },
+    {
+      "type": "text",
+      "id": "feature_5_label",
+      "label": "Label"
+    },
+    {
+      "type": "text",
+      "id": "product_1_feature_5",
+      "label": "Product 1 value"
+    },
+    {
+      "type": "text",
+      "id": "product_2_feature_5",
+      "label": "Product 2 value"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "card_background_color",
+      "label": "Table background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "row_label_background",
+      "label": "Row label background",
+      "default": "#f7f7f7"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border",
+      "default": "#e0e0e0"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "label_color",
+      "label": "Label",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "price_color",
+      "label": "Price",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Icon",
+      "default": "#dca1a1"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button background",
+      "default": "#dca1a1"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_color",
+      "label": "Button hover background",
+      "default": "#c98f8f"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Heading size",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "product_title_size",
+      "min": 14,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Product title size",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "price_size",
+      "min": 14,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Price size",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "feature_size",
+      "min": 12,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "Feature size",
+      "default": 14
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "range",
+      "id": "card_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Table border radius",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Image border radius",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Button border radius",
+      "default": 4
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product comparison"
+    }
+  ]
+}
 {% endschema %}
