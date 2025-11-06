@@ -203,6 +203,63 @@
         "padding_bottom": 0
       }
     },
+    "blocks_NDCMCe": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_eb0586b_BwEyGK": {
+          "type": "ai_gen_block_eb0586b",
+          "settings": {
+            "heading": "Image Gallery",
+            "subheading": "Explore our collection",
+            "text_alignment": "center",
+            "heading_size": 36,
+            "subheading_size": 16,
+            "heading_color": "#000000",
+            "subheading_color": "#666666",
+            "header_spacing": 30,
+            "subheading_spacing": 10,
+            "image_1": "shopify://shop_images/16.jpg",
+            "title_1": "",
+            "price_1": "",
+            "image_2": "shopify://shop_images/3_38ae745f-7fe2-43d6-8c92-0616bc27ca3e.jpg",
+            "title_2": "",
+            "price_2": "",
+            "image_3": "shopify://shop_images/5_d3b00697-f01f-407e-bdff-c9f71097060e.jpg",
+            "title_3": "",
+            "price_3": "",
+            "image_4": "shopify://shop_images/6_a11bfa40-7d0e-4b8e-9142-3b44447e0fb3.jpg",
+            "title_4": "",
+            "price_4": "",
+            "image_5": "shopify://shop_images/14.jpg",
+            "title_5": "",
+            "price_5": "",
+            "image_6": "shopify://shop_images/4_535ea845-aa3c-4b31-b3bb-3e105cff1ff7.jpg",
+            "title_6": "",
+            "price_6": "",
+            "max_width": 1200,
+            "columns_mobile": "3",
+            "aspect_ratio": "1/1",
+            "gap": 12,
+            "gap_mobile": 8,
+            "content_alignment": "left",
+            "text_spacing": 8,
+            "title_size": 14,
+            "price_size": 14,
+            "title_color": "#000000",
+            "price_color": "#000000",
+            "price_spacing": 4,
+            "image_radius": 0,
+            "section_padding": 40
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_eb0586b_BwEyGK"
+      ],
+      "name": "Image collage",
+      "settings": {}
+    },
     "blocks_htNt9y": {
       "type": "_blocks",
       "blocks": {
@@ -224,7 +281,7 @@
             "name_size": 16,
             "name_color": "#000000",
             "star_size": 16,
-            "star_color": "#FFD700",
+            "star_color": "#ffd700",
             "star_empty_color": "#e0e0e0",
             "comment_size": 14,
             "comment_color": "#333333",
@@ -885,6 +942,58 @@
         "padding_bottom": 36
       }
     },
+    "1762437521ab4057cb": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_22e2aa8_7ThVCg": {
+          "type": "ai_gen_block_22e2aa8",
+          "settings": {
+            "heading": "Compare products",
+            "button_text": "",
+            "product_1": "swan-mirror",
+            "product_2": "swan-beauty-mirror",
+            "feature_1_label": "Kamera",
+            "product_1_feature_1": "khukhgzg",
+            "product_2_feature_1": "uztuztzut",
+            "feature_2_label": "Ringlicht",
+            "product_1_feature_2": "",
+            "product_2_feature_2": "",
+            "feature_3_label": "",
+            "product_1_feature_3": "",
+            "product_2_feature_3": "",
+            "feature_4_label": "",
+            "product_1_feature_4": "",
+            "product_2_feature_4": "",
+            "feature_5_label": "",
+            "product_1_feature_5": "",
+            "product_2_feature_5": "",
+            "background_color": "#ffffff",
+            "card_background_color": "#ffffff",
+            "row_label_background": "#f7f7f7",
+            "border_color": "#e0e0e0",
+            "text_color": "#000000",
+            "label_color": "#666666",
+            "price_color": "#000000",
+            "icon_color": "#dca1a1",
+            "button_color": "#dca1a1",
+            "button_text_color": "#ffffff",
+            "button_hover_color": "#c98f8f",
+            "heading_size": 32,
+            "product_title_size": 18,
+            "price_size": 20,
+            "feature_size": 14,
+            "card_border_radius": 8,
+            "image_border_radius": 4,
+            "button_border_radius": 4
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_22e2aa8_7ThVCg"
+      ],
+      "settings": {}
+    },
     "swan_sign_up_mmTBbY": {
       "type": "swan_sign-up",
       "name": "SWAN Signup",
@@ -954,6 +1063,7 @@
     "swan_rich_text_FK6WPi",
     "swan_image_text_8yYbnC",
     "featured_product_imLJVN",
+    "blocks_NDCMCe",
     "blocks_htNt9y",
     "blocks_c7ywbP",
     "1756214345b5c620e8",
@@ -964,6 +1074,7 @@
     "collapsible_content_TkqmVL",
     "landing_image_banner_NmPPaq",
     "image_with_text_HdjJfc",
+    "1762437521ab4057cb",
     "swan_sign_up_mmTBbY",
     "swan_image_text_6nbE3P"
   ]
