@@ -189,6 +189,37 @@
         "padding_bottom": 36
       }
     },
+    "1762518926dff99792": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_18bb072_CpLpCJ": {
+          "type": "ai_gen_block_18bb072",
+          "disabled": true,
+          "settings": {
+            "heading": "Discover our collection",
+            "text": "<p>Browse through our carefully curated selection of products designed to enhance your beauty routine.</p>",
+            "heading_size": 32,
+            "text_size": 16,
+            "image_1": "shopify://shop_images/SMAU_e1ea0902-5cdc-48ba-9d41-52c7e6c438a5.jpg",
+            "image_max_width": 300,
+            "image_aspect_ratio": "1 / 1",
+            "image_border_radius": 0,
+            "background_color": "#ffffff",
+            "text_color": "#000000",
+            "button_color": "#000000",
+            "button_hover_color": "#333333",
+            "button_icon_color": "#ffffff",
+            "dot_color": "#cccccc",
+            "dot_active_color": "#000000"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_18bb072_CpLpCJ"
+      ],
+      "settings": {}
+    },
     "image_with_text_6ajfcp": {
       "type": "image-with-text",
       "blocks": {
@@ -438,6 +469,7 @@
     "swan_image_text_7fNpfG",
     "image_with_text_HD9jKM",
     "multirow_BKCiz4",
+    "1762518926dff99792",
     "image_with_text_6ajfcp",
     "image_with_text_E7MApp",
     "rich_text_BDq9mn",
