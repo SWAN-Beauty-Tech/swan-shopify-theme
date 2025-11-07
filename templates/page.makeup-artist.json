@@ -96,6 +96,7 @@
         "image_background": "#ffffff",
         "image_inset": "none",
         "mirror_swap": false,
+        "image_2": "shopify://shop_images/makeup-brushes-close-up.jpg",
         "text_alignment": "center",
         "sticky_text": false,
         "custom_id": "",
