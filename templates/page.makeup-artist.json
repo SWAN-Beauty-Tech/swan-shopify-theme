@@ -299,6 +299,11 @@
         "padding_bottom": 36
       }
     },
+    "blocks_DAeUJf": {
+      "type": "_blocks",
+      "name": "Customer reviews",
+      "settings": {}
+    },
     "rich_text_BDq9mn": {
       "type": "rich-text",
       "blocks": {
@@ -473,6 +478,7 @@
     "1762518926dff99792",
     "image_with_text_6ajfcp",
     "image_with_text_E7MApp",
+    "blocks_DAeUJf",
     "rich_text_BDq9mn",
     "1760960645842ca7ef",
     "featured_product_driex8",
