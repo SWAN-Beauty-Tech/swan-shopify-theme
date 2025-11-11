@@ -397,7 +397,7 @@
         "ai_gen_block_3b068d8_rwTLGq": {
           "type": "ai_gen_block_3b068d8",
           "settings": {
-            "heading": "Kundenstimmen",
+            "heading": "Stimmen aus der Community",
             "heading_size": 32,
             "heading_color": "#000000",
             "background_color": "#ffffff",
@@ -513,27 +513,6 @@
         "padding_bottom": 0
       }
     },
-    "1760960645842ca7ef": {
-      "type": "apps",
-      "blocks": {
-        "klarna_on_site_messaging_app_block_6FidPY": {
-          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
-          "settings": {
-            "data_key": "top-strip-promotion-badge",
-            "theme": "default",
-            "topPadding": "0",
-            "bottomPadding": "0",
-            "messagePrefix": ""
-          }
-        }
-      },
-      "block_order": [
-        "klarna_on_site_messaging_app_block_6FidPY"
-      ],
-      "settings": {
-        "include_margins": true
-      }
-    },
     "featured_product_driex8": {
       "type": "featured-product",
       "blocks": {
@@ -606,6 +585,27 @@
         "padding_bottom": 36
       }
     },
+    "1760960645842ca7ef": {
+      "type": "apps",
+      "blocks": {
+        "klarna_on_site_messaging_app_block_6FidPY": {
+          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
+          "settings": {
+            "data_key": "top-strip-promotion-badge",
+            "theme": "default",
+            "topPadding": "0",
+            "bottomPadding": "0",
+            "messagePrefix": ""
+          }
+        }
+      },
+      "block_order": [
+        "klarna_on_site_messaging_app_block_6FidPY"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "featured_blog_Jinfg6": {
       "type": "featured-blog",
       "name": "t:sections.featured-blog.presets.name",
@@ -649,8 +649,8 @@
     "blocks_DAeUJf",
     "blocks_pRUdn9",
     "rich_text_BDq9mn",
-    "1760960645842ca7ef",
     "featured_product_driex8",
+    "1760960645842ca7ef",
     "featured_blog_Jinfg6",
     "swan_sign_up_ptqnVH"
   ]
