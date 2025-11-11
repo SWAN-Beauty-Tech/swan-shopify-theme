@@ -256,8 +256,8 @@
         "column_GXQyfE": {
           "type": "column",
           "settings": {
-            "title": "<strong>Step 1</strong>",
-            "text": "<h5><strong>Brand Page erstellen</strong></h5><p>Erstelle dein eigenes Profil in der <strong>SWAN App</strong> – so werden deine Marke, deine Produkte und deine Videos direkt sichtbar. </p><p>Präsentiere, wer du bist, wofür du stehst und was deine Brand besonders macht.</p>",
+            "title": "Step 1",
+            "text": "<h5>Brand Page erstellen</h5><p>Erstelle dein eigenes Profil in der <strong>SWAN App</strong> – so werden deine Marke, deine Produkte und deine Videos direkt sichtbar. </p><p>Zeig, wer du bist, wofür du stehst und was deine Brand besonders macht.</p>",
             "link_label": "",
             "link": ""
           }
@@ -288,7 +288,7 @@
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "Mit mehreren Spalten",
+        "title": "What's next?",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
