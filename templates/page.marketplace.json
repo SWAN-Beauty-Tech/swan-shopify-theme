@@ -86,6 +86,55 @@
         "color_scheme": "scheme-3"
       }
     },
+    "image_with_text_MA4YUz": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_EfcLnj": {
+          "type": "heading",
+          "settings": {
+            "heading": "Die besten Beauty Deals - jeden monat",
+            "heading_size": "h1"
+          }
+        },
+        "text_47zAnp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ein Mal im Monat hast du die Chance, trendige Beauty Must-haves zu entdecken und zu sparen. </p><p>Ab einem Bestellwert von <strong>30 € </strong>profitierst du von <strong>kostenlosem Versand </strong>und erhältst deine Lieblingsprodukte bequem nach Hause geliefert – ganz ohne zusätzliche Kosten.</p><p>Der nächste Drop -<strong> 17. November </strong> </p>",
+            "text_style": "body"
+          }
+        },
+        "button_AE96mA": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Jetzt App herunterladen",
+            "button_link": "https://onelink.to/swanapp?utm_source=applp&utm_medium=website&utm_campaign=ctabutton&utm_content=appstores",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_EfcLnj",
+        "text_47zAnp",
+        "button_AE96mA"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Mirror_Shots_-_neu_1.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "rich_text_NJJnxg": {
       "type": "rich-text",
       "blocks": {
@@ -688,7 +737,7 @@
             "name_size": 16,
             "name_color": "#000000",
             "star_size": 16,
-            "star_color": "#FFD700",
+            "star_color": "#ffd700",
             "star_empty_color": "#e0e0e0",
             "comment_size": 14,
             "comment_color": "#333333",
@@ -846,6 +895,7 @@
     "main",
     "swan_rich_text_daYrVd",
     "swan_image_text_67EcKy",
+    "image_with_text_MA4YUz",
     "rich_text_NJJnxg",
     "image_with_text_WjNQgC",
     "image_with_text_cpLEB4",
