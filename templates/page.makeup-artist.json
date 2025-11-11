@@ -143,6 +143,63 @@
         "padding_bottom": 0
       }
     },
+    "blocks_FG9Kyk": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_eb0586b_6K9TRd": {
+          "type": "ai_gen_block_eb0586b",
+          "settings": {
+            "heading": "",
+            "subheading": "",
+            "text_alignment": "center",
+            "heading_size": 36,
+            "subheading_size": 16,
+            "heading_color": "#000000",
+            "subheading_color": "#666666",
+            "header_spacing": 30,
+            "subheading_spacing": 10,
+            "image_1": "shopify://shop_images/6_a11bfa40-7d0e-4b8e-9142-3b44447e0fb3.jpg",
+            "title_1": "",
+            "price_1": "",
+            "image_2": "shopify://shop_images/9.jpg",
+            "title_2": "",
+            "price_2": "",
+            "image_3": "shopify://shop_images/5_d3b00697-f01f-407e-bdff-c9f71097060e.jpg",
+            "title_3": "",
+            "price_3": "",
+            "image_4": "shopify://shop_images/6_e29b3994-2f78-4856-9280-24d599d0ce32.jpg",
+            "title_4": "",
+            "price_4": "",
+            "image_5": "shopify://shop_images/16.jpg",
+            "title_5": "",
+            "price_5": "",
+            "image_6": "shopify://shop_images/13.jpg",
+            "title_6": "",
+            "price_6": "",
+            "max_width": 1200,
+            "columns_mobile": "3",
+            "aspect_ratio": "1/1",
+            "gap": 12,
+            "gap_mobile": 8,
+            "content_alignment": "left",
+            "text_spacing": 8,
+            "title_size": 14,
+            "price_size": 14,
+            "title_color": "#000000",
+            "price_color": "#000000",
+            "price_spacing": 4,
+            "image_radius": 0,
+            "section_padding": 40
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_eb0586b_6K9TRd"
+      ],
+      "name": "Image collage",
+      "settings": {}
+    },
     "multirow_BKCiz4": {
       "type": "multirow",
       "blocks": {
@@ -474,6 +531,7 @@
     "rich_text_ngqBeE",
     "swan_image_text_7fNpfG",
     "image_with_text_HD9jKM",
+    "blocks_FG9Kyk",
     "multirow_BKCiz4",
     "1762518926dff99792",
     "image_with_text_6ajfcp",
