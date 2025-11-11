@@ -257,7 +257,7 @@
           "type": "column",
           "settings": {
             "title": "Step 1",
-            "text": "<h5>Brand Page erstellen</h5><p>Erstelle dein eigenes Profil in der <strong>SWAN App</strong> – so werden deine Marke, deine Produkte und deine Videos direkt sichtbar. </p><p>Zeig, wer du bist, wofür du stehst und was deine Brand besonders macht.</p>",
+            "text": "<h5>Brand Page erstellen</h5><p>Erstelle dein Profil in der <strong>SWAN App </strong>– so werden deine Produkte, Videos und deine Marke direkt sichtbar.<br/>Zeig, wer du bist, wofür du stehst und was deine Brand besonders macht.</p>",
             "link_label": "",
             "link": ""
           }
