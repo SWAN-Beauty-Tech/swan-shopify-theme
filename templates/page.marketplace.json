@@ -122,7 +122,7 @@
       "settings": {
         "image": "shopify://shop_images/Mirror_Shots_-_neu_1.jpg",
         "height": "adapt",
-        "desktop_image_width": "medium",
+        "desktop_image_width": "small",
         "layout": "image_first",
         "image_behavior": "none",
         "content_layout": "no-overlap",
@@ -134,6 +134,26 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "17630317497a9c0775": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_bcae852_nVCyjm": {
+          "type": "ai_gen_block_bcae852",
+          "settings": {
+            "image": "shopify://shop_images/Newsletter_November__Sales_Special.jpg",
+            "image_width": 400,
+            "border_radius": 0,
+            "padding_top": 40,
+            "padding_bottom": 40
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_bcae852_nVCyjm"
+      ],
+      "settings": {}
     },
     "rich_text_NJJnxg": {
       "type": "rich-text",
@@ -896,6 +916,7 @@
     "swan_rich_text_daYrVd",
     "swan_image_text_67EcKy",
     "image_with_text_MA4YUz",
+    "17630317497a9c0775",
     "rich_text_NJJnxg",
     "image_with_text_WjNQgC",
     "image_with_text_cpLEB4",
