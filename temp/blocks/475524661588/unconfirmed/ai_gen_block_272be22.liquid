@@ -1,6 +1,475 @@
+{% doc %}
+  @prompt
+    Create a customizable “Features Banner” section for Shopify.
+    Design Requirements:
+    A clean, minimal, modern banner with a white background.
+    Icons displayed above the text (SVG icons, simple line style).
+    Each feature item includes:
+    Icon
+    Title (bold serif or semi-serif style, similar to beauty / wellness brands)
+    Description (lighter sans-serif text)
+    Layout should support 2, 3, or 4 columns on desktop (adjustable in the theme editor).
+    On mobile, features stack vertically with generous spacing.
+    Icons should have adjustable size for mobile and desktop separately (in px).
+    Text should scale based on adjustable sliders for heading size (mobile + desktop).
+    Optional main heading for the whole block (can be empty).
+    Icons centered by default, but allow a toggle for left-aligned icons on desktop.
+    Functionality:
+    The section should support adding multiple feature blocks via “Add block”.
+    Each block must have settings for:
+    Icon upload (SVG recommended)
+    Title
+    Description text
+    Global section settings must include:
+    Heading
+    Heading size mobile (slider %)
+    Heading size desktop (slider %)
+    Icon width mobile (slider in px)
+    Icon width desktop (slider in px)
+    Number of columns on desktop (2 / 3 / 4 buttons)
+    Icon alignment toggle (center / left)
+    Code Requirements:
+    Build this as a complete Shopify .liquid section containing HTML, Liquid, and CSS.
+    Output responsive CSS using flexbox or grid.
+    No external libraries.
+    Clean, readable code with comments.
+    Keep typography sophisticated and suitable for a premium beauty brand.
+    Please generate the full section code., all in one row please, Headline also in one line and shopping bags as icons
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-features-banner-{{ ai_gen_id }} {
+    background-color: #ffffff;
+    padding: 60px 20px;
+  }
+
+  .ai-features-banner__container-{{ ai_gen_id }} {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .ai-features-banner__heading-{{ ai_gen_id }} {
+    text-align: center;
+    margin: 0 0 50px;
+    font-family: Georgia, serif;
+    font-weight: 600;
+    color: #000000;
+    font-size: calc({{ block.settings.heading_size_desktop }}% * 0.32);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .ai-features-banner__grid-{{ ai_gen_id }} {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 40px;
+    overflow-x: auto;
+  }
+
+  .ai-features-banner__item-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+    {% if block.settings.icon_alignment == 'center' %}
+      align-items: center;
+      text-align: center;
+    {% else %}
+      align-items: flex-start;
+      text-align: left;
+    {% endif %}
+  }
+
+  .ai-features-banner__icon-wrapper-{{ ai_gen_id }} {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-features-banner__icon-{{ ai_gen_id }} {
+    width: {{ block.settings.icon_width_desktop }}px;
+    height: auto;
+    display: block;
+  }
+
+  .ai-features-banner__icon-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: auto;
+  }
+
+  .ai-features-banner__title-{{ ai_gen_id }} {
+    font-family: Georgia, serif;
+    font-weight: 600;
+    font-size: 18px;
+    margin: 0 0 10px;
+    color: #000000;
+  }
+
+  .ai-features-banner__description-{{ ai_gen_id }} {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666666;
+    margin: 0;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-features-banner-{{ ai_gen_id }} {
+      padding: 40px 20px;
+    }
+
+    .ai-features-banner__heading-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.heading_size_mobile }}% * 0.24);
+      margin-bottom: 30px;
+      white-space: normal;
+    }
+
+    .ai-features-banner__grid-{{ ai_gen_id }} {
+      flex-direction: column;
+      gap: 35px;
+    }
+
+    .ai-features-banner__icon-{{ ai_gen_id }} {
+      width: {{ block.settings.icon_width_mobile }}px;
+    }
+
+    .ai-features-banner__item-{{ ai_gen_id }} {
+      align-items: center;
+      text-align: center;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-features-banner-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-features-banner__container-{{ ai_gen_id }}">
+    {% if block.settings.heading != blank %}
+      <h2 class="ai-features-banner__heading-{{ ai_gen_id }}">
+        {{ block.settings.heading }}
+      </h2>
+    {% endif %}
+
+    <div class="ai-features-banner__grid-{{ ai_gen_id }}">
+      {% if block.settings.icon_1 != blank or block.settings.title_1 != blank %}
+        <div class="ai-features-banner__item-{{ ai_gen_id }}">
+          {% if block.settings.icon_1 != blank %}
+            <div class="ai-features-banner__icon-wrapper-{{ ai_gen_id }}">
+              <img
+                src="{{ block.settings.icon_1 | image_url }}"
+                alt="{{ block.settings.title_1 | escape }}"
+                class="ai-features-banner__icon-{{ ai_gen_id }}"
+                loading="lazy"
+              >
+            </div>
+          {% else %}
+            <div class="ai-features-banner__icon-wrapper-{{ ai_gen_id }}">
+              <div class="ai-features-banner__icon-{{ ai_gen_id }}">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+              </div>
+            </div>
+          {% endif %}
+
+          {% if block.settings.title_1 != blank %}
+            <h3 class="ai-features-banner__title-{{ ai_gen_id }}">
+              {{ block.settings.title_1 }}
+            </h3>
+          {% endif %}
+
+          {% if block.settings.description_1 != blank %}
+            <p class="ai-features-banner__description-{{ ai_gen_id }}">
+              {{ block.settings.description_1 }}
+            </p>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if block.settings.icon_2 != blank or block.settings.title_2 != blank %}
+        <div class="ai-features-banner__item-{{ ai_gen_id }}">
+          {% if block.settings.icon_2 != blank %}
+            <div class="ai-features-banner__icon-wrapper-{{ ai_gen_id }}">
+              <img
+                src="{{ block.settings.icon_2 | image_url }}"
+                alt="{{ block.settings.title_2 | escape }}"
+                class="ai-features-banner__icon-{{ ai_gen_id }}"
+                loading="lazy"
+              >
+            </div>
+          {% else %}
+            <div class="ai-features-banner__icon-wrapper-{{ ai_gen_id }}">
+              <div class="ai-features-banner__icon-{{ ai_gen_id }}">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+              </div>
+            </div>
+          {% endif %}
+
+          {% if block.settings.title_2 != blank %}
+            <h3 class="ai-features-banner__title-{{ ai_gen_id }}">
+              {{ block.settings.title_2 }}
+            </h3>
+          {% endif %}
+
+          {% if block.settings.description_2 != blank %}
+            <p class="ai-features-banner__description-{{ ai_gen_id }}">
+              {{ block.settings.description_2 }}
+            </p>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if block.settings.icon_3 != blank or block.settings.title_3 != blank %}
+        <div class="ai-features-banner__item-{{ ai_gen_id }}">
+          {% if block.settings.icon_3 != blank %}
+            <div class="ai-features-banner__icon-wrapper-{{ ai_gen_id }}">
+              <img
+                src="{{ block.settings.icon_3 | image_url }}"
+                alt="{{ block.settings.title_3 | escape }}"
+                class="ai-features-banner__icon-{{ ai_gen_id }}"
+                loading="lazy"
+              >
+            </div>
+          {% else %}
+            <div class="ai-features-banner__icon-wrapper-{{ ai_gen_id }}">
+              <div class="ai-features-banner__icon-{{ ai_gen_id }}">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+              </div>
+            </div>
+          {% endif %}
+
+          {% if block.settings.title_3 != blank %}
+            <h3 class="ai-features-banner__title-{{ ai_gen_id }}">
+              {{ block.settings.title_3 }}
+            </h3>
+          {% endif %}
+
+          {% if block.settings.description_3 != blank %}
+            <p class="ai-features-banner__description-{{ ai_gen_id }}">
+              {{ block.settings.description_3 }}
+            </p>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if block.settings.icon_4 != blank or block.settings.title_4 != blank %}
+        <div class="ai-features-banner__item-{{ ai_gen_id }}">
+          {% if block.settings.icon_4 != blank %}
+            <div class="ai-features-banner__icon-wrapper-{{ ai_gen_id }}">
+              <img
+                src="{{ block.settings.icon_4 | image_url }}"
+                alt="{{ block.settings.title_4 | escape }}"
+                class="ai-features-banner__icon-{{ ai_gen_id }}"
+                loading="lazy"
+              >
+            </div>
+          {% else %}
+            <div class="ai-features-banner__icon-wrapper-{{ ai_gen_id }}">
+              <div class="ai-features-banner__icon-{{ ai_gen_id }}">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+              </div>
+            </div>
+          {% endif %}
+
+          {% if block.settings.title_4 != blank %}
+            <h3 class="ai-features-banner__title-{{ ai_gen_id }}">
+              {{ block.settings.title_4 }}
+            </h3>
+          {% endif %}
+
+          {% if block.settings.description_4 != blank %}
+            <p class="ai-features-banner__description-{{ ai_gen_id }}">
+              {{ block.settings.description_4 }}
+            </p>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Features banner",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Heading"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "range",
+      "id": "heading_size_mobile",
+      "min": 80,
+      "max": 150,
+      "step": 5,
+      "unit": "%",
+      "label": "Mobile size",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "heading_size_desktop",
+      "min": 80,
+      "max": 200,
+      "step": 5,
+      "unit": "%",
+      "label": "Desktop size",
+      "default": 120
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "radio",
+      "id": "icon_alignment",
+      "label": "Icon alignment",
+      "options": [
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "left",
+          "label": "Left"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "Icon size"
+    },
+    {
+      "type": "range",
+      "id": "icon_width_mobile",
+      "min": 30,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Mobile",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "icon_width_desktop",
+      "min": 40,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "label": "Desktop",
+      "default": 60
+    },
+    {
+      "type": "header",
+      "content": "Feature 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_1",
+      "label": "Icon"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title_1",
+      "label": "Title",
+      "default": "Premium Quality"
+    },
+    {
+      "type": "textarea",
+      "id": "description_1",
+      "label": "Description",
+      "default": "Crafted with the finest ingredients for exceptional results."
+    },
+    {
+      "type": "header",
+      "content": "Feature 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_2",
+      "label": "Icon"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title_2",
+      "label": "Title",
+      "default": "Dermatologist Tested"
+    },
+    {
+      "type": "textarea",
+      "id": "description_2",
+      "label": "Description",
+      "default": "Clinically proven formulas safe for all skin types."
+    },
+    {
+      "type": "header",
+      "content": "Feature 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_3",
+      "label": "Icon"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title_3",
+      "label": "Title",
+      "default": "Sustainable Beauty"
+    },
+    {
+      "type": "textarea",
+      "id": "description_3",
+      "label": "Description",
+      "default": "Eco-friendly packaging and ethically sourced ingredients."
+    },
+    {
+      "type": "header",
+      "content": "Feature 4"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_4",
+      "label": "Icon"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title_4",
+      "label": "Title",
+      "default": "Fast Results"
+    },
+    {
+      "type": "textarea",
+      "id": "description_4",
+      "label": "Description",
+      "default": "Visible improvements in as little as 7 days."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Features banner"
+    }
+  ]
+}
 {% endschema %}
