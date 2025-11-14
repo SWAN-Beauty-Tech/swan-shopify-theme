@@ -1,6 +1,445 @@
+{% doc %}
+  @prompt
+    Create a customizable Shopify section for a countdown banner.
+    Design:
+    A full-width horizontal banner with a light pastel yellow background.
+    Three columns on desktop:
+    Left: small headline text “Get it before it’s gone”.
+    Center: a live countdown timer showing Days / Hours / Minutes / Seconds.
+    Right: text “Get 30% off on our seasonal sale!” and a primary button “Shop sale”.
+    Clean, minimal, fashion-ecommerce look, similar to luxury clothing brands.
+    Serif font style for headlines, sans-serif for smaller text.
+    Button with dark background and white text.
+    On mobile: stack the elements (headline → countdown → text + button) with good spacing.
+    Functionality:
+    End date and time configurable in the theme editor.
+    Editable headline, promo text, button label and button link.
+    Editable colors for background, text and button.
+    The countdown should update on the client side every second.
+    When the countdown expires, it should stop at 0 and optionally add an “expired” class to the section.
+    Implementation:
+    Output a full Shopify .liquid section with HTML, CSS and JavaScript.
+    No external libraries; only vanilla JavaScript.
+    Use semantic HTML and responsive CSS (flexbox).
+    Keep the code clean and commented.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-countdown-banner-{{ ai_gen_id }} {
+    width: 100%;
+    background-color: {{ block.settings.background_color }};
+    padding: 20px 40px;
+    box-sizing: border-box;
+  }
+
+  .ai-countdown-banner-container-{{ ai_gen_id }} {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .ai-countdown-banner-left-{{ ai_gen_id }} {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .ai-countdown-banner-headline-{{ ai_gen_id }} {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: {{ block.settings.headline_size }}px;
+    color: {{ block.settings.text_color }};
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+  }
+
+  .ai-countdown-banner-center-{{ ai_gen_id }} {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    min-width: 0;
+  }
+
+  .ai-countdown-timer-{{ ai_gen_id }} {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+
+  .ai-countdown-unit-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .ai-countdown-value-{{ ai_gen_id }} {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: {{ block.settings.timer_size }}px;
+    font-weight: 600;
+    color: {{ block.settings.text_color }};
+    line-height: 1;
+    min-width: 40px;
+    text-align: center;
+  }
+
+  .ai-countdown-label-{{ ai_gen_id }} {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: {{ block.settings.text_color }};
+    opacity: 0.7;
+  }
+
+  .ai-countdown-separator-{{ ai_gen_id }} {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: {{ block.settings.timer_size }}px;
+    color: {{ block.settings.text_color }};
+    opacity: 0.5;
+    line-height: 1;
+  }
+
+  .ai-countdown-banner-right-{{ ai_gen_id }} {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+    min-width: 0;
+  }
+
+  .ai-countdown-promo-text-{{ ai_gen_id }} {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: {{ block.settings.promo_text_size }}px;
+    color: {{ block.settings.text_color }};
+    margin: 0;
+    text-align: right;
+  }
+
+  .ai-countdown-button-{{ ai_gen_id }} {
+    display: inline-block;
+    padding: 12px 32px;
+    background-color: {{ block.settings.button_bg_color }};
+    color: {{ block.settings.button_text_color }};
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .ai-countdown-button-{{ ai_gen_id }}:hover {
+    opacity: 0.85;
+  }
+
+  .ai-countdown-banner-{{ ai_gen_id }}.expired {
+    opacity: 0.6;
+  }
+
+  @media screen and (max-width: 989px) {
+    .ai-countdown-banner-{{ ai_gen_id }} {
+      padding: 24px 20px;
+    }
+
+    .ai-countdown-banner-container-{{ ai_gen_id }} {
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+    }
+
+    .ai-countdown-banner-left-{{ ai_gen_id }},
+    .ai-countdown-banner-center-{{ ai_gen_id }},
+    .ai-countdown-banner-right-{{ ai_gen_id }} {
+      width: 100%;
+      align-items: center;
+    }
+
+    .ai-countdown-banner-right-{{ ai_gen_id }} {
+      align-items: center;
+    }
+
+    .ai-countdown-promo-text-{{ ai_gen_id }} {
+      text-align: center;
+    }
+
+    .ai-countdown-timer-{{ ai_gen_id }} {
+      gap: 16px;
+    }
+
+    .ai-countdown-value-{{ ai_gen_id }} {
+      font-size: {{ block.settings.timer_size | times: 0.8 }}px;
+      min-width: 32px;
+    }
+
+    .ai-countdown-separator-{{ ai_gen_id }} {
+      font-size: {{ block.settings.timer_size | times: 0.8 }}px;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-countdown-headline-{{ ai_gen_id }} {
+      font-size: {{ block.settings.headline_size | times: 0.85 }}px;
+    }
+
+    .ai-countdown-timer-{{ ai_gen_id }} {
+      gap: 12px;
+    }
+
+    .ai-countdown-value-{{ ai_gen_id }} {
+      font-size: {{ block.settings.timer_size | times: 0.7 }}px;
+      min-width: 28px;
+    }
+
+    .ai-countdown-separator-{{ ai_gen_id }} {
+      font-size: {{ block.settings.timer_size | times: 0.7 }}px;
+    }
+
+    .ai-countdown-promo-text-{{ ai_gen_id }} {
+      font-size: {{ block.settings.promo_text_size | times: 0.9 }}px;
+    }
+  }
+{% endstyle %}
+
+<countdown-banner-{{ ai_gen_id }}
+  class="ai-countdown-banner-{{ ai_gen_id }}"
+  data-end-date="{{ block.settings.end_date }}"
+  data-end-time="{{ block.settings.end_time }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-countdown-banner-container-{{ ai_gen_id }}">
+    <div class="ai-countdown-banner-left-{{ ai_gen_id }}">
+      {% if block.settings.headline != blank %}
+        <h2 class="ai-countdown-banner-headline-{{ ai_gen_id }}">{{ block.settings.headline }}</h2>
+      {% endif %}
+    </div>
+
+    <div class="ai-countdown-banner-center-{{ ai_gen_id }}">
+      <div class="ai-countdown-timer-{{ ai_gen_id }}">
+        <div class="ai-countdown-unit-{{ ai_gen_id }}">
+          <div class="ai-countdown-value-{{ ai_gen_id }}" data-days>00</div>
+          <div class="ai-countdown-label-{{ ai_gen_id }}">Days</div>
+        </div>
+        <div class="ai-countdown-separator-{{ ai_gen_id }}">/</div>
+        <div class="ai-countdown-unit-{{ ai_gen_id }}">
+          <div class="ai-countdown-value-{{ ai_gen_id }}" data-hours>00</div>
+          <div class="ai-countdown-label-{{ ai_gen_id }}">Hours</div>
+        </div>
+        <div class="ai-countdown-separator-{{ ai_gen_id }}">/</div>
+        <div class="ai-countdown-unit-{{ ai_gen_id }}">
+          <div class="ai-countdown-value-{{ ai_gen_id }}" data-minutes>00</div>
+          <div class="ai-countdown-label-{{ ai_gen_id }}">Minutes</div>
+        </div>
+        <div class="ai-countdown-separator-{{ ai_gen_id }}">/</div>
+        <div class="ai-countdown-unit-{{ ai_gen_id }}">
+          <div class="ai-countdown-value-{{ ai_gen_id }}" data-seconds>00</div>
+          <div class="ai-countdown-label-{{ ai_gen_id }}">Seconds</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ai-countdown-banner-right-{{ ai_gen_id }}">
+      {% if block.settings.promo_text != blank %}
+        <p class="ai-countdown-promo-text-{{ ai_gen_id }}">{{ block.settings.promo_text }}</p>
+      {% endif %}
+      {% if block.settings.button_link != blank and block.settings.button_label != blank %}
+        <a href="{{ block.settings.button_link }}" class="ai-countdown-button-{{ ai_gen_id }}">
+          {{ block.settings.button_label }}
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</countdown-banner-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class CountdownBanner{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.endDate = this.dataset.endDate;
+        this.endTime = this.dataset.endTime;
+        this.interval = null;
+      }
+
+      connectedCallback() {
+        if (!this.endDate || !this.endTime) {
+          return;
+        }
+
+        this.daysElement = this.querySelector('[data-days]');
+        this.hoursElement = this.querySelector('[data-hours]');
+        this.minutesElement = this.querySelector('[data-minutes]');
+        this.secondsElement = this.querySelector('[data-seconds]');
+
+        this.startCountdown();
+      }
+
+      disconnectedCallback() {
+        if (this.interval) {
+          clearInterval(this.interval);
+        }
+      }
+
+      startCountdown() {
+        this.updateCountdown();
+        this.interval = setInterval(() => {
+          this.updateCountdown();
+        }, 1000);
+      }
+
+      updateCountdown() {
+        const endDateTime = new Date(this.endDate + 'T' + this.endTime).getTime();
+        const now = new Date().getTime();
+        const distance = endDateTime - now;
+
+        if (distance < 0) {
+          this.daysElement.textContent = '00';
+          this.hoursElement.textContent = '00';
+          this.minutesElement.textContent = '00';
+          this.secondsElement.textContent = '00';
+          this.classList.add('expired');
+          if (this.interval) {
+            clearInterval(this.interval);
+          }
+          return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        this.daysElement.textContent = String(days).padStart(2, '0');
+        this.hoursElement.textContent = String(hours).padStart(2, '0');
+        this.minutesElement.textContent = String(minutes).padStart(2, '0');
+        this.secondsElement.textContent = String(seconds).padStart(2, '0');
+      }
+    }
+
+    customElements.define('countdown-banner-{{ ai_gen_id }}', CountdownBanner{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Countdown banner",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Headline",
+      "default": "Get it before it's gone"
+    },
+    {
+      "type": "text",
+      "id": "promo_text",
+      "label": "Promo text",
+      "default": "Get 30% off on our seasonal sale!"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Shop sale"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "header",
+      "content": "Countdown timer"
+    },
+    {
+      "type": "text",
+      "id": "end_date",
+      "label": "End date",
+      "info": "Format: YYYY-MM-DD (e.g., 2025-12-31)",
+      "default": "2025-12-31"
+    },
+    {
+      "type": "text",
+      "id": "end_time",
+      "label": "End time",
+      "info": "Format: HH:MM (24-hour, e.g., 23:59)",
+      "default": "23:59"
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#FFF9E6"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#2C2C2C"
+    },
+    {
+      "type": "color",
+      "id": "button_bg_color",
+      "label": "Button background",
+      "default": "#2C2C2C"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "range",
+      "id": "headline_size",
+      "min": 14,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Headline size",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "timer_size",
+      "min": 24,
+      "max": 56,
+      "step": 2,
+      "unit": "px",
+      "label": "Timer size",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "promo_text_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Promo text size",
+      "default": 15
+    }
+  ],
+  "presets": [
+    {
+      "name": "Countdown banner"
+    }
+  ]
+}
 {% endschema %}
