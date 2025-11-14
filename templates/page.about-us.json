@@ -340,36 +340,6 @@
         "padding_bottom": 0
       }
     },
-    "rich_text_i8fCE9": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_f7qkKe": {
-          "type": "heading",
-          "settings": {
-            "heading": ""
-          }
-        },
-        "text_dCGkCB": {
-          "type": "text",
-          "settings": {
-            "text": ""
-          }
-        }
-      },
-      "block_order": [
-        "heading_f7qkKe",
-        "text_dCGkCB"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "blocks_htNt9y": {
       "type": "_blocks",
       "blocks": {
@@ -448,6 +418,36 @@
       ],
       "name": "Customer reviews",
       "settings": {}
+    },
+    "rich_text_i8fCE9": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_f7qkKe": {
+          "type": "heading",
+          "settings": {
+            "heading": ""
+          }
+        },
+        "text_dCGkCB": {
+          "type": "text",
+          "settings": {
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_f7qkKe",
+        "text_dCGkCB"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     },
     "blocks_c7ywbP": {
       "type": "_blocks",
@@ -911,6 +911,11 @@
       "name": "Video left",
       "settings": {}
     },
+    "blocks_w9pwjC": {
+      "type": "_blocks",
+      "name": "Features banner",
+      "settings": {}
+    },
     "collapsible_content_TkqmVL": {
       "type": "collapsible-content",
       "blocks": {
@@ -1185,6 +1190,7 @@
     "17552366850a6e1abb",
     "video_nVB6z7",
     "blocks_R3JYbW",
+    "blocks_w9pwjC",
     "collapsible_content_TkqmVL",
     "landing_image_banner_NmPPaq",
     "image_with_text_HdjJfc",
