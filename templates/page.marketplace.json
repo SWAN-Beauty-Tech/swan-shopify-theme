@@ -135,6 +135,34 @@
         "padding_bottom": 36
       }
     },
+    "1763124655dd5fb6a7": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_c93e0eb_wHE3VW": {
+          "type": "ai_gen_block_c93e0eb",
+          "settings": {
+            "headline": "Der nächste SWAN Drop",
+            "promo_text": "Sichere dir bis zu 30% Rabatt auf die angesagtesten Beauty Brands und Produkte.",
+            "button_label": "Shop sale",
+            "button_link": "",
+            "end_date": "2025-11-17",
+            "end_time": "23:59",
+            "background_color": "#ffffff",
+            "text_color": "#2C2C2C",
+            "button_bg_color": "#2C2C2C",
+            "button_text_color": "#FFFFFF",
+            "headline_size": 18,
+            "timer_size": 36,
+            "promo_text_size": 15
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_c93e0eb_wHE3VW"
+      ],
+      "settings": {}
+    },
     "17630317497a9c0775": {
       "type": "_blocks",
       "blocks": {
@@ -916,6 +944,7 @@
     "swan_rich_text_daYrVd",
     "swan_image_text_67EcKy",
     "image_with_text_MA4YUz",
+    "1763124655dd5fb6a7",
     "17630317497a9c0775",
     "rich_text_NJJnxg",
     "image_with_text_WjNQgC",
