@@ -607,6 +607,26 @@
     "1762426940049a816c": {
       "type": "_blocks",
       "blocks": {
+        "ai_gen_block_43c3622_PXKMCb": {
+          "type": "ai_gen_block_43c3622",
+          "settings": {
+            "heading": "",
+            "heading_size_mobile": 100,
+            "heading_size_desktop": 120,
+            "icon_alignment": "center",
+            "icon_width_mobile": 50,
+            "icon_width_desktop": 60,
+            "title_1": "Gratis Versand",
+            "description_1": "Ab einem Einkauf von 30€ versandkostenfrei.",
+            "title_2": "In-App Marketplace",
+            "description_2": "Shoppe Produkte direkt aus den Videos ohne die App zu verlassen.",
+            "title_3": "Content Creation",
+            "description_3": "Werde selbst zum Creator! Filmen, Bearbeiten und Hochladen - alles direkt in der App.",
+            "title_4": "SWAN Mirror Sync",
+            "description_4": "Sieh deine durchgeführten Hautanalyse ein und passe deine Routine in der App an."
+          },
+          "blocks": {}
+        },
         "ai_gen_block_eb0586b_bg4GrH": {
           "type": "ai_gen_block_eb0586b",
           "settings": {
@@ -656,6 +676,7 @@
         }
       },
       "block_order": [
+        "ai_gen_block_43c3622_PXKMCb",
         "ai_gen_block_eb0586b_bg4GrH"
       ],
       "settings": {}
