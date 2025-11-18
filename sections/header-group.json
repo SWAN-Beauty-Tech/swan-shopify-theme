@@ -59,7 +59,7 @@
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
         "custom_liquid": "<div id=\"my-js-block\"></div>\n<script>\n  document.addEventListener('DOMContentLoaded', function () {\n    // dein JS\n    console.log('👋 test');\n  });\n</script>",
-        "color_scheme": "",
+        "color_scheme": "scheme-1",
         "padding_top": 0,
         "padding_bottom": 0
       }

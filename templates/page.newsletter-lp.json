@@ -10,8 +10,62 @@
 {
   "layout": "theme.plain",
   "sections": {
+    "rich_text_HM4Wwb": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_C7TBmb": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Erzähle etwas über deine Marke</p>"
+          }
+        },
+        "text_xKYXG8": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Teile Infos über deine Marke mit deinen Kunden. Beschreibe ein Produkt, kündige etwas an oder heiße Kunden willkommen.</p>"
+          }
+        },
+        "button_DQdLki": {
+          "type": "button",
+          "settings": {
+            "button_label": "Schaltflächenbeschriftung",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_C7TBmb",
+        "text_xKYXG8",
+        "button_DQdLki"
+      ],
+      "disabled": true,
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 132,
+        "padding_bottom": 0
+      }
+    },
+    "swan_sign_up_QHD3RM": {
+      "type": "swan_sign-up",
+      "name": "SWAN Signup",
+      "settings": {
+        "header": "Melde dich zum Newsletter an",
+        "text_content": "<p>Werde zum SWAN Beauty Insider und verpasse keine Updates, SWAN Drops und Rabatt-Aktionen</p>",
+        "color_scheme": "",
+        "mirror_image": "black"
+      }
+    },
     "main": {
       "type": "page-no-title",
+      "disabled": true,
       "settings": {
         "padding_top": 0,
         "padding_bottom": 0
@@ -19,6 +73,8 @@
     }
   },
   "order": [
+    "rich_text_HM4Wwb",
+    "swan_sign_up_QHD3RM",
     "main"
   ]
 }
