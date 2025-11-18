@@ -1004,6 +1004,24 @@
       "type": "_blocks",
       "settings": {}
     },
+    "1763473701a5e77958": {
+      "type": "apps",
+      "blocks": {
+        "snap_compare_app_block_LHj3Yy": {
+          "type": "shopify://apps/snap-compare/blocks/app-block/9f7c7bcd-04ba-47ae-800e-227777a8d3e3",
+          "settings": {
+            "dark_mode": false,
+            "fallback_to_global": true
+          }
+        }
+      },
+      "block_order": [
+        "snap_compare_app_block_LHj3Yy"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "collapsible_content_TkqmVL": {
       "type": "collapsible-content",
       "blocks": {
@@ -1280,6 +1298,7 @@
     "blocks_R3JYbW",
     "blocks_w9pwjC",
     "1763129543e5bca508",
+    "1763473701a5e77958",
     "collapsible_content_TkqmVL",
     "landing_image_banner_NmPPaq",
     "image_with_text_HdjJfc",
