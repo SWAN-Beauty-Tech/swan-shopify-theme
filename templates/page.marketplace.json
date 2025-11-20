@@ -86,6 +86,22 @@
         "color_scheme": "scheme-3"
       }
     },
+    "video_wUJTLm": {
+      "type": "video",
+      "name": "t:sections.video.presets.name",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video": "shopify://files/videos/2 Imagefilm V4 TR website Split App Only.mp4",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
     "image_with_text_MA4YUz": {
       "type": "image-with-text",
       "blocks": {
@@ -966,6 +982,7 @@
     "main",
     "swan_rich_text_daYrVd",
     "swan_image_text_67EcKy",
+    "video_wUJTLm",
     "image_with_text_MA4YUz",
     "1763124655dd5fb6a7",
     "17630317497a9c0775",
