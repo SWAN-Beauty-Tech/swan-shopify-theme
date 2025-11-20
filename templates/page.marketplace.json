@@ -99,7 +99,7 @@
         "text_47zAnp": {
           "type": "text",
           "settings": {
-            "text": "<p>Einmal im Monat schalten wir für <strong>24 Stunden exklusive Sales </strong>auf ausgewählte Brands und Kategorien im SWAN Marketplace live.</p><p>Ab einem Bestellwert von 30 € profitierst du von kostenlosem Versand<strong> </strong>und erhältst deine Lieblingsprodukte bequem nach Hause geliefert – ganz ohne zusätzliche Kosten.</p><p>Der nächste Drop -<strong> 17. November </strong></p><p>Damit du keinen neuen Drop verpasst, folge uns auf Instagram oder sichere dir <strong>Early Access über unseren Newsletter.</strong></p>",
+            "text": "<p>Einmal im Monat schalten wir für <strong>24 Stunden exklusive Sales </strong>auf ausgewählte Brands und Kategorien im SWAN Marketplace live.</p><p>Ab einem Bestellwert von 30 € profitierst du von kostenlosem Versand<strong> </strong>und erhältst deine Lieblingsprodukte bequem nach Hause geliefert – ganz ohne zusätzliche Kosten.</p><p>Damit du keinen neuen Drop verpasst, folge uns auf Instagram oder sichere dir <strong>Early Access über unseren Newsletter.</strong></p>",
             "text_style": "body"
           }
         },
@@ -140,6 +140,7 @@
       "blocks": {
         "ai_gen_block_c93e0eb_wHE3VW": {
           "type": "ai_gen_block_c93e0eb",
+          "disabled": true,
           "settings": {
             "headline": "Der nächste SWAN Drop",
             "promo_text": "Sichere dir bis zu 30% Rabatt auf die angesagtesten Beauty Brands und Produkte.",
@@ -148,9 +149,9 @@
             "end_date": "2025-11-17",
             "end_time": "23:59",
             "background_color": "#ffffff",
-            "text_color": "#2C2C2C",
-            "button_bg_color": "#2C2C2C",
-            "button_text_color": "#FFFFFF",
+            "text_color": "#2c2c2c",
+            "button_bg_color": "#2c2c2c",
+            "button_text_color": "#ffffff",
             "headline_size": 18,
             "timer_size": 36,
             "promo_text_size": 15
@@ -168,6 +169,7 @@
       "blocks": {
         "ai_gen_block_bcae852_nVCyjm": {
           "type": "ai_gen_block_bcae852",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Newsletter_November__Sales_Special-2.jpg",
             "image_width": 400,
