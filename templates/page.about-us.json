@@ -115,6 +115,22 @@
         "color_scheme": "scheme-3"
       }
     },
+    "video_kDcf7K": {
+      "type": "video",
+      "name": "t:sections.video.presets.name",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "enable_video_looping": true,
+        "video": "shopify://files/videos/2 Imagefilm V4 TR website Split Mirror Only.mp4",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
     "featured_product_imLJVN": {
       "type": "featured-product",
       "blocks": {
@@ -1006,18 +1022,6 @@
     },
     "1763473701a5e77958": {
       "type": "apps",
-      "blocks": {
-        "snap_compare_app_block_LHj3Yy": {
-          "type": "shopify://apps/snap-compare/blocks/app-block/9f7c7bcd-04ba-47ae-800e-227777a8d3e3",
-          "settings": {
-            "dark_mode": false,
-            "fallback_to_global": true
-          }
-        }
-      },
-      "block_order": [
-        "snap_compare_app_block_LHj3Yy"
-      ],
       "settings": {
         "include_margins": true
       }
@@ -1284,6 +1288,7 @@
     "main",
     "swan_rich_text_FK6WPi",
     "swan_image_text_8yYbnC",
+    "video_kDcf7K",
     "featured_product_imLJVN",
     "rich_text_qgHTLn",
     "blocks_NDCMCe",
