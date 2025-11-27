@@ -1,6 +1,231 @@
+{% doc %}
+  @prompt
+    two pictures in one line, same size 
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-two-images-{{ ai_gen_id }} {
+    display: flex;
+    gap: {{ block.settings.gap }}px;
+    width: 100%;
+  }
+
+  .ai-two-images__item-{{ ai_gen_id }} {
+    flex: 1;
+    width: 50%;
+  }
+
+  .ai-two-images__image-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: {{ block.settings.border_radius }}px;
+  }
+
+  .ai-two-images__image-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .ai-two-images__placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    aspect-ratio: {{ block.settings.aspect_ratio }};
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .ai-two-images__placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-two-images__empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-two-images-{{ ai_gen_id }} {
+      flex-direction: {{ block.settings.mobile_layout }};
+      gap: {{ block.settings.mobile_gap }}px;
+    }
+
+    {% if block.settings.mobile_layout == 'column' %}
+      .ai-two-images__item-{{ ai_gen_id }} {
+        width: 100%;
+      }
+    {% endif %}
+  }
+{% endstyle %}
+
+<div class="ai-two-images-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-two-images__item-{{ ai_gen_id }}">
+    <div class="ai-two-images__image-wrapper-{{ ai_gen_id }}">
+      {% if block.settings.image_1 %}
+        <img
+          src="{{ block.settings.image_1 | image_url: width: 1500 }}"
+          alt="{{ block.settings.image_1.alt | escape }}"
+          loading="lazy"
+          width="{{ block.settings.image_1.width }}"
+          height="{{ block.settings.image_1.height }}"
+          class="ai-two-images__image-{{ ai_gen_id }}"
+          style="aspect-ratio: {{ block.settings.aspect_ratio }};"
+        >
+      {% else %}
+        <div class="ai-two-images__placeholder-{{ ai_gen_id }}">
+          {{ 'image' | placeholder_svg_tag }}
+          <div class="ai-two-images__empty-state-{{ ai_gen_id }}">
+            Add first image
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="ai-two-images__item-{{ ai_gen_id }}">
+    <div class="ai-two-images__image-wrapper-{{ ai_gen_id }}">
+      {% if block.settings.image_2 %}
+        <img
+          src="{{ block.settings.image_2 | image_url: width: 1500 }}"
+          alt="{{ block.settings.image_2.alt | escape }}"
+          loading="lazy"
+          width="{{ block.settings.image_2.width }}"
+          height="{{ block.settings.image_2.height }}"
+          class="ai-two-images__image-{{ ai_gen_id }}"
+          style="aspect-ratio: {{ block.settings.aspect_ratio }};"
+        >
+      {% else %}
+        <div class="ai-two-images__placeholder-{{ ai_gen_id }}">
+          {{ 'image' | placeholder_svg_tag }}
+          <div class="ai-two-images__empty-state-{{ ai_gen_id }}">
+            Add second image
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Two images",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Images"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "First image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Second image"
+    },
+    {
+      "type": "select",
+      "id": "aspect_ratio",
+      "label": "Aspect ratio",
+      "options": [
+        {
+          "value": "1/1",
+          "label": "Square (1:1)"
+        },
+        {
+          "value": "4/3",
+          "label": "Landscape (4:3)"
+        },
+        {
+          "value": "16/9",
+          "label": "Widescreen (16:9)"
+        },
+        {
+          "value": "3/4",
+          "label": "Portrait (3:4)"
+        },
+        {
+          "value": "2/3",
+          "label": "Tall (2:3)"
+        }
+      ],
+      "default": "1/1"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Gap between images",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Mobile layout"
+    },
+    {
+      "type": "select",
+      "id": "mobile_layout",
+      "label": "Mobile layout",
+      "options": [
+        {
+          "value": "row",
+          "label": "Side by side"
+        },
+        {
+          "value": "column",
+          "label": "Stacked"
+        }
+      ],
+      "default": "column"
+    },
+    {
+      "type": "range",
+      "id": "mobile_gap",
+      "min": 0,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "label": "Mobile gap",
+      "default": 16
+    }
+  ],
+  "presets": [
+    {
+      "name": "Two images"
+    }
+  ]
+}
 {% endschema %}
