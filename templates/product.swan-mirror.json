@@ -72,42 +72,6 @@
           "settings": {
             "custom_liquid": "<div style=\"text-align:center\">\n{% assign enabled_payment_types = 'visa,master,paypal, apple_pay,google_pay,klarna' | remove: ' ' | split: ',' %}\n{% for type in enabled_payment_types %}\n{{ type | payment_type_svg_tag }}\n{% endfor %}\n</div>"
           }
-        },
-        "collapsible_tab_E4Vc9B": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Weitere Details",
-            "icon": "eye",
-            "content": "<ul><li><strong>Hautanalyse - </strong>Starte mit einer KI-gestützten Hautanalyse (mit Dermatolog*innen entwickelt). Verstehe deine Haut, erkenne Veränderungen und erhalte individuelle Pflege-Empfehlungen.</li><li><strong>Kamera </strong>– 13-Megapixel-HD-Kamera & Mikrofon: Nimm Routinen in hoher Qualität auf und kreiere Social-Content direkt am Spiegel.</li><li><strong>SWAN App </strong>– Nahtlos verbunden: Tutorials, Tipps, Trends und personalisierte Inhalte – am Mirror oder unterwegs in der App.</li><li><strong>Beauty-Light </strong>– LED-Beleuchtung mit dimmbarer Helligkeit und Farbtemperatur von warm über neutral bis kalt – immer optimal ausgeleuchtet.</li><li><strong>Multi-Touch </strong>– 15,6-Zoll Multi-Touch-Display: Intuitive Steuerung wie am Smartphone. Schnell, präzise, zukunftssicher.</li><li><strong>Design-Upgrade </strong>– Minimalistisch & elegant in Schwarz oder Weiß – fügt sich stilvoll in dein Interior ein.</li></ul>",
-            "page": ""
-          }
-        },
-        "collapsible-row-2": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Abmessung",
-            "icon": "ruler",
-            "content": "<p>- 15,6” rahmenlose Spiegelfläche</p><p>- Wand- oder Standspiegel </p><p>- Gewicht: 2,3 kg</p>",
-            "page": ""
-          }
-        },
-        "collapsible-row-1": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Lieferumfang",
-            "icon": "truck",
-            "content": "<p>- 1x Smart Mirror</p><p>- 1x Netzteil + 1x Adapter (UK & US) </p><p>- 1x Mikrofaser Reinigungstuch</p><p>- 1x Bedienungsanleitung</p>",
-            "page": ""
-          }
-        },
-        "collapsible-row-3": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Versand & Rücksendung",
-            "icon": "box",
-            "content": "<p><strong>Kostenloser Versand in Deutschland. </strong>Lieferzeit: <strong>2–4 Werktage </strong>ab Zahlungseingang. Versand mit DHL (versichert & Sendungsverfolgung inklusive). Internationale Lieferungen auf Anfrage.</p><p><strong>14 Tage Rückgaberecht.                       </strong>Rückgabe nur im Originalzustand und in der Originalverpackung möglich. Nach Prüfung der Ware erfolgt die Rückerstattung innerhalb von <strong>5 Werktagen</strong>.</p><p></p>",
-            "page": ""
-          }
         }
       },
       "block_order": [
@@ -120,11 +84,7 @@
         "quantity_selector",
         "description",
         "buy_buttons",
-        "custom_liquid_GjD6ir",
-        "collapsible_tab_E4Vc9B",
-        "collapsible-row-2",
-        "collapsible-row-1",
-        "collapsible-row-3"
+        "custom_liquid_GjD6ir"
       ],
       "custom_css": [
         ".product {padding-top: 10vh; max-width: 175ch; margin: 0 auto;}"
