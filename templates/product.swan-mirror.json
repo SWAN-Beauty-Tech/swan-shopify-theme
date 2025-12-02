@@ -1,0 +1,174 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "caption": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.descriptors.subtitle.value }}",
+            "text_style": "subtitle"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "klarna_on_site_messaging_app_block_cgJTxM": {
+          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
+          "settings": {
+            "data_key": "credit-promotion-badge",
+            "theme": "custom",
+            "topPadding": "0",
+            "bottomPadding": "0",
+            "messagePrefix": "Or"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "custom_liquid_GjD6ir": {
+          "type": "custom_liquid",
+          "name": "Bezahlmöglichkeiten",
+          "settings": {
+            "custom_liquid": "<div style=\"text-align:center\">\n{% assign enabled_payment_types = 'visa,master,paypal, apple_pay,google_pay,klarna' | remove: ' ' | split: ',' %}\n{% for type in enabled_payment_types %}\n{{ type | payment_type_svg_tag }}\n{% endfor %}\n</div>"
+          }
+        },
+        "collapsible_tab_E4Vc9B": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Weitere Details",
+            "icon": "eye",
+            "content": "<ul><li><strong>Hautanalyse - </strong>Starte mit einer KI-gestützten Hautanalyse (mit Dermatolog*innen entwickelt). Verstehe deine Haut, erkenne Veränderungen und erhalte individuelle Pflege-Empfehlungen.</li><li><strong>Kamera </strong>– 13-Megapixel-HD-Kamera & Mikrofon: Nimm Routinen in hoher Qualität auf und kreiere Social-Content direkt am Spiegel.</li><li><strong>SWAN App </strong>– Nahtlos verbunden: Tutorials, Tipps, Trends und personalisierte Inhalte – am Mirror oder unterwegs in der App.</li><li><strong>Beauty-Light </strong>– LED-Beleuchtung mit dimmbarer Helligkeit und Farbtemperatur von warm über neutral bis kalt – immer optimal ausgeleuchtet.</li><li><strong>Multi-Touch </strong>– 15,6-Zoll Multi-Touch-Display: Intuitive Steuerung wie am Smartphone. Schnell, präzise, zukunftssicher.</li><li><strong>Design-Upgrade </strong>– Minimalistisch & elegant in Schwarz oder Weiß – fügt sich stilvoll in dein Interior ein.</li></ul>",
+            "page": ""
+          }
+        },
+        "collapsible-row-2": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Abmessung",
+            "icon": "ruler",
+            "content": "<p>- 15,6” rahmenlose Spiegelfläche</p><p>- Wand- oder Standspiegel </p><p>- Gewicht: 2,3 kg</p>",
+            "page": ""
+          }
+        },
+        "collapsible-row-1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Lieferumfang",
+            "icon": "truck",
+            "content": "<p>- 1x Smart Mirror</p><p>- 1x Netzteil + 1x Adapter (UK & US) </p><p>- 1x Mikrofaser Reinigungstuch</p><p>- 1x Bedienungsanleitung</p>",
+            "page": ""
+          }
+        },
+        "collapsible-row-3": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Versand & Rücksendung",
+            "icon": "box",
+            "content": "<p><strong>Kostenloser Versand in Deutschland. </strong>Lieferzeit: <strong>2–4 Werktage </strong>ab Zahlungseingang. Versand mit DHL (versichert & Sendungsverfolgung inklusive). Internationale Lieferungen auf Anfrage.</p><p><strong>14 Tage Rückgaberecht.                       </strong>Rückgabe nur im Originalzustand und in der Originalverpackung möglich. Nach Prüfung der Ware erfolgt die Rückerstattung innerhalb von <strong>5 Werktagen</strong>.</p><p></p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "caption",
+        "price",
+        "klarna_on_site_messaging_app_block_cgJTxM",
+        "variant_picker",
+        "quantity_selector",
+        "description",
+        "buy_buttons",
+        "custom_liquid_GjD6ir",
+        "collapsible_tab_E4Vc9B",
+        "collapsible-row-2",
+        "collapsible-row-1",
+        "collapsible-row-3"
+      ],
+      "custom_css": [
+        ".product {padding-top: 10vh; max-width: 175ch; margin: 0 auto;}"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "",
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "stacked",
+        "mobile_thumbnails": "hide",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "custom_css": [
+        "div {max-width: 175ch; margin: 0 auto;}"
+      ],
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "main",
+    "related-products"
+  ]
+}
