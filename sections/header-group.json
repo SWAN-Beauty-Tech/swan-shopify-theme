@@ -16,7 +16,6 @@
       "blocks": {
         "announcement-bar-0": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
             "text": "Ab einem Einkaufswert von 30€ - Versandkostenfreie Lieferung - Jetzt in der SWAN App!",
             "link": ""
