@@ -16,8 +16,9 @@
       "blocks": {
         "announcement-bar-0": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
-            "text": "Black Friday Deal - 20% Rabatt auf den SWAN Mirror 28. bis 30. November",
+            "text": "",
             "link": ""
           }
         }
