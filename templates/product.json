@@ -57,6 +57,7 @@
         },
         "description": {
           "type": "description",
+          "disabled": true,
           "settings": {}
         },
         "buy_buttons": {
