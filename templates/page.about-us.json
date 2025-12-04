@@ -279,6 +279,97 @@
         "padding_bottom": 36
       }
     },
+    "blocks_NDCMCe": {
+      "type": "_blocks",
+      "blocks": {
+        "text_EBJy7b": {
+          "type": "text",
+          "name": "Content",
+          "settings": {
+            "text": "",
+            "alignment": "left"
+          },
+          "blocks": {}
+        },
+        "text_4Ub3hJ": {
+          "type": "text",
+          "name": "Text",
+          "settings": {
+            "text": "",
+            "alignment": "left"
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_bcae852_BXH4Gt": {
+          "type": "ai_gen_block_bcae852",
+          "name": "Centered image",
+          "settings": {
+            "image": "shopify://shop_images/Mirror_Wheel_dad4005d-18e7-4dde-a3e7-fb46c8bf98ab.png",
+            "image_width": 800,
+            "border_radius": 0,
+            "padding_top": 0,
+            "padding_bottom": 52
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_eb0586b_BwEyGK": {
+          "type": "ai_gen_block_eb0586b",
+          "disabled": true,
+          "settings": {
+            "heading": "Not just a device - a personal ritual",
+            "subheading": "Von der Hautanalyse über die Skincare-Routine bis hin zum virtuellen Make-up-Artist und integriertem Onlineshop.",
+            "text_alignment": "center",
+            "heading_size": 36,
+            "subheading_size": 16,
+            "heading_color": "#000000",
+            "subheading_color": "#666666",
+            "header_spacing": 30,
+            "subheading_spacing": 10,
+            "image_1": "shopify://shop_images/16.jpg",
+            "title_1": "",
+            "price_1": "",
+            "image_2": "shopify://shop_images/3_38ae745f-7fe2-43d6-8c92-0616bc27ca3e.jpg",
+            "title_2": "",
+            "price_2": "",
+            "image_3": "shopify://shop_images/5_d3b00697-f01f-407e-bdff-c9f71097060e.jpg",
+            "title_3": "",
+            "price_3": "",
+            "image_4": "shopify://shop_images/6_a11bfa40-7d0e-4b8e-9142-3b44447e0fb3.jpg",
+            "title_4": "",
+            "price_4": "",
+            "image_5": "shopify://shop_images/14.jpg",
+            "title_5": "",
+            "price_5": "",
+            "image_6": "shopify://shop_images/4_535ea845-aa3c-4b31-b3bb-3e105cff1ff7.jpg",
+            "title_6": "",
+            "price_6": "",
+            "max_width": 1200,
+            "columns_mobile": "3",
+            "aspect_ratio": "1/1",
+            "gap": 12,
+            "gap_mobile": 8,
+            "content_alignment": "left",
+            "text_spacing": 8,
+            "title_size": 14,
+            "price_size": 14,
+            "title_color": "#000000",
+            "price_color": "#000000",
+            "price_spacing": 4,
+            "image_radius": 0,
+            "section_padding": 40
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_EBJy7b",
+        "text_4Ub3hJ",
+        "ai_gen_block_bcae852_BXH4Gt",
+        "ai_gen_block_eb0586b_BwEyGK"
+      ],
+      "name": "Image collage",
+      "settings": {}
+    },
     "blocks_htNt9y": {
       "type": "_blocks",
       "blocks": {
@@ -524,100 +615,23 @@
       "name": "Text hotspots",
       "settings": {}
     },
-    "blocks_NDCMCe": {
-      "type": "_blocks",
-      "blocks": {
-        "text_EBJy7b": {
-          "type": "text",
-          "name": "Content",
-          "settings": {
-            "text": "",
-            "alignment": "left"
-          },
-          "blocks": {}
-        },
-        "text_4Ub3hJ": {
-          "type": "text",
-          "name": "Text",
-          "settings": {
-            "text": "",
-            "alignment": "left"
-          },
-          "blocks": {}
-        },
-        "ai_gen_block_bcae852_BXH4Gt": {
-          "type": "ai_gen_block_bcae852",
-          "name": "Centered image",
-          "settings": {
-            "image": "shopify://shop_images/Mirror_Wheel_dad4005d-18e7-4dde-a3e7-fb46c8bf98ab.png",
-            "image_width": 800,
-            "border_radius": 0,
-            "padding_top": 0,
-            "padding_bottom": 52
-          },
-          "blocks": {}
-        },
-        "ai_gen_block_eb0586b_BwEyGK": {
-          "type": "ai_gen_block_eb0586b",
-          "disabled": true,
-          "settings": {
-            "heading": "Not just a device - a personal ritual",
-            "subheading": "Von der Hautanalyse über die Skincare-Routine bis hin zum virtuellen Make-up-Artist und integriertem Onlineshop.",
-            "text_alignment": "center",
-            "heading_size": 36,
-            "subheading_size": 16,
-            "heading_color": "#000000",
-            "subheading_color": "#666666",
-            "header_spacing": 30,
-            "subheading_spacing": 10,
-            "image_1": "shopify://shop_images/16.jpg",
-            "title_1": "",
-            "price_1": "",
-            "image_2": "shopify://shop_images/3_38ae745f-7fe2-43d6-8c92-0616bc27ca3e.jpg",
-            "title_2": "",
-            "price_2": "",
-            "image_3": "shopify://shop_images/5_d3b00697-f01f-407e-bdff-c9f71097060e.jpg",
-            "title_3": "",
-            "price_3": "",
-            "image_4": "shopify://shop_images/6_a11bfa40-7d0e-4b8e-9142-3b44447e0fb3.jpg",
-            "title_4": "",
-            "price_4": "",
-            "image_5": "shopify://shop_images/14.jpg",
-            "title_5": "",
-            "price_5": "",
-            "image_6": "shopify://shop_images/4_535ea845-aa3c-4b31-b3bb-3e105cff1ff7.jpg",
-            "title_6": "",
-            "price_6": "",
-            "max_width": 1200,
-            "columns_mobile": "3",
-            "aspect_ratio": "1/1",
-            "gap": 12,
-            "gap_mobile": 8,
-            "content_alignment": "left",
-            "text_spacing": 8,
-            "title_size": 14,
-            "price_size": 14,
-            "title_color": "#000000",
-            "price_color": "#000000",
-            "price_spacing": 4,
-            "image_radius": 0,
-            "section_padding": 40
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "text_EBJy7b",
-        "text_4Ub3hJ",
-        "ai_gen_block_bcae852_BXH4Gt",
-        "ai_gen_block_eb0586b_BwEyGK"
-      ],
-      "name": "Image collage",
-      "settings": {}
-    },
     "1756214345b5c620e8": {
       "type": "_blocks",
       "blocks": {
+        "ai_gen_block_96f037f_g3eAUi": {
+          "type": "ai_gen_block_96f037f",
+          "name": "Two images",
+          "settings": {
+            "image_1": "shopify://shop_images/1_122898b9-ae4b-486c-a6f3-8cae91a774b2.jpg",
+            "image_2": "shopify://shop_images/2_3c2ecc47-3369-45b2-9311-f58ffd8aa5b4.jpg",
+            "aspect_ratio": "1/1",
+            "gap": 16,
+            "border_radius": 0,
+            "mobile_layout": "column",
+            "mobile_gap": 16
+          },
+          "blocks": {}
+        },
         "ai_gen_block_7e17886_bCxefx": {
           "type": "ai_gen_block_7e17886",
           "name": "Product hotspots",
@@ -710,6 +724,7 @@
         }
       },
       "block_order": [
+        "ai_gen_block_96f037f_g3eAUi",
         "ai_gen_block_7e17886_bCxefx",
         "ai_gen_block_96f037f_HH8pkA",
         "ai_gen_block_ba0b649_EjnKUf"
@@ -1320,10 +1335,10 @@
     "rich_text_qgHTLn",
     "rich_text_WhErJL",
     "video_kDcf7K",
+    "blocks_NDCMCe",
     "blocks_htNt9y",
     "rich_text_i8fCE9",
     "blocks_c7ywbP",
-    "blocks_NDCMCe",
     "1756214345b5c620e8",
     "blocks_pPzc37",
     "17552366850a6e1abb",
