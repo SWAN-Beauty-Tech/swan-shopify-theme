@@ -18,7 +18,7 @@
             "title": "Finde die passenden Produkte",
             "subtitle": "",
             "collection": "",
-            "search_placeholder": "Search products...",
+            "search_placeholder": "Search products... {{ closest.collection.title }}",
             "currency_code": "EUR",
             "currency_locale": "de-DE",
             "max_width": 1400,
@@ -45,6 +45,7 @@
     },
     "banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "settings": {
         "show_collection_description": true,
         "show_collection_image": false,
