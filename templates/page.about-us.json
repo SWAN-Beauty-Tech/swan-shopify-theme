@@ -29,7 +29,7 @@
         "text_mAjDLK": {
           "type": "text",
           "settings": {
-            "text": "<h2>SWAN     Mirror</h2>"
+            "text": "<h2>Test</h2><h2></h2>"
           }
         }
       },
