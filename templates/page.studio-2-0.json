@@ -1,0 +1,377 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_9xhcmp": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_RTGxHP": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h1>SWAN Squad</h1>"
+          }
+        },
+        "text_yj7Wbx": {
+          "type": "text",
+          "settings": {
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_RTGxHP",
+        "text_yj7Wbx"
+      ],
+      "disabled": true,
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_banner_z94hFA": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify://shop_images/maria-lupan-fGbFh23VIDU-unsplash.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": false,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "swan_rich_text_AiyzpU": {
+      "type": "swan_rich-text",
+      "blocks": {
+        "heading_mVXyEC": {
+          "type": "heading",
+          "settings": {
+            "heading": ""
+          }
+        },
+        "text_ftVfr4": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Deine Brand. Dein Beautyverse.</h2><h2></h2>"
+          }
+        },
+        "text_TkerxH": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Der <strong>SWAN Marketplace</strong> ist die Plattform für Marken, die sichtbar werden wollen – echt, ästhetisch und authentisch.<br/>Wir verbinden Technologie, Content und Community, um Beauty Brands eine transparente und inspirierende Präsenz im SWAN Kosmos zu bieten.</p><p><strong>Ein System. Eine Zielgruppe.</strong><br/>Über die SWAN App und den SWAN Mirror erreichst du eine kuratierte Beauty Community – Menschen, die auf Inspiration, Vertrauen und Qualität setzen.</p><p><strong>Einfach verbunden.</strong><br/>Dank Shopify Connect wirst du mit wenigen Klicks Teil von SWAN.<br/>Produkte synchronisieren, Inhalte teilen, Verkäufe sehen – unkompliziert, transparent, direkt.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_mVXyEC",
+        "text_ftVfr4",
+        "text_TkerxH"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "custom_id": "",
+        "custom_class": "",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "video_slider_D9Nqcc": {
+      "type": "video-slider",
+      "blocks": {
+        "carousel_video_chwgFp": {
+          "type": "carousel_video",
+          "settings": {
+            "media": "https://cdn.shopify.com/videos/c/o/v/4ca18f066b9a4d0f944bcfc0ee88eaa9.mp4"
+          }
+        },
+        "carousel_video_tUJBqM": {
+          "type": "carousel_video",
+          "settings": {
+            "media": "https://cdn.shopify.com/videos/c/o/v/ffd95449a25e4452b1685afcd732a916.mp4"
+          }
+        },
+        "carousel_video_8hX6cQ": {
+          "type": "carousel_video",
+          "settings": {
+            "media": "https://cdn.shopify.com/videos/c/o/v/c4b9b4f46fbf4c5181c3006cc8b86679.mp4"
+          }
+        },
+        "carousel_video_HUeRA3": {
+          "type": "carousel_video",
+          "settings": {
+            "media": "https://cdn.shopify.com/videos/c/o/v/90cf35ab4067429fbb2da2535ebef9b3.mp4"
+          }
+        },
+        "carousel_video_qyxAFc": {
+          "type": "carousel_video",
+          "settings": {
+            "media": "https://cdn.shopify.com/videos/c/o/v/eeca8e5b96b74defa5dbae49f240a99d.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "carousel_video_chwgFp",
+        "carousel_video_tUJBqM",
+        "carousel_video_8hX6cQ",
+        "carousel_video_HUeRA3",
+        "carousel_video_qyxAFc"
+      ],
+      "disabled": true,
+      "name": "Videos Slider",
+      "settings": {
+        "section_heading": "",
+        "heading_alignment": "center",
+        "heading_size": "medium",
+        "full_width": false,
+        "section_bg_color": "#ffffff",
+        "section_padding_top": 40,
+        "section_padding_bottom": 40,
+        "auto_slide": true,
+        "auto_slide_speed": 6000,
+        "video_start_delay": 500,
+        "show_arrows": false,
+        "arrow_shape": "circle",
+        "arrow_bg_color": "#666666",
+        "visible_slides": 3,
+        "visible_mobile": 1,
+        "image_shape": "square",
+        "image_size": "small",
+        "media_size": "medium",
+        "media_design": "adapt",
+        "media_shadow": false,
+        "testimonial_name_size": 20
+      }
+    },
+    "video_carousel_rect_braWeg": {
+      "type": "video_carousel_rect",
+      "disabled": true,
+      "name": "Video carousel",
+      "settings": {
+        "padding_block_desktop": 40,
+        "padding_inline_desktop": 40,
+        "margin_block_desktop": 20,
+        "margin_inline_desktop": 20,
+        "padding_block_mobile": 20,
+        "padding_inline_mobile": 20,
+        "margin_block_mobile": 10,
+        "margin_inline_mobile": 10,
+        "video_1": "shopify://files/videos/3.mp4",
+        "video_2": "shopify://files/videos/1.mp4",
+        "video_3": "shopify://files/videos/5.mp4",
+        "video_4": "shopify://files/videos/4.mp4",
+        "video_5": "shopify://files/videos/Ohne Titel.mp4",
+        "video_width": 280,
+        "video_height": 480,
+        "video_gap": 20,
+        "mobile_video_gap": 2,
+        "inactive_scale": 80,
+        "inactive_opacity": 60,
+        "border_radius": 12,
+        "nav_button_color": "#ffffff",
+        "nav_button_hover_color": "#f0f0f0",
+        "nav_button_icon_color": "#000000",
+        "autoplay_enabled": true,
+        "autoplay_duration": 8
+      }
+    },
+    "swan_image_text_bUttRB": {
+      "type": "swan_image-text",
+      "blocks": {
+        "headline_i9mhXX": {
+          "type": "headline",
+          "settings": {
+            "text": "Weil Beauty heute anders funktioniert",
+            "center_text": false,
+            "heading_level": "h2",
+            "custom_id": "",
+            "custom_class": ""
+          }
+        },
+        "text_area_GUr6Y9": {
+          "type": "text_area",
+          "settings": {
+            "text": "<p>Der SWAN Marketplace ist kein weiterer Online-Shop – er ist die Zukunft des Beauty Commerce.<br/>Ein Ort, an dem Marken sichtbar werden, weil Menschen über sie sprechen, sie ausprobieren und lieben.</p><p>Der Mix aus <strong>SWAN App</strong> und <strong>SWAN Mirror</strong> schafft etwas völlig Neues:<br/>eine Verbindung aus <strong>Community, Content und Commerce.</strong><br/>Hier entsteht <strong>Social Beauty E-Commerce</strong> – authentisch, inspirierend, direkt.</p>",
+            "center_text": false,
+            "custom_id": "",
+            "custom_class": ""
+          }
+        },
+        "button_VFhwzD": {
+          "type": "button",
+          "settings": {
+            "button_text": "Jetzt als brand bewerben",
+            "button_link": "https://forms.office.com/r/Bpc0vZVAQV",
+            "button_style_secondary": false,
+            "custom_id": "",
+            "custom_class": ""
+          }
+        }
+      },
+      "block_order": [
+        "headline_i9mhXX",
+        "text_area_GUr6Y9",
+        "button_VFhwzD"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/8_1_2ac6cff2-1d48-448f-bc7a-e80465880dbd.png",
+        "image_position": "right",
+        "image_scale": "cover",
+        "image_background": "#ffffff",
+        "image_inset": "false",
+        "mirror_swap": false,
+        "text_alignment": "flex-end",
+        "sticky_text": false,
+        "custom_id": "",
+        "custom_class": "",
+        "color_scheme": "scheme-3"
+      }
+    },
+    "multicolumn_pAcYqY": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_GXQyfE": {
+          "type": "column",
+          "settings": {
+            "title": "Step 1",
+            "text": "<h5>Brand Page erstellen</h5><p>Erstelle dein Profil in der <strong>SWAN App </strong>– so werden deine Produkte, Videos und deine Marke direkt sichtbar.<br/>Zeig, wer du bist, wofür du stehst und was deine Brand besonders macht.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_xEDacJ": {
+          "type": "column",
+          "settings": {
+            "title": "Step 2",
+            "text": "<h5>Content, der verbindet</h5><p>Erstelle authentischen Content – Tutorials, Looks, Tipps.<br/>Je mehr du teilst, desto sichtbarer wirst du: im <strong>Mirror</strong>, in der <strong>App </strong>und in der <strong>Community.</strong></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_w3zMEm": {
+          "type": "column",
+          "settings": {
+            "title": "Step 3",
+            "text": "<h5>Einfach angebunden, direkt verkauft</h5><p>Mit <strong>Shopify Connect </strong>bist du in Minuten startklar.<br/>Verkäufe laufen direkt über deine Videos – ohne Umwege, ohne Streuverluste.<br/>Werde Teil von SWAN und wachse mit uns.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_GXQyfE",
+        "column_xEDacJ",
+        "column_w3zMEm"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "What's next?",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Werde Teil des Swan marketplace",
+        "button_link": "https://forms.office.com/Pages/ResponsePage.aspx?id=s3bIqKyKik-Ngfjnfc6W0FP49d_iUcVFtTuQ7bTIZkNUQVlNSEs1TzlaTlk2QU04V0dWTlE3Tk1FTC4u",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_kLGAey": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_LeyeKW": {
+          "type": "heading",
+          "settings": {
+            "heading": "BEAUTY, BUT MAKE IT MEANINGFUL",
+            "heading_size": "h1"
+          }
+        },
+        "text_PWFdVF": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Du willst sichtbar werden – aber authentisch?<br/>Dann ist SWAN dein Place to be.</p><p>Werde Teil einer Bewegung, die anders denkt, die gemeinsam wächst und Marken, Menschen und Ideen verbindet.<br/><br/>Be part of SWAN. Be part of what’s next. </p>",
+            "text_style": "body"
+          }
+        },
+        "button_yzCtHe": {
+          "type": "button",
+          "settings": {
+            "button_label": "Jetzt als brand bewerben",
+            "button_link": "https://forms.office.com/r/Bpc0vZVAQV",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_LeyeKW",
+        "text_PWFdVF",
+        "button_yzCtHe"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/9.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "swan_sign_up_7wJRrF": {
+      "type": "swan_sign-up",
+      "settings": {
+        "header": "the future of beauty is now.",
+        "text_content": "<h5>Werde SWAN Beauty Insider und verpasse keine Updates.</h5>",
+        "color_scheme": "",
+        "mirror_image": "white"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_9xhcmp",
+    "image_banner_z94hFA",
+    "swan_rich_text_AiyzpU",
+    "video_slider_D9Nqcc",
+    "video_carousel_rect_braWeg",
+    "swan_image_text_bUttRB",
+    "multicolumn_pAcYqY",
+    "image_with_text_kLGAey",
+    "swan_sign_up_7wJRrF"
+  ]
+}
