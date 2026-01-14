@@ -47,7 +47,7 @@
           "settings": {
             "heading": "Was wir anbieten:",
             "heading_size_mobile": 100,
-            "heading_size_desktop": 120,
+            "heading_size_desktop": 100,
             "icon_alignment": "center",
             "icon_width_mobile": 70,
             "icon_width_desktop": 60,
