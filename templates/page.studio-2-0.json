@@ -27,7 +27,7 @@
       "settings": {
         "video_intro": "shopify://files/videos/2 Imagefilm V4 TR website Split App Only_05cc5cc3-63e0-4add-8393-2555c6241f90.mp4",
         "playback_speed": 1,
-        "image_overlay_opacity": 10,
+        "image_overlay_opacity": 40,
         "image_height": "medium",
         "image_behavior": "none",
         "desktop_content_position": "middle-center",
