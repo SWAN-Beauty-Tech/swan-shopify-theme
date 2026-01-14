@@ -9,10 +9,10 @@
  */
 {
   "sections": {
-    "landing_image_banner_6cdic3": {
+    "landing_image_banner_8ALGhc": {
       "type": "landing-image-banner",
       "blocks": {
-        "heading_RfrBHh": {
+        "heading_pWRnLr": {
           "type": "heading",
           "settings": {
             "heading": "Content, der Marken fühlbar macht.",
@@ -21,20 +21,19 @@
         }
       },
       "block_order": [
-        "heading_RfrBHh"
+        "heading_pWRnLr"
       ],
-      "custom_css": [],
       "name": "Landing Image Banner",
       "settings": {
         "video_intro": "shopify://files/videos/2 Imagefilm V4 TR website Split App Only_05cc5cc3-63e0-4add-8393-2555c6241f90.mp4",
         "playback_speed": 1,
-        "image_overlay_opacity": 50,
+        "image_overlay_opacity": 0,
         "image_height": "medium",
-        "image_behavior": "ambient",
+        "image_behavior": "none",
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
         "show_text_box": false,
-        "color_scheme": "scheme-1",
+        "color_scheme": "",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "show_text_below": true
@@ -215,6 +214,7 @@
         "nav_margin_left": 16,
         "nav_margin_left_mobile": 16,
         "nav_active_color": "#ffffff",
+        "slide_1_image": "shopify://shop_images/31.jpg",
         "slide_1_icon": "<svg viewbox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z\"></path></svg>",
         "slide_1_title": "Kiyomi",
         "slide_1_description": "This is the description for slide 1. Add compelling content here.",
@@ -241,6 +241,7 @@
       "type": "swan_image-text",
       "name": "SWAN Image & Text",
       "settings": {
+        "image": "shopify://shop_images/pablo-merchan-montes-5hiwRZsPfrQ-unsplash.jpg",
         "image_position": "left",
         "image_scale": "cover",
         "image_background": "#ffffff",
@@ -255,7 +256,7 @@
     }
   },
   "order": [
-    "landing_image_banner_6cdic3",
+    "landing_image_banner_8ALGhc",
     "main",
     "rich_text_9xhcmp",
     "video_slider_D9Nqcc",
