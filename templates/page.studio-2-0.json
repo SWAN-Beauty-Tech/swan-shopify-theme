@@ -45,9 +45,9 @@
         "ai_gen_block_43c3622_HyVGyi": {
           "type": "ai_gen_block_43c3622",
           "settings": {
-            "heading": "",
-            "heading_size_mobile": 100,
-            "heading_size_desktop": 120,
+            "heading": "Was wir anbieten:",
+            "heading_size_mobile": 120,
+            "heading_size_desktop": 165,
             "icon_alignment": "center",
             "icon_width_mobile": 70,
             "icon_width_desktop": 60,
@@ -174,22 +174,6 @@
       "name": "Video carousel",
       "settings": {}
     },
-    "blocks_TXgPKT": {
-      "type": "_blocks",
-      "name": "Video with text",
-      "settings": {}
-    },
-    "contact_form_y6JzrH": {
-      "type": "contact-form",
-      "name": "t:sections.contact-form.presets.name",
-      "settings": {
-        "heading": "Projektanfragen",
-        "heading_size": "h1",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "blocks_Em86wU": {
       "type": "_blocks",
       "blocks": {
@@ -223,6 +207,22 @@
       "name": "Marquee logo list",
       "settings": {}
     },
+    "blocks_TXgPKT": {
+      "type": "_blocks",
+      "name": "Video with text",
+      "settings": {}
+    },
+    "contact_form_y6JzrH": {
+      "type": "contact-form",
+      "name": "t:sections.contact-form.presets.name",
+      "settings": {
+        "heading": "Projektanfragen",
+        "heading_size": "h1",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "main": {
       "type": "main-page",
       "disabled": true,
@@ -242,9 +242,9 @@
     "blocks_GffcCQ",
     "blocks_WAgUXp",
     "blocks_G8QDTA",
+    "blocks_Em86wU",
     "blocks_TXgPKT",
     "contact_form_y6JzrH",
-    "blocks_Em86wU",
     "main",
     "blocks_Ck9tCM"
   ]
