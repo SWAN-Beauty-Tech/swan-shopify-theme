@@ -202,7 +202,7 @@
             "logo_max_width": 120,
             "logo_spacing": 40,
             "padding_vertical": 40,
-            "animation_speed": 55,
+            "animation_speed": 50,
             "pause_on_hover": true,
             "background_color": "#ffffff",
             "logo_opacity": 70,
