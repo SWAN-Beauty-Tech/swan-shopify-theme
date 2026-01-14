@@ -39,144 +39,6 @@
         "show_text_below": true
       }
     },
-    "main": {
-      "type": "main-page",
-      "disabled": true,
-      "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
-      }
-    },
-    "rich_text_9xhcmp": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_RTGxHP": {
-          "type": "heading",
-          "settings": {
-            "heading": "<h1>SWAN Squad</h1>"
-          }
-        },
-        "text_yj7Wbx": {
-          "type": "text",
-          "settings": {
-            "text": ""
-          }
-        }
-      },
-      "block_order": [
-        "heading_RTGxHP",
-        "text_yj7Wbx"
-      ],
-      "disabled": true,
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
-    "video_slider_D9Nqcc": {
-      "type": "video-slider",
-      "blocks": {
-        "carousel_video_chwgFp": {
-          "type": "carousel_video",
-          "settings": {
-            "media": "https://cdn.shopify.com/videos/c/o/v/4ca18f066b9a4d0f944bcfc0ee88eaa9.mp4"
-          }
-        },
-        "carousel_video_tUJBqM": {
-          "type": "carousel_video",
-          "settings": {
-            "media": "https://cdn.shopify.com/videos/c/o/v/ffd95449a25e4452b1685afcd732a916.mp4"
-          }
-        },
-        "carousel_video_8hX6cQ": {
-          "type": "carousel_video",
-          "settings": {
-            "media": "https://cdn.shopify.com/videos/c/o/v/c4b9b4f46fbf4c5181c3006cc8b86679.mp4"
-          }
-        },
-        "carousel_video_HUeRA3": {
-          "type": "carousel_video",
-          "settings": {
-            "media": "https://cdn.shopify.com/videos/c/o/v/90cf35ab4067429fbb2da2535ebef9b3.mp4"
-          }
-        },
-        "carousel_video_qyxAFc": {
-          "type": "carousel_video",
-          "settings": {
-            "media": "https://cdn.shopify.com/videos/c/o/v/eeca8e5b96b74defa5dbae49f240a99d.mp4"
-          }
-        }
-      },
-      "block_order": [
-        "carousel_video_chwgFp",
-        "carousel_video_tUJBqM",
-        "carousel_video_8hX6cQ",
-        "carousel_video_HUeRA3",
-        "carousel_video_qyxAFc"
-      ],
-      "disabled": true,
-      "name": "Videos Slider",
-      "settings": {
-        "section_heading": "",
-        "heading_alignment": "center",
-        "heading_size": "medium",
-        "full_width": false,
-        "section_bg_color": "#ffffff",
-        "section_padding_top": 40,
-        "section_padding_bottom": 40,
-        "auto_slide": true,
-        "auto_slide_speed": 6000,
-        "video_start_delay": 500,
-        "show_arrows": false,
-        "arrow_shape": "circle",
-        "arrow_bg_color": "#666666",
-        "visible_slides": 3,
-        "visible_mobile": 1,
-        "image_shape": "square",
-        "image_size": "small",
-        "media_size": "medium",
-        "media_design": "adapt",
-        "media_shadow": false,
-        "testimonial_name_size": 20
-      }
-    },
-    "video_carousel_rect_braWeg": {
-      "type": "video_carousel_rect",
-      "disabled": true,
-      "name": "Video carousel",
-      "settings": {
-        "padding_block_desktop": 40,
-        "padding_inline_desktop": 40,
-        "margin_block_desktop": 20,
-        "margin_inline_desktop": 20,
-        "padding_block_mobile": 20,
-        "padding_inline_mobile": 20,
-        "margin_block_mobile": 10,
-        "margin_inline_mobile": 10,
-        "video_1": "shopify://files/videos/3.mp4",
-        "video_2": "shopify://files/videos/1.mp4",
-        "video_3": "shopify://files/videos/5.mp4",
-        "video_4": "shopify://files/videos/4.mp4",
-        "video_5": "shopify://files/videos/Ohne Titel.mp4",
-        "video_width": 280,
-        "video_height": 480,
-        "video_gap": 20,
-        "mobile_video_gap": 2,
-        "inactive_scale": 80,
-        "inactive_opacity": 60,
-        "border_radius": 12,
-        "nav_button_color": "#ffffff",
-        "nav_button_hover_color": "#f0f0f0",
-        "nav_button_icon_color": "#000000",
-        "autoplay_enabled": true,
-        "autoplay_duration": 8
-      }
-    },
     "contact_form_y6JzrH": {
       "type": "contact-form",
       "name": "t:sections.contact-form.presets.name",
@@ -188,81 +50,111 @@
         "padding_bottom": 36
       }
     },
-    "section_slide_carousel_Btg6f4": {
-      "type": "section_slide_carousel",
-      "name": "Responsive slider",
+    "main": {
+      "type": "main-page",
+      "disabled": true,
       "settings": {
-        "padding_block_desktop": 40,
-        "padding_inline_desktop": 40,
-        "margin_block_desktop": 20,
-        "margin_inline_desktop": 20,
-        "padding_block_mobile": 20,
-        "padding_inline_mobile": 20,
-        "margin_block_mobile": 10,
-        "margin_inline_mobile": 10,
-        "overlay_color": "#000000",
-        "overlay_opacity": 40,
-        "text_color": "#ffffff",
-        "icon_color": "#ffffff",
-        "icon_size": 50,
-        "title_size": 42,
-        "title_color": "#DCA1A1",
-        "description_size": 18,
-        "cta_color": "#ffffff",
-        "cta_hover_color": "#cccccc",
-        "cta_size": 16,
-        "nav_margin_left": 16,
-        "nav_margin_left_mobile": 16,
-        "nav_active_color": "#ffffff",
-        "slide_1_image": "shopify://shop_images/31.jpg",
-        "slide_1_icon": "<svg viewbox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z\"></path></svg>",
-        "slide_1_title": "Kiyomi",
-        "slide_1_description": "This is the description for slide 1. Add compelling content here.",
-        "slide_1_cta_text": "Learn More",
-        "slide_1_cta_link": "",
-        "slide_2_icon": "<svg viewbox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\"></path></svg>",
-        "slide_2_title": "Slide 2 Title",
-        "slide_2_description": "This is the description for slide 2. Add compelling content here.",
-        "slide_2_cta_text": "Get Started",
-        "slide_2_cta_link": "",
-        "slide_3_icon": "<svg viewbox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 2l2.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.91-1.01L12 2z\"></path></svg>",
-        "slide_3_title": "Slide 3 Title",
-        "slide_3_description": "This is the description for slide 3. Add compelling content here.",
-        "slide_3_cta_text": "Discover",
-        "slide_3_cta_link": "",
-        "slide_4_icon": "<svg viewbox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M9 11H7v9a2 2 0 002 2h8a2 2 0 002-2V9a2 2 0 00-2-2h-3V5a2 2 0 00-2-2H9a2 2 0 00-2 2v6z\"></path></svg>",
-        "slide_4_title": "Slide 4 Title",
-        "slide_4_description": "This is the description for slide 4. Add compelling content here.",
-        "slide_4_cta_text": "Shop Now",
-        "slide_4_cta_link": ""
+        "padding_top": 28,
+        "padding_bottom": 28
       }
     },
-    "swan_image_text_aWq3DT": {
-      "type": "swan_image-text",
-      "name": "SWAN Image & Text",
-      "settings": {
-        "image": "shopify://shop_images/pablo-merchan-montes-5hiwRZsPfrQ-unsplash.jpg",
-        "image_position": "left",
-        "image_scale": "cover",
-        "image_background": "#ffffff",
-        "image_inset": "none",
-        "mirror_swap": false,
-        "text_alignment": "center",
-        "sticky_text": false,
-        "custom_id": "",
-        "custom_class": "",
-        "color_scheme": ""
-      }
+    "blocks_WAgUXp": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_7818203_8dcM79": {
+          "type": "ai_gen_block_7818203",
+          "settings": {
+            "heading": "Discover our story",
+            "description": "<p>Experience our brand through this immersive video content that showcases our values and commitment to excellence.</p>",
+            "button_text": "Learn more",
+            "button_link": "",
+            "video_max_width": 350,
+            "video_max_width_mobile": 250,
+            "video_border_radius": 12,
+            "content_gap": 60,
+            "mobile_layout": "column",
+            "mobile_text_alignment": "center",
+            "background_color": "#ffffff",
+            "text_color": "#000000",
+            "button_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_hover_color": "#333333",
+            "heading_size": 36,
+            "text_size": 16,
+            "text_spacing": 20,
+            "button_text_size": 16,
+            "button_padding_vertical": 12,
+            "button_padding_horizontal": 24,
+            "button_border_radius": 6
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_7818203_8dcM79"
+      ],
+      "name": "Video with text",
+      "settings": {}
+    },
+    "blocks_TXgPKT": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_ade36af_zFnJmq": {
+          "type": "ai_gen_block_ade36af",
+          "settings": {
+            "video_url": "",
+            "video_border_radius": 12,
+            "heading": "Your story starts here",
+            "text": "<p>Share your brand story, highlight key features, or describe what makes your product special. This text will animate in as users scroll to this section.</p>",
+            "heading_size": 36,
+            "text_size": 16,
+            "heading_color": "#000000",
+            "text_color": "#666666"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_ade36af_zFnJmq"
+      ],
+      "name": "Video with text",
+      "settings": {}
+    },
+    "blocks_G8QDTA": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_3202828_Gyf49F": {
+          "type": "ai_gen_block_3202828",
+          "settings": {
+            "video_1": "shopify://files/videos/Ohne Titel.mp4",
+            "video_2": "shopify://files/videos/2 Imagefilm V4 TR website Split App Only.mp4",
+            "video_3": "shopify://files/videos/1.mp4",
+            "video_4": "shopify://files/videos/2.mp4",
+            "video_5": "shopify://files/videos/Website  Reels.mp4",
+            "background_color": "#ffffff",
+            "text_color": "#000000",
+            "nav_button_color": "#000000",
+            "nav_button_text_color": "#ffffff",
+            "nav_button_hover_color": "#333333",
+            "video_border_radius": 8,
+            "section_padding": 40
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_3202828_Gyf49F"
+      ],
+      "name": "Video carousel",
+      "settings": {}
     }
   },
   "order": [
     "landing_image_banner_8ALGhc",
-    "main",
-    "rich_text_9xhcmp",
-    "video_slider_D9Nqcc",
-    "video_carousel_rect_braWeg",
     "contact_form_y6JzrH",
-    "section_slide_carousel_Btg6f4",
-    "swan_image_text_aWq3DT"
+    "main",
+    "blocks_WAgUXp",
+    "blocks_TXgPKT",
+    "blocks_G8QDTA"
   ]
 }
