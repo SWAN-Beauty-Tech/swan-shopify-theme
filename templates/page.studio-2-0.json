@@ -47,6 +47,36 @@
         "padding_bottom": 28
       }
     },
+    "blocks_GffcCQ": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_43c3622_HyVGyi": {
+          "type": "ai_gen_block_43c3622",
+          "settings": {
+            "heading": "",
+            "heading_size_mobile": 100,
+            "heading_size_desktop": 120,
+            "icon_alignment": "center",
+            "icon_width_mobile": 50,
+            "icon_width_desktop": 60,
+            "title_1": "Premium Quality",
+            "description_1": "Crafted with the finest ingredients for exceptional results.",
+            "title_2": "Dermatologist Tested",
+            "description_2": "Clinically proven formulas safe for all skin types.",
+            "title_3": "Sustainable Beauty",
+            "description_3": "Eco-friendly packaging and ethically sourced ingredients.",
+            "title_4": "Fast Results",
+            "description_4": "Visible improvements in as little as 7 days."
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_43c3622_HyVGyi"
+      ],
+      "name": "Features banner",
+      "settings": {}
+    },
     "blocks_WAgUXp": {
       "type": "_blocks",
       "blocks": {
@@ -173,36 +203,6 @@
         "ai_gen_block_62e4169_4LJbkc"
       ],
       "name": "Marquee logo list",
-      "settings": {}
-    },
-    "blocks_GffcCQ": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_43c3622_HyVGyi": {
-          "type": "ai_gen_block_43c3622",
-          "settings": {
-            "heading": "",
-            "heading_size_mobile": 100,
-            "heading_size_desktop": 120,
-            "icon_alignment": "center",
-            "icon_width_mobile": 50,
-            "icon_width_desktop": 60,
-            "title_1": "Premium Quality",
-            "description_1": "Crafted with the finest ingredients for exceptional results.",
-            "title_2": "Dermatologist Tested",
-            "description_2": "Clinically proven formulas safe for all skin types.",
-            "title_3": "Sustainable Beauty",
-            "description_3": "Eco-friendly packaging and ethically sourced ingredients.",
-            "title_4": "Fast Results",
-            "description_4": "Visible improvements in as little as 7 days."
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_43c3622_HyVGyi"
-      ],
-      "name": "Features banner",
       "settings": {}
     }
   },
