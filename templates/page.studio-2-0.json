@@ -9,6 +9,14 @@
  */
 {
   "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
     "landing_image_banner_8ALGhc": {
       "type": "landing-image-banner",
       "blocks": {
@@ -39,34 +47,30 @@
         "show_text_below": true
       }
     },
-    "main": {
-      "type": "main-page",
-      "disabled": true,
-      "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
-      }
-    },
     "blocks_GffcCQ": {
       "type": "_blocks",
       "blocks": {
         "ai_gen_block_43c3622_HyVGyi": {
           "type": "ai_gen_block_43c3622",
           "settings": {
-            "heading": "Was wir anbieten:",
+            "heading": "",
             "heading_size_mobile": 100,
             "heading_size_desktop": 120,
             "icon_alignment": "center",
-            "icon_width_mobile": 50,
+            "icon_width_mobile": 70,
             "icon_width_desktop": 60,
-            "title_1": "Premium Quality",
-            "description_1": "Crafted with the finest ingredients for exceptional results.",
-            "title_2": "Dermatologist Tested",
-            "description_2": "Clinically proven formulas safe for all skin types.",
-            "title_3": "Sustainable Beauty",
-            "description_3": "Eco-friendly packaging and ethically sourced ingredients.",
-            "title_4": "Fast Results",
-            "description_4": "Visible improvements in as little as 7 days."
+            "icon_1": "shopify://shop_images/2_6dba9bff-c826-4f58-8f1a-3887dd5971fe.png",
+            "title_1": "Studio",
+            "description_1": "Unser Studio ist der kreative Kern unserer Arbeit.\nFlexibel einsetzbar, professionell ausgestattet und ideal für effiziente Produktionen.",
+            "icon_2": "shopify://shop_images/3_b5476bbf-b40d-415c-9598-320f5237332b.png",
+            "title_2": "Konzeption",
+            "description_2": "Guter Content beginnt mit einer starken Idee.\nWir entwickeln Konzepte, die zur Marke passen, Zielgruppen erreichen und visuell funktionieren – kanalübergreifend und messbar.",
+            "icon_3": "shopify://shop_images/4_e2e15846-5c3f-41dd-a1e8-be89ba69e917.png",
+            "title_3": "Produktion",
+            "description_3": "Ob Studio-Shoot oder On-Location-Dreh:\nWir setzen Inhalte effizient und hochwertig um – mit eingespielten Abläufen, modernem Equipment und einem Auge fürs Detail.",
+            "icon_4": "shopify://shop_images/5_5e9bffe0-c305-441e-b399-63b7868e0bd2.png",
+            "title_4": "Bearbeitung",
+            "description_4": "In der Postproduktion bekommt Content seinen Charakter.\nSchnitt, Color Grading, Retusche, Motion – alles präzise abgestimmt auf Brand, Plattform und Ziel."
           },
           "blocks": {}
         }
@@ -87,7 +91,7 @@
             "description": "<p>Experience our brand through this immersive video content that showcases our values and commitment to excellence.</p>",
             "button_text": "Learn more",
             "button_link": "",
-            "video": "shopify://files/videos/HL 2025 Test.mov",
+            "video": "shopify://files/videos/J-Beauty Set V2 9-16.mov",
             "video_max_width": 350,
             "video_max_width_mobile": 250,
             "video_border_radius": 12,
@@ -173,7 +177,7 @@
       "type": "contact-form",
       "name": "t:sections.contact-form.presets.name",
       "settings": {
-        "heading": "Kontaktformular",
+        "heading": "Projektanfragen",
         "heading_size": "h1",
         "color_scheme": "",
         "padding_top": 36,
