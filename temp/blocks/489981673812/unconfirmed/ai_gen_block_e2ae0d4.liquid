@@ -1,0 +1,577 @@
+{% doc %}
+  @prompt
+    Create a themeblock that has 4 diferent sections that are connect with a curved line. 
+    
+    Section 1: Headline and sublines on the left side 1:1 Frame for Image on the right side. 
+    
+    Section 2: Headline and sublines on the right side. 9:16 video on the left side.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-curved-sections-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    padding: {{ block.settings.section_spacing }}px 20px;
+    background-color: {{ block.settings.background_color }};
+  }
+
+  .ai-curved-sections__container-{{ ai_gen_id }} {
+    max-width: {{ block.settings.max_width }}px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .ai-curved-sections__section-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: {{ block.settings.content_gap }}px;
+    align-items: center;
+    margin-bottom: {{ block.settings.section_gap }}px;
+    position: relative;
+  }
+
+  .ai-curved-sections__section-{{ ai_gen_id }}:last-child {
+    margin-bottom: 0;
+  }
+
+  .ai-curved-sections__content-{{ ai_gen_id }} {
+    padding: 20px;
+  }
+
+  .ai-curved-sections__heading-{{ ai_gen_id }} {
+    font-size: {{ block.settings.heading_size }}px;
+    color: {{ block.settings.heading_color }};
+    margin: 0 0 16px 0;
+    line-height: 1.2;
+  }
+
+  .ai-curved-sections__subtext-{{ ai_gen_id }} {
+    font-size: {{ block.settings.subtext_size }}px;
+    color: {{ block.settings.subtext_color }};
+    line-height: 1.6;
+  }
+
+  .ai-curved-sections__media-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: {{ block.settings.media_border_radius }}px;
+  }
+
+  .ai-curved-sections__image-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    background-color: #f4f4f4;
+  }
+
+  .ai-curved-sections__image-wrapper-{{ ai_gen_id }} img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-curved-sections__image-placeholder-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+  }
+
+  .ai-curved-sections__image-placeholder-{{ ai_gen_id }} svg {
+    width: 60%;
+    height: 60%;
+    opacity: 0.3;
+  }
+
+  .ai-curved-sections__video-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    padding-bottom: 177.78%;
+    background-color: #000000;
+  }
+
+  .ai-curved-sections__video-wrapper-{{ ai_gen_id }} video,
+  .ai-curved-sections__video-wrapper-{{ ai_gen_id }} iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-curved-sections__video-placeholder-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1a1a1a;
+  }
+
+  .ai-curved-sections__video-placeholder-{{ ai_gen_id }} svg {
+    width: 80px;
+    height: 80px;
+    opacity: 0.5;
+    color: #ffffff;
+  }
+
+  .ai-curved-sections__curve-{{ ai_gen_id }} {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: {{ block.settings.section_gap }}px;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .ai-curved-sections__curve-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-curved-sections__section-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .ai-curved-sections__content-{{ ai_gen_id }} {
+      order: 1;
+    }
+
+    .ai-curved-sections__media-{{ ai_gen_id }} {
+      order: 2;
+    }
+
+    .ai-curved-sections__heading-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.heading_size }}px * 0.8);
+    }
+
+    .ai-curved-sections__subtext-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.subtext_size }}px * 0.9);
+    }
+
+    .ai-curved-sections__curve-{{ ai_gen_id }} {
+      display: none;
+    }
+  }
+{% endstyle %}
+
+<curved-sections-{{ ai_gen_id }} class="ai-curved-sections-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-curved-sections__container-{{ ai_gen_id }}">
+    
+    <div class="ai-curved-sections__section-{{ ai_gen_id }}">
+      <div class="ai-curved-sections__content-{{ ai_gen_id }}">
+        {% if block.settings.section_1_heading != blank %}
+          <h2 class="ai-curved-sections__heading-{{ ai_gen_id }}">{{ block.settings.section_1_heading }}</h2>
+        {% endif %}
+        {% if block.settings.section_1_subtext != blank %}
+          <div class="ai-curved-sections__subtext-{{ ai_gen_id }}">{{ block.settings.section_1_subtext }}</div>
+        {% endif %}
+      </div>
+      <div class="ai-curved-sections__media-{{ ai_gen_id }}">
+        <div class="ai-curved-sections__image-wrapper-{{ ai_gen_id }}">
+          {% if block.settings.section_1_image %}
+            <img
+              src="{{ block.settings.section_1_image | image_url: width: 800 }}"
+              alt="{{ block.settings.section_1_image.alt | escape }}"
+              loading="lazy"
+              width="800"
+              height="800"
+            >
+          {% else %}
+            <div class="ai-curved-sections__image-placeholder-{{ ai_gen_id }}">
+              {{ 'image' | placeholder_svg_tag }}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    {% if block.settings.show_curves %}
+      <div class="ai-curved-sections__curve-{{ ai_gen_id }}">
+        <svg viewBox="0 0 100 {{ block.settings.section_gap }}" preserveAspectRatio="none">
+          <path
+            d="M 50 0 Q 30 {{ block.settings.section_gap | divided_by: 2 }} 50 {{ block.settings.section_gap }}"
+            stroke="{{ block.settings.curve_color }}"
+            stroke-width="{{ block.settings.curve_width }}"
+            fill="none"
+          />
+        </svg>
+      </div>
+    {% endif %}
+
+    <div class="ai-curved-sections__section-{{ ai_gen_id }}">
+      <div class="ai-curved-sections__media-{{ ai_gen_id }}">
+        <div class="ai-curved-sections__video-wrapper-{{ ai_gen_id }}">
+          {% if block.settings.section_2_video %}
+            {{ block.settings.section_2_video | video_tag: autoplay: true, loop: true, muted: true, controls: false }}
+          {% else %}
+            <div class="ai-curved-sections__video-placeholder-{{ ai_gen_id }}">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+      <div class="ai-curved-sections__content-{{ ai_gen_id }}">
+        {% if block.settings.section_2_heading != blank %}
+          <h2 class="ai-curved-sections__heading-{{ ai_gen_id }}">{{ block.settings.section_2_heading }}</h2>
+        {% endif %}
+        {% if block.settings.section_2_subtext != blank %}
+          <div class="ai-curved-sections__subtext-{{ ai_gen_id }}">{{ block.settings.section_2_subtext }}</div>
+        {% endif %}
+      </div>
+    </div>
+
+    {% if block.settings.show_curves %}
+      <div class="ai-curved-sections__curve-{{ ai_gen_id }}">
+        <svg viewBox="0 0 100 {{ block.settings.section_gap }}" preserveAspectRatio="none">
+          <path
+            d="M 50 0 Q 70 {{ block.settings.section_gap | divided_by: 2 }} 50 {{ block.settings.section_gap }}"
+            stroke="{{ block.settings.curve_color }}"
+            stroke-width="{{ block.settings.curve_width }}"
+            fill="none"
+          />
+        </svg>
+      </div>
+    {% endif %}
+
+    <div class="ai-curved-sections__section-{{ ai_gen_id }}">
+      <div class="ai-curved-sections__content-{{ ai_gen_id }}">
+        {% if block.settings.section_3_heading != blank %}
+          <h2 class="ai-curved-sections__heading-{{ ai_gen_id }}">{{ block.settings.section_3_heading }}</h2>
+        {% endif %}
+        {% if block.settings.section_3_subtext != blank %}
+          <div class="ai-curved-sections__subtext-{{ ai_gen_id }}">{{ block.settings.section_3_subtext }}</div>
+        {% endif %}
+      </div>
+      <div class="ai-curved-sections__media-{{ ai_gen_id }}">
+        <div class="ai-curved-sections__image-wrapper-{{ ai_gen_id }}">
+          {% if block.settings.section_3_image %}
+            <img
+              src="{{ block.settings.section_3_image | image_url: width: 800 }}"
+              alt="{{ block.settings.section_3_image.alt | escape }}"
+              loading="lazy"
+              width="800"
+              height="800"
+            >
+          {% else %}
+            <div class="ai-curved-sections__image-placeholder-{{ ai_gen_id }}">
+              {{ 'image' | placeholder_svg_tag }}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    {% if block.settings.show_curves %}
+      <div class="ai-curved-sections__curve-{{ ai_gen_id }}">
+        <svg viewBox="0 0 100 {{ block.settings.section_gap }}" preserveAspectRatio="none">
+          <path
+            d="M 50 0 Q 30 {{ block.settings.section_gap | divided_by: 2 }} 50 {{ block.settings.section_gap }}"
+            stroke="{{ block.settings.curve_color }}"
+            stroke-width="{{ block.settings.curve_width }}"
+            fill="none"
+          />
+        </svg>
+      </div>
+    {% endif %}
+
+    <div class="ai-curved-sections__section-{{ ai_gen_id }}">
+      <div class="ai-curved-sections__media-{{ ai_gen_id }}">
+        <div class="ai-curved-sections__video-wrapper-{{ ai_gen_id }}">
+          {% if block.settings.section_4_video %}
+            {{ block.settings.section_4_video | video_tag: autoplay: true, loop: true, muted: true, controls: false }}
+          {% else %}
+            <div class="ai-curved-sections__video-placeholder-{{ ai_gen_id }}">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+      <div class="ai-curved-sections__content-{{ ai_gen_id }}">
+        {% if block.settings.section_4_heading != blank %}
+          <h2 class="ai-curved-sections__heading-{{ ai_gen_id }}">{{ block.settings.section_4_heading }}</h2>
+        {% endif %}
+        {% if block.settings.section_4_subtext != blank %}
+          <div class="ai-curved-sections__subtext-{{ ai_gen_id }}">{{ block.settings.section_4_subtext }}</div>
+        {% endif %}
+      </div>
+    </div>
+
+  </div>
+</curved-sections-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class CurvedSections{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.adjustCurvePositions();
+        window.addEventListener('resize', () => this.adjustCurvePositions());
+      }
+
+      adjustCurvePositions() {
+        const sections = this.querySelectorAll('.ai-curved-sections__section-{{ ai_gen_id }}');
+        const curves = this.querySelectorAll('.ai-curved-sections__curve-{{ ai_gen_id }}');
+
+        curves.forEach((curve, index) => {
+          if (sections[index] && sections[index + 1]) {
+            const currentSection = sections[index];
+            const nextSection = sections[index + 1];
+            const currentRect = currentSection.getBoundingClientRect();
+            const nextRect = nextSection.getBoundingClientRect();
+            const containerRect = this.querySelector('.ai-curved-sections__container-{{ ai_gen_id }}').getBoundingClientRect();
+            
+            const topPosition = currentRect.bottom - containerRect.top;
+            curve.style.top = topPosition + 'px';
+          }
+        });
+      }
+    }
+
+    customElements.define('curved-sections-{{ ai_gen_id }}', CurvedSections{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Curved sections",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "min": 800,
+      "max": 1600,
+      "step": 100,
+      "unit": "px",
+      "label": "Maximum width",
+      "default": 1200
+    },
+    {
+      "type": "range",
+      "id": "section_spacing",
+      "min": 20,
+      "max": 100,
+      "step": 10,
+      "unit": "px",
+      "label": "Top and bottom spacing",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "section_gap",
+      "min": 40,
+      "max": 200,
+      "step": 20,
+      "unit": "px",
+      "label": "Gap between sections",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "content_gap",
+      "min": 20,
+      "max": 100,
+      "step": 10,
+      "unit": "px",
+      "label": "Gap between content and media",
+      "default": 60
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Curved lines"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_curves",
+      "label": "Show curved lines",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "curve_color",
+      "label": "Curve color",
+      "default": "#dca1a1"
+    },
+    {
+      "type": "range",
+      "id": "curve_width",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "unit": "px",
+      "label": "Curve width",
+      "default": 2
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Heading size",
+      "default": 36
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "subtext_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Subtext size",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "subtext_color",
+      "label": "Subtext color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "media_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Media border radius",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Section 1"
+    },
+    {
+      "type": "text",
+      "id": "section_1_heading",
+      "label": "Heading",
+      "default": "First section"
+    },
+    {
+      "type": "richtext",
+      "id": "section_1_subtext",
+      "label": "Subtext",
+      "default": "<p>Add your description here to tell your story and engage your audience.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "section_1_image",
+      "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "Section 2"
+    },
+    {
+      "type": "text",
+      "id": "section_2_heading",
+      "label": "Heading",
+      "default": "Second section"
+    },
+    {
+      "type": "richtext",
+      "id": "section_2_subtext",
+      "label": "Subtext",
+      "default": "<p>Share more details about your products or services with engaging content.</p>"
+    },
+    {
+      "type": "video",
+      "id": "section_2_video",
+      "label": "Video"
+    },
+    {
+      "type": "header",
+      "content": "Section 3"
+    },
+    {
+      "type": "text",
+      "id": "section_3_heading",
+      "label": "Heading",
+      "default": "Third section"
+    },
+    {
+      "type": "richtext",
+      "id": "section_3_subtext",
+      "label": "Subtext",
+      "default": "<p>Continue your narrative with compelling information that resonates with your customers.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "section_3_image",
+      "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "Section 4"
+    },
+    {
+      "type": "text",
+      "id": "section_4_heading",
+      "label": "Heading",
+      "default": "Fourth section"
+    },
+    {
+      "type": "richtext",
+      "id": "section_4_subtext",
+      "label": "Subtext",
+      "default": "<p>Complete your story with a final message that leaves a lasting impression.</p>"
+    },
+    {
+      "type": "video",
+      "id": "section_4_video",
+      "label": "Video"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Curved sections"
+    }
+  ]
+}
+{% endschema %}
