@@ -1,6 +1,563 @@
+{% doc %}
+  @prompt
+    I want to build a block with a video on the right side and text on the left half. The video should be switching between the different formats 1:1, 4:5, 16:9 and 9:16. I would need an upload section in the settings for the idividual formats. The text on the right side should appear when the user scrolls to this section and also slightly disappear when the user is scrolling further, leaving this section.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-video-text-block-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    padding: 60px 20px;
+    background-color: {{ block.settings.background_color }};
+  }
+
+  .ai-video-text-container-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .ai-video-text-content-{{ ai_gen_id }} {
+    padding: 20px;
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .ai-video-text-content-{{ ai_gen_id }}.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .ai-video-text-content-{{ ai_gen_id }}.fading {
+    opacity: 0.3;
+    transform: translateX(-15px);
+  }
+
+  .ai-video-text-heading-{{ ai_gen_id }} {
+    font-size: {{ block.settings.heading_size }}px;
+    color: {{ block.settings.heading_color }};
+    margin: 0 0 20px;
+    line-height: 1.2;
+  }
+
+  .ai-video-text-description-{{ ai_gen_id }} {
+    font-size: {{ block.settings.text_size }}px;
+    color: {{ block.settings.text_color }};
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .ai-video-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    background-color: #f4f4f4;
+    border-radius: {{ block.settings.video_border_radius }}px;
+    overflow: hidden;
+  }
+
+  .ai-video-aspect-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+  }
+
+  .ai-video-aspect-{{ ai_gen_id }}.ratio-1-1 {
+    padding-bottom: 100%;
+  }
+
+  .ai-video-aspect-{{ ai_gen_id }}.ratio-4-5 {
+    padding-bottom: 125%;
+  }
+
+  .ai-video-aspect-{{ ai_gen_id }}.ratio-16-9 {
+    padding-bottom: 56.25%;
+  }
+
+  .ai-video-aspect-{{ ai_gen_id }}.ratio-9-16 {
+    padding-bottom: 177.78%;
+  }
+
+  .ai-video-element-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+  }
+
+  .ai-video-element-{{ ai_gen_id }}.active {
+    display: block;
+  }
+
+  .ai-video-placeholder-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+  }
+
+  .ai-video-placeholder-{{ ai_gen_id }} svg {
+    width: 80px;
+    height: 80px;
+    opacity: 0.3;
+  }
+
+  .ai-video-format-selector-{{ ai_gen_id }} {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .ai-video-format-button-{{ ai_gen_id }} {
+    padding: 10px 20px;
+    background-color: {{ block.settings.button_background }};
+    color: {{ block.settings.button_text_color }};
+    border: 2px solid {{ block.settings.button_border_color }};
+    border-radius: {{ block.settings.button_border_radius }}px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+
+  .ai-video-format-button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.button_hover_background }};
+    color: {{ block.settings.button_hover_text_color }};
+  }
+
+  .ai-video-format-button-{{ ai_gen_id }}.active {
+    background-color: {{ block.settings.button_active_background }};
+    color: {{ block.settings.button_active_text_color }};
+    border-color: {{ block.settings.button_active_background }};
+  }
+
+  @media screen and (max-width: 768px) {
+    .ai-video-text-container-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .ai-video-text-heading-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.heading_size }}px * 0.8);
+    }
+
+    .ai-video-text-description-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.text_size }}px * 0.9);
+    }
+  }
+{% endstyle %}
+
+<video-text-block-{{ ai_gen_id }}
+  class="ai-video-text-block-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-video-text-container-{{ ai_gen_id }}">
+    <div class="ai-video-text-content-{{ ai_gen_id }}">
+      {% if block.settings.heading != blank %}
+        <h2 class="ai-video-text-heading-{{ ai_gen_id }}">{{ block.settings.heading }}</h2>
+      {% endif %}
+      {% if block.settings.description != blank %}
+        <div class="ai-video-text-description-{{ ai_gen_id }}">{{ block.settings.description }}</div>
+      {% endif %}
+    </div>
+
+    <div>
+      <div class="ai-video-wrapper-{{ ai_gen_id }}">
+        <div class="ai-video-aspect-{{ ai_gen_id }} ratio-{{ block.settings.default_format }}" data-aspect-container>
+          {% if block.settings.video_1_1 != blank %}
+            <video
+              class="ai-video-element-{{ ai_gen_id }} {% if block.settings.default_format == '1-1' %}active{% endif %}"
+              data-format="1-1"
+              src="{{ block.settings.video_1_1 }}"
+              autoplay
+              muted
+              loop
+              playsinline
+            ></video>
+          {% endif %}
+
+          {% if block.settings.video_4_5 != blank %}
+            <video
+              class="ai-video-element-{{ ai_gen_id }} {% if block.settings.default_format == '4-5' %}active{% endif %}"
+              data-format="4-5"
+              src="{{ block.settings.video_4_5 }}"
+              autoplay
+              muted
+              loop
+              playsinline
+            ></video>
+          {% endif %}
+
+          {% if block.settings.video_16_9 != blank %}
+            <video
+              class="ai-video-element-{{ ai_gen_id }} {% if block.settings.default_format == '16-9' %}active{% endif %}"
+              data-format="16-9"
+              src="{{ block.settings.video_16_9 }}"
+              autoplay
+              muted
+              loop
+              playsinline
+            ></video>
+          {% endif %}
+
+          {% if block.settings.video_9_16 != blank %}
+            <video
+              class="ai-video-element-{{ ai_gen_id }} {% if block.settings.default_format == '9-16' %}active{% endif %}"
+              data-format="9-16"
+              src="{{ block.settings.video_9_16 }}"
+              autoplay
+              muted
+              loop
+              playsinline
+            ></video>
+          {% endif %}
+
+          {% if block.settings.video_1_1 == blank and block.settings.video_4_5 == blank and block.settings.video_16_9 == blank and block.settings.video_9_16 == blank %}
+            <div class="ai-video-placeholder-{{ ai_gen_id }}">
+              {{ 'image' | placeholder_svg_tag }}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="ai-video-format-selector-{{ ai_gen_id }}">
+        {% if block.settings.video_1_1 != blank %}
+          <button
+            class="ai-video-format-button-{{ ai_gen_id }} {% if block.settings.default_format == '1-1' %}active{% endif %}"
+            data-format="1-1"
+            aria-label="Switch to 1:1 format"
+          >
+            1:1
+          </button>
+        {% endif %}
+
+        {% if block.settings.video_4_5 != blank %}
+          <button
+            class="ai-video-format-button-{{ ai_gen_id }} {% if block.settings.default_format == '4-5' %}active{% endif %}"
+            data-format="4-5"
+            aria-label="Switch to 4:5 format"
+          >
+            4:5
+          </button>
+        {% endif %}
+
+        {% if block.settings.video_16_9 != blank %}
+          <button
+            class="ai-video-format-button-{{ ai_gen_id }} {% if block.settings.default_format == '16-9' %}active{% endif %}"
+            data-format="16-9"
+            aria-label="Switch to 16:9 format"
+          >
+            16:9
+          </button>
+        {% endif %}
+
+        {% if block.settings.video_9_16 != blank %}
+          <button
+            class="ai-video-format-button-{{ ai_gen_id }} {% if block.settings.default_format == '9-16' %}active{% endif %}"
+            data-format="9-16"
+            aria-label="Switch to 9:16 format"
+          >
+            9:16
+          </button>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</video-text-block-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class VideoTextBlock{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.textContent = this.querySelector('.ai-video-text-content-{{ ai_gen_id }}');
+        this.formatButtons = this.querySelectorAll('.ai-video-format-button-{{ ai_gen_id }}');
+        this.videos = this.querySelectorAll('.ai-video-element-{{ ai_gen_id }}');
+        this.aspectContainer = this.querySelector('[data-aspect-container]');
+      }
+
+      connectedCallback() {
+        this.setupFormatSwitcher();
+        this.setupScrollAnimation();
+      }
+
+      setupFormatSwitcher() {
+        this.formatButtons.forEach(button => {
+          button.addEventListener('click', () => {
+            const format = button.getAttribute('data-format');
+            this.switchFormat(format);
+          });
+        });
+      }
+
+      switchFormat(format) {
+        this.formatButtons.forEach(btn => {
+          btn.classList.remove('active');
+          if (btn.getAttribute('data-format') === format) {
+            btn.classList.add('active');
+          }
+        });
+
+        this.videos.forEach(video => {
+          video.classList.remove('active');
+          if (video.getAttribute('data-format') === format) {
+            video.classList.add('active');
+            video.play();
+          } else {
+            video.pause();
+          }
+        });
+
+        this.aspectContainer.className = 'ai-video-aspect-{{ ai_gen_id }} ratio-' + format;
+      }
+
+      setupScrollAnimation() {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                this.textContent.classList.add('visible');
+                this.textContent.classList.remove('fading');
+              }
+            });
+          },
+          {
+            threshold: 0.3,
+            rootMargin: '0px'
+          }
+        );
+
+        observer.observe(this);
+
+        window.addEventListener('scroll', () => {
+          const rect = this.getBoundingClientRect();
+          const windowHeight = window.innerHeight;
+          const elementTop = rect.top;
+          const elementBottom = rect.bottom;
+
+          if (elementTop < windowHeight && elementBottom > 0) {
+            const scrollProgress = (windowHeight - elementTop) / (windowHeight + rect.height);
+
+            if (scrollProgress > 0.8) {
+              this.textContent.classList.add('fading');
+            } else if (scrollProgress > 0.2) {
+              this.textContent.classList.add('visible');
+              this.textContent.classList.remove('fading');
+            }
+          }
+        });
+      }
+    }
+
+    customElements.define('video-text-block-{{ ai_gen_id }}', VideoTextBlock{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Video text block",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Text content"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Discover our story"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Watch as we showcase our products in different formats. Switch between aspect ratios to see how our content adapts to various platforms and viewing experiences.</p>"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Heading size",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Text size",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Video uploads"
+    },
+    {
+      "type": "video",
+      "id": "video_1_1",
+      "label": "Video 1:1 (Square)"
+    },
+    {
+      "type": "video",
+      "id": "video_4_5",
+      "label": "Video 4:5 (Portrait)"
+    },
+    {
+      "type": "video",
+      "id": "video_16_9",
+      "label": "Video 16:9 (Landscape)"
+    },
+    {
+      "type": "video",
+      "id": "video_9_16",
+      "label": "Video 9:16 (Vertical)"
+    },
+    {
+      "type": "select",
+      "id": "default_format",
+      "label": "Default format",
+      "options": [
+        {
+          "value": "1-1",
+          "label": "1:1 Square"
+        },
+        {
+          "value": "4-5",
+          "label": "4:5 Portrait"
+        },
+        {
+          "value": "16-9",
+          "label": "16:9 Landscape"
+        },
+        {
+          "value": "9-16",
+          "label": "9:16 Vertical"
+        }
+      ],
+      "default": "1-1"
+    },
+    {
+      "type": "range",
+      "id": "video_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Video border radius",
+      "default": 8
+    },
+    {
+      "type": "header",
+      "content": "Format buttons"
+    },
+    {
+      "type": "color",
+      "id": "button_background",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Text color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_border_color",
+      "label": "Border color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_background",
+      "label": "Hover background",
+      "default": "#f4f4f4"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_text_color",
+      "label": "Hover text color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_active_background",
+      "label": "Active background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_active_text_color",
+      "label": "Active text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Button border radius",
+      "default": 4
+    },
+    {
+      "type": "header",
+      "content": "Section style"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    }
+  ],
+  "presets": [
+    {
+      "name": "Video text block"
+    }
+  ]
+}
 {% endschema %}
