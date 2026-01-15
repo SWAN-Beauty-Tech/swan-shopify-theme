@@ -924,78 +924,6 @@
         "include_margins": true
       }
     },
-    "collapsible_content_TkqmVL": {
-      "type": "collapsible-content",
-      "blocks": {
-        "collapsible_row_bcghC6": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Brauche ich ein spezielles Abonnement oder eine App für die Nutzung?",
-            "icon": "none",
-            "row_content": "<p>Der SWAN Mirror kann <strong>ohne Abonnement kostenfrei</strong> genutzt werden. Allerdings ist für den Zugriff auf die Plattform und ihre Funktionen – wie Beauty-Videos, Produktshopping, Content-Erstellung und Hautanalyse – die kostenlose <strong>SWAN App erforderlich</strong>.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_bGWiMg": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Unterstützt der SWAN Mirror Drittanbieter-Apps?",
-            "icon": "none",
-            "row_content": "<p>Nein, der SWAN Mirror ist so konzipiert, dass er <strong>ausschließlich mit der SWAN App</strong> funktioniert. Das gewährleistet ein nahtloses, sicheres und optimiertes Beauty-Erlebnis.</p><p>Alle Funktionen – von Beauty-Videos und Tutorials über Hautanalyse bis hin zum Produkt-Shopping – sind direkt in die SWAN App integriert.</p><p>Diese Lösung garantiert hohe Leistung, Sicherheit und kontinuierliche Updates.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_zQrkFy": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Welche Rückgabemöglichkeiten gibt es?",
-            "icon": "none",
-            "row_content": "<p>Wir bieten eine 14-tägige Rückgabemöglichkeit für den SWAN Mirror an.</p><p>Du kannst deinen SWAN Mirror innerhalb von 14 Tagen nach Erhalt zurückgeben, sofern er sich im Originalzustand und in der Originalverpackung befindet.</p><p>Um eine Rückgabe einzuleiten, kontaktiere einfach unser Kundenservice-Team per E-Mail (hi@swanbeauty.com). Sie werden dich durch den Rückgabeprozess führen.</p><p>Rückerstattungen erfolgen über die ursprüngliche Zahlungsmethode.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_BTU87p": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "An wen kann ich mich bei technischen Problemen oder Fragen wenden?",
-            "icon": "none",
-            "row_content": "<p>Der Kundenservice von SWAN Beauty ist per E-Mail unter hi@swanbeauty.com erreichbar.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_pjj8pm": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Benötige ich WLAN für den SWAN Mirror?",
-            "icon": "none",
-            "row_content": "<p>Ja, für die volle Funktionalität benötigst du eine WLAN-Verbindung sowie einen Stromanschluss. Der Spiegel verbindet sich mit der SWAN App und dem Internet, um dir aktuelle Inhalte, Updates und die Community-Funktionen zu bieten.</p>",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_bcghC6",
-        "collapsible_row_bGWiMg",
-        "collapsible_row_zQrkFy",
-        "collapsible_row_BTU87p",
-        "collapsible_row_pjj8pm"
-      ],
-      "name": "FAQs",
-      "settings": {
-        "caption": "Häufig gestellte Fragen",
-        "heading": "Fragen & Antworten",
-        "heading_size": "h0",
-        "heading_alignment": "center",
-        "layout": "row",
-        "container_color_scheme": "scheme-2",
-        "color_scheme": "scheme-1",
-        "open_first_collapsible_row": true,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "landing_image_banner_NmPPaq": {
       "type": "landing-image-banner",
       "disabled": true,
@@ -1018,20 +946,6 @@
     "1756214345b5c620e8": {
       "type": "_blocks",
       "blocks": {
-        "ai_gen_block_96f037f_g3eAUi": {
-          "type": "ai_gen_block_96f037f",
-          "name": "Two images",
-          "settings": {
-            "image_1": "shopify://shop_images/1_122898b9-ae4b-486c-a6f3-8cae91a774b2.jpg",
-            "image_2": "shopify://shop_images/2_3c2ecc47-3369-45b2-9311-f58ffd8aa5b4.jpg",
-            "aspect_ratio": "1/1",
-            "gap": 16,
-            "border_radius": 0,
-            "mobile_layout": "column",
-            "mobile_gap": 16
-          },
-          "blocks": {}
-        },
         "ai_gen_block_7e17886_bCxefx": {
           "type": "ai_gen_block_7e17886",
           "name": "Product hotspots",
@@ -1108,14 +1022,100 @@
             "button_radius": 8
           },
           "blocks": {}
+        },
+        "ai_gen_block_96f037f_g3eAUi": {
+          "type": "ai_gen_block_96f037f",
+          "name": "Two images",
+          "settings": {
+            "image_1": "shopify://shop_images/1_122898b9-ae4b-486c-a6f3-8cae91a774b2.jpg",
+            "image_2": "shopify://shop_images/2_3c2ecc47-3369-45b2-9311-f58ffd8aa5b4.jpg",
+            "aspect_ratio": "1/1",
+            "gap": 16,
+            "border_radius": 0,
+            "mobile_layout": "column",
+            "mobile_gap": 16
+          },
+          "blocks": {}
         }
       },
       "block_order": [
-        "ai_gen_block_96f037f_g3eAUi",
         "ai_gen_block_7e17886_bCxefx",
-        "ai_gen_block_ba0b649_EjnKUf"
+        "ai_gen_block_ba0b649_EjnKUf",
+        "ai_gen_block_96f037f_g3eAUi"
       ],
       "settings": {}
+    },
+    "collapsible_content_TkqmVL": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_bcghC6": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Brauche ich ein spezielles Abonnement oder eine App für die Nutzung?",
+            "icon": "none",
+            "row_content": "<p>Der SWAN Mirror kann <strong>ohne Abonnement kostenfrei</strong> genutzt werden. Allerdings ist für den Zugriff auf die Plattform und ihre Funktionen – wie Beauty-Videos, Produktshopping, Content-Erstellung und Hautanalyse – die kostenlose <strong>SWAN App erforderlich</strong>.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_bGWiMg": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Unterstützt der SWAN Mirror Drittanbieter-Apps?",
+            "icon": "none",
+            "row_content": "<p>Nein, der SWAN Mirror ist so konzipiert, dass er <strong>ausschließlich mit der SWAN App</strong> funktioniert. Das gewährleistet ein nahtloses, sicheres und optimiertes Beauty-Erlebnis.</p><p>Alle Funktionen – von Beauty-Videos und Tutorials über Hautanalyse bis hin zum Produkt-Shopping – sind direkt in die SWAN App integriert.</p><p>Diese Lösung garantiert hohe Leistung, Sicherheit und kontinuierliche Updates.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_zQrkFy": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Welche Rückgabemöglichkeiten gibt es?",
+            "icon": "none",
+            "row_content": "<p>Wir bieten eine 14-tägige Rückgabemöglichkeit für den SWAN Mirror an.</p><p>Du kannst deinen SWAN Mirror innerhalb von 14 Tagen nach Erhalt zurückgeben, sofern er sich im Originalzustand und in der Originalverpackung befindet.</p><p>Um eine Rückgabe einzuleiten, kontaktiere einfach unser Kundenservice-Team per E-Mail (hi@swanbeauty.com). Sie werden dich durch den Rückgabeprozess führen.</p><p>Rückerstattungen erfolgen über die ursprüngliche Zahlungsmethode.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_BTU87p": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "An wen kann ich mich bei technischen Problemen oder Fragen wenden?",
+            "icon": "none",
+            "row_content": "<p>Der Kundenservice von SWAN Beauty ist per E-Mail unter hi@swanbeauty.com erreichbar.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_pjj8pm": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Benötige ich WLAN für den SWAN Mirror?",
+            "icon": "none",
+            "row_content": "<p>Ja, für die volle Funktionalität benötigst du eine WLAN-Verbindung sowie einen Stromanschluss. Der Spiegel verbindet sich mit der SWAN App und dem Internet, um dir aktuelle Inhalte, Updates und die Community-Funktionen zu bieten.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_bcghC6",
+        "collapsible_row_bGWiMg",
+        "collapsible_row_zQrkFy",
+        "collapsible_row_BTU87p",
+        "collapsible_row_pjj8pm"
+      ],
+      "name": "FAQs",
+      "settings": {
+        "caption": "Häufig gestellte Fragen",
+        "heading": "Fragen & Antworten",
+        "heading_size": "h0",
+        "heading_alignment": "center",
+        "layout": "row",
+        "container_color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
+        "open_first_collapsible_row": true,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     },
     "image_with_text_HdjJfc": {
       "type": "image-with-text",
@@ -1303,9 +1303,9 @@
     "blocks_w9pwjC",
     "1763129543e5bca508",
     "1763473701a5e77958",
-    "collapsible_content_TkqmVL",
     "landing_image_banner_NmPPaq",
     "1756214345b5c620e8",
+    "collapsible_content_TkqmVL",
     "image_with_text_HdjJfc",
     "1762437521ab4057cb",
     "swan_sign_up_mmTBbY",
