@@ -203,36 +203,6 @@
         "padding_bottom": 0
       }
     },
-    "rich_text_qgHTLn": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_aH3AwH": {
-          "type": "heading",
-          "settings": {
-            "heading": ""
-          }
-        },
-        "text_GTYfQH": {
-          "type": "text",
-          "settings": {
-            "text": ""
-          }
-        }
-      },
-      "block_order": [
-        "heading_aH3AwH",
-        "text_GTYfQH"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "rich_text_WhErJL": {
       "type": "rich-text",
       "blocks": {
@@ -265,6 +235,7 @@
     },
     "video_kDcf7K": {
       "type": "video",
+      "disabled": true,
       "name": "t:sections.video.presets.name",
       "settings": {
         "heading": "",
@@ -303,6 +274,7 @@
         "ai_gen_block_bcae852_BXH4Gt": {
           "type": "ai_gen_block_bcae852",
           "name": "Centered image",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Mirror_Wheel_dad4005d-18e7-4dde-a3e7-fb46c8bf98ab.png",
             "image_width": 800,
@@ -1318,7 +1290,6 @@
     "swan_rich_text_FK6WPi",
     "swan_image_text_8yYbnC",
     "featured_product_imLJVN",
-    "rich_text_qgHTLn",
     "rich_text_WhErJL",
     "video_kDcf7K",
     "blocks_NDCMCe",
