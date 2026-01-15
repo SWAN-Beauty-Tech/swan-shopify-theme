@@ -227,44 +227,6 @@
     },
     "1768489849a0329901": {
       "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_f6b595b_RH4wGQ": {
-          "type": "ai_gen_block_f6b595b",
-          "settings": {
-            "max_width": 1200,
-            "section_spacing": 80,
-            "content_gap": 60,
-            "background_color": "#ffffff",
-            "line_thickness": 4,
-            "line_color": "#dca1a1",
-            "headline_size": 24,
-            "headline_color": "#000000",
-            "subline_size": 16,
-            "subline_color": "#000000",
-            "media_border_radius": 0,
-            "section_1_headline": "<p>First Section</p>",
-            "section_1_subline": "<p>This is the first section with headline and subline on the left, and a 1:1 image on the right.</p>",
-            "section_1_image": "shopify://shop_images/DN_4Skintones_PO_ClassicFrench_MR_jpg.webp",
-            "section_2_headline": "<p>Second Section</p>",
-            "section_2_subline": "<p>This is the second section with headline and subline on the right, and a 9:16 video on the left.</p>",
-            "section_2_video": "",
-            "section_3_headline": "<p>Third Section</p>",
-            "section_3_subline": "<p>This is the third section with animated video that cycles through different aspect ratios.</p>",
-            "section_3_video_1_1": "shopify://files/videos/J-Beauty Set V2 1-1.mov",
-            "section_3_video_4_5": "shopify://files/videos/J-Beauty Set V2 4-5.mov",
-            "section_3_video_16_9": "shopify://files/videos/J-Beauty Set V2.mov",
-            "section_3_video_9_16": "shopify://files/videos/J-Beauty Set V2 9-16_adbb978e-2e2e-45a6-9fa2-6d6e3414bdbd.mov",
-            "animation_speed": 3000,
-            "section_4_headline": "<p>Fourth Section</p>",
-            "section_4_subline": "<p>This is the fourth section with headline and subline on the right, and a 16:9 image on the left.</p>",
-            "section_4_image": "shopify://shop_images/karolina-grabowska-iF-34OcUpLI-unsplash.jpg"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_f6b595b_RH4wGQ"
-      ],
       "settings": {}
     },
     "contact_form_y6JzrH": {
@@ -277,6 +239,42 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "17684947690cc884c8": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_167bf52_7rMdr9": {
+          "type": "ai_gen_block_167bf52",
+          "settings": {
+            "background_color": "#ffffff",
+            "line_color": "#000000",
+            "media_border_radius": 0,
+            "heading_size": 32,
+            "heading_color": "#000000",
+            "subline_size": 16,
+            "subline_color": "#666666",
+            "section_1_heading": "First section",
+            "section_1_subline": "<p>Add your description here</p>",
+            "section_2_heading": "Second section",
+            "section_2_subline": "<p>Add your description here</p>",
+            "section_2_video": "",
+            "section_3_heading": "Third section",
+            "section_3_subline": "<p>Add your description here</p>",
+            "section_3_video_1_1": "https://www.youtube.com/watch?v=4N_rE8N8O_M",
+            "section_3_video_4_5": "https://www.youtube.com/watch?v=4N_rE8N8O_M",
+            "section_3_video_16_9": "https://www.youtube.com/watch?v=4N_rE8N8O_M",
+            "section_3_video_9_16": "https://www.youtube.com/watch?v=4N_rE8N8O_M",
+            "transition_duration": 4,
+            "section_4_heading": "Fourth section",
+            "section_4_subline": "<p>Add your description here</p>"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_167bf52_7rMdr9"
+      ],
+      "settings": {}
     }
   },
   "order": [
@@ -289,6 +287,7 @@
     "main",
     "blocks_Ck9tCM",
     "1768489849a0329901",
-    "contact_form_y6JzrH"
+    "contact_form_y6JzrH",
+    "17684947690cc884c8"
   ]
 }
