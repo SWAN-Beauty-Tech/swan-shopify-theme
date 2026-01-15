@@ -48,22 +48,6 @@
         "padding_bottom": 52
       }
     },
-    "image_banner_z94hFA": {
-      "type": "image-banner",
-      "settings": {
-        "image": "shopify://shop_images/maria-lupan-fGbFh23VIDU-unsplash.jpg",
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "image_behavior": "none",
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
-        "show_text_box": true,
-        "color_scheme": "",
-        "stack_images_on_mobile": false,
-        "mobile_content_alignment": "center",
-        "show_text_below": true
-      }
-    },
     "swan_rich_text_AiyzpU": {
       "type": "swan_rich-text",
       "blocks": {
@@ -76,7 +60,7 @@
         "text_ftVfr4": {
           "type": "text",
           "settings": {
-            "text": "<h2>Deine Brand. Dein Beautyverse.</h2><h2></h2>"
+            "text": "<h2>Deine Brand. </h2><h2>Dein Beautyverse.</h2><h2></h2>"
           }
         },
         "text_TkerxH": {
@@ -365,7 +349,6 @@
   "order": [
     "main",
     "rich_text_9xhcmp",
-    "image_banner_z94hFA",
     "swan_rich_text_AiyzpU",
     "video_slider_D9Nqcc",
     "video_carousel_rect_braWeg",
