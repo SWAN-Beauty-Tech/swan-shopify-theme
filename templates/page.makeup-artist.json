@@ -357,7 +357,7 @@
             "image_size": 80,
             "placeholder_bg": "#dca1a1",
             "placeholder_text": "#ffffff",
-            "name_size": 16,
+            "name_size": 14,
             "name_color": "#000000",
             "star_size": 16,
             "star_color": "#ffd700",
@@ -556,6 +556,7 @@
     },
     "featured_blog_Jinfg6": {
       "type": "featured-blog",
+      "custom_css": [],
       "name": "t:sections.featured-blog.presets.name",
       "settings": {
         "blog": "news",
