@@ -688,19 +688,6 @@
           },
           "blocks": {}
         },
-        "ai_gen_block_96f037f_HH8pkA": {
-          "type": "ai_gen_block_96f037f",
-          "settings": {
-            "image_1": "shopify://shop_images/Vergleich_V1_vs._V2.png",
-            "image_2": "shopify://shop_images/2_8a4b8400-405c-4902-8f27-ab8665f7cdf4.png",
-            "aspect_ratio": "1/1",
-            "gap": 84,
-            "border_radius": 0,
-            "mobile_layout": "column",
-            "mobile_gap": 36
-          },
-          "blocks": {}
-        },
         "ai_gen_block_ba0b649_EjnKUf": {
           "type": "ai_gen_block_ba0b649",
           "settings": {
@@ -726,7 +713,6 @@
       "block_order": [
         "ai_gen_block_96f037f_g3eAUi",
         "ai_gen_block_7e17886_bCxefx",
-        "ai_gen_block_96f037f_HH8pkA",
         "ai_gen_block_ba0b649_EjnKUf"
       ],
       "settings": {}
