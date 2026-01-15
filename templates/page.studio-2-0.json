@@ -212,17 +212,6 @@
       "name": "Video with text",
       "settings": {}
     },
-    "contact_form_y6JzrH": {
-      "type": "contact-form",
-      "name": "t:sections.contact-form.presets.name",
-      "settings": {
-        "heading": "Projektanfragen",
-        "heading_size": "h1",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "main": {
       "type": "main-page",
       "disabled": true,
@@ -246,15 +235,16 @@
             "section_spacing": 80,
             "content_gap": 60,
             "background_color": "#ffffff",
-            "line_thickness": 2,
+            "line_thickness": 4,
             "line_color": "#dca1a1",
-            "headline_size": 32,
+            "headline_size": 24,
             "headline_color": "#000000",
             "subline_size": 16,
             "subline_color": "#000000",
             "media_border_radius": 0,
             "section_1_headline": "<p>First Section</p>",
             "section_1_subline": "<p>This is the first section with headline and subline on the left, and a 1:1 image on the right.</p>",
+            "section_1_image": "shopify://shop_images/DN_4Skintones_PO_ClassicFrench_MR_jpg.webp",
             "section_2_headline": "<p>Second Section</p>",
             "section_2_subline": "<p>This is the second section with headline and subline on the right, and a 9:16 video on the left.</p>",
             "section_2_video": "",
@@ -275,6 +265,17 @@
         "ai_gen_block_f6b595b_RH4wGQ"
       ],
       "settings": {}
+    },
+    "contact_form_y6JzrH": {
+      "type": "contact-form",
+      "name": "t:sections.contact-form.presets.name",
+      "settings": {
+        "heading": "Projektanfragen",
+        "heading_size": "h1",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -284,9 +285,9 @@
     "blocks_G8QDTA",
     "blocks_Em86wU",
     "blocks_TXgPKT",
-    "contact_form_y6JzrH",
     "main",
     "blocks_Ck9tCM",
-    "1768489849a0329901"
+    "1768489849a0329901",
+    "contact_form_y6JzrH"
   ]
 }
