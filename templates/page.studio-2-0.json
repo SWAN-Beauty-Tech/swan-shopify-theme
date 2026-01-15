@@ -254,9 +254,10 @@
             "section_3_video_4_5": "shopify://files/videos/J-Beauty Set V2 4-5.mov",
             "section_3_video_16_9": "shopify://files/videos/J-Beauty Set V2.mov",
             "section_3_video_9_16": "shopify://files/videos/J-Beauty Set V2 9-16_adbb978e-2e2e-45a6-9fa2-6d6e3414bdbd.mov",
-            "animation_speed": 5000,
+            "animation_speed": 3000,
             "section_4_headline": "<p>Fourth Section</p>",
-            "section_4_subline": "<p>This is the fourth section with headline and subline on the right, and a 16:9 image on the left.</p>"
+            "section_4_subline": "<p>This is the fourth section with headline and subline on the right, and a 16:9 image on the left.</p>",
+            "section_4_image": "shopify://shop_images/karolina-grabowska-iF-34OcUpLI-unsplash.jpg"
           },
           "blocks": {}
         }
