@@ -388,7 +388,15 @@
       data-form-success="true"
     {% endif %}
   >
-:{{ request.query_string }}
+{%- capture content_for_query_string -%}{{ content_for_header }}{%- endcapture -%}
+{%- liquid
+  assign page_url = content_for_query_string | split: '"pageurl":"' | last | split: '"' | first | replace: '\/',  '/' | replace: '%20', ' ' | replace: '\u0026', '&'
+  assign query_string = page_url | split: '?' | last
+-%}
+
+<!-- Debug-Ausgabe -->
+<p>: {{ query_string }}</p>
+
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
