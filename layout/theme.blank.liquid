@@ -395,12 +395,5 @@
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
     </main>
-      <script>
-    (function() {
-      if (navigator.userAgent.includes('SWAN_MIRROR')) {
-        document.querySelectorAll('header, footer').forEach(el => el.remove());
-      }
-    })();
-  </script>
   </body>
 </html>
