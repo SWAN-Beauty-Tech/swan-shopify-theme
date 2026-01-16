@@ -390,14 +390,12 @@
   >
 
     <script>
-  (function() {
-    // Mirror User-Agent: de.yukawa.swan.mirror.android.{flavor}/{version}...
-
-    if (navigator.userAgent.includes('de.yukawa.swan.mirror')) {
-      document.body.classList.add('mirror-view');
-    }
-  })();
-</script>
+    (function() {
+      if (navigator.userAgent.includes('SWAN_MIRROR')) {
+        document.querySelectorAll('header, footer').forEach(el => el.remove());
+      }
+    })();
+  </script>
 
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
