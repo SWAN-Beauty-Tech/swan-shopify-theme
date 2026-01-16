@@ -388,6 +388,12 @@
       data-form-success="true"
     {% endif %}
   >
+
+        {% if request.query_string contains 'mirror=true' %}
+x
+{% else %}
+y
+{% endif %}
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
