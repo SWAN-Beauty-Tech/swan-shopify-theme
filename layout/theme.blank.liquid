@@ -389,6 +389,16 @@
     {% endif %}
   >
 
+    <script>
+  (function() {
+    // Mirror User-Agent: de.yukawa.swan.mirror.android.{flavor}/{version}...
+    console.log(navigator.userAgent);
+    if (navigator.userAgent.includes('de.yukawa.swan.mirror')) {
+      document.body.classList.add('mirror-view');
+    }
+  })();
+</script>
+
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
