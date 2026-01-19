@@ -744,8 +744,8 @@
           "type": "ai_gen_block_ba0b649",
           "name": "Video with text",
           "settings": {
-            "heading": "Dein persönlicher Hautscore in 3 Schritten",
-            "description": "<p>Der <strong>AI Skin-Analyzer </strong>erzählt die Geschichte deiner Haut.<br/>Mit einem dermatologisch begleiteten Scan bewertet er zentrale Hautthemen und macht Veränderungen sichtbar. In Sekunden erhältst du persönliche Insights und individuell abgestimmte Routinen – so wird der Mirror zu deinem verlässlichsten Beauty-Begleiter.</p><h2>How it works </h2><p>- Analysiert 7 zentrale Hautthemen: Falten, Pigmentierung, Textur, Hautglanz, Rötungen, Unreinheiten, UV-Spots</p><p>- Bewertet jedes Merkmal auf einer Skala von 0 bis 100 und erstellt einen ganzheitlichen Skin-Health-Score</p><p>- Liefert dermatologisch fundierte Insights, personalisierte Tipps und eine nachvollziehbare Scan-Historie</p><p>- Bildet die Basis für personalisierte Routinen, Produktempfehlungen und Content</p><p>- Macht Hautgesundheit visuell erlebbar, messbar und vertrauenswürdig – exklusiv am SWAN Mirror</p>",
+            "heading": "AI Skin-Analyzer",
+            "description": "<p>Der <strong>AI Skin-Analyzer </strong>erzählt die Geschichte deiner Haut.<br/>Mit einem dermatologisch begleiteten Scan bewertet er zentrale Hautthemen und macht Veränderungen sichtbar. In Sekunden erhältst du persönliche Insights und individuell abgestimmte Routinen – so wird der Mirror zu deinem verlässlichsten Beauty-Begleiter.</p>",
             "button_text": "Learn more",
             "button_link": "",
             "video_url": "https://cdn.shopify.com/videos/c/o/v/ca4fa4eebf864736abb6529a6df5c612.mp4",
