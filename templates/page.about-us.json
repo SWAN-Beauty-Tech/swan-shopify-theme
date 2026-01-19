@@ -693,7 +693,7 @@
             "video_max_width": 400,
             "video_border_radius": 16,
             "heading": "Hautpflege leicht gemacht mit dem Routinen-Planer",
-            "text_content": "<p>Kreiere deine Morgen- und Abendroutine in der App.<strong> </strong>So vergisst du keinen Step – und deine Haut ist optimal versorgt: morgens geschützt für den Tag, nachts besonders aufnahmebereit für Wirkstoffe. </p><p>Das <strong>Wetter-Widget mit UV-Index</strong> erinnert dich an SPF und passt deine Pflege an die aktuellen Bedingungen an.</p>",
+            "text_content": "<p>Ein smarter Weg, deine Skincare-Routine Schritt für Schritt zu begleiten.<br/>Reinigen. Behandeln. Pflegen. Schützen.</p><p>Ob mit deinen eigenen Produkten oder mit Empfehlungen aus unserem Marketplace – der Routinen-Planer bringt Struktur und Klarheit in deine Pflege.<br/>Entwickelt für den SWAN Mirror, verwandelt er deine tägliche Routine in ein geführtes, interaktives Erlebnis und hilft dir, dran zu bleiben – einfach, bewusst und ganz ohne Aufwand.</p><p>Das <strong>Wetter-Widget mit UV-Index</strong> erinnert dich an SPF und passt deine Pflege an die aktuellen Bedingungen an.</p>",
             "button_text": "Learn more",
             "button_link": "",
             "section_padding": 60,
@@ -719,6 +719,7 @@
         "ai_gen_block_62e4169_V9jTPn": {
           "type": "ai_gen_block_62e4169",
           "name": "Marquee logo list",
+          "disabled": true,
           "settings": {
             "logo_1": "shopify://shop_images/597720-logo-1737030702.png",
             "logo_3": "shopify://shop_images/d417c127-3d60-4531-bbba-d86c19d12b48.__CR0_0_600_180_PT0_SX600_V1.jpg",
