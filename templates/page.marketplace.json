@@ -91,22 +91,6 @@
         "color_scheme": "scheme-3"
       }
     },
-    "video_wUJTLm": {
-      "type": "video",
-      "name": "t:sections.video.presets.name",
-      "settings": {
-        "heading": "",
-        "heading_size": "h1",
-        "enable_video_looping": true,
-        "video": "shopify://files/videos/2 Imagefilm V4 TR website Split App Only.mp4",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 36
-      }
-    },
     "image_with_text_MA4YUz": {
       "type": "image-with-text",
       "blocks": {
@@ -247,6 +231,22 @@
         "full_width": true,
         "padding_top": 0,
         "padding_bottom": 52
+      }
+    },
+    "video_wUJTLm": {
+      "type": "video",
+      "name": "t:sections.video.presets.name",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "enable_video_looping": true,
+        "video": "shopify://files/videos/2 Imagefilm V4 TR website Split App Only.mp4",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 36
       }
     },
     "image_with_text_WjNQgC": {
@@ -462,6 +462,7 @@
         "ai_gen_block_ba0b649_xwmYyC": {
           "type": "ai_gen_block_ba0b649",
           "name": "Video with text",
+          "disabled": true,
           "settings": {
             "heading": "Routinen-Planer: Deine flexible Hautpflege",
             "description": "<p>Stelle dir mit deinen Lieblingsprodukten eine persönliche Morgen- und Abendroutine zusammen. Passe sie jederzeit an die aktuellen Bedürfnisse deiner Haut an – flexibel, wenn sich etwas ändert. <br/>So verpasst du keinen Step & behältst die korrekte Reihenfolge täglich im Blick.</p><p>Das Beste: Deine geplante Routine erscheint direkt auf dem SWAN Mirror – für ein nahtloses Beauty-Erlebnis.</p><p></p>",
@@ -577,6 +578,83 @@
       ],
       "settings": {}
     },
+    "1762426940049a816c": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_43c3622_PXKMCb": {
+          "type": "ai_gen_block_43c3622",
+          "settings": {
+            "heading": "",
+            "heading_size_mobile": 100,
+            "heading_size_desktop": 120,
+            "icon_alignment": "center",
+            "icon_width_mobile": 50,
+            "icon_width_desktop": 60,
+            "title_1": "Gratis Versand",
+            "description_1": "Ab einem Einkauf von 30€ versandkostenfrei.",
+            "title_2": "In-App Marketplace",
+            "description_2": "Shoppe Produkte direkt aus den Videos ohne die App zu verlassen.",
+            "title_3": "Content Creation",
+            "description_3": "Werde selbst zum Creator! Filmen, Bearbeiten und Hochladen - alles direkt in der App.",
+            "title_4": "SWAN Mirror Sync",
+            "description_4": "Sieh deine durchgeführten Hautanalyse ein und passe deine Routine in der App an."
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_eb0586b_bg4GrH": {
+          "type": "ai_gen_block_eb0586b",
+          "settings": {
+            "heading": "Marketplace Bestseller",
+            "subheading": "Shoppe die Hottest Brands mit Rabatten von bis zu 30 Prozent",
+            "text_alignment": "left",
+            "heading_size": 36,
+            "subheading_size": 18,
+            "heading_color": "#000000",
+            "subheading_color": "#666666",
+            "header_spacing": 30,
+            "subheading_spacing": 10,
+            "image_1": "shopify://shop_images/FINALES_Template_3_eae12970-9b5d-4fb8-8804-457c5fbda54e.jpg",
+            "title_1": "",
+            "price_1": "",
+            "image_2": "shopify://shop_images/Glazing_milk.jpg",
+            "title_2": "",
+            "price_2": "",
+            "image_3": "shopify://shop_images/Jelly_Bean.jpg",
+            "title_3": "",
+            "price_3": "",
+            "image_4": "shopify://shop_images/FINALES_Template_1.jpg",
+            "title_4": "",
+            "price_4": "",
+            "image_5": "shopify://shop_images/FINALES_Template_2_e93f8123-1aca-46a0-a6b3-af8794e161f9.jpg",
+            "title_5": "",
+            "price_5": "",
+            "image_6": "shopify://shop_images/FINALES_Template_8724ee99-6258-4289-aa10-7929c9796a22.jpg",
+            "title_6": "",
+            "price_6": "",
+            "max_width": 1200,
+            "columns_mobile": "3",
+            "aspect_ratio": "1/1",
+            "gap": 12,
+            "gap_mobile": 8,
+            "content_alignment": "left",
+            "text_spacing": 8,
+            "title_size": 14,
+            "price_size": 14,
+            "title_color": "#000000",
+            "price_color": "#000000",
+            "price_spacing": 4,
+            "image_radius": 0,
+            "section_padding": 40
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_43c3622_PXKMCb",
+        "ai_gen_block_eb0586b_bg4GrH"
+      ],
+      "settings": {}
+    },
     "image_with_text_gNGiEa": {
       "type": "image-with-text",
       "blocks": {
@@ -630,83 +708,6 @@
       "name": "Brand carousel",
       "settings": {}
     },
-    "1762426940049a816c": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_43c3622_PXKMCb": {
-          "type": "ai_gen_block_43c3622",
-          "settings": {
-            "heading": "",
-            "heading_size_mobile": 100,
-            "heading_size_desktop": 120,
-            "icon_alignment": "center",
-            "icon_width_mobile": 50,
-            "icon_width_desktop": 60,
-            "title_1": "Gratis Versand",
-            "description_1": "Ab einem Einkauf von 30€ versandkostenfrei.",
-            "title_2": "In-App Marketplace",
-            "description_2": "Shoppe Produkte direkt aus den Videos ohne die App zu verlassen.",
-            "title_3": "Content Creation",
-            "description_3": "Werde selbst zum Creator! Filmen, Bearbeiten und Hochladen - alles direkt in der App.",
-            "title_4": "SWAN Mirror Sync",
-            "description_4": "Sieh deine durchgeführten Hautanalyse ein und passe deine Routine in der App an."
-          },
-          "blocks": {}
-        },
-        "ai_gen_block_eb0586b_bg4GrH": {
-          "type": "ai_gen_block_eb0586b",
-          "settings": {
-            "heading": "Marketplace Bestseller",
-            "subheading": "Shoppe die Hottest Brands mit Rabatten von bis zu 30 Prozent",
-            "text_alignment": "left",
-            "heading_size": 36,
-            "subheading_size": 16,
-            "heading_color": "#000000",
-            "subheading_color": "#666666",
-            "header_spacing": 30,
-            "subheading_spacing": 10,
-            "image_1": "shopify://shop_images/FINALES_Template_3_eae12970-9b5d-4fb8-8804-457c5fbda54e.jpg",
-            "title_1": "",
-            "price_1": "",
-            "image_2": "shopify://shop_images/Glazing_milk.jpg",
-            "title_2": "",
-            "price_2": "",
-            "image_3": "shopify://shop_images/Jelly_Bean.jpg",
-            "title_3": "",
-            "price_3": "",
-            "image_4": "shopify://shop_images/FINALES_Template_1.jpg",
-            "title_4": "",
-            "price_4": "",
-            "image_5": "shopify://shop_images/FINALES_Template_2_e93f8123-1aca-46a0-a6b3-af8794e161f9.jpg",
-            "title_5": "",
-            "price_5": "",
-            "image_6": "shopify://shop_images/FINALES_Template_8724ee99-6258-4289-aa10-7929c9796a22.jpg",
-            "title_6": "",
-            "price_6": "",
-            "max_width": 1200,
-            "columns_mobile": "3",
-            "aspect_ratio": "1/1",
-            "gap": 12,
-            "gap_mobile": 8,
-            "content_alignment": "left",
-            "text_spacing": 8,
-            "title_size": 14,
-            "price_size": 14,
-            "title_color": "#000000",
-            "price_color": "#000000",
-            "price_spacing": 4,
-            "image_radius": 0,
-            "section_padding": 40
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_43c3622_PXKMCb",
-        "ai_gen_block_eb0586b_bg4GrH"
-      ],
-      "settings": {}
-    },
     "featured_collection_RF88mc": {
       "type": "featured-collection",
       "disabled": true,
@@ -743,6 +744,7 @@
         "ai_gen_block_5989830_UagdQm": {
           "type": "ai_gen_block_5989830",
           "name": "Customer reviews",
+          "disabled": true,
           "settings": {
             "title": "Stimmen aus der Community",
             "subtitle": "Das sagen unsere Nutzer",
@@ -990,20 +992,20 @@
     "main",
     "swan_rich_text_daYrVd",
     "swan_image_text_67EcKy",
-    "video_wUJTLm",
     "image_with_text_MA4YUz",
     "1763124655dd5fb6a7",
     "17630317497a9c0775",
     "rich_text_NJJnxg",
+    "video_wUJTLm",
     "image_with_text_WjNQgC",
     "image_with_text_cpLEB4",
     "image_with_text_8pjiA4",
     "rich_text_3zqCi8",
     "17556416728320b2de",
     "1755642240b7fb8d61",
+    "1762426940049a816c",
     "image_with_text_gNGiEa",
     "blocks_N6FyP6",
-    "1762426940049a816c",
     "featured_collection_RF88mc",
     "blocks_jgG73b",
     "1762426545bb1037f7",
