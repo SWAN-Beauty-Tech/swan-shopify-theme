@@ -275,6 +275,36 @@
         "ai_gen_block_167bf52_7rMdr9"
       ],
       "settings": {}
+    },
+    "17689193007d808a35": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_017cb2d_dzFWmb": {
+          "type": "ai_gen_block_017cb2d",
+          "settings": {
+            "heading": "Jeder Frame nach Wunsch",
+            "description": "<p>Experience the perfect blend of innovation and elegance. Our commitment to quality shines through in every detail.</p>",
+            "video": "shopify://files/videos/Timeline 144.mov",
+            "video_border_radius": 0,
+            "max_width": 1400,
+            "gap": 60,
+            "section_padding": 60,
+            "heading_size": 40,
+            "text_size": 16,
+            "text_spacing": 20,
+            "heading_color": "#000000",
+            "text_color": "#000000",
+            "background_color": "#ffffff",
+            "fade_threshold": 0.3,
+            "desktop_width_percent": 100
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_017cb2d_dzFWmb"
+      ],
+      "settings": {}
     }
   },
   "order": [
@@ -288,6 +318,7 @@
     "blocks_Ck9tCM",
     "1768489849a0329901",
     "contact_form_y6JzrH",
-    "17684947690cc884c8"
+    "17684947690cc884c8",
+    "17689193007d808a35"
   ]
 }
