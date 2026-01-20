@@ -79,8 +79,8 @@
         "ai_gen_block_7818203_8dcM79": {
           "type": "ai_gen_block_7818203",
           "settings": {
-            "heading": "Discover our story",
-            "description": "<p>Experience our brand through this immersive video content that showcases our values and commitment to excellence.</p>",
+            "heading": "Studio",
+            "description": "<p>Unser Studio ist der kreative Kern unserer Arbeit.<br/>Flexibel einsetzbar, professionell ausgestattet und ideal für effiziente Produktionen.</p>",
             "button_text": "Learn more",
             "button_link": "",
             "video": "shopify://files/videos/J-Beauty Set V2 9-16.mov",
@@ -114,8 +114,8 @@
             "muted": true,
             "controls": true,
             "video_border_radius": 8,
-            "heading": "Watch our story",
-            "text": "<p>Discover the passion and craftsmanship behind our products in this exclusive behind-the-scenes video.</p>",
+            "heading": "Konzeption",
+            "text": "<p>Guter Content beginnt mit einer starken Idee.<br/>Wir entwickeln Konzepte, die zur Marke passen, Zielgruppen erreichen und visuell funktionieren – kanalübergreifend und messbar.</p>",
             "button_text": "Learn more",
             "button_link": "",
             "background_color": "#ffffff",
@@ -148,31 +148,70 @@
     },
     "blocks_G8QDTA": {
       "type": "_blocks",
+      "name": "Video carousel",
+      "settings": {}
+    },
+    "17689193007d808a35": {
+      "type": "_blocks",
       "blocks": {
-        "ai_gen_block_3202828_Gyf49F": {
-          "type": "ai_gen_block_3202828",
+        "ai_gen_block_017cb2d_dzFWmb": {
+          "type": "ai_gen_block_017cb2d",
           "settings": {
-            "video_1": "shopify://files/videos/Ohne Titel.mp4",
-            "video_2": "shopify://files/videos/2 Imagefilm V4 TR website Split App Only.mp4",
-            "video_3": "shopify://files/videos/1.mp4",
-            "video_4": "shopify://files/videos/2.mp4",
-            "video_5": "shopify://files/videos/Website  Reels.mp4",
-            "background_color": "#ffffff",
+            "heading": "Jeder Frame nach Wunsch",
+            "description": "<p>Experience the perfect blend of innovation and elegance. Our commitment to quality shines through in every detail.</p>",
+            "video": "shopify://files/videos/Timeline 144.mov",
+            "video_border_radius": 0,
+            "max_width": 1400,
+            "gap": 60,
+            "section_padding": 60,
+            "heading_size": 40,
+            "text_size": 16,
+            "text_spacing": 20,
+            "heading_color": "#000000",
             "text_color": "#000000",
-            "nav_button_color": "#000000",
-            "nav_button_text_color": "#ffffff",
-            "nav_button_hover_color": "#333333",
-            "video_border_radius": 8,
-            "section_padding": 40
+            "background_color": "#ffffff",
+            "fade_threshold": 0.3,
+            "desktop_width_percent": 100
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "ai_gen_block_3202828_Gyf49F"
+        "ai_gen_block_017cb2d_dzFWmb"
       ],
-      "name": "Video carousel",
       "settings": {}
+    },
+    "blocks_TXgPKT": {
+      "type": "_blocks",
+      "name": "Video with text",
+      "settings": {}
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "17684947690cc884c8": {
+      "type": "_blocks",
+      "settings": {}
+    },
+    "1768489849a0329901": {
+      "type": "_blocks",
+      "settings": {}
+    },
+    "contact_form_y6JzrH": {
+      "type": "contact-form",
+      "name": "t:sections.contact-form.presets.name",
+      "settings": {
+        "heading": "Projektanfragen",
+        "heading_size": "h1",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     },
     "blocks_Em86wU": {
       "type": "_blocks",
@@ -206,105 +245,6 @@
       ],
       "name": "Marquee logo list",
       "settings": {}
-    },
-    "blocks_TXgPKT": {
-      "type": "_blocks",
-      "name": "Video with text",
-      "settings": {}
-    },
-    "main": {
-      "type": "main-page",
-      "disabled": true,
-      "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
-      }
-    },
-    "blocks_Ck9tCM": {
-      "type": "_blocks",
-      "name": "Video with text",
-      "settings": {}
-    },
-    "1768489849a0329901": {
-      "type": "_blocks",
-      "settings": {}
-    },
-    "contact_form_y6JzrH": {
-      "type": "contact-form",
-      "name": "t:sections.contact-form.presets.name",
-      "settings": {
-        "heading": "Projektanfragen",
-        "heading_size": "h1",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "17684947690cc884c8": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_167bf52_7rMdr9": {
-          "type": "ai_gen_block_167bf52",
-          "settings": {
-            "background_color": "#ffffff",
-            "line_color": "#000000",
-            "media_border_radius": 0,
-            "heading_size": 32,
-            "heading_color": "#000000",
-            "subline_size": 16,
-            "subline_color": "#666666",
-            "section_1_heading": "First section",
-            "section_1_subline": "<p>Add your description here</p>",
-            "section_2_heading": "Second section",
-            "section_2_subline": "<p>Add your description here</p>",
-            "section_2_video": "",
-            "section_3_heading": "Third section",
-            "section_3_subline": "<p>Add your description here</p>",
-            "section_3_video_1_1": "https://www.youtube.com/watch?v=4N_rE8N8O_M",
-            "section_3_video_4_5": "https://www.youtube.com/watch?v=4N_rE8N8O_M",
-            "section_3_video_16_9": "https://www.youtube.com/watch?v=4N_rE8N8O_M",
-            "section_3_video_9_16": "https://www.youtube.com/watch?v=4N_rE8N8O_M",
-            "transition_duration": 4,
-            "section_4_heading": "Fourth section",
-            "section_4_subline": "<p>Add your description here</p>"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_167bf52_7rMdr9"
-      ],
-      "settings": {}
-    },
-    "17689193007d808a35": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_017cb2d_dzFWmb": {
-          "type": "ai_gen_block_017cb2d",
-          "settings": {
-            "heading": "Jeder Frame nach Wunsch",
-            "description": "<p>Experience the perfect blend of innovation and elegance. Our commitment to quality shines through in every detail.</p>",
-            "video": "shopify://files/videos/Timeline 144.mov",
-            "video_border_radius": 0,
-            "max_width": 1400,
-            "gap": 60,
-            "section_padding": 60,
-            "heading_size": 40,
-            "text_size": 16,
-            "text_spacing": 20,
-            "heading_color": "#000000",
-            "text_color": "#000000",
-            "background_color": "#ffffff",
-            "fade_threshold": 0.3,
-            "desktop_width_percent": 100
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_017cb2d_dzFWmb"
-      ],
-      "settings": {}
     }
   },
   "order": [
@@ -312,13 +252,12 @@
     "blocks_GffcCQ",
     "blocks_WAgUXp",
     "blocks_G8QDTA",
-    "blocks_Em86wU",
+    "17689193007d808a35",
     "blocks_TXgPKT",
     "main",
-    "blocks_Ck9tCM",
+    "17684947690cc884c8",
     "1768489849a0329901",
     "contact_form_y6JzrH",
-    "17684947690cc884c8",
-    "17689193007d808a35"
+    "blocks_Em86wU"
   ]
 }
