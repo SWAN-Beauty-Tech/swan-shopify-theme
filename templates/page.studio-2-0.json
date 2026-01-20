@@ -39,118 +39,6 @@
         "show_text_below": true
       }
     },
-    "blocks_GffcCQ": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_43c3622_HyVGyi": {
-          "type": "ai_gen_block_43c3622",
-          "settings": {
-            "heading": "Was wir anbieten:",
-            "heading_size_mobile": 100,
-            "heading_size_desktop": 100,
-            "icon_alignment": "center",
-            "icon_width_mobile": 70,
-            "icon_width_desktop": 60,
-            "icon_1": "shopify://shop_images/2_6dba9bff-c826-4f58-8f1a-3887dd5971fe.png",
-            "title_1": "Studio",
-            "description_1": "Unser Studio ist der kreative Kern unserer Arbeit.\nFlexibel einsetzbar, professionell ausgestattet und ideal für effiziente Produktionen.",
-            "icon_2": "shopify://shop_images/3_b5476bbf-b40d-415c-9598-320f5237332b.png",
-            "title_2": "Konzeption",
-            "description_2": "Guter Content beginnt mit einer starken Idee.\nWir entwickeln Konzepte, die zur Marke passen, Zielgruppen erreichen und visuell funktionieren – kanalübergreifend und messbar.",
-            "icon_3": "shopify://shop_images/4_e2e15846-5c3f-41dd-a1e8-be89ba69e917.png",
-            "title_3": "Produktion",
-            "description_3": "Ob Studio-Shoot oder On-Location-Dreh:\nWir setzen Inhalte effizient und hochwertig um – mit eingespielten Abläufen, modernem Equipment und einem Auge fürs Detail.",
-            "icon_4": "shopify://shop_images/5_5e9bffe0-c305-441e-b399-63b7868e0bd2.png",
-            "title_4": "Bearbeitung",
-            "description_4": "In der Postproduktion bekommt Content seinen Charakter.\nSchnitt, Color Grading, Retusche, Motion – alles präzise abgestimmt auf Brand, Plattform und Ziel."
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_43c3622_HyVGyi"
-      ],
-      "name": "Features banner",
-      "settings": {}
-    },
-    "blocks_WAgUXp": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_7818203_8dcM79": {
-          "type": "ai_gen_block_7818203",
-          "settings": {
-            "heading": "Studio",
-            "description": "<p>Unser Studio ist der kreative Kern unserer Arbeit.<br/>Flexibel einsetzbar, professionell ausgestattet und ideal für effiziente Produktionen.</p>",
-            "button_text": "Learn more",
-            "button_link": "",
-            "video": "shopify://files/videos/J-Beauty Set V2 9-16.mov",
-            "video_max_width": 350,
-            "video_max_width_mobile": 250,
-            "video_border_radius": 12,
-            "content_gap": 60,
-            "mobile_layout": "column",
-            "mobile_text_alignment": "center",
-            "background_color": "#ffffff",
-            "text_color": "#000000",
-            "button_color": "#000000",
-            "button_text_color": "#ffffff",
-            "button_hover_color": "#333333",
-            "heading_size": 36,
-            "text_size": 16,
-            "text_spacing": 20,
-            "button_text_size": 16,
-            "button_padding_vertical": 12,
-            "button_padding_horizontal": 24,
-            "button_border_radius": 6
-          },
-          "blocks": {}
-        },
-        "ai_gen_block_223d3a4_zENfWN": {
-          "type": "ai_gen_block_223d3a4",
-          "name": "Video with text",
-          "settings": {
-            "autoplay": false,
-            "loop": false,
-            "muted": true,
-            "controls": true,
-            "video_border_radius": 8,
-            "heading": "Konzeption",
-            "text": "<p>Guter Content beginnt mit einer starken Idee.<br/>Wir entwickeln Konzepte, die zur Marke passen, Zielgruppen erreichen und visuell funktionieren – kanalübergreifend und messbar.</p>",
-            "button_text": "Learn more",
-            "button_link": "",
-            "background_color": "#ffffff",
-            "heading_color": "#000000",
-            "text_color": "#666666",
-            "button_color": "#000000",
-            "button_text_color": "#ffffff",
-            "button_hover_color": "#333333",
-            "heading_size": 32,
-            "text_size": 16,
-            "button_text_size": 14,
-            "padding": 40,
-            "gap": 40,
-            "heading_margin": 16,
-            "text_margin": 20,
-            "button_padding_vertical": 12,
-            "button_padding_horizontal": 24,
-            "border_radius": 0,
-            "button_border_radius": 4
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_7818203_8dcM79",
-        "ai_gen_block_223d3a4_zENfWN"
-      ],
-      "name": "Video with text",
-      "settings": {}
-    },
-    "blocks_G8QDTA": {
-      "type": "_blocks",
-      "name": "Video carousel",
-      "settings": {}
-    },
     "17689193007d808a35": {
       "type": "_blocks",
       "blocks": {
@@ -158,7 +46,7 @@
           "type": "ai_gen_block_017cb2d",
           "settings": {
             "heading": "Bearbeitung",
-            "description": "<p>In der Postproduktion bekommt Content seinen Charakter.<br/>Schnitt, Color Grading, Retusche, Motion – alles präzise abgestimmt auf Brand, Plattform und Ziel.</p>",
+            "description": "<p>In der Postproduktion bekommt Content seinen Charakter.<br/>Schnitt, Adaption auf verschieden Formate, Color Grading, Retusche, Motion – alles präzise abgestimmt auf Brand, Plattform und Ziel.</p>",
             "video": "shopify://files/videos/Timeline 144.mov",
             "video_border_radius": 0,
             "max_width": 1400,
@@ -181,11 +69,6 @@
       ],
       "settings": {}
     },
-    "blocks_TXgPKT": {
-      "type": "_blocks",
-      "name": "Video with text",
-      "settings": {}
-    },
     "main": {
       "type": "main-page",
       "disabled": true,
@@ -193,14 +76,6 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
-    },
-    "17684947690cc884c8": {
-      "type": "_blocks",
-      "settings": {}
-    },
-    "1768489849a0329901": {
-      "type": "_blocks",
-      "settings": {}
     },
     "contact_form_y6JzrH": {
       "type": "contact-form",
@@ -232,7 +107,7 @@
             "logo_spacing": 40,
             "padding_vertical": 40,
             "animation_speed": 50,
-            "pause_on_hover": true,
+            "pause_on_hover": false,
             "background_color": "#ffffff",
             "logo_opacity": 70,
             "grayscale_logos": true
@@ -249,14 +124,8 @@
   },
   "order": [
     "landing_image_banner_8ALGhc",
-    "blocks_GffcCQ",
-    "blocks_WAgUXp",
-    "blocks_G8QDTA",
     "17689193007d808a35",
-    "blocks_TXgPKT",
     "main",
-    "17684947690cc884c8",
-    "1768489849a0329901",
     "contact_form_y6JzrH",
     "blocks_Em86wU"
   ]
