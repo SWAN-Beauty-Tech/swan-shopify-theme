@@ -1,6 +1,362 @@
+{% doc %}
+  @prompt
+    I want to build a block with a video on the right side and text on the left half. The video should be 1:1 video format and the text on the right side should appear when the user scrolls to this section and also slightly disappear when the user is scrolling further, leaving this section.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-video-text-block-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    padding: {{ block.settings.section_padding }}px 0;
+    background-color: {{ block.settings.background_color }};
+  }
+
+  .ai-video-text-container-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: {{ block.settings.gap }}px;
+    max-width: {{ block.settings.max_width }}px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .ai-video-text-content-{{ ai_gen_id }} {
+    flex: 1;
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .ai-video-text-content-{{ ai_gen_id }}.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .ai-video-text-content-{{ ai_gen_id }}.fading {
+    opacity: 0.3;
+    transform: translateX(-15px);
+  }
+
+  .ai-video-text-heading-{{ ai_gen_id }} {
+    font-size: {{ block.settings.heading_size }}px;
+    color: {{ block.settings.heading_color }};
+    margin: 0 0 {{ block.settings.text_spacing }}px 0;
+    font-weight: 600;
+  }
+
+  .ai-video-text-description-{{ ai_gen_id }} {
+    font-size: {{ block.settings.text_size }}px;
+    color: {{ block.settings.text_color }};
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .ai-video-text-video-wrapper-{{ ai_gen_id }} {
+    flex: 1;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: {{ block.settings.video_border_radius }}px;
+    overflow: hidden;
+    background-color: #f4f4f4;
+  }
+
+  .ai-video-text-video-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-video-text-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+    position: relative;
+  }
+
+  .ai-video-text-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    max-height: 300px;
+  }
+
+  .ai-video-text-empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    .ai-video-text-container-{{ ai_gen_id }} {
+      flex-direction: column;
+      gap: {{ block.settings.gap | times: 0.7 }}px;
+    }
+
+    .ai-video-text-heading-{{ ai_gen_id }} {
+      font-size: {{ block.settings.heading_size | times: 0.8 }}px;
+    }
+
+    .ai-video-text-description-{{ ai_gen_id }} {
+      font-size: {{ block.settings.text_size | times: 0.9 }}px;
+    }
+  }
+{% endstyle %}
+
+<video-text-scroll-{{ ai_gen_id }}
+  class="ai-video-text-block-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+  data-fade-threshold="{{ block.settings.fade_threshold }}"
+>
+  <div class="ai-video-text-container-{{ ai_gen_id }}">
+    <div class="ai-video-text-content-{{ ai_gen_id }}" data-scroll-element>
+      {% if block.settings.heading != blank %}
+        <h2 class="ai-video-text-heading-{{ ai_gen_id }}">{{ block.settings.heading }}</h2>
+      {% endif %}
+      {% if block.settings.description != blank %}
+        <div class="ai-video-text-description-{{ ai_gen_id }}">{{ block.settings.description }}</div>
+      {% endif %}
+    </div>
+
+    <div class="ai-video-text-video-wrapper-{{ ai_gen_id }}">
+      {% if block.settings.video != blank %}
+        <video
+          class="ai-video-text-video-{{ ai_gen_id }}"
+          autoplay
+          loop
+          muted
+          playsinline
+        >
+          <source src="{{ block.settings.video }}" type="video/mp4">
+        </video>
+      {% else %}
+        <div class="ai-video-text-placeholder-{{ ai_gen_id }}">
+          {{ 'image' | placeholder_svg_tag }}
+          <div class="ai-video-text-empty-state-{{ ai_gen_id }}">
+            Next, add a video
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</video-text-scroll-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class VideoTextScroll{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.scrollElement = this.querySelector('[data-scroll-element]');
+        this.fadeThreshold = parseFloat(this.dataset.fadeThreshold) || 0.3;
+        this.handleScroll = this.handleScroll.bind(this);
+      }
+
+      connectedCallback() {
+        window.addEventListener('scroll', this.handleScroll);
+        this.handleScroll();
+      }
+
+      disconnectedCallback() {
+        window.removeEventListener('scroll', this.handleScroll);
+      }
+
+      handleScroll() {
+        if (!this.scrollElement) return;
+
+        const rect = this.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        const elementTop = rect.top;
+        const elementBottom = rect.bottom;
+        const elementHeight = rect.height;
+
+        const visibleTop = Math.max(0, Math.min(windowHeight, elementBottom));
+        const visibleBottom = Math.max(0, Math.min(windowHeight, windowHeight - elementTop));
+        const visibleHeight = Math.min(visibleTop, visibleBottom);
+        const visibilityRatio = visibleHeight / windowHeight;
+
+        if (elementTop < windowHeight && elementBottom > 0) {
+          if (visibilityRatio > this.fadeThreshold) {
+            this.scrollElement.classList.add('visible');
+            this.scrollElement.classList.remove('fading');
+          } else {
+            this.scrollElement.classList.remove('visible');
+            this.scrollElement.classList.add('fading');
+          }
+        } else {
+          this.scrollElement.classList.remove('visible');
+          this.scrollElement.classList.remove('fading');
+        }
+      }
+    }
+
+    customElements.define('video-text-scroll-{{ ai_gen_id }}', VideoTextScroll{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Video with text",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Discover our story"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Experience the perfect blend of innovation and elegance. Our commitment to quality shines through in every detail.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Video"
+    },
+    {
+      "type": "video",
+      "id": "video",
+      "label": "Video"
+    },
+    {
+      "type": "range",
+      "id": "video_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "label": "Video border radius",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "min": 800,
+      "max": 1600,
+      "step": 100,
+      "unit": "px",
+      "label": "Maximum width",
+      "default": 1400
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "min": 20,
+      "max": 100,
+      "step": 10,
+      "unit": "px",
+      "label": "Gap between text and video",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "section_padding",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "unit": "px",
+      "label": "Section padding",
+      "default": 60
+    },
+    {
+      "type": "header",
+      "content": "Text style"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Heading size",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Text size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "text_spacing",
+      "min": 10,
+      "max": 40,
+      "step": 5,
+      "unit": "px",
+      "label": "Spacing below heading",
+      "default": 20
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Scroll animation"
+    },
+    {
+      "type": "range",
+      "id": "fade_threshold",
+      "min": 0,
+      "max": 0.5,
+      "step": 0.1,
+      "label": "Fade threshold",
+      "default": 0.3
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    }
+  ],
+  "presets": [
+    {
+      "name": "Video with text"
+    }
+  ]
+}
 {% endschema %}
