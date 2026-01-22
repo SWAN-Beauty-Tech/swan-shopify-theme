@@ -108,8 +108,8 @@
           "settings": {
             "headline": "Discover our story",
             "description": "<p>Experience the perfect blend of innovation and beauty. Our products are designed to enhance your natural glow.</p>",
-            "video": "shopify://files/videos/Timeline 144.mov",
-            "video_border_radius": 4,
+            "video": "shopify://files/videos/Frame ratio animation.mp4",
+            "video_border_radius": 0,
             "headline_color": "#000000",
             "headline_size": 40,
             "description_color": "#000000",
