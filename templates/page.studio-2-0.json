@@ -25,7 +25,7 @@
       ],
       "name": "Landing Image Banner",
       "settings": {
-        "video_intro": "shopify://files/videos/2 Imagefilm V4 TR website Split App Only_05cc5cc3-63e0-4add-8393-2555c6241f90.mp4",
+        "video_intro": "shopify://files/videos/Untitled.mov",
         "playback_speed": 1,
         "image_overlay_opacity": 0,
         "image_height": "medium",
@@ -41,32 +41,6 @@
     },
     "17689193007d808a35": {
       "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_017cb2d_dzFWmb": {
-          "type": "ai_gen_block_017cb2d",
-          "settings": {
-            "heading": "Bearbeitung",
-            "description": "<p>In der Postproduktion bekommt Content seinen Charakter.<br/>Schnitt, Adaption auf verschieden Formate, Color Grading, Retusche, Motion – alles präzise abgestimmt auf Brand, Plattform und Ziel.</p>",
-            "video": "shopify://files/videos/Timeline 144.mov",
-            "video_border_radius": 0,
-            "max_width": 1400,
-            "gap": 60,
-            "section_padding": 60,
-            "heading_size": 40,
-            "text_size": 16,
-            "text_spacing": 20,
-            "heading_color": "#000000",
-            "text_color": "#000000",
-            "background_color": "#ffffff",
-            "fade_threshold": 0.3,
-            "desktop_width_percent": 100
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_017cb2d_dzFWmb"
-      ],
       "settings": {}
     },
     "main": {
