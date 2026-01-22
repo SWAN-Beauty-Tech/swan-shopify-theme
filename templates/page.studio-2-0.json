@@ -54,6 +54,44 @@
     "1769098114b1004b0d": {
       "type": "_blocks",
       "blocks": {
+        "ai_gen_block_24533e3_zC6zHy": {
+          "type": "ai_gen_block_24533e3",
+          "settings": {
+            "heading": "Konzeption",
+            "description": "<p>Guter Content beginnt mit einer starken Idee.<br/>Wir entwickeln Konzepte, die zur Marke passen, Zielgruppen erreichen und visuell funktionieren.</p>",
+            "image_radius": 0,
+            "background_color": "#ffffff",
+            "heading_color": "#000000",
+            "description_color": "#000000",
+            "heading_size": 32,
+            "description_size": 16,
+            "spacing": 40,
+            "text_spacing": 16,
+            "padding": 40,
+            "desktop_width_percent": 100
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_3c1c40f_wFGG7f": {
+          "type": "ai_gen_block_3c1c40f",
+          "settings": {
+            "image_width": 45,
+            "image_border_radius": 0,
+            "heading": "Dreh / Produktion",
+            "description": "<p>Ob Studio-Shoot oder On-Location-Dreh:<br/>Wir setzen Inhalte effizient und hochwertig um – mit eingespielten Abläufen, modernem Equipment und einem Auge fürs Detail.</p><p></p>",
+            "heading_size": 32,
+            "description_size": 16,
+            "heading_color": "#000000",
+            "description_color": "#000000",
+            "spacing": 40,
+            "text_spacing": 16,
+            "padding_vertical": 40,
+            "padding_horizontal": 20,
+            "background_color": "#ffffff",
+            "desktop_width_percent": 100
+          },
+          "blocks": {}
+        },
         "ai_gen_block_73d7e7d_gGxT84": {
           "type": "ai_gen_block_73d7e7d",
           "settings": {
@@ -71,10 +109,62 @@
             "desktop_width_percent": 100
           },
           "blocks": {}
+        },
+        "ai_gen_block_3c1c40f_cTdzzp": {
+          "type": "ai_gen_block_3c1c40f",
+          "settings": {
+            "image_width": 45,
+            "image_border_radius": 0,
+            "heading": "Studio",
+            "description": "<p>Unser Studio ist der kreative Kern unserer Arbeit.<br/>Flexibel einsetzbar, professionell ausgestattet und ideal für effiziente Produktionen – von kleinen Content-Sessions bis zu komplexen Setups.</p><p></p>",
+            "heading_size": 32,
+            "description_size": 16,
+            "heading_color": "#000000",
+            "description_color": "#000000",
+            "spacing": 40,
+            "text_spacing": 16,
+            "padding_vertical": 40,
+            "padding_horizontal": 20,
+            "background_color": "#ffffff",
+            "desktop_width_percent": 100
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_153cfa2_Va4xmR": {
+          "type": "ai_gen_block_153cfa2",
+          "settings": {
+            "image_size": 150,
+            "image_border_width": 0,
+            "image_border_color": "#dca1a1",
+            "name": "Thibault Riou",
+            "name_size": 28,
+            "name_weight": "600",
+            "name_color": "#000000",
+            "name_spacing": 8,
+            "role": "Studiomanager / Director of Photography",
+            "role_size": 18,
+            "role_weight": "500",
+            "role_color": "#dca1a1",
+            "role_spacing": 12,
+            "description": "Passionate about helping clients discover their natural beauty through personalized content. trasnlate",
+            "description_size": 16,
+            "description_color": "#000000",
+            "gap": 32,
+            "max_width": 1000,
+            "mobile_layout": "column",
+            "padding_vertical": 40,
+            "padding_horizontal": 20,
+            "background_color": "#ffffff"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
-        "ai_gen_block_73d7e7d_gGxT84"
+        "ai_gen_block_24533e3_zC6zHy",
+        "ai_gen_block_3c1c40f_wFGG7f",
+        "ai_gen_block_73d7e7d_gGxT84",
+        "ai_gen_block_3c1c40f_cTdzzp",
+        "ai_gen_block_153cfa2_Va4xmR"
       ],
       "settings": {}
     },
