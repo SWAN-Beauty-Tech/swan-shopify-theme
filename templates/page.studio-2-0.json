@@ -103,29 +103,27 @@
     "1769098114b1004b0d": {
       "type": "_blocks",
       "blocks": {
-        "ai_gen_block_8235699_FGiENK": {
-          "type": "ai_gen_block_8235699",
+        "ai_gen_block_73d7e7d_gGxT84": {
+          "type": "ai_gen_block_73d7e7d",
           "settings": {
-            "heading": "<p>Discover our story</p>",
+            "headline": "Discover our story",
             "description": "<p>Experience the perfect blend of innovation and beauty. Our products are designed to enhance your natural glow.</p>",
-            "video": "",
-            "heading_size": 32,
-            "heading_color": "#000000",
-            "description_size": 16,
+            "video": "shopify://files/videos/Timeline 144.mov",
+            "video_border_radius": 4,
+            "headline_color": "#000000",
+            "headline_size": 40,
             "description_color": "#000000",
-            "content_gap": 16,
-            "video_border_radius": 0,
-            "max_width": 1400,
+            "description_size": 16,
+            "section_padding": 40,
             "gap": 60,
-            "gap_mobile": 30,
-            "padding_vertical": 40,
-            "padding_horizontal": 20
+            "text_gap": 20,
+            "desktop_width_percent": 100
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "ai_gen_block_8235699_FGiENK"
+        "ai_gen_block_73d7e7d_gGxT84"
       ],
       "settings": {}
     }
