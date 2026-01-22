@@ -51,6 +51,33 @@
         "padding_bottom": 28
       }
     },
+    "1769098114b1004b0d": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_73d7e7d_gGxT84": {
+          "type": "ai_gen_block_73d7e7d",
+          "settings": {
+            "headline": "Nachbearbeitung",
+            "description": "<p>In der Postproduktion bekommt Content seinen Charakter. Schnitt, Color Grading, Retusche, Motion oder Adaptionen – alles präzise abgestimmt auf Brand, Plattform und Ziel.</p>",
+            "video": "shopify://files/videos/Frame ratio animation.mp4",
+            "video_border_radius": 0,
+            "headline_color": "#000000",
+            "headline_size": 40,
+            "description_color": "#000000",
+            "description_size": 16,
+            "section_padding": 40,
+            "gap": 60,
+            "text_gap": 20,
+            "desktop_width_percent": 100
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_73d7e7d_gGxT84"
+      ],
+      "settings": {}
+    },
     "contact_form_y6JzrH": {
       "type": "contact-form",
       "name": "t:sections.contact-form.presets.name",
@@ -99,42 +126,15 @@
       "type": "_blocks",
       "name": "Video with text",
       "settings": {}
-    },
-    "1769098114b1004b0d": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_73d7e7d_gGxT84": {
-          "type": "ai_gen_block_73d7e7d",
-          "settings": {
-            "headline": "Discover our story",
-            "description": "<p>Experience the perfect blend of innovation and beauty. Our products are designed to enhance your natural glow.</p>",
-            "video": "shopify://files/videos/Frame ratio animation.mp4",
-            "video_border_radius": 0,
-            "headline_color": "#000000",
-            "headline_size": 40,
-            "description_color": "#000000",
-            "description_size": 16,
-            "section_padding": 40,
-            "gap": 60,
-            "text_gap": 20,
-            "desktop_width_percent": 100
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_73d7e7d_gGxT84"
-      ],
-      "settings": {}
     }
   },
   "order": [
     "landing_image_banner_8ALGhc",
     "17689193007d808a35",
     "main",
+    "1769098114b1004b0d",
     "contact_form_y6JzrH",
     "blocks_Em86wU",
-    "blocks_QtTRfn",
-    "1769098114b1004b0d"
+    "blocks_QtTRfn"
   ]
 }
