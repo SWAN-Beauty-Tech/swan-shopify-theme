@@ -61,7 +61,7 @@
             "description": "<p>Guter Content beginnt mit einer starken Idee.<br/>Wir entwickeln Konzepte, die zur Marke passen, Zielgruppen erreichen und visuell funktionieren.</p>",
             "max_width": 800,
             "spacing": 20,
-            "heading_size": 16,
+            "heading_size": 60,
             "heading_weight": "700",
             "heading_color": "#000000",
             "description_size": 16,
@@ -73,7 +73,7 @@
           "type": "ai_gen_block_40d341b",
           "settings": {
             "image": "shopify://shop_images/6c1bd434-0499-4e3e-9829-05fccc8d0bb8.jpg",
-            "image_width": 30,
+            "image_width": 50,
             "image_border_radius": 0,
             "heading": "<p>2. Dreh / Produktion</p>",
             "description": "<p>Ob Studio-Shoot oder On-Location-Dreh:<br/>Wir setzen Inhalte effizient und hochwertig um – mit eingespielten Abläufen, modernem Equipment und einem Auge fürs Detail.</p><p></p>",
@@ -88,9 +88,9 @@
             "description_color": "#000000",
             "spacing": 40,
             "spacing_mobile": 24,
-            "padding_vertical": 40,
-            "padding_horizontal": 40,
-            "text_alignment_mobile": "left"
+            "padding_vertical": 0,
+            "padding_horizontal": 100,
+            "text_alignment_mobile": "center"
           },
           "blocks": {}
         },
@@ -115,7 +115,7 @@
           "type": "ai_gen_block_40d341b",
           "settings": {
             "image": "shopify://shop_images/edd35292-d7a3-4a67-b9aa-2b9681739c0c.jpg",
-            "image_width": 35,
+            "image_width": 50,
             "image_border_radius": 0,
             "heading": "<p>4. Studio</p>",
             "description": "<p>Unser Studio ist der kreative Kern unserer Arbeit. Flexibel einsetzbar, professionell ausgestattet und ideal für effiziente Produktionen – von kleinen Content-Sessions bis zu komplexen Setups.</p>",
