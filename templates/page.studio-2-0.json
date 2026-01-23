@@ -90,7 +90,7 @@
             "spacing_mobile": 24,
             "padding_vertical": 0,
             "padding_horizontal": 100,
-            "text_alignment_mobile": "center"
+            "text_alignment_mobile": "left"
           },
           "blocks": {}
         },
