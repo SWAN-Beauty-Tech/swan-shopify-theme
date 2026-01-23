@@ -28,15 +28,15 @@
         "video_intro": "shopify://files/videos/Untitled.mov",
         "playback_speed": 1,
         "image_overlay_opacity": 0,
-        "image_height": "medium",
+        "image_height": "large",
         "image_behavior": "none",
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
-        "show_text_box": false,
+        "show_text_box": true,
         "color_scheme": "",
-        "stack_images_on_mobile": true,
+        "stack_images_on_mobile": false,
         "mobile_content_alignment": "center",
-        "show_text_below": true
+        "show_text_below": false
       }
     },
     "17689193007d808a35": {
@@ -69,24 +69,28 @@
           },
           "blocks": {}
         },
-        "ai_gen_block_3c1c40f_wFGG7f": {
-          "type": "ai_gen_block_3c1c40f",
+        "ai_gen_block_40d341b_wxNWN9": {
+          "type": "ai_gen_block_40d341b",
           "settings": {
             "image": "shopify://shop_images/6c1bd434-0499-4e3e-9829-05fccc8d0bb8.jpg",
-            "image_width": 45,
+            "image_width": 50,
             "image_border_radius": 0,
-            "heading": "2. Dreh / Produktion",
+            "heading": "<p>2. Dreh / Produktion</p>",
             "description": "<p>Ob Studio-Shoot oder On-Location-Dreh:<br/>Wir setzen Inhalte effizient und hochwertig um – mit eingespielten Abläufen, modernem Equipment und einem Auge fürs Detail.</p><p></p>",
+            "text_alignment": "left",
             "heading_size": 32,
+            "heading_size_mobile": 24,
             "description_size": 16,
+            "description_size_mobile": 14,
+            "heading_spacing": 16,
+            "background_color": "#ffffff",
             "heading_color": "#000000",
             "description_color": "#000000",
             "spacing": 40,
-            "text_spacing": 16,
+            "spacing_mobile": 24,
             "padding_vertical": 40,
-            "padding_horizontal": 20,
-            "background_color": "#ffffff",
-            "desktop_width_percent": 100
+            "padding_horizontal": 40,
+            "text_alignment_mobile": "left"
           },
           "blocks": {}
         },
@@ -161,7 +165,7 @@
       },
       "block_order": [
         "ai_gen_block_e75fe4a_qkCBkd",
-        "ai_gen_block_3c1c40f_wFGG7f",
+        "ai_gen_block_40d341b_wxNWN9",
         "ai_gen_block_73d7e7d_gGxT84",
         "ai_gen_block_3c1c40f_cTdzzp",
         "ai_gen_block_153cfa2_Va4xmR"
