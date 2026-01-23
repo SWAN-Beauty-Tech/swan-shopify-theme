@@ -1,6 +1,133 @@
+{% doc %}
+  @prompt
+    
+    Create me a block with a centered Headline and also centered Description Text which is left aligned underneath.
+    
+    The Headline should be area extended bold in size 45px while the description should be Area regular in 15px.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-text-block-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    padding: 40px 20px;
+  }
+
+  .ai-text-block__container-{{ ai_gen_id }} {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .ai-text-block__headline-{{ ai_gen_id }} {
+    font-family: 'Area Extended', sans-serif;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 1.2;
+    margin: 0 0 20px 0;
+    color: {{ block.settings.headline_color }};
+  }
+
+  .ai-text-block__description-{{ ai_gen_id }} {
+    font-family: 'Area', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+    text-align: left;
+    color: {{ block.settings.description_color }};
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-text-block__headline-{{ ai_gen_id }} {
+      font-size: 32px;
+    }
+
+    .ai-text-block__description-{{ ai_gen_id }} {
+      font-size: 14px;
+    }
+  }
+
+  @media screen and (min-width: 750px) {
+    .ai-text-block-{{ ai_gen_id }} {
+      width: {{ block.settings.desktop_width_percent }}%;
+    }
+  }
+{% endstyle %}
+
+<text-block-{{ ai_gen_id }} class="ai-text-block-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-text-block__container-{{ ai_gen_id }}">
+    {% if block.settings.headline != blank %}
+      <h2 class="ai-text-block__headline-{{ ai_gen_id }}">
+        {{ block.settings.headline }}
+      </h2>
+    {% endif %}
+
+    {% if block.settings.description != blank %}
+      <div class="ai-text-block__description-{{ ai_gen_id }}">
+        {{ block.settings.description }}
+      </div>
+    {% endif %}
+  </div>
+</text-block-{{ ai_gen_id }}>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Headline with description",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "headline",
+      "label": "Headline",
+      "default": "Your headline here"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Add your description text here. This text will be left-aligned underneath the centered headline.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "headline_color",
+      "label": "Headline",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    }
+  ],
+  "presets": [
+    {
+      "name": "Headline with description"
+    }
+  ]
+}
 {% endschema %}
