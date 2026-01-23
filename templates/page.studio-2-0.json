@@ -54,17 +54,6 @@
     "1769098114b1004b0d": {
       "type": "_blocks",
       "blocks": {
-        "ai_gen_block_3bc1a08_7wFNFK": {
-          "type": "ai_gen_block_3bc1a08",
-          "settings": {
-            "headline": "Your headline here",
-            "description": "<p>Add your description text here. This text will be left-aligned underneath the centered headline.</p>",
-            "headline_color": "#000000",
-            "description_color": "#000000",
-            "desktop_width_percent": 100
-          },
-          "blocks": {}
-        },
         "ai_gen_block_e75fe4a_qkCBkd": {
           "type": "ai_gen_block_e75fe4a",
           "settings": {
@@ -178,7 +167,6 @@
         }
       },
       "block_order": [
-        "ai_gen_block_3bc1a08_7wFNFK",
         "ai_gen_block_e75fe4a_qkCBkd",
         "ai_gen_block_40d341b_wxNWN9",
         "ai_gen_block_73d7e7d_gGxT84",
