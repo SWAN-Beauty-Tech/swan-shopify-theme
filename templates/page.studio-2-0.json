@@ -58,9 +58,9 @@
           "type": "ai_gen_block_e75fe4a",
           "settings": {
             "heading": "1. Konzeption",
-            "description": "<p>Guter Content beginnt mit einer starken Idee.<br/>Wir entwickeln Konzepte, die zur Marke passen, Zielgruppen erreichen und visuell funktionieren.</p>",
-            "max_width": 800,
-            "spacing": 20,
+            "description": "<p>Guter Content beginnt mit einer starken Idee. Wir entwickeln Konzepte, die zur Marke passen, Zielgruppen erreichen und visuell funktionieren.</p>",
+            "max_width": 650,
+            "spacing": 10,
             "heading_size": 60,
             "heading_weight": "700",
             "heading_color": "#000000",
