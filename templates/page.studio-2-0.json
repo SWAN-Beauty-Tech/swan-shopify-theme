@@ -102,10 +102,10 @@
             "video": "shopify://files/videos/Frame ratio animation.mp4",
             "video_border_radius": 0,
             "headline_color": "#000000",
-            "headline_size": 40,
+            "headline_size": 60,
             "description_color": "#000000",
-            "description_size": 16,
-            "section_padding": 40,
+            "description_size": 19,
+            "section_padding": 0,
             "gap": 40,
             "text_gap": 12
           },
