@@ -54,30 +54,28 @@
     "1769098114b1004b0d": {
       "type": "_blocks",
       "blocks": {
-        "ai_gen_block_24533e3_zC6zHy": {
-          "type": "ai_gen_block_24533e3",
+        "ai_gen_block_e75fe4a_qkCBkd": {
+          "type": "ai_gen_block_e75fe4a",
           "settings": {
-            "heading": "Konzeption",
+            "heading": "1. Konzeption",
             "description": "<p>Guter Content beginnt mit einer starken Idee.<br/>Wir entwickeln Konzepte, die zur Marke passen, Zielgruppen erreichen und visuell funktionieren.</p>",
-            "image_radius": 0,
-            "background_color": "#ffffff",
-            "heading_color": "#000000",
-            "description_color": "#000000",
+            "max_width": 800,
+            "spacing": 20,
             "heading_size": 32,
+            "heading_weight": "600",
+            "heading_color": "#000000",
             "description_size": 16,
-            "spacing": 40,
-            "text_spacing": 16,
-            "padding": 40,
-            "desktop_width_percent": 100
+            "description_color": "#000000"
           },
           "blocks": {}
         },
         "ai_gen_block_3c1c40f_wFGG7f": {
           "type": "ai_gen_block_3c1c40f",
           "settings": {
+            "image": "shopify://shop_images/6c1bd434-0499-4e3e-9829-05fccc8d0bb8.jpg",
             "image_width": 45,
             "image_border_radius": 0,
-            "heading": "Dreh / Produktion",
+            "heading": "2. Dreh / Produktion",
             "description": "<p>Ob Studio-Shoot oder On-Location-Dreh:<br/>Wir setzen Inhalte effizient und hochwertig um – mit eingespielten Abläufen, modernem Equipment und einem Auge fürs Detail.</p><p></p>",
             "heading_size": 32,
             "description_size": 16,
@@ -95,7 +93,7 @@
         "ai_gen_block_73d7e7d_gGxT84": {
           "type": "ai_gen_block_73d7e7d",
           "settings": {
-            "headline": "Nachbearbeitung",
+            "headline": "3. Nachbearbeitung",
             "description": "<p>In der Postproduktion bekommt Content seinen Charakter. Schnitt, Color Grading, Retusche, Motion oder Adaptionen – alles präzise abgestimmt auf Brand, Plattform und Ziel.</p>",
             "video": "shopify://files/videos/Frame ratio animation.mp4",
             "video_border_radius": 0,
@@ -113,9 +111,10 @@
         "ai_gen_block_3c1c40f_cTdzzp": {
           "type": "ai_gen_block_3c1c40f",
           "settings": {
+            "image": "shopify://shop_images/edd35292-d7a3-4a67-b9aa-2b9681739c0c.jpg",
             "image_width": 45,
             "image_border_radius": 0,
-            "heading": "Studio",
+            "heading": "4. Studio",
             "description": "<p>Unser Studio ist der kreative Kern unserer Arbeit.<br/>Flexibel einsetzbar, professionell ausgestattet und ideal für effiziente Produktionen – von kleinen Content-Sessions bis zu komplexen Setups.</p><p></p>",
             "heading_size": 32,
             "description_size": 16,
@@ -133,6 +132,7 @@
         "ai_gen_block_153cfa2_Va4xmR": {
           "type": "ai_gen_block_153cfa2",
           "settings": {
+            "image": "shopify://shop_images/Screenshot_2026-01-23_at_11.20.57.png",
             "image_size": 150,
             "image_border_width": 0,
             "image_border_color": "#dca1a1",
@@ -160,7 +160,7 @@
         }
       },
       "block_order": [
-        "ai_gen_block_24533e3_zC6zHy",
+        "ai_gen_block_e75fe4a_qkCBkd",
         "ai_gen_block_3c1c40f_wFGG7f",
         "ai_gen_block_73d7e7d_gGxT84",
         "ai_gen_block_3c1c40f_cTdzzp",
