@@ -1,6 +1,911 @@
+{% doc %}
+  @prompt
+    Design
+    
+    Add a centered heading: “AI that knows your skin”
+    
+    Add a subheading: “From scans to routines – precision care in one mirror.”
+    
+    Show a 3-column grid of tall image cards with rounded corners.
+    
+    Each card includes:
+    
+    a translucent pill label top-left (editable text)
+    
+    a circular plus button top-right (visual only)
+    
+    a large headline bottom-left (editable, 2–3 lines)
+    
+    optional small caption under the headline
+    
+    Interaction (use Shopify native components, no JS)
+    
+    Under the grid, add a Collapsible content / Collapsible rows area (accordion).
+    
+    Each accordion row corresponds to one card.
+    
+    Row header includes the same headline and a plus icon.
+    
+    When a row is opened, show a two-column layout:
+    
+    left: the card image
+    
+    right: title, paragraph text, and a bullet list
+    
+    Ensure only one row is open at a time (accordion behavior).
+    
+    Theme editor structure
+    
+    Use blocks: each feature is one block with: image, pill label, headline, caption, detail title, detail paragraph, bullet list.
+    
+    Section settings: max width, padding, corner radius.
+    
+    Responsive
+    
+    Mobile: cards become 1 column; accordion detail layout stacks image above text.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-skin-features-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    max-width: {{ block.settings.max_width }}px;
+    margin: 0 auto;
+    padding: {{ block.settings.padding_top }}px {{ block.settings.padding_horizontal }}px {{ block.settings.padding_bottom }}px;
+  }
+
+  .ai-skin-features-header-{{ ai_gen_id }} {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  .ai-skin-features-heading-{{ ai_gen_id }} {
+    font-size: 36px;
+    font-weight: 600;
+    margin: 0 0 12px;
+    color: {{ block.settings.heading_color }};
+  }
+
+  .ai-skin-features-subheading-{{ ai_gen_id }} {
+    font-size: 18px;
+    margin: 0;
+    color: {{ block.settings.subheading_color }};
+  }
+
+  .ai-skin-features-grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: {{ block.settings.grid_gap }}px;
+    margin-bottom: 48px;
+  }
+
+  .ai-skin-features-card-{{ ai_gen_id }} {
+    position: relative;
+    aspect-ratio: 3 / 4;
+    border-radius: {{ block.settings.card_radius }}px;
+    overflow: hidden;
+    background-color: #f4f4f4;
+  }
+
+  .ai-skin-features-card-image-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-skin-features-card-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+  }
+
+  .ai-skin-features-card-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-skin-features-card-overlay-{{ ai_gen_id }} {
+    position: absolute;
+    inset: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .ai-skin-features-card-top-{{ ai_gen_id }} {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .ai-skin-features-pill-{{ ai_gen_id }} {
+    background-color: {{ block.settings.pill_bg_color }};
+    color: {{ block.settings.pill_text_color }};
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .ai-skin-features-plus-button-{{ ai_gen_id }} {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: {{ block.settings.plus_bg_color }};
+    color: {{ block.settings.plus_icon_color }};
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  .ai-skin-features-card-bottom-{{ ai_gen_id }} {
+    color: {{ block.settings.card_text_color }};
+  }
+
+  .ai-skin-features-card-headline-{{ ai_gen_id }} {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 8px;
+    line-height: 1.2;
+  }
+
+  .ai-skin-features-card-caption-{{ ai_gen_id }} {
+    font-size: 14px;
+    margin: 0;
+    opacity: 0.9;
+  }
+
+  .ai-skin-features-accordion-{{ ai_gen_id }} {
+    border-top: 1px solid {{ block.settings.accordion_border_color }};
+  }
+
+  .ai-skin-features-accordion-{{ ai_gen_id }} details {
+    border-bottom: 1px solid {{ block.settings.accordion_border_color }};
+  }
+
+  .ai-skin-features-accordion-{{ ai_gen_id }} summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+    cursor: pointer;
+    list-style: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: {{ block.settings.accordion_heading_color }};
+  }
+
+  .ai-skin-features-accordion-{{ ai_gen_id }} summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .ai-skin-features-accordion-icon-{{ ai_gen_id }} {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+  }
+
+  .ai-skin-features-accordion-{{ ai_gen_id }} details[open] .ai-skin-features-accordion-icon-{{ ai_gen_id }} {
+    transform: rotate(45deg);
+  }
+
+  .ai-skin-features-accordion-content-{{ ai_gen_id }} {
+    padding-bottom: 32px;
+  }
+
+  .ai-skin-features-accordion-layout-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+
+  .ai-skin-features-accordion-image-{{ ai_gen_id }} {
+    width: 100%;
+    border-radius: {{ block.settings.card_radius }}px;
+    overflow: hidden;
+    aspect-ratio: 3 / 4;
+  }
+
+  .ai-skin-features-accordion-image-{{ ai_gen_id }} img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-skin-features-accordion-image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-skin-features-accordion-image-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-skin-features-accordion-text-{{ ai_gen_id }} {
+    color: {{ block.settings.accordion_text_color }};
+  }
+
+  .ai-skin-features-accordion-title-{{ ai_gen_id }} {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 16px;
+  }
+
+  .ai-skin-features-accordion-paragraph-{{ ai_gen_id }} {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0 0 20px;
+  }
+
+  .ai-skin-features-accordion-list-{{ ai_gen_id }} {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .ai-skin-features-accordion-list-{{ ai_gen_id }} li {
+    padding-left: 24px;
+    position: relative;
+    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .ai-skin-features-accordion-list-{{ ai_gen_id }} li:before {
+    content: "•";
+    position: absolute;
+    left: 8px;
+    color: {{ block.settings.bullet_color }};
+    font-weight: bold;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-skin-features-heading-{{ ai_gen_id }} {
+      font-size: 28px;
+    }
+
+    .ai-skin-features-subheading-{{ ai_gen_id }} {
+      font-size: 16px;
+    }
+
+    .ai-skin-features-grid-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .ai-skin-features-card-headline-{{ ai_gen_id }} {
+      font-size: 20px;
+    }
+
+    .ai-skin-features-accordion-layout-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .ai-skin-features-accordion-{{ ai_gen_id }} summary {
+      font-size: 18px;
+      padding: 20px 0;
+    }
+
+    .ai-skin-features-accordion-title-{{ ai_gen_id }} {
+      font-size: 20px;
+    }
+  }
+{% endstyle %}
+
+<ai-skin-features-{{ ai_gen_id }} class="ai-skin-features-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-skin-features-header-{{ ai_gen_id }}">
+    <h2 class="ai-skin-features-heading-{{ ai_gen_id }}">{{ block.settings.main_heading }}</h2>
+    <p class="ai-skin-features-subheading-{{ ai_gen_id }}">{{ block.settings.main_subheading }}</p>
+  </div>
+
+  <div class="ai-skin-features-grid-{{ ai_gen_id }}">
+    {% if block.settings.feature_1_image or block.settings.feature_1_headline != blank %}
+      <div class="ai-skin-features-card-{{ ai_gen_id }}">
+        {% if block.settings.feature_1_image %}
+          <img
+            src="{{ block.settings.feature_1_image | image_url: width: 800 }}"
+            alt="{{ block.settings.feature_1_image.alt | escape }}"
+            class="ai-skin-features-card-image-{{ ai_gen_id }}"
+            loading="lazy"
+            width="800"
+            height="1067"
+          >
+        {% else %}
+          <div class="ai-skin-features-card-placeholder-{{ ai_gen_id }}">
+            {{ 'image' | placeholder_svg_tag }}
+          </div>
+        {% endif %}
+        <div class="ai-skin-features-card-overlay-{{ ai_gen_id }}">
+          <div class="ai-skin-features-card-top-{{ ai_gen_id }}">
+            {% if block.settings.feature_1_pill != blank %}
+              <span class="ai-skin-features-pill-{{ ai_gen_id }}">{{ block.settings.feature_1_pill }}</span>
+            {% endif %}
+            <div class="ai-skin-features-plus-button-{{ ai_gen_id }}">+</div>
+          </div>
+          <div class="ai-skin-features-card-bottom-{{ ai_gen_id }}">
+            {% if block.settings.feature_1_headline != blank %}
+              <h3 class="ai-skin-features-card-headline-{{ ai_gen_id }}">{{ block.settings.feature_1_headline }}</h3>
+            {% endif %}
+            {% if block.settings.feature_1_caption != blank %}
+              <p class="ai-skin-features-card-caption-{{ ai_gen_id }}">{{ block.settings.feature_1_caption }}</p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    {% endif %}
+
+    {% if block.settings.feature_2_image or block.settings.feature_2_headline != blank %}
+      <div class="ai-skin-features-card-{{ ai_gen_id }}">
+        {% if block.settings.feature_2_image %}
+          <img
+            src="{{ block.settings.feature_2_image | image_url: width: 800 }}"
+            alt="{{ block.settings.feature_2_image.alt | escape }}"
+            class="ai-skin-features-card-image-{{ ai_gen_id }}"
+            loading="lazy"
+            width="800"
+            height="1067"
+          >
+        {% else %}
+          <div class="ai-skin-features-card-placeholder-{{ ai_gen_id }}">
+            {{ 'image' | placeholder_svg_tag }}
+          </div>
+        {% endif %}
+        <div class="ai-skin-features-card-overlay-{{ ai_gen_id }}">
+          <div class="ai-skin-features-card-top-{{ ai_gen_id }}">
+            {% if block.settings.feature_2_pill != blank %}
+              <span class="ai-skin-features-pill-{{ ai_gen_id }}">{{ block.settings.feature_2_pill }}</span>
+            {% endif %}
+            <div class="ai-skin-features-plus-button-{{ ai_gen_id }}">+</div>
+          </div>
+          <div class="ai-skin-features-card-bottom-{{ ai_gen_id }}">
+            {% if block.settings.feature_2_headline != blank %}
+              <h3 class="ai-skin-features-card-headline-{{ ai_gen_id }}">{{ block.settings.feature_2_headline }}</h3>
+            {% endif %}
+            {% if block.settings.feature_2_caption != blank %}
+              <p class="ai-skin-features-card-caption-{{ ai_gen_id }}">{{ block.settings.feature_2_caption }}</p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    {% endif %}
+
+    {% if block.settings.feature_3_image or block.settings.feature_3_headline != blank %}
+      <div class="ai-skin-features-card-{{ ai_gen_id }}">
+        {% if block.settings.feature_3_image %}
+          <img
+            src="{{ block.settings.feature_3_image | image_url: width: 800 }}"
+            alt="{{ block.settings.feature_3_image.alt | escape }}"
+            class="ai-skin-features-card-image-{{ ai_gen_id }}"
+            loading="lazy"
+            width="800"
+            height="1067"
+          >
+        {% else %}
+          <div class="ai-skin-features-card-placeholder-{{ ai_gen_id }}">
+            {{ 'image' | placeholder_svg_tag }}
+          </div>
+        {% endif %}
+        <div class="ai-skin-features-card-overlay-{{ ai_gen_id }}">
+          <div class="ai-skin-features-card-top-{{ ai_gen_id }}">
+            {% if block.settings.feature_3_pill != blank %}
+              <span class="ai-skin-features-pill-{{ ai_gen_id }}">{{ block.settings.feature_3_pill }}</span>
+            {% endif %}
+            <div class="ai-skin-features-plus-button-{{ ai_gen_id }}">+</div>
+          </div>
+          <div class="ai-skin-features-card-bottom-{{ ai_gen_id }}">
+            {% if block.settings.feature_3_headline != blank %}
+              <h3 class="ai-skin-features-card-headline-{{ ai_gen_id }}">{{ block.settings.feature_3_headline }}</h3>
+            {% endif %}
+            {% if block.settings.feature_3_caption != blank %}
+              <p class="ai-skin-features-card-caption-{{ ai_gen_id }}">{{ block.settings.feature_3_caption }}</p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+
+  <div class="ai-skin-features-accordion-{{ ai_gen_id }}">
+    {% if block.settings.feature_1_headline != blank %}
+      <details>
+        <summary>
+          <span>{{ block.settings.feature_1_headline }}</span>
+          <svg class="ai-skin-features-accordion-icon-{{ ai_gen_id }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+        </summary>
+        <div class="ai-skin-features-accordion-content-{{ ai_gen_id }}">
+          <div class="ai-skin-features-accordion-layout-{{ ai_gen_id }}">
+            <div class="ai-skin-features-accordion-image-{{ ai_gen_id }}">
+              {% if block.settings.feature_1_image %}
+                <img
+                  src="{{ block.settings.feature_1_image | image_url: width: 600 }}"
+                  alt="{{ block.settings.feature_1_image.alt | escape }}"
+                  loading="lazy"
+                  width="600"
+                  height="800"
+                >
+              {% else %}
+                <div class="ai-skin-features-accordion-image-placeholder-{{ ai_gen_id }}">
+                  {{ 'image' | placeholder_svg_tag }}
+                </div>
+              {% endif %}
+            </div>
+            <div class="ai-skin-features-accordion-text-{{ ai_gen_id }}">
+              {% if block.settings.feature_1_detail_title != blank %}
+                <h4 class="ai-skin-features-accordion-title-{{ ai_gen_id }}">{{ block.settings.feature_1_detail_title }}</h4>
+              {% endif %}
+              {% if block.settings.feature_1_detail_paragraph != blank %}
+                <div class="ai-skin-features-accordion-paragraph-{{ ai_gen_id }}">{{ block.settings.feature_1_detail_paragraph }}</div>
+              {% endif %}
+              {% if block.settings.feature_1_detail_bullets != blank %}
+                <ul class="ai-skin-features-accordion-list-{{ ai_gen_id }}">
+                  {% assign bullets = block.settings.feature_1_detail_bullets | split: '|' %}
+                  {% for bullet in bullets %}
+                    {% if bullet != blank %}
+                      <li>{{ bullet | strip }}</li>
+                    {% endif %}
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </details>
+    {% endif %}
+
+    {% if block.settings.feature_2_headline != blank %}
+      <details>
+        <summary>
+          <span>{{ block.settings.feature_2_headline }}</span>
+          <svg class="ai-skin-features-accordion-icon-{{ ai_gen_id }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+        </summary>
+        <div class="ai-skin-features-accordion-content-{{ ai_gen_id }}">
+          <div class="ai-skin-features-accordion-layout-{{ ai_gen_id }}">
+            <div class="ai-skin-features-accordion-image-{{ ai_gen_id }}">
+              {% if block.settings.feature_2_image %}
+                <img
+                  src="{{ block.settings.feature_2_image | image_url: width: 600 }}"
+                  alt="{{ block.settings.feature_2_image.alt | escape }}"
+                  loading="lazy"
+                  width="600"
+                  height="800"
+                >
+              {% else %}
+                <div class="ai-skin-features-accordion-image-placeholder-{{ ai_gen_id }}">
+                  {{ 'image' | placeholder_svg_tag }}
+                </div>
+              {% endif %}
+            </div>
+            <div class="ai-skin-features-accordion-text-{{ ai_gen_id }}">
+              {% if block.settings.feature_2_detail_title != blank %}
+                <h4 class="ai-skin-features-accordion-title-{{ ai_gen_id }}">{{ block.settings.feature_2_detail_title }}</h4>
+              {% endif %}
+              {% if block.settings.feature_2_detail_paragraph != blank %}
+                <div class="ai-skin-features-accordion-paragraph-{{ ai_gen_id }}">{{ block.settings.feature_2_detail_paragraph }}</div>
+              {% endif %}
+              {% if block.settings.feature_2_detail_bullets != blank %}
+                <ul class="ai-skin-features-accordion-list-{{ ai_gen_id }}">
+                  {% assign bullets = block.settings.feature_2_detail_bullets | split: '|' %}
+                  {% for bullet in bullets %}
+                    {% if bullet != blank %}
+                      <li>{{ bullet | strip }}</li>
+                    {% endif %}
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </details>
+    {% endif %}
+
+    {% if block.settings.feature_3_headline != blank %}
+      <details>
+        <summary>
+          <span>{{ block.settings.feature_3_headline }}</span>
+          <svg class="ai-skin-features-accordion-icon-{{ ai_gen_id }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+        </summary>
+        <div class="ai-skin-features-accordion-content-{{ ai_gen_id }}">
+          <div class="ai-skin-features-accordion-layout-{{ ai_gen_id }}">
+            <div class="ai-skin-features-accordion-image-{{ ai_gen_id }}">
+              {% if block.settings.feature_3_image %}
+                <img
+                  src="{{ block.settings.feature_3_image | image_url: width: 600 }}"
+                  alt="{{ block.settings.feature_3_image.alt | escape }}"
+                  loading="lazy"
+                  width="600"
+                  height="800"
+                >
+              {% else %}
+                <div class="ai-skin-features-accordion-image-placeholder-{{ ai_gen_id }}">
+                  {{ 'image' | placeholder_svg_tag }}
+                </div>
+              {% endif %}
+            </div>
+            <div class="ai-skin-features-accordion-text-{{ ai_gen_id }}">
+              {% if block.settings.feature_3_detail_title != blank %}
+                <h4 class="ai-skin-features-accordion-title-{{ ai_gen_id }}">{{ block.settings.feature_3_detail_title }}</h4>
+              {% endif %}
+              {% if block.settings.feature_3_detail_paragraph != blank %}
+                <div class="ai-skin-features-accordion-paragraph-{{ ai_gen_id }}">{{ block.settings.feature_3_detail_paragraph }}</div>
+              {% endif %}
+              {% if block.settings.feature_3_detail_bullets != blank %}
+                <ul class="ai-skin-features-accordion-list-{{ ai_gen_id }}">
+                  {% assign bullets = block.settings.feature_3_detail_bullets | split: '|' %}
+                  {% for bullet in bullets %}
+                    {% if bullet != blank %}
+                      <li>{{ bullet | strip }}</li>
+                    {% endif %}
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </details>
+    {% endif %}
+  </div>
+</ai-skin-features-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class AiSkinFeatures{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.setupAccordion();
+      }
+
+      setupAccordion() {
+        const details = this.querySelectorAll('details');
+        
+        details.forEach((targetDetail) => {
+          targetDetail.addEventListener('click', () => {
+            details.forEach((detail) => {
+              if (detail !== targetDetail) {
+                detail.removeAttribute('open');
+              }
+            });
+          });
+        });
+      }
+    }
+
+    customElements.define('ai-skin-features-{{ ai_gen_id }}', AiSkinFeatures{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "AI skin features",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Main heading"
+    },
+    {
+      "type": "text",
+      "id": "main_heading",
+      "label": "Heading",
+      "default": "AI that knows your skin"
+    },
+    {
+      "type": "text",
+      "id": "main_subheading",
+      "label": "Subheading",
+      "default": "From scans to routines – precision care in one mirror."
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "subheading_color",
+      "label": "Subheading color",
+      "default": "#666666"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "min": 1000,
+      "max": 1600,
+      "step": 100,
+      "unit": "px",
+      "label": "Max width",
+      "default": 1400
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_horizontal",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding horizontal",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "grid_gap",
+      "min": 8,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "label": "Grid gap",
+      "default": 24
+    },
+    {
+      "type": "header",
+      "content": "Card style"
+    },
+    {
+      "type": "range",
+      "id": "card_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Corner radius",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "card_text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "pill_bg_color",
+      "label": "Pill background",
+      "default": "rgba(255, 255, 255, 0.3)"
+    },
+    {
+      "type": "color",
+      "id": "pill_text_color",
+      "label": "Pill text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "plus_bg_color",
+      "label": "Plus button background",
+      "default": "rgba(255, 255, 255, 0.3)"
+    },
+    {
+      "type": "color",
+      "id": "plus_icon_color",
+      "label": "Plus icon color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Accordion style"
+    },
+    {
+      "type": "color",
+      "id": "accordion_border_color",
+      "label": "Border color",
+      "default": "#e0e0e0"
+    },
+    {
+      "type": "color",
+      "id": "accordion_heading_color",
+      "label": "Heading color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "accordion_text_color",
+      "label": "Text color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "bullet_color",
+      "label": "Bullet color",
+      "default": "#dca1a1"
+    },
+    {
+      "type": "header",
+      "content": "Feature 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "feature_1_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "feature_1_pill",
+      "label": "Pill label",
+      "default": "Analysis"
+    },
+    {
+      "type": "text",
+      "id": "feature_1_headline",
+      "label": "Headline",
+      "default": "Skin analysis in seconds"
+    },
+    {
+      "type": "text",
+      "id": "feature_1_caption",
+      "label": "Caption",
+      "default": "AI-powered precision"
+    },
+    {
+      "type": "text",
+      "id": "feature_1_detail_title",
+      "label": "Detail title",
+      "default": "Skin analysis in seconds"
+    },
+    {
+      "type": "richtext",
+      "id": "feature_1_detail_paragraph",
+      "label": "Detail paragraph",
+      "default": "<p>Get a complete skin analysis with AI-powered precision. Our mirror scans your skin and provides personalized insights.</p>"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_1_detail_bullets",
+      "label": "Detail bullets",
+      "info": "Separate each bullet with a | character",
+      "default": "Real-time skin scanning|Personalized recommendations|Track progress over time"
+    },
+    {
+      "type": "header",
+      "content": "Feature 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "feature_2_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "feature_2_pill",
+      "label": "Pill label",
+      "default": "Routines"
+    },
+    {
+      "type": "text",
+      "id": "feature_2_headline",
+      "label": "Headline",
+      "default": "Custom skincare routines"
+    },
+    {
+      "type": "text",
+      "id": "feature_2_caption",
+      "label": "Caption",
+      "default": "Tailored to your needs"
+    },
+    {
+      "type": "text",
+      "id": "feature_2_detail_title",
+      "label": "Detail title",
+      "default": "Custom skincare routines"
+    },
+    {
+      "type": "richtext",
+      "id": "feature_2_detail_paragraph",
+      "label": "Detail paragraph",
+      "default": "<p>Receive personalized skincare routines based on your unique skin profile and goals.</p>"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_2_detail_bullets",
+      "label": "Detail bullets",
+      "info": "Separate each bullet with a | character",
+      "default": "Morning and evening routines|Product recommendations|Step-by-step guidance"
+    },
+    {
+      "type": "header",
+      "content": "Feature 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "feature_3_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "feature_3_pill",
+      "label": "Pill label",
+      "default": "Tracking"
+    },
+    {
+      "type": "text",
+      "id": "feature_3_headline",
+      "label": "Headline",
+      "default": "Progress tracking"
+    },
+    {
+      "type": "text",
+      "id": "feature_3_caption",
+      "label": "Caption",
+      "default": "See your results"
+    },
+    {
+      "type": "text",
+      "id": "feature_3_detail_title",
+      "label": "Detail title",
+      "default": "Progress tracking"
+    },
+    {
+      "type": "richtext",
+      "id": "feature_3_detail_paragraph",
+      "label": "Detail paragraph",
+      "default": "<p>Monitor your skin's improvement over time with detailed analytics and visual comparisons.</p>"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_3_detail_bullets",
+      "label": "Detail bullets",
+      "info": "Separate each bullet with a | character",
+      "default": "Before and after photos|Skin health metrics|Weekly progress reports"
+    }
+  ],
+  "presets": [
+    {
+      "name": "AI skin features"
+    }
+  ]
+}
 {% endschema %}
