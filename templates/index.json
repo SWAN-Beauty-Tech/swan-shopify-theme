@@ -794,6 +794,7 @@
     },
     "17695180895d1e271a": {
       "type": "_blocks",
+      "disabled": true,
       "settings": {}
     }
   },
