@@ -223,6 +223,15 @@
       "type": "_blocks",
       "name": "Video with text",
       "settings": {}
+    },
+    "blocks_JrPMGA": {
+      "type": "_blocks",
+      "name": "Connected sections",
+      "settings": {}
+    },
+    "1769524153eec48073": {
+      "type": "_blocks",
+      "settings": {}
     }
   },
   "order": [
@@ -232,6 +241,8 @@
     "1769098114b1004b0d",
     "contact_form_y6JzrH",
     "blocks_Em86wU",
-    "blocks_QtTRfn"
+    "blocks_QtTRfn",
+    "blocks_JrPMGA",
+    "1769524153eec48073"
   ]
 }

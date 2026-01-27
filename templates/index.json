@@ -791,6 +791,10 @@
       ],
       "disabled": true,
       "settings": {}
+    },
+    "17695180895d1e271a": {
+      "type": "_blocks",
+      "settings": {}
     }
   },
   "order": [
@@ -809,6 +813,7 @@
     "video_carousel_rect_yT3Qmi",
     "section_slide_carousel_rWNp3W",
     "section_stats_gYrxq6",
-    "17577248435e9123f3"
+    "17577248435e9123f3",
+    "17695180895d1e271a"
   ]
 }
