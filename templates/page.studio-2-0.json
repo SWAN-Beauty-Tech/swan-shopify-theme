@@ -113,6 +113,7 @@
         },
         "ai_gen_block_40d341b_x6CWAD": {
           "type": "ai_gen_block_40d341b",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/edd35292-d7a3-4a67-b9aa-2b9681739c0c.jpg",
             "image_width": 30,
@@ -139,7 +140,7 @@
         "ai_gen_block_4e7e1d0_nfVU7V": {
           "type": "ai_gen_block_4e7e1d0",
           "settings": {
-            "headline_text": "ANFRAGEN:",
+            "headline_text": "ANFRAGEN: hi@swanbeauty.com",
             "heading_tag": "h2",
             "font_size": 80,
             "font_weight": "700",
@@ -151,35 +152,6 @@
             "desktop_width_percent": 100
           },
           "blocks": {}
-        },
-        "ai_gen_block_153cfa2_Va4xmR": {
-          "type": "ai_gen_block_153cfa2",
-          "settings": {
-            "image": "shopify://shop_images/Screenshot_2026-01-23_at_11.20.57.png",
-            "image_size": 150,
-            "image_border_width": 0,
-            "image_border_color": "#dca1a1",
-            "name": "Thibault Riou",
-            "name_size": 28,
-            "name_weight": "600",
-            "name_color": "#000000",
-            "name_spacing": 8,
-            "role": "Studiomanager / Director of Photography",
-            "role_size": 18,
-            "role_weight": "500",
-            "role_color": "#dca1a1",
-            "role_spacing": 12,
-            "description": "thibault.riou@swanbeauty.com",
-            "description_size": 16,
-            "description_color": "#000000",
-            "gap": 32,
-            "max_width": 1000,
-            "mobile_layout": "column",
-            "padding_vertical": 100,
-            "padding_horizontal": 100,
-            "background_color": "#ffffff"
-          },
-          "blocks": {}
         }
       },
       "block_order": [
@@ -187,8 +159,7 @@
         "ai_gen_block_40d341b_wxNWN9",
         "ai_gen_block_73d7e7d_gGxT84",
         "ai_gen_block_40d341b_x6CWAD",
-        "ai_gen_block_4e7e1d0_nfVU7V",
-        "ai_gen_block_153cfa2_Va4xmR"
+        "ai_gen_block_4e7e1d0_nfVU7V"
       ],
       "settings": {}
     },
